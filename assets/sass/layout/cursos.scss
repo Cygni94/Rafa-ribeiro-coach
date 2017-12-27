@@ -1,0 +1,15 @@
+.cursos {
+height: 95%;
+}
+
+.cursos__item {
+    background-color: grey;
+    max-height: 25rem;
+    padding: 5rem 2rem 4rem 0.5rem;
+    span {
+        color: white;
+        font-size: 2rem;
+    }
+}
+
+

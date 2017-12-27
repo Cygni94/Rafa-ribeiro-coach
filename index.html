@@ -1,23 +1,237 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-<div class="home">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <h1 class="page-heading">Posts</h1>
+    <link rel="icon" href="rafaribeiro.ico" />
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <title>Rafael Ribeiro Coaching - Desperte seu Herói</title>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+<body>
+    <header class="header container-fluid">
+        <nav class="nav row">
+            <div class="nav__brand offset-md-2 col-2">
+                <span class="gray">RAFA</span>
+                <span class="yellow">RIBEIRO</span>
+            </div>
+            <div class="nav__menu offset-md-3 col-5">
+                <div class="nav__item">Papo Momento da Virada</div>
+                <div class="nav__item">Depoimentos</div>
+                <div class="nav__item">Contato</div>
+            </div>
+        </nav>
+    </header>
 
-</div>
+    <main class="main container-fluid">
+        <div class="main__callout">
+            <div class="main__lead">TENHA A VIDA DOS SEUS</div>
+            <div class="main__headline">
+                <h1>SONHOS</h1>
+            </div>
+        </div>
+    </main>
+
+    <section class="mailing-list">
+        <div class="container">
+            <div class="row">
+                <div class="col-5">
+                    Entre para nossa lista e receba conteúdos
+                    <br> exclusivos e com prioridade
+                </div>
+                <div class="offset-md-1 col-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Qual o seu e-mail?" aria-label="Qual o seu e-mail?">
+                        <span class="input-group-btn">
+                            <button class="btn btn-secondary" type="button">Cadastrar</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <div class="row">
+                <div class="about__container offset-6 col-6">
+                    <div class="about__title">
+                        <h2>conheça o rafa</h2>
+                    </div>
+                    <div class="about__text">
+                        <p>Um apaixonado por esportes e empreendedorismo, formado em
+                            <br> Coaching e Liderança pela Organização Internacional Cóndor
+                            <br> Blanco.</p>
+                        <p>Pai do Matheus, que sonha em ser jogador de futebol.</p>
+                        <p>Co-criador da Revoada, rede de facilitadores que potencializa o
+                            <br> desenvolvimento pessoal e de grupos através de cursos,
+                            <br> workshop e vivências.</p>
+                        <p>Membro da equipe de Coachs da empresa Desperte-se. Mentor
+                            <br> de jovens Empreendedores no Programa Iniciativa Jovem.</p>
+                        <p>Formado em sustentabilidade pelo Gaia Education e facilitador de
+                            <br> projetos colaborativos - Dragon Dreaming.</p>​
+                        <p>Turismólogo e Sócio-fundador da Mini Aventuras.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="papo">
+        <div class="container">
+            <div class="row">
+                <div class="papo__callout col-4">
+                    <p>Assista GRATUITAMENTE o PAPO MOMENTO DA VIRADA</p>
+                    <p>Uma série de entrevistas com EMPREENDEDORES SUPER INSPIRADORES</p>
+                    <br>
+                    <button class="papo__button">QUERO PARTICIPAR AGORA</button>
+                </div>
+                <div class="papo__img offset-2 col-6">
+                    <img src="assets/img/papomomentodavirada.png" alt="Papo Momento da Virada">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cursos container">
+        <div class="row">
+            <div class="cursos__section-title col-3">
+                <hr>
+                <h2>conheça nossos cursos</h2>
+            </div>
+        </div>
+        <div class="cursos__container container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="cursos__item">
+                        <span>papo momento da virada</span>
+                    </div>
+                </div>
+                <div class="offset-1 col-3">
+                    <div class="cursos__item">
+                        <span>aperte o play</span>
+                    </div>
+                </div>
+                <div class="offset-1 col-3">
+                    <div class="cursos__item">
+                        <span>mentoria</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--
+    <section class="blog">
+        <div class="container">
+            <div class="row">
+                <div class="blog__section-title">
+                    <h2>BLOG</h2>
+                </div>
+            </div>
+            <div class="blog__container container">
+                <div class="blog__container">
+                    <div class="row">
+                        <div class="blog__post-title col-12">
+                            <h3>05 passos para planejar seu 2017 de forma prática e eficiente</h3>
+                            e rezar para todos os santos. Certo?</p>
+                            <p>Quantas vezes você fez isso e um mês depois (ou até mesmo uma semana depois) já não lembrava
+                                de mais nada? E assim seguiu seu ano, com muitas coisas acontecendo, claro… quando boas,
+                                dando graças a Deus, ma...
+                            </p>
+                            ma...
+                            </p>
+                        </div>
+                        <div class="blog__footer">
+                            <div class="blog__btn">
+                            </div>
+    </section>
+-->
+
+    </section>
+
+    <section class="depoimentos">
+        <div class="container">
+            <div class="row">
+                <div class="depoimentos__section-title">
+                    <hr>
+                    <h2>DEPOIMENTOS</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img src="/assets/img/depoimento.png" alt="">
+                </div>
+                <div class="col-4">
+                    <img src="/assets/img/depoimento.png" alt="">
+                </div>
+                <div class="col-4">
+                    <img src="/assets/img/depoimento.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer container">
+        <div class="footer__mailing-callout row">
+            <div class="col-12">
+                <p>Entre para nossa lista e receba conteúdos
+                    <br> exclusivos e com prioridade
+            </div>
+            <div class="col-12">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Qual o seu e-mail?" aria-label="Qual o seu e-mail?">
+                    <span class="input-group-btn">
+                        <button class="btn btn-secondary" type="button">Cadastrar</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="footer__menu offset-2 col-3">
+                <p>sobre</p>
+                <p>pra você</p>
+                <p>blog</p>
+                <p>depoimentos</p>
+                <p>contato</p>
+            </div>
+            <div class="footer__social col-3">
+                <h2>CONECTE-SE COMIGO</h2>
+                <span>
+                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                </span>
+                <span>
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </span>
+            </div>
+            <div class="row">
+                <div class="footer__logo col-12">
+                    <h2>rafaribeiro</h2>
+                </div>
+                <div class="footer__copyright col-12">
+                    <small>© 2017 - Rafa Ribeiro. Todos os direitos reservados. Termos de uso. Design orgulhosamente elaborado pelo
+                        time Rafa Ribeiro.</small>
+                </div>
+                <br>
+            </div>
+        </div>
+        <br>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/dd1b0d59f0.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
