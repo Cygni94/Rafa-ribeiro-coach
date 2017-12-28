@@ -70,5 +70,3 @@ gulp.task('sass', function() {
         .pipe(gulp.dest("src/assets/css"))
         .pipe(browserSync.stream());
 });
-
-gulp.task('default', ['server']);

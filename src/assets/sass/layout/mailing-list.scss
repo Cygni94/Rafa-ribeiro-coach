@@ -1,12 +1,163 @@
 .mailing-list {
     position: absolute;
     margin-top: -3.5rem;
+    height: 10rem;
     width: 100%;
     padding: 0rem 9rem;
     display: flex;
+    justify-content: space-between;
 }
 
 .mailing-list .container {
-    height: 10rem;
     background-color: white;
+}
+
+.mailing-list .container .row {
+    padding: 3rem 2rem;
+}
+
+.mailing-list__callout {
+    font-family: Roboto-Bold;
+    font-size: 1.2rem;
+    color: $cinza-escuro;
+}
+
+.mailing-list__input {
+    align-self: center;
+    text-align: right;
+    border-radius: 10px;
+}
+
+.mailing-list__input-email {
+    background-color: rgb(240, 242, 244);
+    border-bottom-color: rgb(122, 140, 158);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 0px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0px;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-left-color: rgb(122, 140, 158);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: rgb(122, 140, 158);
+    border-right-style: none;
+    border-right-width: 0px;
+    border-top-color: rgb(122, 140, 158);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 0px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    box-sizing: border-box;
+    color: rgb(62, 70, 79);
+    cursor: text;
+    display: inline-block;
+    font-family: Roboto;
+    font-size: 14px;
+    font-stretch: 100%;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-weight: 400;
+    height: 46.5px;
+    letter-spacing: normal;
+    line-height: normal;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    outline-color: rgb(62, 70, 79);
+    outline-style: none;
+    outline-width: 0px;
+    padding-bottom: 14px;
+    padding-left: 1rem;
+    padding-right: 14px;
+    padding-top: 14px;
+    text-align: start;
+    text-indent: 0px;
+    text-rendering: auto;
+    text-shadow: none;
+    text-transform: none;
+    width: 65%;
+    word-spacing: 0px;
+    writing-mode: horizontal-tb;
+    -webkit-appearance: none;
+    -webkit-rtl-ordering: logical;
+    -webkit-border-image: none;
+}
+
+.mailing-list__button {
+    /*   @include plain-button;
+    background-color: $verde;
+    color: white; */
+    align-items: flex-start;
+    background-color: rgb(70, 204, 110);
+    border-bottom-color: rgb(70, 204, 110);
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 5px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0px;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-left-color: rgb(70, 204, 110);
+    border-left-style: none;
+    border-left-width: 0px;
+    border-right-color: rgb(70, 204, 110);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: rgb(70, 204, 110);
+    border-top-left-radius: 0px;
+    border-top-right-radius: 5px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roboto;
+    font-size: 14px;
+    font-stretch: 100%;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-weight: 400;
+    height: 47px;
+    letter-spacing: normal;
+    line-height: normal;
+    margin-bottom: 0px;
+    margin-left: -4px;
+    margin-right: 0px;
+    margin-top: 0px;
+    max-width: 200px;
+    outline-color: rgb(255, 255, 255);
+    outline-style: none;
+    outline-width: 0px;
+    padding-bottom: 14px;
+    padding-left: 26px;
+    padding-right: 26px;
+    padding-top: 14px;
+    text-align: center;
+    text-indent: 0px;
+    text-rendering: auto;
+    text-shadow: none;
+    text-transform: none;
+    user-select: none;
+    vertical-align: middle;
+    white-space: pre;
+    width: 30%;
+    word-spacing: 0px;
+    writing-mode: horizontal-tb;
+    -webkit-appearance: none;
+    -webkit-rtl-ordering: logical;
+    -webkit-border-image: none;
 }
