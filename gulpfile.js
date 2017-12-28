@@ -64,7 +64,7 @@ gulp.task('server', ['sass'], function() {
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
-    return gulp.src("/assets/sass/**/*.scss")
+    return gulp.src("src/assets/sass/*.scss")
         .pipe(sass())
         .pipe(gulp.dest("src/assets/css"))
         .pipe(browserSync.stream());
