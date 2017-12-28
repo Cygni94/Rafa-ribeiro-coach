@@ -1,0 +1,27 @@
+.main {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    height: 95%;
+    background: url('../img/sunset.jpg') no-repeat right top;
+    background-size: cover;
+}
+
+.main__callout {
+    align-self: center;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    line-height: 6rem;
+}
+
+.main__lead {
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+}
+
+.main__headline {
+    letter-spacing: 1.5rem;
+    font-size: 4rem;
+}

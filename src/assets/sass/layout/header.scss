@@ -1,0 +1,37 @@
+//header//
+
+.header {
+    background-color: black;
+    position: absolute;
+    z-index: 1;
+}
+
+.nav {
+    align-content: center;
+    height: 3.5rem;
+}
+
+.nav__brand {
+    align-self: center;
+    text-align: center;
+}
+
+.nav__menu {
+    display: flex;
+}
+
+.nav__item {
+    align-self: center;
+    text-align: center;
+    margin-left: 1rem;
+    color: $cinza-claro;
+    font-size: 1rem;
+}
+
+.gray {
+    color: $cinza-claro;
+}
+
+.yellow {
+    color: $yellow;
+}

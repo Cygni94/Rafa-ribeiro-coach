@@ -1,0 +1,23 @@
+.papo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    .row {
+        justify-content: space-around;
+    }
+}
+
+.papo__img {
+    align-self: center;
+}
+
+.papo__callout {
+    font-size: 1.25rem;
+    color: $cinza-claro;
+    align-self: center;
+}
+
+.papo__button{
+    @include plain-button;
+    color: lightgray;
+}
