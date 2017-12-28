@@ -846,27 +846,31 @@ html, body {
   width: 5rem; }
 
 .header {
-  background-color: black;
+  background-color: #01CAFF;
   position: absolute;
   z-index: 1; }
 
 .nav {
   align-content: center;
-  height: 3.5rem; }
+  height: 4.5rem; }
 
 .nav__brand {
   align-self: center;
   text-align: center; }
 
+.nav__brand-logo {
+  margin-left: 1.5rem; }
+
 .nav__menu {
-  display: flex; }
+  display: flex;
+  padding-left: 2.75rem; }
 
 .nav__item {
   align-self: center;
   text-align: center;
   margin-left: 1rem;
-  color: #A8A8A8;
-  font-size: 1rem; }
+  color: #FFF;
+  font-size: 14px; }
 
 .gray {
   color: #A8A8A8; }
@@ -880,7 +884,7 @@ html, body {
   justify-content: center;
   position: relative;
   height: 95%;
-  background: url("../img/sunset.jpg") no-repeat right top;
+  background: whitesmoke no-repeat right top;
   background-size: cover; }
 
 .main__callout {
