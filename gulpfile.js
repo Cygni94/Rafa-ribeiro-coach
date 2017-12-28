@@ -50,19 +50,24 @@ gulp.task('svgmin', function () {
         .pipe(gulp.dest('dist/assets/img'));
 });
 
-gulp.task('server', function () {
+
+// Static Server + watching scss/html files
+gulp.task('server', ['sass'], function() {
+
     browserSync.init({
-        server: {
-            baseDir: 'src'
-        }
+        server: "./src"
     });
 
-    gulp.watch('src/**/*').on('change', browserSync.reload);
-
-    gulp.watch('src/assets/sass/**/*.scss').on('change', function (event) {
-        return gulp.src('src/assets/sass/style.scss')
-            .pipe(sass(gulp.src))
-            .pipe(gulp.dest('src/assets/css'))
-            .pipe(browserSync.stream());
-    });
+    gulp.watch("src/assets/sass/**/*.scss", ['sass']);
+    gulp.watch("src/*.html").on('change', browserSync.reload);
 });
+
+// Compile sass into CSS & auto-inject into browsers
+gulp.task('sass', function() {
+    return gulp.src("/assets/sass/**/*.scss")
+        .pipe(sass())
+        .pipe(gulp.dest("src/assets/css"))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('default', ['server']);
