@@ -1,5 +1,6 @@
 // Para rodar o browsersync e o sass, utilize npm run gulp server
 // Para gerar a versão dist, utilize npm run gulp
+//CRIAR TASK PARA GERAR SITE ESTÁTICO DO JEKYLL
 
 var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
