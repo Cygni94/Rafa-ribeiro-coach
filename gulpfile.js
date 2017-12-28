@@ -62,6 +62,7 @@ gulp.task('server', function () {
     gulp.watch('src/assets/sass/**/*.scss').on('change', function (event) {
         return gulp.src('src/assets/sass/style.scss')
             .pipe(sass(gulp.src))
-            .pipe(gulp.dest('src/assets/css'));
+            .pipe(gulp.dest('src/assets/css'))
+            .pipe(browserSync.stream());
     });
 });

@@ -858,9 +858,6 @@ html, body {
   align-self: center;
   text-align: center; }
 
-.nav__brand-logo {
-  margin-left: 1.5rem; }
-
 .nav__menu {
   display: flex;
   padding-left: 2.75rem; }
@@ -884,12 +881,12 @@ html, body {
   justify-content: center;
   position: relative;
   height: 95%;
-  background: whitesmoke no-repeat right top;
+  background: black no-repeat right top;
   background-size: cover; }
 
 .main__callout {
   align-self: center;
-  color: black;
+  color: white;
   font-family: 'Poppins', sans-serif;
   text-align: center;
   line-height: 6rem; }
@@ -906,10 +903,10 @@ html, body {
   position: absolute;
   margin-top: -3.5rem;
   width: 100%;
+  padding: 0rem 8rem;
   display: flex; }
 
 .mailing-list .container {
-  padding: 2rem;
   background-color: white; }
 
 .about {
