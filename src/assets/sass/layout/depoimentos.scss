@@ -1,6 +1,15 @@
 .depoimentos {
-    height: 95%;
-    background-color: lightblue;
+    height: 98%;
+    background-color: $azul;
+    display: flex;
+    align-items: center;
+}
+
+.depoimentos__section-title {
+}
+
+.depoimentos__section-title span {
+    font-family: Roboto-Bold;
 }
 
 .depoimentos__list {

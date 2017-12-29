@@ -1,7 +1,7 @@
 .papo {
     display: flex;
     align-items: center;
-    height: 90%;
+    height: 95%;
     .row {
         justify-content: space-around;
     }
@@ -13,11 +13,32 @@
 
 .papo__callout {
     font-size: 1.25rem;
-    color: $cinza-claro;
     align-self: center;
 }
 
-.papo__button{
+.papo__callout-title {
+    font-family: Roboto-Bold;
+    color: black;
+}
+
+.papo__callout-main {
+    font-family: Roboto-Bold;
+    color: $vermelho;
+    font-size: 2rem;
+    display: block;
+    line-height: 1;
+    margin: 1rem 0rem;
+}
+
+.papo__callout-description {
+    font-family: Roboto-Light;
+}
+
+.papo__callout-button {
     @include plain-button;
-    color: lightgray;
+    font-family: Roboto-Light;
+    border: 1px solid black;
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    margin: 1rem 0rem;
 }

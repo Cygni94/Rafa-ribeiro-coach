@@ -1,17 +1,26 @@
 .cursos {
-height: 95%;
+height: 80%;
+}
+
+.cursos__section-header {
+    padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .cursos__section-title {
-    padding-left: 0px;
+    font-size: Roboto-Bold;
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 .cursos__container .row {
 display: flex;
 }
 
-.cursos__item {
-    background-color: grey;
+.cursos__item-1, .cursos__item-2, .cursos__item-3 {
+    font-family: Roboto-Bold;
     height: 20rem;
     margin-top: 2rem;
     margin-right: 5.5rem;
@@ -24,4 +33,14 @@ display: flex;
     }
 }
 
+.cursos__item-1 {
+    background-color: $vermelho;
+}
 
+.cursos__item-2 {
+    background-color: $amarelo;
+}
+
+.cursos__item-3 {
+    background-color: $azul;
+}

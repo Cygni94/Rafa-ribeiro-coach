@@ -858,7 +858,8 @@ body {
 
 .hr {
   display: inline-block;
-  width: 5rem; }
+  width: 5rem;
+  margin: 0; }
 
 .blank {
   background-color: #b3b3b3;
@@ -1076,7 +1077,7 @@ body {
   -webkit-border-image: none; }
 
 .about {
-  height: 80%;
+  height: 95%;
   padding: 2rem 5rem;
   background-image: url(../img/rafaelribeiro.jpg);
   background-size: 100% auto;
@@ -1098,7 +1099,7 @@ body {
 .papo {
   display: flex;
   align-items: center;
-  height: 90%; }
+  height: 95%; }
   .papo .row {
     justify-content: space-around; }
 
@@ -1107,38 +1108,78 @@ body {
 
 .papo__callout {
   font-size: 1.25rem;
-  color: #A8A8A8;
   align-self: center; }
 
-.papo__button {
+.papo__callout-title {
+  font-family: Roboto-Bold;
+  color: black; }
+
+.papo__callout-main {
+  font-family: Roboto-Bold;
+  color: #EF4136;
+  font-size: 2rem;
+  display: block;
+  line-height: 1;
+  margin: 1rem 0rem; }
+
+.papo__callout-description {
+  font-family: Roboto-Light; }
+
+.papo__callout-button {
   border: none;
   background-color: transparent;
-  color: lightgray; }
+  font-family: Roboto-Light;
+  border: 1px solid black;
+  border-radius: .5rem;
+  padding: .5rem 1rem;
+  margin: 1rem 0rem; }
 
 .cursos {
-  height: 95%; }
+  height: 80%; }
+
+.cursos__section-header {
+  padding-left: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; }
 
 .cursos__section-title {
-  padding-left: 0px; }
+  font-size: Roboto-Bold;
+  font-size: 2rem;
+  font-weight: 700; }
 
 .cursos__container .row {
   display: flex; }
 
-.cursos__item {
-  background-color: grey;
+.cursos__item-1, .cursos__item-2, .cursos__item-3 {
+  font-family: Roboto-Bold;
   height: 20rem;
   margin-top: 2rem;
   margin-right: 5.5rem;
   display: flex;
   align-content: center; }
-  .cursos__item span {
+  .cursos__item-1 span, .cursos__item-2 span, .cursos__item-3 span {
     align-self: center;
     color: white;
     font-size: 2rem; }
 
+.cursos__item-1 {
+  background-color: #EF4136; }
+
+.cursos__item-2 {
+  background-color: #FFD200; }
+
+.cursos__item-3 {
+  background-color: #01CAFF; }
+
 .depoimentos {
-  height: 95%;
-  background-color: lightblue; }
+  height: 98%;
+  background-color: #01CAFF;
+  display: flex;
+  align-items: center; }
+
+.depoimentos__section-title span {
+  font-family: Roboto-Bold; }
 
 .depoimentos__list {
   display: flex;
