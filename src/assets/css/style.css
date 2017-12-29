@@ -861,6 +861,9 @@ body {
   position: relative;
   color: #4D4D4D; }
 
+a, a:hover {
+  color: #4D4D4D; }
+
 .hr {
   display: inline-block;
   width: 5rem;
@@ -886,13 +889,15 @@ body {
 .nav__menu {
   display: flex;
   padding-left: 2.75rem; }
+  .nav__menu a {
+    color: inherit; }
 
 .nav__item {
   align-self: center;
   text-align: center;
   margin-left: 1rem;
   color: #FFF;
-  font-size: 14px; }
+  font-size: 1rem; }
 
 .gray {
   color: #A8A8A8; }
@@ -906,7 +911,7 @@ body {
   justify-content: center;
   position: relative;
   height: 85%;
-  background: black no-repeat right top;
+  background: url(../img/rafa_ribeiro_home.jpg) no-repeat right top;
   background-size: cover; }
 
 .main__callout {
@@ -1187,7 +1192,7 @@ body {
   font-size: Roboto-Bold;
   font-size: 2rem;
   font-weight: 700;
-  margin-top: 5rem; }
+  margin-top: 1rem; }
 
 .depoimentos__list {
   display: flex;
