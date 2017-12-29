@@ -1,23 +1,32 @@
 @font-face {
     font-family: Roboto;
     src: url('../font/Roboto.ttf');
-  }
+}
 
+@font-face {
+    font-family: Roboto-Light;
+    src: url('../font/Roboto-Light.ttf');
+}
 
 @font-face {
     font-family: Roboto-Bold;
     src: url('../font/Roboto-Bold.ttf');
-  }
-
-html, body {
-    height: 100%;
-    width: 100%;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:800');
+html,
+body {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
 
 .hr {
     display: inline-block;
     width: 5rem;
 }
 
+.blank {
+    background-color: rgb(179, 179, 179);
+    height: 7rem;
+}

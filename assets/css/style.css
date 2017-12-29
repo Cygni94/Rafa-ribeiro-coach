@@ -843,16 +843,26 @@ template {
   src: url("../font/Roboto.ttf"); }
 
 @font-face {
+  font-family: Roboto-Light;
+  src: url("../font/Roboto-Light.ttf"); }
+
+@font-face {
   font-family: Roboto-Bold;
   src: url("../font/Roboto-Bold.ttf"); }
 
-html, body {
+html,
+body {
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  position: relative; }
 
 .hr {
   display: inline-block;
   width: 5rem; }
+
+.blank {
+  background-color: #b3b3b3;
+  height: 7rem; }
 
 .header {
   background-color: #01CAFF;
@@ -889,31 +899,31 @@ html, body {
   align-content: center;
   justify-content: center;
   position: relative;
-  height: 95%;
+  height: 75%;
   background: black no-repeat right top;
   background-size: cover; }
 
 .main__callout {
   align-self: center;
-  color: white;
-  font-family: 'Poppins', sans-serif;
   text-align: center;
-  line-height: 6rem; }
+  color: white;
+  margin-top: 5.5rem; }
 
 .main__lead {
-  font-size: 1.5rem;
-  letter-spacing: 0.5rem; }
+  font-family: Roboto-Light;
+  font-size: 1.8rem; }
 
 .main__headline {
-  letter-spacing: 1.5rem;
-  font-size: 4rem; }
+  margin-top: -1rem;
+  font-family: Roboto-Bold;
+  font-size: 7rem; }
 
 .mailing-list {
   position: absolute;
   margin-top: -3.5rem;
-  height: 10rem;
+  height: 9rem;
   width: 100%;
-  padding: 0rem 9rem;
+  padding: 0rem 8rem;
   display: flex;
   justify-content: space-between; }
 
@@ -921,7 +931,7 @@ html, body {
   background-color: white; }
 
 .mailing-list .container .row {
-  padding: 3rem 2rem; }
+  padding: 2.5rem 2rem; }
 
 .mailing-list__callout {
   font-family: Roboto-Bold;
@@ -1066,15 +1076,29 @@ html, body {
   -webkit-border-image: none; }
 
 .about {
-  padding: 7rem 5rem;
+  height: 80%;
+  padding: 2rem 5rem;
   background-image: url(../img/rafaelribeiro.jpg);
   background-size: 100% auto;
   color: white; }
 
+.about__title-white {
+  font-family: Roboto-Light;
+  font-size: 2rem;
+  color: white; }
+
+.about__title-blue {
+  font-family: Roboto-Bold;
+  font-size: 2rem;
+  color: #01CAFF; }
+
+.about__text {
+  font-family: Roboto-Light; }
+
 .papo {
   display: flex;
   align-items: center;
-  height: 100%; }
+  height: 90%; }
   .papo .row {
     justify-content: space-around; }
 
