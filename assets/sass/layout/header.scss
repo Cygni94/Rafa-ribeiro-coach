@@ -23,6 +23,9 @@
 .nav__menu {
     display: flex;
     padding-left: 2.75rem;
+    a {
+        color: inherit;
+    }
 }
 
 .nav__item {
@@ -30,7 +33,7 @@
     text-align: center;
     margin-left: 1rem;
     color: $branco;
-    font-size: 14px;
+    font-size: 1rem;
 }
 
 .gray {
