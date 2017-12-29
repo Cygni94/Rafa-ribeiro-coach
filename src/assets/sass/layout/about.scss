@@ -1,6 +1,23 @@
 .about {
-    padding: 7rem 5rem;
+    height: 80%;
+    padding: 2rem 5rem;
     background-image: url(../img/rafaelribeiro.jpg);
     background-size: 100% auto;
     color: white;
+}
+
+.about__title-white {
+    font-family: Roboto-Light;
+    font-size: 2rem;
+    color: white;
+}
+
+.about__title-blue {
+    font-family: Roboto-Bold;
+    font-size: 2rem;
+    color: $azul;
+}
+
+.about__text {
+    font-family: Roboto-Light;
 }
