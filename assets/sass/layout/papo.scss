@@ -42,3 +42,9 @@
     padding: .5rem 1rem;
     margin: 1rem 0rem;
 }
+
+.papo__callout-button:hover {
+ transition: 500ms;
+    background-color: $cinza-escuro;
+    color: white;
+}

@@ -861,13 +861,17 @@ body {
   position: relative;
   color: #4D4D4D; }
 
-a, a:hover {
+a,
+a:hover {
   color: #4D4D4D; }
 
 .hr {
   display: inline-block;
-  width: 5rem;
-  margin: 0; }
+  width: 7rem;
+  margin: 0;
+  height: 1px;
+  background: #717171;
+  border-bottom: 2px solid #4D4D4D; }
 
 .blank {
   background-color: #b3b3b3;
@@ -1143,6 +1147,11 @@ a, a:hover {
   border-radius: .5rem;
   padding: .5rem 1rem;
   margin: 1rem 0rem; }
+
+.papo__callout-button:hover {
+  transition: 500ms;
+  background-color: #555555;
+  color: white; }
 
 .cursos {
   height: 80%; }
