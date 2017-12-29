@@ -13,12 +13,18 @@
     src: url('../font/Roboto-Bold.ttf');
 }
 
+@font-face {
+    font-family: Roboto-ThinItalic;
+    src: url('../font/Roboto-ThinItalic.ttf');
+}
+
 @import url('https://fonts.googleapis.com/css?family=Poppins:800');
 html,
 body {
     height: 100%;
     width: 100%;
     position: relative;
+    color: $preto-claro;
 }
 
 .hr {

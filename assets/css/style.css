@@ -850,11 +850,16 @@ template {
   font-family: Roboto-Bold;
   src: url("../font/Roboto-Bold.ttf"); }
 
+@font-face {
+  font-family: Roboto-ThinItalic;
+  src: url("../font/Roboto-ThinItalic.ttf"); }
+
 html,
 body {
   height: 100%;
   width: 100%;
-  position: relative; }
+  position: relative;
+  color: #4D4D4D; }
 
 .hr {
   display: inline-block;
@@ -1173,32 +1178,71 @@ body {
   background-color: #01CAFF; }
 
 .depoimentos {
-  height: 98%;
+  min-height: 100%;
   background-color: #01CAFF;
   display: flex;
   align-items: center; }
 
-.depoimentos__section-title span {
-  font-family: Roboto-Bold; }
+.depoimentos__section-title {
+  font-size: Roboto-Bold;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 5rem; }
 
 .depoimentos__list {
   display: flex;
   justify-content: space-around;
   align-content: center;
-  padding-top: 2rem; }
+  padding-top: 2rem;
+  margin-bottom: 5rem; }
 
-.depoimentos__item {
+.depoimentos__item-1,
+.depoimentos__item-2,
+.depoimentos__item-3 {
   height: 28rem;
   display: flex;
   flex-direction: column;
   align-content: center;
   margin: auto;
   text-align: center;
-  background-color: black;
   color: whitesmoke; }
 
+.depoimentos__item-1 {
+  background-image: url(../img/depoimentos/rafa_ribeiro_depoimento_xande_bastos.jpg); }
+
+.depoimentos__item-2 {
+  background-image: url(../img/depoimentos/rafa_ribeiro_depoimento_agatha.jpg); }
+
+.depoimentos__item-3 {
+  background-image: url(../img/depoimentos/rafa_ribeiro_depoimento_rafael.jpg); }
+
+.depoimentos__item-header {
+  color: #FFD200;
+  margin: 3rem 0rem; }
+
+.depoimentos__item-body {
+  font-family: Roboto-ThinItalic;
+  font-size: 1.1rem;
+  line-height: 1.5; }
+
+.footer {
+  min-height: 80%; }
+
 .footer__mailing-callout {
-  text-align: center; }
+  font-family: Roboto-Bold;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 4rem; }
+
+.footer__menu {
+  font-family: Roboto-Bold;
+  font-size: 1.1rem; }
+  .footer__menu span {
+    display: block;
+    margin-bottom: .5rem; }
+
+.footer__bottom {
+  margin-top: 6rem; }
 
 .footer__social .fa {
   font-size: 2rem; }

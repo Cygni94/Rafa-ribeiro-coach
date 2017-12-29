@@ -1,6 +1,26 @@
 //footer//
+.footer {
+    min-height: 80%;
+}
+
 .footer__mailing-callout {
+    font-family: Roboto-Bold;
+    font-size: 1.2rem;
     text-align: center;
+    margin-top: 4rem;
+}
+
+.footer__menu {
+    font-family: Roboto-Bold;
+    font-size: 1.1rem;
+    span {
+        display: block;
+        margin-bottom: .5rem;
+    }
+}
+
+.footer__bottom {
+    margin-top: 6rem;
 }
 
 .footer__social .fa {
