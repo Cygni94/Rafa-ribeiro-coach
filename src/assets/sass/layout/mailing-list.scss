@@ -3,7 +3,7 @@
     margin-top: -3.5rem;
     height: 9rem;
     width: 100%;
-    padding: 0rem 8rem;
+
     display: flex;
     justify-content: space-between;
 }
@@ -13,13 +13,15 @@
 }
 
 .mailing-list .container .row {
-    padding: 2.5rem 2rem;
+    padding: 2.5rem 0rem;
+    width: 100%;
 }
 
 .mailing-list__callout {
     font-family: Roboto-Bold;
     font-size: 1.2rem;
     color: $cinza-escuro;
+    padding-left: 3rem;
 }
 
 .mailing-list__input {

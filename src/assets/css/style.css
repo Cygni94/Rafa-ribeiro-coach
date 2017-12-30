@@ -938,7 +938,6 @@ a:hover {
   margin-top: -3.5rem;
   height: 9rem;
   width: 100%;
-  padding: 0rem 8rem;
   display: flex;
   justify-content: space-between; }
 
@@ -946,12 +945,14 @@ a:hover {
   background-color: white; }
 
 .mailing-list .container .row {
-  padding: 2.5rem 2rem; }
+  padding: 2.5rem 0rem;
+  width: 100%; }
 
 .mailing-list__callout {
   font-family: Roboto-Bold;
   font-size: 1.2rem;
-  color: #555555; }
+  color: #555555;
+  padding-left: 3rem; }
 
 .mailing-list__input {
   align-self: center;
@@ -1114,11 +1115,10 @@ a:hover {
   display: flex;
   align-items: center;
   height: 95%; }
-  .papo .row {
-    justify-content: space-around; }
 
-.papo__img {
-  align-self: center; }
+.papo__callout-img {
+  text-align: right;
+  padding-right: 0; }
 
 .papo__callout {
   font-size: 1.25rem;
@@ -1154,7 +1154,8 @@ a:hover {
   color: white; }
 
 .cursos {
-  height: 80%; }
+  height: 100%;
+  padding-top: 3rem; }
 
 .cursos__section-header {
   padding-left: 0px;
@@ -1174,7 +1175,7 @@ a:hover {
   font-family: Roboto-Bold;
   height: 20rem;
   margin-top: 2rem;
-  margin-right: 5.5rem;
+  margin-right: auto;
   display: flex;
   align-content: center; }
   .cursos__item-1 span, .cursos__item-2 span, .cursos__item-3 span {
@@ -1204,9 +1205,6 @@ a:hover {
   margin-top: 1rem; }
 
 .depoimentos__list {
-  display: flex;
-  justify-content: space-around;
-  align-content: center;
   padding-top: 2rem;
   margin-bottom: 5rem; }
 
@@ -1217,7 +1215,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-content: center;
-  margin: auto;
+  margin-right: auto;
   text-align: center;
   color: whitesmoke; }
 

@@ -2,13 +2,11 @@
     display: flex;
     align-items: center;
     height: 95%;
-    .row {
-        justify-content: space-around;
-    }
 }
 
-.papo__img {
-    align-self: center;
+.papo__callout-img {
+text-align: right;
+padding-right: 0;
 }
 
 .papo__callout {
