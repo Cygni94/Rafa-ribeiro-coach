@@ -1,5 +1,6 @@
 .cursos {
-height: 80%;
+height: 100%;
+padding-top: 3rem;
 }
 
 .cursos__section-header {
@@ -23,7 +24,7 @@ display: flex;
     font-family: Roboto-Bold;
     height: 20rem;
     margin-top: 2rem;
-    margin-right: 5.5rem;
+    margin-right: auto;
     display: flex;
     align-content: center;
     span {
