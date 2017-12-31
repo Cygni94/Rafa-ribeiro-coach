@@ -47,7 +47,9 @@
         height: 10rem;
     }
     .about {
-        padding: 0px;
+        font-size: 1.5rem;
+        padding: .5rem;
+        background-size: auto;
     }
     .about__container {
         padding-left: 0px;
@@ -55,6 +57,9 @@
     }
     .about__text p br {
         @include remove-br;
+    }
+    .footer__social {
+        text-align: right;
     }
 }
 

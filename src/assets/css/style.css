@@ -6534,9 +6534,8 @@ a:hover {
 .about {
   min-height: 95%;
   padding: 2rem 5rem;
-  background-image: url(../img/rafaelribeiro.jpg);
-  background-size: auto;
-  background-repeat: no-repeat;
+  background: url(../img/rafaelribeiro.jpg) no-repeat right top;
+  background-size: 100% auto;
   color: white; }
 
 .about__title-white {
@@ -6740,12 +6739,16 @@ a:hover {
   .cursos__item-3 {
     height: 10rem; }
   .about {
-    padding: 0px; }
+    font-size: 1.5rem;
+    padding: .5rem;
+    background-size: auto; }
   .about__container {
     padding-left: 0px;
     padding-right: 0px; }
   .about__text p br {
-    content: ' '; } }
+    content: ' '; }
+  .footer__social {
+    text-align: right; } }
 
 @media (min-width: 768px) {
   .papo__callout-img-sm {
