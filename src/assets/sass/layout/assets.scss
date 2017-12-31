@@ -21,13 +21,13 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:800');
 html,
 body {
+    position: relative;
     height: 100%;
     width: 100%;
-    position: relative;
     color: $preto-claro;
 }
 
-.body {
+body {
     overflow-x:hidden;
 }
 

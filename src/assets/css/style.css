@@ -6294,12 +6294,12 @@ a.text-dark:focus, a.text-dark:hover {
 
 html,
 body {
+  position: relative;
   height: 100%;
   width: 100%;
-  position: relative;
   color: #4D4D4D; }
 
-.body {
+body {
   overflow-x: hidden; }
 
 a,
@@ -6342,6 +6342,9 @@ a:hover {
   margin-left: 1rem;
   color: #FFF;
   font-size: 1rem; }
+
+.navbar-dark, .navbar-nav, .nav-link {
+  color: white; }
 
 .gray {
   color: #A8A8A8; }
@@ -6529,10 +6532,11 @@ a:hover {
   -webkit-border-image: none; }
 
 .about {
-  height: 95%;
+  min-height: 95%;
   padding: 2rem 5rem;
   background-image: url(../img/rafaelribeiro.jpg);
-  background-size: 100% auto;
+  background-size: auto;
+  background-repeat: no-repeat;
   color: white; }
 
 .about__title-white {
@@ -6553,10 +6557,6 @@ a:hover {
   align-items: center;
   height: 95%;
   background-color: whitesmoke; }
-
-.papo__callout-img {
-  text-align: right;
-  padding-right: 0; }
 
 .papo__callout {
   font-size: 1.25rem;
@@ -6592,7 +6592,7 @@ a:hover {
   color: white; }
 
 .cursos {
-  height: 100%;
+  min-height: 100%;
   padding-top: 3rem; }
 
 .cursos__section-header {
@@ -6654,8 +6654,13 @@ a:hover {
   flex-direction: column;
   align-content: center;
   margin-right: auto;
+  margin-bottom: 1rem;
   text-align: center;
   color: whitesmoke; }
+  .depoimentos__item-1 h3,
+  .depoimentos__item-2 h3,
+  .depoimentos__item-3 h3 {
+    font-size: 1.17em; }
 
 .depoimentos__item-1 {
   background-image: url(../img/depoimentos/rafa_ribeiro_depoimento_xande_bastos.jpg); }
@@ -6701,6 +6706,8 @@ a:hover {
   text-align: center; }
 
 @media (max-width: 767px) {
+  span br {
+    content: ' '; }
   .main__callout .main__lead {
     font-size: 1.3rem; }
   .main__callout .main__headline {
@@ -6708,10 +6715,41 @@ a:hover {
   .mailing-list {
     position: relative;
     text-align: center;
+    display: flex;
+    justify-content: center;
     margin: auto; }
     .mailing-list .mailing-list__callout br {
       content: ' '; }
     .mailing-list .mailing-list__input-email {
       margin-top: 1rem; }
     .mailing-list .mailing-list__button {
-      padding-left: 15px; } }
+      padding-left: 15px; }
+  .papo__callout {
+    text-align: center; }
+  .papo__callout-main,
+  .papo__callout-description {
+    text-align: center; }
+  .papo__callout-img-sm {
+    text-align: right;
+    padding-right: 0;
+    margin: auto; }
+  .papo__callout-img-md {
+    display: none; }
+  .cursos__item-1,
+  .cursos__item-2,
+  .cursos__item-3 {
+    height: 10rem; }
+  .about {
+    padding: 0px; }
+  .about__container {
+    padding-left: 0px;
+    padding-right: 0px; }
+  .about__text p br {
+    content: ' '; } }
+
+@media (min-width: 768px) {
+  .papo__callout-img-sm {
+    display: none; }
+  .papo__callout-img-md {
+    text-align: right;
+    padding-right: 0; } }

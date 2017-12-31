@@ -15,8 +15,6 @@
     text-align: center;
 }
 
-.nav__brand-logo {}
-
 .nav__menu {
     justify-content: flex-end;
     padding-left: 2.75rem;
@@ -31,6 +29,10 @@
     margin-left: 1rem;
     color: $branco;
     font-size: 1rem;
+}
+
+.navbar-dark, .navbar-nav, .nav-link {
+    color: white;
 }
 
 .gray {
