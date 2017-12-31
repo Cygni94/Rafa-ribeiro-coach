@@ -874,8 +874,7 @@ a:hover {
   border-bottom: 2px solid #4D4D4D; }
 
 .blank {
-  background-color: #b3b3b3;
-  height: 7rem; }
+  color: transparent; }
 
 .header {
   background-color: #01CAFF;
