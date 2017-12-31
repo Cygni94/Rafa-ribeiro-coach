@@ -1,8 +1,9 @@
 .about {
-    height: 95%;
+    min-height: 95%;
     padding: 2rem 5rem;
     background-image: url(../img/rafaelribeiro.jpg);
-    background-size: 100% auto;
+    background-size: auto;
+    background-repeat: no-repeat;
     color: white;
 }
 

@@ -2,12 +2,9 @@
     display: flex;
     align-items: center;
     height: 95%;
+    background-color: whitesmoke;
 }
 
-.papo__callout-img {
-text-align: right;
-padding-right: 0;
-}
 
 .papo__callout {
     font-size: 1.25rem;
@@ -42,7 +39,7 @@ padding-right: 0;
 }
 
 .papo__callout-button:hover {
- transition: 500ms;
+    transition: 500ms;
     background-color: $cinza-escuro;
     color: white;
 }

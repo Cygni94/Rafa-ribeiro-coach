@@ -856,10 +856,13 @@ template {
 
 html,
 body {
+  position: relative;
   height: 100%;
   width: 100%;
-  position: relative;
   color: #4D4D4D; }
+
+body {
+  overflow-x: hidden; }
 
 a,
 a:hover {

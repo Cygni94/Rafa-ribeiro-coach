@@ -13,19 +13,30 @@
 </head>
 
 <body>
-    <header class="header container-fluid">
-        <nav class="nav row">
-            <div class="nav__brand offset-1 col-2">
-                <img class="nav__brand-logo" src="assets/img/rafa_ribeiro_logo_menu.png" alt="">
+    <header class="header">
+        <nav class="nav navbar navbar-dark navbar-expand-lg justify-content-between container">
+            <div class="nav__brand">
+                <a class="navbar-brand" href="#">
+                    <img class="nav__brand-logo" src="assets/img/rafa_ribeiro_logo_menu.png" alt="">
+                </a>
             </div>
-            <div class="nav__menu offset-md-4 col-5">
-                <div class="nav__item">
-                    <a href="index.html#papo-momento-da-virada">papo momento da virada</a>
-                </div>
-                <div class="nav__item">
-                    <a href="index.html#cursos">treinamentos</a>
-                </div>
-                <div class="nav__item">contato</div>
+            <button class="navbar-toggler justify-content-end" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="nav__menu collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="nav__item navbar-nav">
+                    <li class="nav__item nav-item active">
+                        <a class="nav-link" href="index.html#papo-momento-da-virada">papo momento da virada</a>
+                        </a>
+                    </li>
+                    <li class="nav__item nav-item active">
+                        <a class="nav-link" href="index.html#cursos">treinamentos</a>
+                    </li>
+                    <li class="nav__item nav-item active">
+                        <a class="nav-link" href="#">contato</a>
+                    </li>
+                </ul>
             </div>
         </nav>
     </header>
@@ -44,14 +55,14 @@
     <section class="mailing-list">
         <div class="container">
             <div class="row">
-                <div class="mailing-list__callout col">
-                    Entre para nossa lista e receba conteúdos
-                    <br> exclusivos e com prioridade
+                <div class="mailing-list__callout col-md col-sm-12">
+                    <span>Entre para nossa lista e receba conteúdos
+                        <br> exclusivos e com prioridade</span>
                 </div>
-                <div class="mailing-list__input col">
-                    <div class="input-group">
+                <div class="mailing-list__input col-md col-sm-12">
+                    <div>
                         <input type="email" class="mailing-list__input-email" placeholder="Qual o seu  e-mail?">
-                        <span class="input-group-btn">
+                        <span>
                             <button class="mailing-list__button" type="button">Cadastrar</button>
                         </span>
                     </div>
@@ -59,21 +70,24 @@
             </div>
         </div>
     </section>
-    
+
     <section class="papo" id="papo-momento-da-virada">
         <div class="container">
             <div class="row">
-                <div class="papo__callout col-6">
+                <div class="papo__callout col-md-6 col-12">
                     <span class="papo__callout-title">nossos treinamentos</span>
                     <br>
                     <span class="papo__callout-main">assista gratuitamente o
                         <br>papo momento da virada</span>
+                    <div class="papo__callout-img-sm col-10">
+                        <img class="img-fluid" src="assets/img/rafa_ribeiro_logo_papo_momento_da_virada.png" alt="Papo Momento da Virada">
+                    </div>
                     <span class="papo__callout-description">uma série de entrevistas com
                         <br>empreendedores super inspiradores</span>
                     <br>
                     <button class="papo__callout-button">quero participar agora</button>
                 </div>
-                <div class="papo__callout-img col-6">
+                <div class="papo__callout-img-md col-6">
                     <img class="img-fluid" src="assets/img/rafa_ribeiro_logo_papo_momento_da_virada.png" alt="Papo Momento da Virada">
                 </div>
             </div>
@@ -91,19 +105,20 @@
         </div>
         <div class="cursos__container container">
             <div class="row">
-                <div class="cursos__item-1 col-3">
+                <div class="cursos__item-1 col-md-3 col-10">
                     <span>papo momento da virada</span>
                 </div>
                 <div class="col"></div>
-                <div class="cursos__item-2 col-3">
+                <div class="cursos__item-2 col-md-3 col-10">
                     <span>aperte o play</span>
                 </div>
                 <div class="col"></div>
-                <div class="cursos__item-3 col-3">
+                <div class="cursos__item-3 col-md-3 col-10">
                     <span>mentoria</span>
                 </div>
             </div>
         </div>
+        <br>
     </section>
     <!--
     <section class="blog">
@@ -142,7 +157,8 @@
                 </div>
             </div>
             <div class="depoimentos__list row">
-                <div class="depoimentos__item-1 col-3">
+                <div class="col"></div>
+                <div class="depoimentos__item-1 col-md-3 col-10">
                     <div class="depoimentos__item-header">
                         <h3>XANDE BASTOS</h3>
                     </div>
@@ -160,7 +176,8 @@
                     </div>
                 </div>
                 <div class="col"></div>
-                <div class="depoimentos__item-2 col-3">
+                <div class="col"></div>
+                <div class="depoimentos__item-2 col-md-3 col-10">
                     <div class="depoimentos__item-header">
                         <h3>ÁGATHA TOMMASI</h3>
                     </div>
@@ -179,7 +196,8 @@
                     </div>
                 </div>
                 <div class="col"></div>
-                <div class="depoimentos__item-3 col-3">
+                <div class="col"></div>
+                <div class="depoimentos__item-3 col-md-3 col-10">
                     <div class="depoimentos__item-header">
                         <h3>RAFAEL, DABÁ</h3>
                     </div>
@@ -194,6 +212,7 @@
                         <img src="assets/img/aspas_depoimento.png" alt="">
                     </div>
                 </div>
+                <div class="col"></div>
             </div>
         </div>
     </section>
@@ -201,10 +220,12 @@
     <section class="about" id="sobre">
         <div class="container">
             <div class="row">
-                <div class="about__container offset-6 col-6">
+                <div class="about__container offset-md-6 offset-5 col-md-6 col-7">
                     <div class="about__title">
-                        <span class="about__title-white">conheça o </span>
-                        <span class="about__title-blue">rafa</span>
+                        <span class="about__title-blue">
+                            <span class="about__title-white">conheça o </span>
+                            rafa</span>
+                        </span>
                     </div>
                     <div class="about__text">
                         <p>Um apaixonado por esportes e empreendedorismo, formado em
@@ -232,9 +253,9 @@
                     <br> exclusivos e com prioridade
             </div>
             <div class="mailing-list__input offset-3 col-6">
-                <div class="input-group">
+                <div>
                     <input type="email" class="mailing-list__input-email" placeholder="Qual o seu  e-mail?">
-                    <span class="input-group-btn">
+                    <span>
                         <button class="mailing-list__button" type="button">Cadastrar</button>
                     </span>
                 </div>
@@ -289,6 +310,7 @@
         crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/dd1b0d59f0.js"></script>
     <script src="script.js"></script>
+
 </body>
 
 </html>

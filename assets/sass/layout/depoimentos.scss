@@ -30,8 +30,12 @@
     flex-direction: column;
     align-content: center;
     margin-right: auto;
+    margin-bottom: 1rem;
     text-align: center;
     color: whitesmoke;
+    h3 {
+        font-size: 1.17em;
+    }
 }
 
 .depoimentos__item-1 {
