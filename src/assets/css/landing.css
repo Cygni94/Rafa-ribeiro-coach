@@ -874,9 +874,126 @@ a:hover {
   border-bottom: 2px solid #4D4D4D; }
 
 .blank {
-  background-color: #b3b3b3;
-  height: 7rem; }
+  color: transparent; }
 
-.landing-callout .col {
-  display: flex;
+.landing-callout {
+  color: white;
+  background-color: #01CAFF;
+  min-height: auto;
+  padding: 4rem 0rem 2rem 0rem;
+  text-align: center; }
+
+.landing-callout__header {
+  font-size: 1.8rem;
+  font-family: Roboto-Light; }
+
+.landing-callout__main {
+  font-size: 2rem;
+  font-family: Roboto;
+  text-align: center;
+  line-height: 1; }
+  .landing-callout__main .highlight {
+    font-family: Roboto-Bold;
+    font-size: 3rem;
+    color: black; }
+
+.landing-callout__list {
+  font-family: Roboto-Light;
+  font-size: 1.3rem; }
+
+.mailing-list {
+  background-color: #FFD200;
+  color: black;
+  font-family: Roboto-Light;
+  font-size: 1.2rem;
+  padding: 1rem 0rem;
+  text-align: center;
+  line-height: 1.2; }
+  .mailing-list .highlight {
+    font-family: Roboto-Bold;
+    font-size: 1.3rem; }
+
+.mailing-list__input--email {
+  width: 90%;
+  padding: .5rem;
+  color: black; }
+
+.mailing-list__input--button {
+  border: none;
+  background-color: transparent;
+  background-color: #01CAFF;
+  color: white;
+  font-family: Roboto-Light;
+  width: 90%;
+  margin: .5rem;
+  padding: .3rem; }
+
+.landing-description {
+  min-height: auto;
+  background-color: #F1F2F4;
+  padding-bottom: 5rem;
+  color: black; }
+
+.landing-description__header {
+  line-height: 1;
+  text-align: center;
+  margin: auto;
+  padding-top: 4rem; }
+  .landing-description__header h1 {
+    font-family: Roboto-Bold;
+    font-size: 2rem; }
+
+.landing-description__main {
+  margin: auto;
+  text-align: center;
+  padding: .5rem; }
+  .landing-description__main h2 {
+    font-family: Roboto-Light;
+    font-size: 1.5rem;
+    font-weight: 300; }
+
+.landing-description__list {
   justify-content: center; }
+
+.list__item--1,
+.list__item--2,
+.list__item--3,
+.list__item--4 {
+  background-color: white;
+  display: inherit;
+  height: auto;
+  margin: 2rem 1.2rem;
+  padding: 0;
+  line-height: 1; }
+
+.list__item--1,
+.list__item--3 {
+  text-align: left;
+  justify-content: flex-start; }
+  .list__item--1 .list__item--title,
+  .list__item--3 .list__item--title {
+    padding: 3rem 0rem 0rem 1rem; }
+  .list__item--1 .list__item--description,
+  .list__item--3 .list__item--description {
+    padding: 1rem 0rem 0rem 1rem; }
+
+.list__item--2,
+.list__item--4 {
+  text-align: right;
+  justify-content: flex-end; }
+  .list__item--2 .list__item--title,
+  .list__item--4 .list__item--title {
+    padding: 3rem 1rem 0rem 0rem; }
+  .list__item--2 .list__item--description,
+  .list__item--4 .list__item--description {
+    padding: 1rem 1rem 0rem 0rem; }
+
+.list__item--title {
+  font-family: Roboto-Bold;
+  font-size: 1.3rem;
+  line-height: 1.2; }
+
+.list__item--description {
+  font-family: Roboto-Light;
+  font-size: 1.2rem;
+  padding: 3rem 0rem 0rem 1rem; }
