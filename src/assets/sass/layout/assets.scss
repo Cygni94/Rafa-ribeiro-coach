@@ -27,6 +27,10 @@ body {
     color: $preto-claro;
 }
 
+.body {
+    overflow-x:hidden;
+}
+
 a,
 a:hover {
     color: $preto-claro;

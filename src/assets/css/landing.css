@@ -861,6 +861,9 @@ body {
   position: relative;
   color: #4D4D4D; }
 
+.body {
+  overflow-x: hidden; }
+
 a,
 a:hover {
   color: #4D4D4D; }

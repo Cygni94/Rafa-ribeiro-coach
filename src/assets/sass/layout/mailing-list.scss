@@ -1,9 +1,8 @@
 .mailing-list {
     position: absolute;
     margin-top: -3.5rem;
-    height: 9rem;
+    min-height: 9rem;
     width: 100%;
-
     display: flex;
     justify-content: space-between;
 }
@@ -94,9 +93,6 @@
 }
 
 .mailing-list__button {
-    /*   @include plain-button;
-    background-color: $verde;
-    color: white; */
     align-items: flex-start;
     background-color: rgb(70, 204, 110);
     border-bottom-color: rgb(70, 204, 110);
