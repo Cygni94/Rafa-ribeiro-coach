@@ -3,7 +3,15 @@
         @include remove-br;
     }
     .nav__menu {
-        width: 100%;
+        position: absolute;
+        top: 4rem;
+        right: 0;
+        padding-right: 1rem;
+    }
+    .nav__item {
+        align-self: inherit;
+        text-align: right;
+        margin-left: 0px;
     }
     .main__callout {
         .main__lead {

@@ -6554,7 +6554,7 @@ a:hover {
 .papo {
   display: flex;
   align-items: center;
-  height: 95%;
+  min-height: 95%;
   background-color: whitesmoke; }
 
 .papo__callout {
@@ -6708,6 +6708,15 @@ a:hover {
 @media (max-width: 767px) {
   span br {
     content: ' '; }
+  .nav__menu {
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    padding-right: 1rem; }
+  .nav__item {
+    align-self: inherit;
+    text-align: right;
+    margin-left: 0px; }
   .main__callout .main__lead {
     font-size: 1.3rem; }
   .main__callout .main__headline {
