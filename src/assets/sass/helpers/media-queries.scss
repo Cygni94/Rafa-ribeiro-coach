@@ -77,6 +77,10 @@
 }
 
 @media (min-width: 768px) {
+    .about-sm {
+        display: none;
+    }
+
     .papo__callout-img-sm {
         display: none;
     }
