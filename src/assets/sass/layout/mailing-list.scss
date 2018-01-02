@@ -1,12 +1,14 @@
 .mailing-list {
     position: absolute;
-    margin-top: -3.5rem;
+    margin-top: -4rem;
     min-height: 9rem;
     width: 100%;
 }
 
 .mailing-list .container {
     background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 0 20px rgba(62,70,79,.2);
 }
 
 .mailing-list .container .row {
