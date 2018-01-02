@@ -1,4 +1,7 @@
 .landing-description {
+    br {
+        @include remove-br;
+    }
     min-height: auto;
     background-color: $cinza-bg;
     padding-bottom: 5rem;
@@ -29,6 +32,7 @@
 
 .landing-description__list {
     justify-content: center;
+    padding-bottom: 4rem;
 }
 
 .list__item--1,

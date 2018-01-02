@@ -883,8 +883,10 @@ a:hover {
   color: white;
   background-color: #01CAFF;
   min-height: auto;
-  padding: 4rem 0rem 2rem 0rem;
+  padding: 4rem 0rem 4rem 0rem;
   text-align: center; }
+  .landing-callout br {
+    content: ' '; }
 
 .landing-callout__header {
   font-size: 1.8rem;
@@ -902,7 +904,9 @@ a:hover {
 
 .landing-callout__list {
   font-family: Roboto-Light;
-  font-size: 1.3rem; }
+  font-size: 1.3rem;
+  margin-top: 4rem;
+  margin-bottom: 3rem; }
 
 .mailing-list {
   background-color: #FFD200;
@@ -936,6 +940,8 @@ a:hover {
   background-color: #F1F2F4;
   padding-bottom: 5rem;
   color: black; }
+  .landing-description br {
+    content: ' '; }
 
 .landing-description__header {
   line-height: 1;
@@ -956,7 +962,8 @@ a:hover {
     font-weight: 300; }
 
 .landing-description__list {
-  justify-content: center; }
+  justify-content: center;
+  padding-bottom: 4rem; }
 
 .list__item--1,
 .list__item--2,
@@ -1000,3 +1007,82 @@ a:hover {
   font-family: Roboto-Light;
   font-size: 1.2rem;
   padding: 3rem 0rem 0rem 1rem; }
+
+@media (max-width: 767px) {
+  span br {
+    content: ' '; }
+  .nav__menu {
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    padding-right: 1rem; }
+  .nav__item {
+    align-self: inherit;
+    text-align: right;
+    margin-left: 0px; }
+  .main__callout .main__lead {
+    font-size: 1.3rem; }
+  .main__callout .main__headline {
+    font-size: 5rem; }
+  .mailing-list {
+    position: relative;
+    text-align: center; }
+    .mailing-list .mailing-list__callout br {
+      content: ' '; }
+    .mailing-list .mailing-list__input-email {
+      margin-top: 1rem;
+      width: 70%; }
+    .mailing-list .mailing-list__button {
+      padding-left: 15px; }
+  .papo__callout {
+    text-align: center; }
+  .papo__callout-main,
+  .papo__callout-description {
+    text-align: center; }
+  .papo__callout-img-sm {
+    text-align: right;
+    padding-right: 0;
+    margin: 2rem auto 2rem auto; }
+  .papo__callout-img-md {
+    display: none; }
+  .cursos__item-1,
+  .cursos__item-2,
+  .cursos__item-3 {
+    height: 10rem; }
+  .about {
+    font-size: 1.5rem;
+    padding: .5rem;
+    background-size: auto; }
+  .about__container {
+    padding-left: 0px;
+    padding-right: 0px; }
+  .about__title {
+    text-align: center;
+    font-size: 3rem; }
+  .about__text p br {
+    content: ' '; }
+  .footer__social {
+    text-align: right; }
+  p {
+    line-height: 1.5; }
+  .list__item--1 .list__item--title,
+  .list__item--3 .list__item--title {
+    padding: 1rem 0rem 0rem .5rem; }
+  .list__item--1 .list__item--description,
+  .list__item--3 .list__item--description {
+    padding: 0rem 0rem 0rem .5rem; }
+  .list__item--2 .list__item--title,
+  .list__item--4 .list__item--title {
+    padding: 1rem .5rem 0rem 0rem; }
+  .list__item--2 .list__item--description,
+  .list__item--4 .list__item--description {
+    padding: 0rem .5rem 0rem 0rem; } }
+
+@media (min-width: 768px) {
+  .about-sm {
+    display: none; }
+  .papo__callout-img-sm {
+    display: none; }
+  .papo__callout-img-md {
+    text-align: right;
+    padding-right: 0; } }

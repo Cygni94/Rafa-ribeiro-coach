@@ -1,8 +1,11 @@
 .landing-callout {
+    br {
+        @include remove-br;
+    }
     color: white;
     background-color: $azul;
     min-height: auto;
-    padding: 4rem 0rem 2rem 0rem;
+    padding: 4rem 0rem 4rem 0rem;
     text-align: center;
 }
 
@@ -26,6 +29,8 @@
 .landing-callout__list {
     font-family: Roboto-Light;
     font-size: 1.3rem;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
 }
 
 .mailing-list {

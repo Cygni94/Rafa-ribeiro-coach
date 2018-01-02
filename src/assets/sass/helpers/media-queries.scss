@@ -73,6 +73,27 @@
     }
     .footer__social {
         text-align: right;
+    } //landing-page
+    p {
+        line-height: 1.5;
+    }
+    .list__item--1,
+.list__item--3 {
+    .list__item--title {
+        padding: 1rem 0rem 0rem .5rem;
+    }
+    .list__item--description {
+        padding: 0rem 0rem 0rem .5rem;
+    }
+}
+    .list__item--2,
+    .list__item--4 {
+        .list__item--title {
+            padding: 1rem .5rem 0rem 0rem;
+        }
+        .list__item--description {
+            padding: 0rem .5rem 0rem 0rem;
+        }
     }
 }
 
@@ -80,7 +101,6 @@
     .about-sm {
         display: none;
     }
-
     .papo__callout-img-sm {
         display: none;
     }
