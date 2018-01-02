@@ -6381,9 +6381,7 @@ a:hover {
   position: absolute;
   margin-top: -3.5rem;
   min-height: 9rem;
-  width: 100%;
-  display: flex;
-  justify-content: space-between; }
+  width: 100%; }
 
 .mailing-list .container {
   background-color: white; }
@@ -6403,133 +6401,28 @@ a:hover {
   border-radius: 10px; }
 
 .mailing-list__input-email {
-  background-color: #f0f2f4;
-  border-bottom-color: #7a8c9e;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 0px;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-image-outset: 0px;
-  border-image-repeat: stretch;
-  border-image-slice: 100%;
-  border-image-source: none;
-  border-image-width: 1;
-  border-left-color: #7a8c9e;
-  border-left-style: solid;
-  border-left-width: 1px;
-  border-right-color: #7a8c9e;
-  border-right-style: none;
-  border-right-width: 0px;
-  border-top-color: #7a8c9e;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 0px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  box-sizing: border-box;
-  color: #3e464f;
-  cursor: text;
-  display: inline-block;
-  font-family: Roboto;
-  font-size: 14px;
-  font-stretch: 100%;
-  font-style: normal;
-  font-variant-caps: normal;
-  font-variant-east-asian: normal;
-  font-variant-ligatures: normal;
-  font-variant-numeric: normal;
-  font-weight: 400;
-  height: 46.5px;
-  letter-spacing: normal;
-  line-height: normal;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-top: 0px;
-  outline-color: #3e464f;
-  outline-style: none;
-  outline-width: 0px;
-  padding-bottom: 14px;
+  border-radius: 5px 0px 0px 5px;
+  border: 1px solid #A8A8A8;
+  background-color: #F1F2F4;
   padding-left: 1rem;
-  padding-right: 14px;
-  padding-top: 14px;
-  text-align: start;
-  text-indent: 0px;
-  text-rendering: auto;
-  text-shadow: none;
-  text-transform: none;
-  width: 65%;
-  word-spacing: 0px;
-  writing-mode: horizontal-tb;
-  -webkit-appearance: none;
-  -webkit-rtl-ordering: logical;
-  -webkit-border-image: none; }
+  font-family: Roboto;
+  height: 2.5rem;
+  margin-left: 2px;
+  width: 60%; }
 
 .mailing-list__button {
-  align-items: flex-start;
-  background-color: #46cc6e;
-  border-bottom-color: #46cc6e;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-image-outset: 0px;
-  border-image-repeat: stretch;
-  border-image-slice: 100%;
-  border-image-source: none;
-  border-image-width: 1;
-  border-left-color: #46cc6e;
-  border-left-style: none;
-  border-left-width: 0px;
-  border-right-color: #46cc6e;
-  border-right-style: solid;
-  border-right-width: 1px;
-  border-top-color: #46cc6e;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 5px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  box-sizing: border-box;
-  color: white;
-  cursor: pointer;
-  display: inline-block;
+  border-radius: 0px 5px 5px 0px;
+  border: 0px solid #A8A8A8;
+  background-color: #F1F2F4;
+  padding: 0rem 1rem;
   font-family: Roboto;
-  font-size: 14px;
-  font-stretch: 100%;
-  font-style: normal;
-  font-variant-caps: normal;
-  font-variant-east-asian: normal;
-  font-variant-ligatures: normal;
-  font-variant-numeric: normal;
-  font-weight: 400;
-  height: 47px;
-  letter-spacing: normal;
+  font-size: 1rem;
+  color: white;
+  background-color: #00CD68;
+  height: 2.5rem;
+  margin-left: -.5rem;
   line-height: normal;
-  margin-bottom: 0px;
-  margin-left: -4px;
-  margin-right: 0px;
-  margin-top: 0px;
-  max-width: 200px;
-  outline-color: white;
-  outline-style: none;
-  outline-width: 0px;
-  padding-bottom: 14px;
-  padding-left: 26px;
-  padding-right: 26px;
-  padding-top: 14px;
-  text-align: center;
-  text-indent: 0px;
-  text-rendering: auto;
-  text-shadow: none;
-  text-transform: none;
-  user-select: none;
-  vertical-align: middle;
-  white-space: pre;
-  width: 30%;
-  word-spacing: 0px;
-  writing-mode: horizontal-tb;
-  -webkit-appearance: none;
-  -webkit-rtl-ordering: logical;
-  -webkit-border-image: none; }
+  width: 30%; }
 
 .about {
   min-height: 95%;
@@ -6682,7 +6575,9 @@ a:hover {
 .footer {
   min-height: 80%;
   font-family: Roboto-Bold;
-  font-size: 1.2rem; }
+  font-size: 1rem; }
+  .footer .mailing-list__input-email {
+    width: 70%; }
 
 .footer .mailing-list__callout {
   text-align: center;
@@ -6699,10 +6594,14 @@ a:hover {
 .footer__bottom {
   margin-top: 6rem; }
 
+.footer__social {
+  font-size: 1.2rem; }
+
 .footer__social .social-icon {
   background-color: black; }
 
-.footer__logo, .footer__copyright {
+.footer__logo,
+.footer__copyright {
   text-align: center; }
 
 @media (max-width: 767px) {
@@ -6723,14 +6622,12 @@ a:hover {
     font-size: 5rem; }
   .mailing-list {
     position: relative;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    margin: auto; }
+    text-align: center; }
     .mailing-list .mailing-list__callout br {
       content: ' '; }
     .mailing-list .mailing-list__input-email {
-      margin-top: 1rem; }
+      margin-top: 1rem;
+      width: 70%; }
     .mailing-list .mailing-list__button {
       padding-left: 15px; }
   .papo__callout {

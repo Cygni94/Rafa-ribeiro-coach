@@ -24,14 +24,12 @@
     .mailing-list {
         position: relative;
         text-align: center;
-        display: flex;
-        justify-content: center;
-        margin: auto;
         .mailing-list__callout br {
             @include remove-br;
         }
         .mailing-list__input-email {
             margin-top: 1rem;
+            width: 70%;
         }
         .mailing-list__button {
             padding-left: 15px;
