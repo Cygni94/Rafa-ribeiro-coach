@@ -1,13 +1,14 @@
 //footer//
 .footer {
     min-height: 80%;
-}
-
-.footer__mailing-callout {
     font-family: Roboto-Bold;
     font-size: 1.2rem;
+}
+
+.footer .mailing-list__callout {
     text-align: center;
     margin-top: 4rem;
+    margin-bottom: 1rem;
 }
 
 .footer__menu {
@@ -23,8 +24,8 @@
     margin-top: 6rem;
 }
 
-.footer__social .fa {
-    font-size: 2rem;
+.footer__social .social-icon {
+    background-color: black;
 }
 
 .footer__logo, .footer__copyright {

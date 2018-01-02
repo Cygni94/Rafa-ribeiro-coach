@@ -6332,7 +6332,8 @@ a:hover {
 
 .nav__menu {
   justify-content: flex-end;
-  padding-left: 2.75rem; }
+  padding-left: 2.75rem;
+  background-color: #01CAFF; }
   .nav__menu a {
     color: inherit; }
 
@@ -6399,7 +6400,6 @@ a:hover {
 
 .mailing-list__input {
   align-self: center;
-  text-align: right;
   border-radius: 10px; }
 
 .mailing-list__input-email {
@@ -6680,13 +6680,14 @@ a:hover {
   line-height: 1.5; }
 
 .footer {
-  min-height: 80%; }
-
-.footer__mailing-callout {
+  min-height: 80%;
   font-family: Roboto-Bold;
-  font-size: 1.2rem;
+  font-size: 1.2rem; }
+
+.footer .mailing-list__callout {
   text-align: center;
-  margin-top: 4rem; }
+  margin-top: 4rem;
+  margin-bottom: 1rem; }
 
 .footer__menu {
   font-family: Roboto-Bold;
@@ -6698,8 +6699,8 @@ a:hover {
 .footer__bottom {
   margin-top: 6rem; }
 
-.footer__social .fa {
-  font-size: 2rem; }
+.footer__social .social-icon {
+  background-color: black; }
 
 .footer__logo, .footer__copyright {
   text-align: center; }
@@ -6745,6 +6746,9 @@ a:hover {
   .about__container {
     padding-left: 0px;
     padding-right: 0px; }
+  .about__title {
+    text-align: center;
+    font-size: 3rem; }
   .about__text p br {
     content: ' '; }
   .footer__social {

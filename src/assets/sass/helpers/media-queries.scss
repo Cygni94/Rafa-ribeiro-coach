@@ -2,6 +2,9 @@
     span br {
         @include remove-br;
     }
+    .nav__menu {
+        width: 100%;
+    }
     .main__callout {
         .main__lead {
             font-size: 1.3rem;
@@ -54,6 +57,10 @@
     .about__container {
         padding-left: 0px;
         padding-right: 0px;
+    }
+    .about__title {
+        text-align: center;
+        font-size: 3rem;
     }
     .about__text p br {
         @include remove-br;
