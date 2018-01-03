@@ -6702,7 +6702,11 @@ a:hover {
   .list__item--4 .list__item--img {
     background-color: #FE1E26; }
   .landing-description br {
-    content: ' '; } }
+    content: ' '; }
+  .calltoaction__lead {
+    font-size: 2rem; }
+  .calltoaction__headline {
+    font-size: 3.5rem; } }
 
 @media (min-width: 768px) {
   .about-sm {

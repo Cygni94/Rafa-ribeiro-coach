@@ -134,6 +134,14 @@
             @include remove-br;
         }
     }
+    //calltoaction
+    .calltoaction__lead {
+        font-size: 2rem;
+    }
+    .calltoaction__headline {
+        font-size: 3.5rem;
+    }
+
 }
 
 @media (min-width: 768px) {

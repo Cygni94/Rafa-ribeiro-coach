@@ -934,76 +934,24 @@ a:hover {
   margin: .5rem;
   padding: .3rem; }
 
-.landing-description {
-  min-height: auto;
-  background-color: #F1F2F4;
-  padding-bottom: 5rem;
-  color: black; }
+.calltoaction {
+  height: 100%;
+  background-color: #01CAFF; }
 
-.landing-description__header {
-  line-height: 1;
-  text-align: center;
-  margin: auto;
-  padding-top: 4rem; }
-  .landing-description__header h1 {
-    font-family: Roboto-Bold;
-    font-size: 2rem; }
-
-.landing-description__main {
-  margin: auto;
-  text-align: center;
-  padding: .5rem; }
-  .landing-description__main h2 {
-    font-family: Roboto-Light;
-    font-size: 1.5rem;
-    font-weight: 300; }
-
-.landing-description__list {
-  justify-content: center;
-  padding-bottom: 4rem; }
-
-.list__item--1,
-.list__item--2,
-.list__item--3,
-.list__item--4 {
-  background-color: white;
-  display: inherit;
-  height: auto;
-  margin: 2rem 1.2rem;
-  padding: 0;
+.calltoaction__callout {
+  margin-top: 10rem;
+  margin-bottom: 20rem;
   line-height: 1; }
 
-.list__item--1,
-.list__item--3 {
-  text-align: left;
-  justify-content: flex-start; }
-  .list__item--1 .list__item--title,
-  .list__item--3 .list__item--title {
-    padding: 3rem 0rem 0rem 1rem; }
-  .list__item--1 .list__item--description,
-  .list__item--3 .list__item--description {
-    padding: 1rem 0rem 0rem 1rem; }
-
-.list__item--2,
-.list__item--4 {
-  text-align: right;
-  justify-content: flex-end; }
-  .list__item--2 .list__item--title,
-  .list__item--4 .list__item--title {
-    padding: 3rem 1rem 0rem 0rem; }
-  .list__item--2 .list__item--description,
-  .list__item--4 .list__item--description {
-    padding: 1rem 1rem 0rem 0rem; }
-
-.list__item--title {
-  font-family: Roboto-Bold;
-  font-size: 1.3rem;
-  line-height: 1.2; }
-
-.list__item--description {
+.calltoaction__lead {
   font-family: Roboto-Light;
-  font-size: 1.2rem;
-  padding: 3rem 0rem 0rem 1rem; }
+  font-size: 3rem;
+  margin-bottom: 1rem; }
+
+.calltoaction__headline {
+  font-family: Roboto-Bold;
+  font-size: 5rem;
+  color: #FFD200; }
 
 @media (max-width: 767px) {
   span br {
