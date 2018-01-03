@@ -1,0 +1,62 @@
+.landing-callout {
+    color: white;
+    background-color: $azul;
+    min-height: auto;
+    padding: 4rem 0rem 4rem 0rem;
+    text-align: center;
+}
+
+.landing-callout__header {
+    font-size: 1.8rem;
+    font-family: Roboto-Light;
+    margin-bottom: 1rem;
+}
+
+.landing-callout__main {
+    font-size: 2rem;
+    font-family: Roboto;
+    text-align: center;
+    line-height: 1;
+    .highlight {
+        font-family: Roboto-Bold;
+        font-size: 3rem;
+        color: black;
+    }
+}
+
+.landing-callout__list {
+    font-family: Roboto-Light;
+    font-size: 1.3rem;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+}
+
+.mailing-list {
+    background-color: $amarelo;
+    color: black;
+    font-family: Roboto-Light;
+    font-size: 1.2rem;
+    padding: 1rem 0rem;
+    text-align: center;
+    line-height: 1.2;
+    .highlight {
+        font-family: Roboto-Bold;
+        font-size: 1.3rem;
+    }
+}
+
+.mailing-list__input--email {
+    width: 90%;
+    padding: .5rem;
+    color: black;
+}
+
+.mailing-list__input--button {
+    @include plain-button;
+    background-color: $azul;
+    color: white;
+    font-family: Roboto-Light;
+    width: 90%;
+    margin: .5rem;
+    padding: .3rem;
+}

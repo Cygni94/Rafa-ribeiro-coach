@@ -9,14 +9,15 @@ var gulp = require('gulp'),
     htmlReplace = require('gulp-html-replace'),
     uglify = require('gulp-uglify'),
     usemin = require('gulp-usemin'),
+    purify = require('gulp-purifycss'),
     cssmin = require('gulp-cssmin'),
-    browserSync = require('browser-sync').create(),
+    svgmin = require('gulp-svgmin'),
     autoprefixer = require('gulp-autoprefixer'),
     sass = require('gulp-sass'),
-    svgmin = require('gulp-svgmin');
+    browserSync = require('browser-sync').create();
 
 gulp.task('default', ['copy'], function () {
-    gulp.start('build-img', 'usemin', 'svgmin');
+    gulp.start('build-img', 'usemin', 'svgmin', 'purifycss');
 });
 
 gulp.task('copy', ['clean'], function () {
@@ -45,6 +46,12 @@ gulp.task('usemin', function () {
         .pipe(gulp.dest('dist/assets'));
 });
 
+gulp.task('purifycss', function() {
+    return gulp.src('./dist/assets/css/**/*.css')
+      .pipe(purify(['./dist/assets/**/*.js', './dist/**/*.html']))
+      .pipe(gulp.dest('./dist/'));
+  });
+
 gulp.task('svgmin', function () {
     return gulp.src('src/assets/img/**/*.svg')
         .pipe(svgmin())
@@ -53,7 +60,7 @@ gulp.task('svgmin', function () {
 
 
 // Static Server + watching scss/html files
-gulp.task('server', ['sass'], function() {
+gulp.task('server', ['sass'], function () {
 
     browserSync.init({
         server: "./src"
@@ -64,7 +71,7 @@ gulp.task('server', ['sass'], function() {
 });
 
 // Compile sass into CSS & auto-inject into browsers
-gulp.task('sass', function() {
+gulp.task('sass', function () {
     return gulp.src("src/assets/sass/*.scss")
         .pipe(sass())
         .pipe(gulp.dest("src/assets/css"))

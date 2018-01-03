@@ -1,0 +1,45 @@
+.papo {
+    display: flex;
+    align-items: center;
+    min-height: 95%;
+    background-color: whitesmoke;
+}
+
+
+.papo__callout {
+    font-size: 1.25rem;
+    align-self: center;
+}
+
+.papo__callout-title {
+    font-family: Roboto-Bold;
+    color: black;
+}
+
+.papo__callout-main {
+    font-family: Roboto-Bold;
+    color: $vermelho;
+    font-size: 2rem;
+    display: block;
+    line-height: 1;
+    margin: 1rem 0rem;
+}
+
+.papo__callout-description {
+    font-family: Roboto-Light;
+}
+
+.papo__callout-button {
+    @include plain-button;
+    font-family: Roboto-Light;
+    border: 1px solid black;
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    margin: 1rem 0rem;
+}
+
+.papo__callout-button:hover {
+    transition: 500ms;
+    background-color: $cinza-escuro;
+    color: white;
+}
