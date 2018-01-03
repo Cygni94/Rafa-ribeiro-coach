@@ -6502,7 +6502,7 @@ a:hover {
   justify-content: flex-start; }
 
 .cursos__section-title {
-  font-size: Roboto-Bold;
+  font-family: Roboto-Bold;
   font-size: 2rem;
   font-weight: 700; }
 
@@ -6537,7 +6537,7 @@ a:hover {
   align-items: center; }
 
 .depoimentos__section-title {
-  font-size: Roboto-Bold;
+  font-family: Roboto-Bold;
   font-size: 2rem;
   font-weight: 700;
   margin-top: 1rem; }
