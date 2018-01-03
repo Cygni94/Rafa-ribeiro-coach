@@ -2,11 +2,11 @@
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /3.Profissional/Rafael%20Ribeiro%20Coaching/rafael-ribeiro-coaching/wordpress/
+RewriteBase /3.Profissional/Rafael%20Ribeiro%20Coaching/rafaribeiro/wordpress/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /3.Profissional/Rafael%20Ribeiro%20Coaching/rafael-ribeiro-coaching/wordpress/index.php [L]
+RewriteRule . /3.Profissional/Rafael%20Ribeiro%20Coaching/rafaribeiro/wordpress/index.php [L]
 </IfModule>
 
 # END WordPress
