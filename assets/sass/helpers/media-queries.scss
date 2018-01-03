@@ -77,6 +77,11 @@
     p {
         line-height: 1.5;
     }
+    .landing-callout {
+        br {
+            @include remove-br;
+        }
+    }
     .list__item--1,
     .list__item--3 {
         .list__item--title {
@@ -122,6 +127,11 @@
     .list__item--4 {
         .list__item--img {
             background-color: #FE1E26;
+        }
+    }
+    .landing-description {
+        br {
+            @include remove-br;
         }
     }
 }

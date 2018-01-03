@@ -6672,6 +6672,8 @@ a:hover {
     text-align: right; }
   p {
     line-height: 1.5; }
+  .landing-callout br {
+    content: ' '; }
   .list__item--1 .list__item--title,
   .list__item--3 .list__item--title {
     padding: 1rem 0rem 0rem .5rem; }
@@ -6698,7 +6700,9 @@ a:hover {
   .list__item--3 .list__item--img {
     background-color: #3FA9F5; }
   .list__item--4 .list__item--img {
-    background-color: #FE1E26; } }
+    background-color: #FE1E26; }
+  .landing-description br {
+    content: ' '; } }
 
 @media (min-width: 768px) {
   .about-sm {
