@@ -31,11 +31,11 @@
                     <span class="highlight">ter clareza </span>
                     dos próximos
                     <br>passos
-                    <span class="highlight">para empreender.</span>
+                    <span class="highlight">para empreender</span>
                 </span>
             </div>
             <div class="landing-callout__list row">
-                <div class="offset-md-2 col-md-4 col-sm-12">
+                <div class="offset-md-1 col-md-5 col-sm-12">
                     <div class="landing-callout__list--icon">
                         <img src="<?php bloginfo('template_directory'); ?>/img/like.png" alt="">
                     </div>

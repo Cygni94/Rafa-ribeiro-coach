@@ -29,7 +29,7 @@
                         <span class="highlight">ter clareza </span>
                         dos próximos
                         <br>passos
-                        <span class="highlight">para empreender.</span>
+                        <span class="highlight">para empreender</span>
                     </span>
                 </div>
             </div>

@@ -5,13 +5,31 @@
                 <br> exclusivos e com prioridade</span>
         </div>
     </div>
-    <div class="row">
+    <div class="footer__mailing-list row">
         <div class="mailing-list__input offset-md-3 col-md-6 col-sm-12">
-            <input type="email" class="mailing-list__input-email" placeholder="Qual o seu  e-mail?">
-            <button class="mailing-list__button" type="submit">Cadastrar</button>
+            <div id="mc_embed_signup">
+                <form action="https://rafaribeiro.us17.list-manage.com/subscribe/post?u=df9ab4b863ab4a55fa168caf6&amp;id=f0b21dcfa4" method="post"
+                    id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div id="mc_embed_signup_scroll">
+                        <span class="mc-field-group">
+                            <input type="email" placeholder="Qual o seu e-mail?" name="EMAIL" class="mailing-list__input-email required email" id="mce-EMAIL">
+                        </span>
+                        <span class="clear">
+                            <input type="submit" value="Cadastrar" name="subscribe" id="mc-embedded-subscribe" class="mailing-list__button button">
+                        </span>
+                    </div>
+                    <div id="mce-responses" class="clear">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div>
+                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                        <input type="text" name="b_4b32c2539aa1fa0b016c51887_c2b82fbe39" tabindex="-1" value="">
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-    <br>
     <div class="row">
         <div class="footer__menu offset-md-2 col-md-5 col-6">
             <span>
@@ -27,17 +45,23 @@
         </div>
         <div class="footer__social col-md-3 col-6">
             <span>conecte-se comigo</span>
-            <br>
-            <span>
-                <a href="https://www.facebook.com/rafaribeirocoach/">
-                    <img class="social-icon" src="<?php bloginfo('template_directory'); ?>/img/facebook.png" alt="Facebook">
-                </a>
-            </span>
-            <span>
-                <a href="https://www.instagram.com/rafaribeiro.coach/">
-                    <img class="social-icon" src="<?php bloginfo('template_directory'); ?>/img/instagram.png" alt="Instagram">
-                </a>
-            </span>
+            <div class="social-icons">
+                <span>
+                    <a href="https://www.facebook.com/rafaribeirocoach/">
+                        <img class="social-icon" src="<?php bloginfo('template_directory'); ?>/img/facebook.png" alt="Facebook">
+                    </a>
+                </span>
+                <span>
+                    <a href="https://www.instagram.com/rafaribeiro.coach/">
+                        <img class="social-icon" src="<?php bloginfo('template_directory'); ?>/img/instagram.png" alt="Instagram">
+                    </a>
+                </span>
+                <span>
+                    <a href="https://www.youtube.com/channel/UCyEyl4K-FM1zY_mRaOv5Ylg">
+                        <img class="social-icon" src="<?php bloginfo('template_directory'); ?>/img/youtube.png" alt="Youtube">
+                    </a>
+                </span>
+            </div>
         </div>
     </div>
     <div class="footer__bottom row">

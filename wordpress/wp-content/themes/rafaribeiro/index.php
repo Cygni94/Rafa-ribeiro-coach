@@ -22,7 +22,7 @@
 
                 <!-- Begin MailChimp Signup Form -->
                 <div id="mc_embed_signup">
-                    <form action="https://ccoelho.us17.list-manage.com/subscribe/post?u=4b32c2539aa1fa0b016c51887&amp;id=c2b82fbe39" method="post"
+                    <form action="https://rafaribeiro.us17.list-manage.com/subscribe/post?u=df9ab4b863ab4a55fa168caf6&amp;id=f0b21dcfa4" method="post"
                         id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                         <div id="mc_embed_signup_scroll">
                             <span class="mc-field-group">
@@ -54,8 +54,6 @@
     <div class="container">
         <div class="row">
             <div class="papo__callout col-md-6 col-12">
-                <span class="papo__callout-title">nossos treinamentos</span>
-                <br>
                 <span class="papo__callout-main">assista gratuitamente o
                     <br>papo momento da virada</span>
                 <div class="papo__callout-img-sm col-10">
@@ -133,15 +131,14 @@
 <section class="depoimentos" id="depoimentos">
     <div class="container">
         <div class="row">
-            <div class="depoimentos__section-title">
+            <div class="depoimentos__section-header col-12">
                 <div class="hr"></div>
-                <br>
-                <span>depoimentos</span>
+                <span class="depoimentos__section-title">depoimentos</span>
             </div>
         </div>
         <div class="depoimentos__list row">
 
-            <div class="depoimentos__item-1 col-md-3 offset-1 col-10">
+            <div class="depoimentos__item-1 offset-md-0 col-md-3 offset-1 col-10">
                 <div class="depoimentos__item-header">
                     <h3>XANDE BASTOS</h3>
                 </div>
@@ -158,6 +155,7 @@
                     <img src="<?php bloginfo('template_directory'); ?>/img/aspas_depoimento.png" alt="">
                 </div>
             </div>
+            
             <div class="depoimentos__item-2 col-md-3 offset-1 col-10">
                 <div class="depoimentos__item-header">
                     <h3>ÁGATHA TOMMASI</h3>
@@ -200,13 +198,14 @@
     <div class="container">
         <div class="row">
             <div class="about-sm"></div>
-            <div class="about__container offset-md-6 col-md-6 col-12">
+            <div class="about__container col-md-6 col-12">
                 <div class="about__title">
                     <span class="about__title-blue">
-                        <span class="about__title-white">conheça o </span>
+                        <span class="about__title-black">conheça o </span>
                         rafa</span>
                     </span>
                 </div>
+                <br>
                 <div class="about__text">
                     <p>Um apaixonado por esportes e empreendedorismo, formado em
                         <br> Coaching e Liderança pela Organização Internacional Cóndor
