@@ -9174,11 +9174,18 @@ a:hover {
   .papo__callout-img-md {
     display: none;
   }
+  
+.cursos__section-header {
+  padding-left: 1rem;
+}
   .cursos__item-1,
   .cursos__item-2,
   .cursos__item-3 {
     height: 10rem;
     margin-bottom: 1rem;
+  }
+  .depoimentos__section-header {
+    padding-left: 1rem;
   }
   .about {
     background: whitesmoke;
