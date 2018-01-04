@@ -8963,6 +8963,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  padding-bottom: 4rem;
 }
 
 .cursos__section-title {
@@ -9177,6 +9178,7 @@ a:hover {
   .cursos__item-2,
   .cursos__item-3 {
     height: 10rem;
+    margin-bottom: 1rem;
   }
   .about {
     background: whitesmoke;
@@ -9265,8 +9267,5 @@ a:hover {
   .papo__callout-img-md {
     text-align: right;
     padding-right: 0;
-  }
-  .cursos__section-header {
-    padding-bottom: 4rem;
   }
 }
