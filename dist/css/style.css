@@ -8887,7 +8887,7 @@ a:hover {
   padding-top: 5rem;
   padding-bottom: 5rem;
   background: url('../img/rafa_ribeiro_conheca.jpg') no-repeat right top;
-  background-size: contain;
+  background-size: auto 100%;
   color: black;
 }
 
@@ -8915,8 +8915,12 @@ a:hover {
   align-items: center;
   height: auto;
   padding-top: 5rem;
-  padding-bottom: 3rem;
+  padding-bottom: 4rem;
   background-color: whitesmoke;
+}
+
+.papo .row {
+  margin-top: 2rem;
 }
 
 .papo__callout {
