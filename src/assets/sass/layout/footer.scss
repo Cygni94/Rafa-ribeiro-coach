@@ -1,7 +1,7 @@
 //footer//
 .footer {
     min-height: 80%;
-    font-family: Roboto-Bold;
+    font-family: 'Roboto'; font-weight: 700;
     font-size: 1rem;
     .mailing-list__input-email {
         width: 70%;
@@ -15,7 +15,7 @@
 }
 
 .footer__menu {
-    font-family: Roboto-Bold;
+    font-family: 'Roboto'; font-weight: 700;
     font-size: 1.1rem;
     span {
         display: block;

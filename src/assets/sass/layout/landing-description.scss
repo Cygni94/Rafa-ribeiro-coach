@@ -11,7 +11,7 @@
     margin: auto;
     padding-top: 4rem;
     h1 {
-        font-family: Roboto-Bold;
+        font-family: 'Roboto'; font-weight: 700;
         font-size: 2rem;
     }
 }
@@ -21,7 +21,7 @@
     text-align: center;
     padding: .5rem;
     h2 {
-        font-family: Roboto-Light;
+        font-family: 'Roboto'; font-weight: 300;
         font-size: 1.5rem;
         font-weight: 300;
     }
@@ -69,13 +69,13 @@
 }
 
 .list__item--title {
-    font-family: Roboto-Bold;
+    font-family: 'Roboto'; font-weight: 700;
     font-size: 1.3rem;
     line-height: 1.2;
 }
 
 .list__item--description {
-    font-family: Roboto-Light;
+    font-family: 'Roboto'; font-weight: 300;
     font-size: 1.2rem;
     padding: 3rem 0rem 0rem 1rem;
 }

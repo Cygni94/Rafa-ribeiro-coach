@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:800");
+
 *,
 *::before,
 *::after {
@@ -1202,13 +1202,13 @@ template {
 }
 
 @font-face {
-  font-family: Roboto-Light;
-  src: url("../font/Roboto-Light.ttf");
+  font-family: 'Roboto'; font-weight: 300;
+  src: url("../font/'Roboto'.ttf");
 }
 
 @font-face {
-  font-family: Roboto-Bold;
-  src: url("../font/Roboto-Bold.ttf");
+  font-family: 'Roboto'; font-weight: 700;
+  src: url("../font/'Roboto'.ttf");
 }
 
 @font-face {
@@ -1256,7 +1256,7 @@ a:hover {
 
 .landing-callout__header {
   font-size: 1.8rem;
-  font-family: Roboto-Light;
+  font-family: 'Roboto'; font-weight: 300;
   margin-bottom: 1rem;
 }
 
@@ -1268,13 +1268,13 @@ a:hover {
 }
 
 .landing-callout__main .highlight {
-  font-family: Roboto-Bold;
+  font-family: 'Roboto'; font-weight: 700;
   font-size: 3rem;
   color: black;
 }
 
 .landing-callout__list {
-  font-family: Roboto-Light;
+  font-family: 'Roboto'; font-weight: 300;
   font-size: 1.3rem;
   margin-top: 4rem;
   margin-bottom: 3rem;
@@ -1283,7 +1283,7 @@ a:hover {
 .mailing-list {
   background-color: #FFD200;
   color: black;
-  font-family: Roboto-Light;
+  font-family: 'Roboto'; font-weight: 300;
   font-size: 1.2rem;
   padding: 1rem 0rem;
   text-align: center;
@@ -1291,7 +1291,7 @@ a:hover {
 }
 
 .mailing-list .highlight {
-  font-family: Roboto-Bold;
+  font-family: 'Roboto'; font-weight: 700;
   font-size: 1.3rem;
 }
 
@@ -1306,7 +1306,7 @@ a:hover {
   background-color: transparent;
   background-color: #01CAFF;
   color: white;
-  font-family: Roboto-Light;
+  font-family: 'Roboto'; font-weight: 300;
   width: 90%;
   margin: .5rem;
   padding: .3rem;
@@ -1324,13 +1324,13 @@ a:hover {
 }
 
 .calltoaction__lead {
-  font-family: Roboto-Light;
+  font-family: 'Roboto'; font-weight: 300;
   font-size: 3rem;
   margin-bottom: 1rem;
 }
 
 .calltoaction__headline {
-  font-family: Roboto-Bold;
+  font-family: 'Roboto'; font-weight: 700;
   font-size: 5rem;
   color: #FFD200;
 }

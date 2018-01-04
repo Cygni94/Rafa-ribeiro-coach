@@ -12,12 +12,12 @@
 }
 
 .papo__callout-title {
-    font-family: Roboto-Bold;
+    font-family: 'Roboto'; font-weight: 700;
     color: black;
 }
 
 .papo__callout-main {
-    font-family: Roboto-Bold;
+    font-family: 'Roboto'; font-weight: 700;
     color: $vermelho;
     font-size: 2rem;
     display: block;
@@ -26,12 +26,12 @@
 }
 
 .papo__callout-description {
-    font-family: Roboto-Light;
+    font-family: 'Roboto'; font-weight: 300;
 }
 
 .papo__callout-button {
     @include plain-button;
-    font-family: Roboto-Light;
+    font-family: 'Roboto'; font-weight: 300;
     border: 1px solid black;
     border-radius: .5rem;
     padding: .5rem 1rem;

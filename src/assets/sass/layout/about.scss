@@ -14,17 +14,17 @@
 }
 
 .about__title-white {
-    font-family: Roboto-Light;
+    font-family: 'Roboto'; font-weight: 300;
     font-size: 2rem;
     color: white;
 }
 
 .about__title-blue {
-    font-family: Roboto-Bold;
+    font-family: 'Roboto'; font-weight: 700;
     font-size: 2rem;
     color: $azul;
 }
 
 .about__text {
-    font-family: Roboto-Light;
+    font-family: 'Roboto'; font-weight: 300;
 }

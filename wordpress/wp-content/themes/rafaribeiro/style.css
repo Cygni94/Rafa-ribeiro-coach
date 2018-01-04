@@ -10,7 +10,7 @@
  Text Domain:  rafaribeiro
 */
 
-@import url("https://fonts.googleapis.com/css?family=Poppins:800");
+
 *,
 *::before,
 *::after {
@@ -8707,13 +8707,13 @@ a.text-dark:hover {
 }
 
 @font-face {
-  font-family: Roboto-Light;
-  src: url("font/Roboto-Light.ttf");
+  font-family: 'Roboto'; font-weight: 300;
+  src: url("font/'Roboto'.ttf");
 }
 
 @font-face {
-  font-family: Roboto-Bold;
-  src: url("font/Roboto-Bold.ttf");
+  font-family: 'Roboto'; font-weight: 700;
+  src: url("font/'Roboto'.ttf");
 }
 
 @font-face {
@@ -8817,13 +8817,13 @@ a:hover {
 }
 
 .main__lead {
-  font-family: Roboto-Light;
+  font-family: 'Roboto'; font-weight: 300;
   font-size: 1.8rem;
 }
 
 .main__headline {
   margin-top: -1rem;
-  font-family: Roboto-Bold;
+  font-family: 'Roboto'; font-weight: 700;
   font-size: 7rem;
 }
 
@@ -8846,7 +8846,7 @@ a:hover {
 }
 
 .mailing-list__callout {
-  font-family: Roboto-Bold;
+  font-family: 'Roboto'; font-weight: 700;
   font-size: 1.2rem;
   color: #555555;
   padding-left: 3rem;
@@ -8899,19 +8899,19 @@ a:hover {
 }
 
 .about__title-black {
-  font-family: Roboto-Light;
+  font-family: 'Roboto'; font-weight: 300;
   font-size: 2rem;
   color: black;
 }
 
 .about__title-blue {
-  font-family: Roboto-Bold;
+  font-family: 'Roboto'; font-weight: 700;
   font-size: 2rem;
   color: #01CAFF;
 }
 
 .about__text {
-  font-family: Roboto-Light;
+  font-family: 'Roboto'; font-weight: 300;
 }
 
 .papo {
@@ -8927,12 +8927,12 @@ a:hover {
 }
 
 .papo__callout-title {
-  font-family: Roboto-Bold;
+  font-family: 'Roboto'; font-weight: 700;
   color: black;
 }
 
 .papo__callout-main {
-  font-family: Roboto-Bold;
+  font-family: 'Roboto'; font-weight: 700;
   color: #EF4136;
   font-size: 2rem;
   display: block;
@@ -8941,13 +8941,13 @@ a:hover {
 }
 
 .papo__callout-description {
-  font-family: Roboto-Light;
+  font-family: 'Roboto'; font-weight: 300;
 }
 
 .papo__callout-button {
   border: none;
   background-color: transparent;
-  font-family: Roboto-Light;
+  font-family: 'Roboto'; font-weight: 300;
   border: 1px solid black;
   border-radius: .5rem;
   padding: .5rem 1rem;
@@ -8978,7 +8978,7 @@ a:hover {
 }
 
 .cursos__section-title {
-  font-family: Roboto-Bold;
+  font-family: 'Roboto'; font-weight: 700;
   font-size: 2rem;
   font-weight: 700;
 }
@@ -8990,7 +8990,7 @@ a:hover {
 .cursos__item-1,
 .cursos__item-2,
 .cursos__item-3 {
-  font-family: Roboto-Bold;
+  font-family: 'Roboto'; font-weight: 700;
   height: 20rem;
   margin-right: auto;
   display: flex;
@@ -9032,7 +9032,7 @@ a:hover {
 }
 
 .depoimentos__section-title {
-  font-family: Roboto-Bold;
+  font-family: 'Roboto'; font-weight: 700;
   font-size: 2rem;
   font-weight: 700;
 }
@@ -9089,7 +9089,7 @@ a:hover {
 
 .footer {
   min-height: 80%;
-  font-family: Roboto-Bold;
+  font-family: 'Roboto'; font-weight: 700;
   font-size: 1rem;
 }
 
@@ -9108,7 +9108,7 @@ a:hover {
 }
 
 .footer__menu {
-  font-family: Roboto-Bold;
+  font-family: 'Roboto'; font-weight: 700;
   font-size: 1.1rem;
 }
 

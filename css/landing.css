@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:800");
+
 *,
 *::before,
 *::after {
@@ -843,12 +843,12 @@ template {
   src: url("../font/Roboto.ttf") format('truetype'); }
 
 @font-face {
-  font-family: Roboto-Light;
-  src: url("../font/Roboto-Light.ttf") format('truetype'); }
+  font-family: 'Roboto'; font-weight: 300;
+  src: url("../font/'Roboto'.ttf") format('truetype'); }
 
 @font-face {
-  font-family: Roboto-Bold;
-  src: url("../font/Roboto-Bold.ttf") format('truetype'); }
+  font-family: 'Roboto'; font-weight: 700;
+  src: url("../font/'Roboto'.ttf") format('truetype'); }
 
 @font-face {
   font-family: Roboto-ThinItalic;
@@ -888,7 +888,7 @@ a:hover {
 
 .landing-callout__header {
   font-size: 1.8rem;
-  font-family: Roboto-Light;
+  font-family: 'Roboto'; font-weight: 300;
   margin-bottom: 1rem; }
 
 .landing-callout__main {
@@ -897,12 +897,12 @@ a:hover {
   text-align: center;
   line-height: 1; }
   .landing-callout__main .highlight {
-    font-family: Roboto-Bold;
+    font-family: 'Roboto'; font-weight: 700;
     font-size: 3rem;
     color: black; }
 
 .landing-callout__list {
-  font-family: Roboto-Light;
+  font-family: 'Roboto'; font-weight: 300;
   font-size: 1.3rem;
   margin-top: 4rem;
   margin-bottom: 3rem; }
@@ -910,13 +910,13 @@ a:hover {
 .mailing-list {
   background-color: #FFD200;
   color: black;
-  font-family: Roboto-Light;
+  font-family: 'Roboto'; font-weight: 300;
   font-size: 1.2rem;
   padding: 1rem 0rem;
   text-align: center;
   line-height: 1.2; }
   .mailing-list .highlight {
-    font-family: Roboto-Bold;
+    font-family: 'Roboto'; font-weight: 700;
     font-size: 1.3rem; }
 
 .mailing-list__input--email {
@@ -929,7 +929,7 @@ a:hover {
   background-color: transparent;
   background-color: #01CAFF;
   color: white;
-  font-family: Roboto-Light;
+  font-family: 'Roboto'; font-weight: 300;
   width: 90%;
   margin: .5rem;
   padding: .3rem; }
@@ -946,7 +946,7 @@ a:hover {
   margin: auto;
   padding-top: 4rem; }
   .landing-description__header h1 {
-    font-family: Roboto-Bold;
+    font-family: 'Roboto'; font-weight: 700;
     font-size: 2rem; }
 
 .landing-description__main {
@@ -954,7 +954,7 @@ a:hover {
   text-align: center;
   padding: .5rem; }
   .landing-description__main h2 {
-    font-family: Roboto-Light;
+    font-family: 'Roboto'; font-weight: 300;
     font-size: 1.5rem;
     font-weight: 300; }
 
@@ -996,12 +996,12 @@ a:hover {
     padding: 1rem 1rem 0rem 0rem; }
 
 .list__item--title {
-  font-family: Roboto-Bold;
+  font-family: 'Roboto'; font-weight: 700;
   font-size: 1.3rem;
   line-height: 1.2; }
 
 .list__item--description {
-  font-family: Roboto-Light;
+  font-family: 'Roboto'; font-weight: 300;
   font-size: 1.2rem;
   padding: 3rem 0rem 0rem 1rem; }
 
