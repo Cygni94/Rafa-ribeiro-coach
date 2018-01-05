@@ -1,4 +1,3 @@
-
 *,
 *::before,
 *::after {
@@ -6276,22 +6275,6 @@ a.text-dark:focus, a.text-dark:hover {
   .table-bordered td {
     border: 1px solid #ddd !important; } }
 
-@font-face {
-  font-family: Roboto;
-  src: url("../font/Roboto.ttf"); }
-
-@font-face {
-  font-family: 'Roboto'; font-weight: 300;
-  src: url("../font/'Roboto'.ttf"); }
-
-@font-face {
-  font-family: 'Roboto'; font-weight: 700;
-  src: url("../font/'Roboto'.ttf"); }
-
-@font-face {
-  font-family: Roboto-ThinItalic;
-  src: url("../font/Roboto-ThinItalic.ttf"); }
-
 html,
 body {
   position: relative;
@@ -6369,12 +6352,14 @@ a:hover {
   margin-top: 5.5rem; }
 
 .main__lead {
-  font-family: 'Roboto'; font-weight: 300;
+  font-family: 'Roboto';
+  font-weight: 300;
   font-size: 1.8rem; }
 
 .main__headline {
   margin-top: -1rem;
-  font-family: 'Roboto'; font-weight: 700;
+  font-family: 'Roboto';
+  font-weight: 700;
   font-size: 7rem; }
 
 .mailing-list {
@@ -6393,7 +6378,8 @@ a:hover {
   width: 100%; }
 
 .mailing-list__callout {
-  font-family: 'Roboto'; font-weight: 700;
+  font-family: 'Roboto';
+  font-weight: 700;
   font-size: 1.2rem;
   color: #555555;
   padding-left: 3rem; }
@@ -6440,17 +6426,20 @@ a:hover {
   color: white; }
 
 .about__title-white {
-  font-family: 'Roboto'; font-weight: 300;
+  font-family: 'Roboto';
+  font-weight: 300;
   font-size: 2rem;
   color: white; }
 
 .about__title-blue {
-  font-family: 'Roboto'; font-weight: 700;
+  font-family: 'Roboto';
+  font-weight: 700;
   font-size: 2rem;
   color: #01CAFF; }
 
 .about__text {
-  font-family: 'Roboto'; font-weight: 300; }
+  font-family: 'Roboto';
+  font-weight: 300; }
 
 .papo {
   display: flex;
@@ -6463,11 +6452,13 @@ a:hover {
   align-self: center; }
 
 .papo__callout-title {
-  font-family: 'Roboto'; font-weight: 700;
+  font-family: 'Roboto';
+  font-weight: 700;
   color: black; }
 
 .papo__callout-main {
-  font-family: 'Roboto'; font-weight: 700;
+  font-family: 'Roboto';
+  font-weight: 700;
   color: #EF4136;
   font-size: 2rem;
   display: block;
@@ -6475,12 +6466,14 @@ a:hover {
   margin: 1rem 0rem; }
 
 .papo__callout-description {
-  font-family: 'Roboto'; font-weight: 300; }
+  font-family: 'Roboto';
+  font-weight: 300; }
 
 .papo__callout-button {
   border: none;
   background-color: transparent;
-  font-family: 'Roboto'; font-weight: 300;
+  font-family: 'Roboto';
+  font-weight: 300;
   border: 1px solid black;
   border-radius: .5rem;
   padding: .5rem 1rem;
@@ -6502,7 +6495,8 @@ a:hover {
   justify-content: flex-start; }
 
 .cursos__section-title {
-  font-family: 'Roboto'; font-weight: 700;
+  font-size: 'Roboto';
+  font-weight: 700;
   font-size: 2rem;
   font-weight: 700; }
 
@@ -6510,7 +6504,8 @@ a:hover {
   display: flex; }
 
 .cursos__item-1, .cursos__item-2, .cursos__item-3 {
-  font-family: 'Roboto'; font-weight: 700;
+  font-family: 'Roboto';
+  font-weight: 700;
   height: 20rem;
   margin-top: 2rem;
   margin-right: auto;
@@ -6537,7 +6532,8 @@ a:hover {
   align-items: center; }
 
 .depoimentos__section-title {
-  font-family: 'Roboto'; font-weight: 700;
+  font-size: 'Roboto';
+  font-weight: 700;
   font-size: 2rem;
   font-weight: 700;
   margin-top: 1rem; }
@@ -6585,7 +6581,8 @@ a:hover {
 
 .footer {
   min-height: 80%;
-  font-family: 'Roboto'; font-weight: 700;
+  font-family: 'Roboto';
+  font-weight: 700;
   font-size: 1rem; }
   .footer .mailing-list__input-email {
     width: 70%; }
@@ -6596,7 +6593,8 @@ a:hover {
   margin-bottom: 1rem; }
 
 .footer__menu {
-  font-family: 'Roboto'; font-weight: 700;
+  font-family: 'Roboto';
+  font-weight: 700;
   font-size: 1.1rem; }
   .footer__menu span {
     display: block;
@@ -6609,13 +6607,13 @@ a:hover {
   font-size: 1.2rem; }
 
 .footer__social .social-icon {
-  background-color: black; }
+  background-color: #4D4D4D; }
 
 .footer__logo,
 .footer__copyright {
   text-align: center; }
 
-@media (max-width: 767px) {
+@media (min-width: 0px) {
   span br {
     content: ' '; }
   .nav__menu {
