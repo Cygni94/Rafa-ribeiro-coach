@@ -8890,6 +8890,11 @@ a:hover {
   color: black;
 }
 
+.about .col-md-6 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 .about__title-black {
   font-family: 'Roboto';
   font-weight: 300;
@@ -9095,6 +9100,7 @@ a:hover {
 
 .footer {
   height: 80%;
+  padding-top: 5rem;
   font-family: 'Roboto';
   font-weight: 700;
   font-size: 1rem;
@@ -9110,7 +9116,6 @@ a:hover {
 
 .footer .mailing-list__callout {
   text-align: center;
-  margin-top: 4rem;
   margin-bottom: 1rem;
 }
 
@@ -9146,6 +9151,9 @@ a:hover {
 @media (max-width: 767px) {
   span br {
     content: ' ';
+  }
+  .last-p {
+    margin-bottom: 0px;
   }
   .nav__menu {
     position: absolute;
@@ -9210,8 +9218,7 @@ a:hover {
     padding-left: 1rem;
   }
   .depoimentos__item-1,
-  .depoimentos__item-2,
-  .depoimentos__item-3 {
+  .depoimentos__item-2 {
     margin-bottom: 1rem;
   }
   .about {
@@ -9219,12 +9226,10 @@ a:hover {
     background: whitesmoke;
     background-size: auto;
     font-size: 1.5rem;
+  }
+  .about__title, .about__text {
     padding-left: .5rem;
     padding-right: .5rem;
-  }
-  .about__container {
-    padding-left: 0px;
-    padding-right: 0px;
   }
   .about__title {
     text-align: center;
