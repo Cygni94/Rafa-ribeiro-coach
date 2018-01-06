@@ -8903,10 +8903,6 @@
         background-color: whitesmoke;
     }
 
-    .papo .row {
-        margin-top: 2rem;
-    }
-
     .papo__callout {
         font-size: 1.25rem;
         align-self: center;
@@ -9288,7 +9284,7 @@
             @include padding-y;
         }
         .papo__callout {
-            margin-bottom: -2.4rem;
+            margin-bottom: -1.1rem;
         }
         .papo__callout-img-sm {
             display: none;
@@ -9299,8 +9295,8 @@
             padding-right: 0;
         }
         .papo-img {
-            padding-top: 1.5rem;
-            height: 15rem;
+            padding-top: 1.3rem;
+            height: 14.8rem;
         }
         .cursos {
             @include padding-y;
