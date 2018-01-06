@@ -7263,7 +7263,8 @@ a:hover {
   margin-bottom: .5rem; }
 
 .footer__bottom {
-  margin-top: 6rem; }
+  margin-top: 6rem;
+  margin-bottom: 1rem; }
 
 .footer__social {
   font-size: 1.2rem;
