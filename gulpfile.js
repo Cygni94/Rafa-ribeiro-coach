@@ -3,7 +3,7 @@
 //CRIAR TASK PARA GERAR SITE ESTÁTICO DO JEKYLL
 
 var gulp = require('gulp'),
-    imagemin = require('gulp-imagemin'),
+    imagemin = require('gulp-image'),
     clean = require('gulp-clean'),
     concat = require('gulp-concat'),
     htmlReplace = require('gulp-html-replace'),
@@ -31,9 +31,18 @@ gulp.task('clean', function () {
 });
 
 gulp.task('build-img', function () {
-
     return gulp.src('dist/assets/img/**/*')
-        .pipe(imagemin())
+        .pipe(imagemin({
+            pngquant: true,
+            optipng: false,
+            zopflipng: true,
+            jpegRecompress: false,
+            mozjpeg: true,
+            guetzli: false,
+            gifsicle: true,
+            svgo: true,
+            concurrent: 100
+        }))
         .pipe(gulp.dest('dist/assets/img'));
 });
 
@@ -46,11 +55,11 @@ gulp.task('usemin', function () {
         .pipe(gulp.dest('dist/assets'));
 });
 
-gulp.task('purifycss', function() {
+gulp.task('purifycss', function () {
     return gulp.src('./dist/assets/css/**/*.css')
-      .pipe(purify(['./dist/assets/**/*.js', './dist/**/*.html']))
-      .pipe(gulp.dest('./dist/'));
-  });
+        .pipe(purify(['./dist/assets/**/*.js', './dist/**/*.html']))
+        .pipe(gulp.dest('./dist/'));
+});
 
 gulp.task('svgmin', function () {
     return gulp.src('src/assets/img/**/*.svg')
