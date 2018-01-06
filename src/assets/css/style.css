@@ -7397,8 +7397,12 @@ a:hover {
   .papo__callout-img-sm {
     display: none; }
   .papo__callout-img-md {
+    margin-bottom: -2.4rem;
     text-align: right;
     padding-right: 0; }
+  .papo-img {
+    padding-top: 1.5rem;
+    height: 15rem; }
   .cursos {
     padding-top: 7.7rem;
     padding-bottom: 7.7rem; }
