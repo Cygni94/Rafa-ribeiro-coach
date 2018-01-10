@@ -6651,7 +6651,7 @@ a:hover {
 .footer__copyright {
   text-align: center; }
 
-@media (min-width: 0px) {
+@media (max-width: 767px) {
   span br {
     content: ' '; }
   .nav__menu {
