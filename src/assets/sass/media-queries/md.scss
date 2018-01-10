@@ -1,0 +1,44 @@
+@media (min-width: 768px) {
+    .about-sm {
+        display: none;
+    }
+    .about__title {
+        margin-top: -.7rem;
+    }
+    .about__text {
+        line-height: 1.8;
+    }
+    .papo {
+        @include padding-y;
+    }
+    .papo__callout {
+        margin-bottom: -1rem;
+    }
+    .papo__callout-img-sm {
+        display: none;
+    }
+    .papo__callout-img-md {
+        margin-bottom: -2.4rem;
+        text-align: right;
+        padding-right: 0;
+    }
+    .papo-img {
+        padding-top: 1.3rem;
+        height: 14.8rem;
+    }
+    .cursos {
+        @include padding-y;
+    }
+    .depoimentos {
+        @include padding-y;
+    }
+    .about {
+        @include padding-y;
+    }
+    .footer {
+        padding-top: 7.7rem;
+    }
+    .footer .mailing-list__callout {
+        margin-top: -.3rem;
+    }
+}

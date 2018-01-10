@@ -1,0 +1,69 @@
+.depoimentos {
+    height: auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: #01CAFF;
+}
+
+.depoimentos__section-header {
+    padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.depoimentos__section-title {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.depoimentos__list {
+    padding-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.depoimentos__item-1,
+.depoimentos__item-2,
+.depoimentos__item-3 {
+    height: 28rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.depoimentos__item-1 h3,
+.depoimentos__item-2 h3,
+.depoimentos__item-3 h3 {
+    font-size: 1.17em;
+}
+
+.depoimentos__item-1 {
+    background-image: url('../img/rafa_ribeiro_depoimento_xande_bastos.png');
+    background-size: cover;
+}
+
+.depoimentos__item-2 {
+    background-image: url('../img/rafa_ribeiro_depoimento_agatha.png');
+    background-size: cover;
+}
+
+.depoimentos__item-3 {
+    background-image: url('../img/rafa_ribeiro_depoimento_rafael.png');
+    background-size: cover;
+}
+
+.depoimentos__item-header {
+    color: #FFD200;
+    margin: 3rem 0rem;
+}
+
+.depoimentos__item-body {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
