@@ -6723,6 +6723,8 @@ a:hover {
     line-height: 1.5; }
   .landing-callout br {
     content: ' '; }
+  .list__item--title {
+    height: auto; }
   .list__item--1 .list__item--title,
   .list__item--3 .list__item--title {
     padding: 1rem 0rem 0rem .5rem; }
