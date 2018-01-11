@@ -2,12 +2,6 @@
     position: relative;
 }
 
-h1 {
-    font-size: 24px;
-    font-family: 'Roboto';
-    font-weight: 300;
-}
-
 .papo {
     padding: 1.5rem 0rem;
     text-align: center;
@@ -20,5 +14,6 @@ h1 {
 
 .papo__video {
     width: 705px;
+    padding: 1rem 0rem;
 }
 
