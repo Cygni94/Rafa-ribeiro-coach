@@ -7203,6 +7203,12 @@ a.text-dark:focus, a.text-dark:hover {
   font-family: 'Roboto';
   font-weight: 100; }
 
+#papo h4 {
+  font-size: 21px;
+  font-family: 'Roboto';
+  font-weight: 300;
+  margin-bottom: .3rem; }
+
 html,
 body {
   position: relative;
@@ -7306,6 +7312,27 @@ a:hover {
   margin: 1rem 0rem; }
   .callout .highlight {
     font-weight: 500; }
+
+.videos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem 3rem; }
+
+.videos__item {
+  padding: 1.5rem 0rem;
+  margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content; }
+
+.audios__list {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 .footer {
   height: 80%;
