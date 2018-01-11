@@ -1,0 +1,58 @@
+.assista {
+    display: flex;
+    align-items: center;
+    height: auto;
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+    background-color: whitesmoke;
+}
+
+.assista__callout {
+    font-size: 1.25rem;
+    align-self: center;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.assista__callout-title {
+    font-family: 'Roboto';
+    font-weight: 700;
+    color: black;
+}
+
+.assista__callout-main {
+    font-family: 'Roboto';
+    font-weight: 700;
+    color: #EF4136;
+    font-size: 2rem;
+    display: block;
+    line-height: 1;
+    margin: 1rem 0rem;
+}
+
+.assista__callout-description {
+    font-family: 'Roboto';
+    font-weight: 300;
+}
+
+.assista__callout-button {
+    border: none;
+    background-color: transparent;
+    font-family: 'Roboto';
+    font-weight: 300;
+    border: 1px solid black;
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    margin: 1rem 0rem;
+}
+
+.assista__callout-button:hover {
+    transition: 500ms;
+    background-color: #555555;
+    color: white;
+}
+
+.assista__callout-button a:hover {
+    color: white;
+    text-decoration: none;
+}

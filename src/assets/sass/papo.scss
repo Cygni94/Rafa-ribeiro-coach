@@ -6,13 +6,8 @@
 @import 'helpers/mixins';
 @import 'helpers/assets';
 @import 'layout/header';
-@import 'layout/main';
-@import 'layout/mailing-list';
-@import 'layout/about';
-@import 'layout/assista';
-@import 'layout/cursos';
-@import 'layout/blog';
-@import 'layout/depoimentos';
+@import 'layout/papo/papo';
+@import 'layout/papo/callout';
 @import 'layout/footer';
 @import 'media-queries/xs';
 @import 'media-queries/sm';
