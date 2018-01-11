@@ -7193,22 +7193,6 @@ a.text-dark:focus, a.text-dark:hover {
   .table-bordered td {
     border: 1px solid #ddd !important; } }
 
-#papo h1 {
-  font-size: 24px;
-  font-family: 'Roboto';
-  font-weight: 300; }
-
-#papo h2 {
-  font-size: 24px;
-  font-family: 'Roboto';
-  font-weight: 100; }
-
-#papo h4 {
-  font-size: 21px;
-  font-family: 'Roboto';
-  font-weight: 300;
-  margin-bottom: .3rem; }
-
 html,
 body {
   position: relative;
@@ -7280,59 +7264,309 @@ a:hover {
 .nav-link {
   color: white; }
 
-.header {
-  position: relative; }
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  min-height: 85%;
+  background: url("../img/rafa_ribeiro_home.png") no-repeat center top;
+  background-size: cover; }
 
-.papo {
-  padding: 1.5rem 0rem;
-  text-align: center; }
+.main__callout {
+  -ms-flex-item-align: center;
+      align-self: center;
+  text-align: center;
+  color: white;
+  margin-top: 5.5rem; }
 
-.papo__img {
-  padding: 2.5rem 0rem;
-  width: 306px; }
+.main__lead {
+  font-family: 'Roboto';
+  font-size: 1.8rem; }
 
-.papo__video {
-  width: 705px;
-  padding: 1rem 0rem; }
+.main__headline {
+  margin-top: -1rem;
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 7rem; }
 
-.callout {
+.mailing-list {
+  position: absolute;
+  margin-top: -4.3rem;
+  height: 9rem;
+  width: 100%; }
+
+.mailing-list .container {
+  background-color: white;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 0 20px rgba(62, 70, 79, 0.2);
+          box-shadow: 0 0 20px rgba(62, 70, 79, 0.2); }
+
+.mailing-list .container .row {
+  padding: 2.5rem 0rem; }
+
+.mailing-list__callout {
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #555555;
+  padding-left: 3rem; }
+
+.mailing-list__input {
+  -ms-flex-item-align: center;
+      align-self: center;
+  border-radius: 10px; }
+
+.mailing-list__input-email {
+  border-radius: 5px 0px 0px 5px;
+  border: 1px solid #A8A8A8;
+  background-color: #F1F2F4;
+  padding-left: 1rem;
+  font-family: 'Roboto';
+  height: 2.5rem;
+  margin-left: 2px;
+  width: 60%; }
+
+.mailing-list__button {
+  border-radius: 0px 5px 5px 0px;
+  border: 0px solid #A8A8A8;
+  background-color: #F1F2F4;
+  padding: 0rem 1rem;
+  font-family: Roboto;
+  font-size: 1rem;
+  color: white;
+  background-color: #00CD68;
+  height: 2.5rem;
+  margin-left: -.5rem;
+  line-height: normal;
+  width: 30%; }
+
+.about-sm {
+  width: 100%;
+  height: 15rem;
+  background: url("../img/rafa_ribeiro_conheca.png") no-repeat left top;
+  background-size: cover; }
+
+.about {
+  height: auto;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background: url("../img/rafa_ribeiro_conheca.png") no-repeat right top;
+  background-size: auto 100%;
+  color: black; }
+
+.about .col-md-6 {
+  padding-left: 0px;
+  padding-right: 0px; }
+
+.about__title-black {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 2rem;
+  color: black; }
+
+.about__title-blue {
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 2rem;
+  color: #01CAFF; }
+
+.about__text {
+  font-family: 'Roboto';
+  font-weight: 300; }
+
+.assista {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 130px;
-  background-color: #EF4136;
-  text-align: center;
-  color: white;
-  margin: 1rem 0rem; }
-  .callout .highlight {
-    font-weight: 500; }
+  height: auto;
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+  background-color: whitesmoke; }
 
-.videos {
+.assista__callout {
+  font-size: 1.25rem;
+  -ms-flex-item-align: center;
+      align-self: center;
+  padding-left: 0px;
+  padding-right: 0px; }
+
+.assista__callout-title {
+  font-family: 'Roboto';
+  font-weight: 700;
+  color: black; }
+
+.assista__callout-main {
+  font-family: 'Roboto';
+  font-weight: 700;
+  color: #EF4136;
+  font-size: 2rem;
+  display: block;
+  line-height: 1;
+  margin: 1rem 0rem; }
+
+.assista__callout-description {
+  font-family: 'Roboto';
+  font-weight: 300; }
+
+.assista__callout-button {
+  border: none;
+  background-color: transparent;
+  font-family: 'Roboto';
+  font-weight: 300;
+  border: 1px solid black;
+  border-radius: .5rem;
+  padding: .5rem 1rem;
+  margin: 1rem 0rem; }
+
+.assista__callout-button:hover {
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+  background-color: #555555;
+  color: white; }
+
+.assista__callout-button a:hover {
+  color: white;
+  text-decoration: none; }
+
+.cursos {
+  height: auto;
+  padding-top: 5rem;
+  padding-bottom: 5rem; }
+
+.cursos__section-header {
+  padding-left: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 1rem 3rem; }
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-bottom: 4rem; }
 
-.videos__item {
-  padding: 1.5rem 0rem;
-  margin: auto;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content; }
+.cursos__section-title {
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 2rem; }
 
-.audios__list {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+.cursos__item-1,
+.cursos__item-2,
+.cursos__item-3 {
+  font-family: 'Roboto';
+  font-weight: 700;
+  height: 20rem;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center; }
+
+.cursos__item-1 span,
+.cursos__item-2 span,
+.cursos__item-3 span {
+  -ms-flex-item-align: center;
+      align-self: center;
+  color: white;
+  font-size: 2rem; }
+
+.cursos__item-1 {
+  background-color: #EF4136; }
+
+.cursos__item-2 {
+  background-color: #FFD200; }
+
+.cursos__item-3 {
+  background-color: #01CAFF; }
+
+.depoimentos {
+  height: auto;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: #01CAFF; }
+
+.depoimentos__section-header {
+  padding-left: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+
+.depoimentos__section-title {
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 2rem; }
+
+.depoimentos__list {
+  padding-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.depoimentos__item-1,
+.depoimentos__item-2,
+.depoimentos__item-3 {
+  height: 28rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+  color: whitesmoke; }
+
+.depoimentos__item-1 h3,
+.depoimentos__item-2 h3,
+.depoimentos__item-3 h3 {
+  font-size: 1.17em; }
+
+.depoimentos__item-1 {
+  background-image: url("../img/rafa_ribeiro_depoimento_xande_bastos.png");
+  background-size: cover; }
+
+.depoimentos__item-2 {
+  background-image: url("../img/rafa_ribeiro_depoimento_agatha.png");
+  background-size: cover; }
+
+.depoimentos__item-3 {
+  background-image: url("../img/rafa_ribeiro_depoimento_rafael.png");
+  background-size: cover; }
+
+.depoimentos__item-header {
+  color: #FFD200;
+  margin: 3rem 0rem; }
+
+.depoimentos__item-body {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.5; }
 
 .footer {
   height: 80%;
@@ -7523,4 +7757,4 @@ a:hover {
   .footer .mailing-list__callout {
     margin-top: -.3rem; } }
 
-/*# sourceMappingURL=sourcemaps/papo.css.map */
+/*# sourceMappingURL=sourcemaps/style.css.map */
