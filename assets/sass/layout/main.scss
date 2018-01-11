@@ -1,0 +1,28 @@
+.main {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    min-height: 85%;
+    background: url("../img/rafa_ribeiro_home.png") no-repeat center top;
+    background-size: cover;
+}
+
+.main__callout {
+    align-self: center;
+    text-align: center;
+    color: white;
+    margin-top: 5.5rem;
+}
+
+.main__lead {
+    font-family: 'Roboto';
+    font-size: 1.8rem;
+}
+
+.main__headline {
+    margin-top: -1rem;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 7rem;
+}
