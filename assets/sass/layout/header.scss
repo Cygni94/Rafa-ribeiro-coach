@@ -20,10 +20,6 @@
     background-color: #01CAFF;
 }
 
-.nav__menu a {
-    color: inherit;
-}
-
 .nav__item {
     align-self: center;
     text-align: center;
@@ -32,8 +28,11 @@
     font-size: 1rem;
 }
 
-.navbar-dark,
-.navbar-nav,
-.nav-link {
+.navbar-dark .navbar-nav .nav-link {
     color: white;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #ffc107;
+    font-weight: 500;
 }

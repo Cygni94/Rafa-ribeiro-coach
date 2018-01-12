@@ -1,6 +1,13 @@
 .callout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 130px;
     background-color: #EF4136;
     text-align: center;
     color: white;
+    margin: 1rem 0rem;
+    .highlight {
+        font-weight: 500;
+    }
 }
