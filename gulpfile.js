@@ -80,7 +80,7 @@ gulp.task('sass', function () {
         .pipe(sass())
         .pipe(gulp.dest("src/assets/css"))
         .pipe(sourcemaps.init())
-        .pipe(cleanCSS({
+/*        .pipe(cleanCSS({
             level: {
                 2: {
                     mergeAdjacentRules: true, // controls adjacent rules merging; defaults to true
@@ -101,7 +101,7 @@ gulp.task('sass', function () {
             }
         }, {
             compatibility: 'ie8'
-        }))
+        })) */
         .pipe(postcss([autoprefixer()]))
         .pipe(sourcemaps.write('sourcemaps'))
         .pipe(gulp.dest("src/assets/css"))

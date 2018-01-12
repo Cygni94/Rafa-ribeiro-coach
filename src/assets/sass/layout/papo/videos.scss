@@ -15,7 +15,13 @@
 @media (max-width: 767px) {
 
     .videos {
+        position: relative;
         padding: 3rem 0rem;
+    }
+
+    .videos__item--title, .videos__item--frame {
+        padding: 0rem 0rem;
+        width: auto;
     }
     
 
