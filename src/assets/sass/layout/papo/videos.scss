@@ -1,16 +1,22 @@
 .videos {
-    display: flex;
-    justify-content: center;
     padding: 3rem 3rem 0rem 3rem;
 }
 
 .videos__item {
     padding-bottom: 3rem;
     margin: auto;
-    width: fit-content;
 }
 
 .videos__item--frame {
     width: 452px;
     height: 276px;
+}
+
+@media (max-width: 767px) {
+
+    .videos {
+        padding: 3rem 0rem;
+    }
+    
+
 }
