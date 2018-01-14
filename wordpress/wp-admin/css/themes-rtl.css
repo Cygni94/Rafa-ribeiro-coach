@@ -668,7 +668,7 @@ body.folded .theme-browser ~ .theme-overlay .theme-wrap {
 .theme-overlay .theme-name {
 	color: #23282d;
 	font-size: 32px;
-	font-weight: 300;
+	font-weight: 100;
 	margin: 10px 0 0;
 	line-height: 1.3;
 	word-wrap: break-word;
