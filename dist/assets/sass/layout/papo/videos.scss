@@ -1,0 +1,28 @@
+.videos {
+    padding: 3rem 3rem 0rem 3rem;
+}
+
+.videos__item {
+    padding-bottom: 3rem;
+    margin: auto;
+}
+
+.videos__item--frame {
+    width: 452px;
+    height: 276px;
+}
+
+@media (max-width: 767px) {
+
+    .videos {
+        position: relative;
+        padding: 3rem 0rem;
+    }
+
+    .videos__item--title, .videos__item--frame {
+        padding: 0rem 0rem;
+        width: auto;
+    }
+    
+
+}

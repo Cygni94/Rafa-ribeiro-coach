@@ -1,0 +1,15 @@
+.callout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 130px;
+    background-color: #EF4136;
+    text-align: center;
+    color: white;
+    h2 {
+        font-weight: 300;
+    }
+    .highlight {
+        font-weight: 500;
+    }
+}

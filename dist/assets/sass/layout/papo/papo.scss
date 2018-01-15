@@ -1,0 +1,26 @@
+.header {
+    position: relative;
+}
+
+.papo {
+    padding: 3rem 0rem;
+    text-align: center;
+}
+
+.papo__img {
+    padding: 2.5rem 0rem;
+    width: 306px;
+}
+
+.papo__video {
+    width: 705px;
+    height: 347px;
+}
+
+@media (max-width: 767px) {
+
+    .papo__img {
+width: 100%;
+}
+
+}
