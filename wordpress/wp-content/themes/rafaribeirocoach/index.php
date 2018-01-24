@@ -119,20 +119,21 @@
 			<?php while( $loop->have_posts() ) {
 			$loop->the_post(); ?>
 			<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
-			<div class="depoimentos__item offset-md-0 col-md-3 offset-1 col-10" style="background-image: url('<?php echo $thumb['0'];?>')">
-
-				<div class="depoimentos__item-header">
-					<h3>
-						<?php the_title(); ?>
-					</h3>
-				</div>
-				<div class="depoimentos__item-body">
-					<p>
-						<?php the_content(); ?>
-					</p>
-				</div>
-				<div class="depoimentos__item-footer">
-					<img src="<?= $theme_folder; ?>/assets/img/icon/aspas_depoimento.png" alt="aspas">
+			<div class="depoimentos__wrapper offset-md-0 col-md-3 offset-1 col-10">
+				<div class="depoimentos__item" style="background-image: url('<?php echo $thumb['0'];?>')">
+					<div class="depoimentos__item-header">
+						<h3>
+							<?php the_title(); ?>
+						</h3>
+					</div>
+					<div class="depoimentos__item-body">
+						<p>
+							<?php the_content(); ?>
+						</p>
+					</div>
+					<div class="depoimentos__item-footer">
+						<img src="<?= $theme_folder; ?>/assets/img/icon/aspas_depoimento.png" alt="aspas">
+					</div>
 				</div>
 			</div>
 			<?php } ?>
