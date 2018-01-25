@@ -4,6 +4,14 @@
 @ini_set( 'post_max_size', '64M');
 @ini_set( 'max_execution_time', '300' );
 
+function remove_mediaelement_styles() {
+    if( is_page( '2' ) ) {
+    wp_dequeue_style('wp-mediaelement');
+    wp_deregister_style('wp-mediaelement');
+    }
+}
+add_action( 'wp_print_styles', 'remove_mediaelement_styles' );
+
 add_theme_support( 'post-thumbnails' );
 
 function post_type_depoimentos() {
