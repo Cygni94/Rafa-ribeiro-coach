@@ -16,12 +16,6 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400,700" rel="stylesheet">
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/papo.css">
 
-<style>
-.mejs-duration-container, .mejs-volume-button, .mejs-time-rail, .mejs-horizontal-volume-slider {
-	display:none;
-}
-</style>
-
 </head>
 
 
@@ -165,7 +159,6 @@
 					<span class="audios__item--guest">
 						<?php the_title(); ?>
 					</span>
-					<span class="playbtn"></span>
 						<?php the_content(); ?>
 						</div>
 					</div>
