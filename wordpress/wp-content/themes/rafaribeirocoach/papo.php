@@ -154,28 +154,24 @@
 					<hr>
 					<div class="audios__item">
 						<div class="audios__item--wrapper">
-							<span class="audios__item--header">
-								<span class="audios__item--btn">
+							<div class="audios__item--header">
+								<span class="audios__item--title">papo momento da virada </span>
+								<span class="separator">- </span>
+								<span class="audios__item--guest">
+									<?php the_title(); ?>
+								</span>
+								<div class="audios__item--player">
 									<span class="play-btn">
 										<?php the_content(); ?>
 									</span>
-								</span>
-									<span class="audios__item--title">papo momento da virada </span>
-									<span class="separator">- </span>
-									<span class="audios__item--guest">
-										<?php the_title(); ?>
-									</span>
-								</span>
-								<span class="audios__item--length">
-
-								</span>
+								</div>
+							</div>
 						</div>
 					</div>
 					<?php } ?>
 				</div>
+				<?php } ?>
 			</div>
-			<?php } ?>
-		</div>
 	</section>
 
 	<?php get_footer(); ?>
