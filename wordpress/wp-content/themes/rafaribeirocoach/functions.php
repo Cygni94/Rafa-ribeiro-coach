@@ -6,7 +6,7 @@
 
 add_theme_support( 'post-thumbnails' );
 
-add_action('init', 'avf_remove_media_element', 10);
+//add_action('init', 'avf_remove_media_element', 10);
 function avf_remove_media_element()
 {	
 	wp_deregister_script('wp-mediaelement');
@@ -34,7 +34,7 @@ function post_type_depoimentos() {
 
     $args = array(
         'labels' => $labels,
-        'description' => $descricao,
+        'description' => $description,
         'public' => true,
         'menu_icon' => 'dashicons-testimonial',
         'supports' => $supports
@@ -66,7 +66,7 @@ function post_type_videos() {
 
     $args = array(
         'labels' => $labels,
-        'description' => $descricao,
+        'description' => $description,
         'public' => true,
         'menu_icon' => 'dashicons-video-alt3',
         'supports' => $supports
@@ -99,7 +99,7 @@ function post_type_audios() {
 
     $args = array(
         'labels' => $labels,
-        'description' => $descricao,
+        'description' => $description,
         'public' => true,
         'menu_icon' => 'dashicons-format-audio',
         'supports' => $supports
