@@ -160,6 +160,9 @@
 								<span class="audios__item--guest">
 									<?php the_title(); ?>
 								</span>
+<span><a href="/images/myw3schoolsimage.jpg" download>
+  <img border="0" src="/images/myw3schoolsimage.jpg" alt="W3Schools" width="104" height="142">
+</a></span>								
 								<div class="audios__item--player">
 									<span class="play-btn">
 										<?php the_content(); ?>
