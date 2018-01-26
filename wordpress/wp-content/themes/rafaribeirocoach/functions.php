@@ -6,6 +6,13 @@
 
 add_theme_support( 'post-thumbnails' );
 
+add_action('init', 'avf_remove_media_element', 10);
+function avf_remove_media_element()
+{	
+	wp_deregister_script('wp-mediaelement');
+	wp_deregister_style('wp-mediaelement');
+}
+
 function post_type_depoimentos() {
 
     $nomeSingular = 'Depoimento';

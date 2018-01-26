@@ -24,7 +24,7 @@
 		<nav class="nav navbar navbar-dark navbar-expand-lg justify-content-between container">
 			<div class="nav__brand">
 				<a class="navbar-brand" href="index.html">
-					<img class="nav__brand-logo" src="assets/img/brand/logo_menu.png" alt="">
+					<img class="nav__brand-logo" src="<?php bloginfo('template_url'); ?>/assets/img/brand/logo_menu.png" alt="">
 				</a>
 			</div>
 			<button class="navbar-toggler justify-content-end" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
@@ -154,12 +154,21 @@
 					<hr>
 					<div class="audios__item">
 						<div class="audios__item--wrapper">
-						<span class="audios__item--title">papo momento da virada </span>
-					<span class="separator">- </span>
-					<span class="audios__item--guest">
-						<?php the_title(); ?>
-					</span>
-						<?php the_content(); ?>
+							<span class="audios__item--header">
+								<span class="audios__item--btn">
+									<span class="play-btn">
+										<?php the_content(); ?>
+									</span>
+								</span>
+									<span class="audios__item--title">papo momento da virada </span>
+									<span class="separator">- </span>
+									<span class="audios__item--guest">
+										<?php the_title(); ?>
+									</span>
+								</span>
+								<span class="audios__item--length">
+
+								</span>
 						</div>
 					</div>
 					<?php } ?>
