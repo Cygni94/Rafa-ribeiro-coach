@@ -1,5 +1,3 @@
 .sass-cache
 node_modules/
 package-lock.json
-wordpress/wp-admin/
-wordpress/wp-includes/
