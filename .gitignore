@@ -1,3 +1,6 @@
 .sass-cache
 node_modules/
 package-lock.json
+wordpress/
+!wordpress/wp-content/themes/rafaribeirocoach
+!wordpress/.htaccess
