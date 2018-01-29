@@ -1,4 +1,8 @@
 <?php /* Template Name: Papo Momento da Virada */ ?>
+<?php $media = wp_get_attachment_url(); ?>
+<?php $post_id = get_the_ID(); ?>
+
+<?php $theme_folder = get_template_directory_uri(); ?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -50,11 +54,13 @@
 
 
 
-
 	<main class="papo">
 		<div class="container">
 			<div class="row">
 				<div class="papo__callout offset-md-2 col-md-8 col-12">
+					<h2>
+						<?= $media ?>
+					</h2>
 					<h1>Você sonha em empreender suas idéias, seus sonhos e talentos?
 						<br>Assista o vídeo para saber sobre o</h1>
 				</div>
@@ -99,7 +105,6 @@
 				<div class="videos__list row">
 					<?php while( $loop->have_posts() ) {
 					$loop->the_post(); ?>
-
 					<div class="videos__item col-md col-12">
 						<div class="videos__item--title">
 							<a href="<?= the_permalink(); ?>">
@@ -150,7 +155,8 @@
 						<h5>Rafa Ribeiro</h5>
 					</div>
 					<?php while( $loop->have_posts() ) {
-				$loop->the_post(); ?>
+				$loop->the_post();
+				?>
 					<hr>
 					<div class="audios__item">
 						<div class="audios__item--wrapper">
@@ -160,14 +166,21 @@
 								<span class="audios__item--guest">
 									<?php the_title(); ?>
 								</span>
-<span><a href="/images/myw3schoolsimage.jpg" download>
-  <img border="0" src="/images/myw3schoolsimage.jpg" alt="W3Schools" width="104" height="142">
-</a></span>								
-								<div class="audios__item--player">
-									<span class="play-btn">
-										<?php the_content(); ?>
-									</span>
-								</div>
+								<span class="audio__item--download">
+									<!-- testar os códigos e ir conferindo com hover no botao de download -->
+									<?php 
+									$permalink = get_permalink();
+									$post = the_post( $permalink );
+									?>
+									<a href="<?php echo the_attachment_link( $post ); ?>" download> 
+									<img border="0" src="<?= $theme_folder; ?>/assets/img/icon/download.svg" alt="Baixar áudio" width="30" height="30">
+									</a>
+								</span>
+							</div>
+							<div class="audios__item--player">
+								<span class="play-btn">
+									<?php the_content(); ?>
+								</span>
 							</div>
 						</div>
 					</div>
