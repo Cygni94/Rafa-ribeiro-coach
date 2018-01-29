@@ -68,7 +68,7 @@ define( 'NONCE_SALT',       'coloque a sua frase única aqui' );
  * Você pode ter várias instalações em um único banco de dados se você der
  * um prefixo único para cada um. Somente números, letras e sublinhados!
  */
-$table_prefix  = 'rafaribeiro_';
+$table_prefix  = 'esc_';
 
 /**
  * Para desenvolvedores: Modo de debug do WordPress.
@@ -83,7 +83,7 @@ $table_prefix  = 'rafaribeiro_';
  *
  * @link https://codex.wordpress.org/pt-br:Depura%C3%A7%C3%A3o_no_WordPress
  */
-define( 'WP_DEBUG', true );
+define( 'WP_DEBUG', false );
 
 /* Isto é tudo, pode parar de editar! :) */
 

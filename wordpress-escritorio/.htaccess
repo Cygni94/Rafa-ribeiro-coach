@@ -6,11 +6,11 @@ php_value max_input_time 300
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /3.profissional/rafaribeiro/wordpress/
+RewriteBase /3.Profissional/rafaribeiro/wordpress-escritorio/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /3.profissional/rafaribeiro/wordpress/index.php [L]
+RewriteRule . /3.Profissional/rafaribeiro/wordpress-escritorio/index.php [L]
 </IfModule>
 
 # END WordPress
