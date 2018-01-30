@@ -9784,7 +9784,7 @@ a:hover {
 
 .videos__item--frame {
     width: 452px;
-    height: 276px
+    height: 276px;
 }
 
 @media (max-width:767px) {
