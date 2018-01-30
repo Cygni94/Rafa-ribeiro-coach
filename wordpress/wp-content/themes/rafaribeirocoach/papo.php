@@ -1,7 +1,4 @@
 <?php /* Template Name: Papo Momento da Virada */ ?>
-<?php $media = wp_get_attachment_url(); ?>
-<?php $post_id = get_the_ID(); ?>
-
 <?php $theme_folder = get_template_directory_uri(); ?>
 
 <!DOCTYPE html>
@@ -58,9 +55,6 @@
 		<div class="container">
 			<div class="row">
 				<div class="papo__callout offset-md-2 col-md-8 col-12">
-					<h2>
-						<?= $media ?>
-					</h2>
 					<h1>Você sonha em empreender suas idéias, seus sonhos e talentos?
 						<br>Assista o vídeo para saber sobre o</h1>
 				</div>
@@ -165,16 +159,6 @@
 								<span class="separator">- </span>
 								<span class="audios__item--guest">
 									<?php the_title(); ?>
-								</span>
-								<span class="audio__item--download">
-									<!-- testar os códigos e ir conferindo com hover no botao de download -->
-									<?php 
-									$permalink = get_permalink();
-									$post = the_post( $permalink );
-									?>
-									<a href="<?php echo the_attachment_link( $post ); ?>" download> 
-									<img border="0" src="<?= $theme_folder; ?>/assets/img/icon/download.svg" alt="Baixar áudio" width="30" height="30">
-									</a>
 								</span>
 							</div>
 							<div class="audios__item--player">

@@ -29,7 +29,7 @@
             <div class="nav__menu collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav">
                     <li class="nav__item nav-item active">
-                        <a class="nav-link" href="papo.php">papo momento da virada</a>
+                        <a class="nav-link" href="<?= $theme_folder; ?>/papo.php">papo momento da virada</a>
                         </a>
                     </li>
                     <li class="nav__item nav-item active">

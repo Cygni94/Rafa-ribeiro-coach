@@ -9685,7 +9685,6 @@ a:hover {
 .header {
     background-color: #01caff;
     width: 100%;
-    position: absolute;
     z-index: 1
 }
 
@@ -10192,7 +10191,10 @@ a:hover {
     }
 }
 
-.mejs-container, .mejs-container .mejs-controls, .mejs-embed, .mejs-embed body {
+.mejs-container,
+.mejs-container .mejs-controls,
+.mejs-embed,
+.mejs-embed body {
     background: #01CAFF !important;
 }
 
@@ -10203,4 +10205,15 @@ a:hover {
 
 .audios__item--player {
     padding: 0.5rem 0rem;
+}
+
+.download-btn {
+    background-image: url('../img/icon/download.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0rem;
+    right: 2rem;
 }

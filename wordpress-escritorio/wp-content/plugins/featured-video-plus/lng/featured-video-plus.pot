@@ -15,11 +15,11 @@ msgstr ""
 
 #: build/php/class-backend.php:122 php/class-backend.php:122
 msgid "Featured Video"
-msgstr ""
+msgstr "Vídeo destacado"
 
 #: build/php/class-backend.php:164 php/class-backend.php:164
 msgid "Set Featured Video"
-msgstr ""
+msgstr "Definir vídeo destacado"
 
 #: build/php/class-backend.php:170 php/class-backend.php:170
 msgid "Video URL"
