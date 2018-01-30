@@ -1,0 +1,44 @@
+<?php 
+	$attachments = get_posts( array(
+	'post_type' => 'attachment',
+	'posts_per_page' => -1,
+	'post_parent' => $post->ID,
+	'exclude'     => 'image'
+	));
+	if ( $attachments ) { ?> $attachments[post_type]
+<?php } ?>
+
+
+
+
+
+get_attached_media( 'audio', get_the_ID() )
+
+
+
+'post_type=attachment&post_mime_type=audio'
+
+
+
+
+<?php 
+									$attachment_id = the_ID(); // ID of attachment
+									$attachment_page = get_attachment_link( $attachment_id ); 
+									?>
+									<a href="<?php echo $attachment_page; ?>" download>
+									<?php echo get_the_title( $attachment_id ); ?></a>
+
+
+
+$attr = array(
+					'src',
+					'loop',
+					'autoplay',
+					'preload'
+				);
+				$src = wp_audio_shortcode( 'src' ); 
+				$attachment_page = get_attachment_link( $src);
+
+
+
+                <?php $media = get_attached_media( 'audio' ); ?>
