@@ -16,7 +16,7 @@ function ast_audio_shortcode_enhancer( $html, $atts, $audio, $post_id, $library 
     // Use the first audio type that has data.
     foreach ( $audio_types as $extension ) {
         if ( strlen( $atts[ $extension ] ) ) {
-            return  $html . sprintf( '<a class="download-btn" href="%s"></a>', $atts[ $extension ] );
+            return  $html . sprintf( '<a class="download-btn" href="%s" download></a>', $atts[ $extension ] );
             break;
         }
     }

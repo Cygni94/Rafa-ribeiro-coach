@@ -91,7 +91,6 @@
 
 	<section class="videos">
 		<div class="container">
-			<div class="videos__list row">
 				<?php 
 			$args = array( 'post_type' => 'video' );
 			$loop = new WP_Query( $args );
