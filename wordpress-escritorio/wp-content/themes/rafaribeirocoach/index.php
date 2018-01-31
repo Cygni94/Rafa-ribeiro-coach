@@ -63,7 +63,7 @@
 				<span class="assista__callout-description">uma série de entrevistas com
 					<br>empreendedores super inspiradores</span>
 				<br>
-				<a href="calltoaction.html">
+				<a href="<?= $theme_folder; ?>/papo-momento-da-virada">
 					<button class="assista__callout-button">
 						quero participar agora
 					</button>
