@@ -111,3 +111,34 @@ function post_type_audios() {
 
 add_action('init', 'post_type_audios');
 
+function post_type_eventos() {
+
+    $nomeSingular = 'Evento';
+    $nomePlural = 'Eventos';
+    $description = 'Eventos';
+
+    $labels = array(
+        'name' => $nomePlural,
+        'name_singular' => $nomeSingular,
+        'add_new_item' => 'Adicionar novo ' . $nomeSingular,
+        'edit_item' => 'Editar ' . $nomeSingular
+    );
+
+    $supports = array(
+        'title',
+        'editor',
+        'thumbnail'
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'description' => $description,
+        'public' => true,
+        'menu_icon' => 'dashicons-calendar-alt',
+        'supports' => $supports
+    );
+    
+    register_post_type( 'evento', $args);    
+}
+
+//add_action('init', 'post_type_eventos');

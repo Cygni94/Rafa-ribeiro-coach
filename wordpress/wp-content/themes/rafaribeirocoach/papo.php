@@ -35,15 +35,16 @@
 			<div class="nav__menu collapse navbar-collapse" id="navbarTogglerDemo02">
 				<ul class="navbar-nav">
 					<li class="nav__item nav-item">
-						<a class="nav-link active" href="#papo-momento-da-virada">papo momento da virada</a>
+						<a class="nav-link active" href="<?= $theme_folder; ?>/papo-momento-da-virada">papo momento da virada</a>
 						</a>
 					</li>
 					<li class="nav__item nav-item">
-						<a class="nav-link" href="#cursos">treinamentos</a>
+						<a class="nav-link" href="<?= $theme_folder; ?>/treinamentos">treinamentos</a>
 					</li>
 					<li class="nav__item nav-item">
 						<a class="nav-link" href="#">contato</a>
 					</li>
+
 				</ul>
 			</div>
 		</nav>
@@ -91,7 +92,7 @@
 
 	<section class="videos">
 		<div class="container">
-				<?php 
+			<?php 
 			$args = array( 'post_type' => 'video' );
 			$loop = new WP_Query( $args );
 			if( $loop->have_posts() ) { ?>
@@ -107,19 +108,17 @@
 							</a>
 							<div class="videos__item--frame">
 								<?php 
-			if ( has_post_thumbnail() ) {
-				the_post_thumbnail();
-			} 
-			the_content();
-			?>
-
+									if ( has_post_thumbnail() ) {
+									the_post_thumbnail();
+									} 
+									the_content();
+									?>
 							</div>
 						</div>
 					</div>
-					<?php } ?>
+				<?php } ?>
 				</div>
-				<?php	} ?>
-			</div>
+			<?php } ?>
 		</div>
 	</section>
 
