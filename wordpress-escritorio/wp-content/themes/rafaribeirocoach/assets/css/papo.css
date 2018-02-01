@@ -10217,3 +10217,7 @@ a:hover {
     top: 0rem;
     right: 2rem;
 }
+
+.videos__item--title {
+    text-transform: uppercase;
+}

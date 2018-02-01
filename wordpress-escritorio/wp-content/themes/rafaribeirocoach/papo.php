@@ -66,11 +66,9 @@
 			<div class="row">
 				<div class="papo__video offset-md-2 col-md-8 col-12">
 					<?php 
-			if ( has_post_thumbnail() ) {
-				the_post_thumbnail();
-			} 
-			the_content();
-			?>
+					the_post();
+					the_content();
+					?>
 				</div>
 			</div>
 		</div>
@@ -96,28 +94,28 @@
 			$args = array( 'post_type' => 'video' );
 			$loop = new WP_Query( $args );
 			if( $loop->have_posts() ) { ?>
-				<div class="videos__list row">
-					<?php while( $loop->have_posts() ) {
+			<div class="videos__list row">
+				<?php while( $loop->have_posts() ) {
 					$loop->the_post(); ?>
-					<div class="videos__item col-md col-12">
-						<div class="videos__item--title">
-							<a href="<?= the_permalink(); ?>">
-								<h4>
-									<?php the_title(); ?>
-								</h4>
-							</a>
-							<div class="videos__item--frame">
-								<?php 
+				<div class="videos__item col-md col-12">
+					<div class="videos__item--title">
+						<a href="<?= the_permalink(); ?>">
+							<h4>
+								<?php the_title(); ?>
+							</h4>
+						</a>
+						<div class="videos__item--frame">
+							<?php 
 									if ( has_post_thumbnail() ) {
 									the_post_thumbnail();
 									} 
 									the_content();
 									?>
-							</div>
 						</div>
 					</div>
-				<?php } ?>
 				</div>
+				<?php } ?>
+			</div>
 			<?php } ?>
 		</div>
 	</section>
