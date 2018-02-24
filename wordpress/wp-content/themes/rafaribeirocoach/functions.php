@@ -141,4 +141,15 @@ function post_type_eventos() {
     register_post_type( 'evento', $args);    
 }
 
-//add_action('init', 'post_type_eventos');
+add_action('init', 'post_type_eventos');
+
+function theme_js() {
+
+	global $wp_scripts;
+
+	wp_enqueue_script( 'bootstrap_js', get_template_directory_uri() . '/assets/js/bootstrap.min.js' );
+	wp_enqueue_script( 'my_custom_js', get_template_directory_uri() . '/assets/js/video.js');
+
+}
+
+add_action( 'wp_enqueue_scripts', 'theme_js');

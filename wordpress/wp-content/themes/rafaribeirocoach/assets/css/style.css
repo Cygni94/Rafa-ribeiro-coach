@@ -7259,12 +7259,22 @@ a:hover {
   color: #FFF;
   font-size: 1rem; }
 
-.navbar-dark .navbar-nav .nav-link {
+.navbar-dark .navbar-nav .nav-link, .menu, .menu-item a {
   color: white; }
 
 .navbar-dark .navbar-nav .nav-link.active {
   color: #ffc107;
   font-weight: 500; }
+
+#menu-header-menu {
+  list-style-type: none;
+    display: inline-flex;
+    margin: 1rem;
+}
+
+.menu-item {
+padding: 0rem 2rem;
+}
 
 .main {
   display: -webkit-box;
@@ -7747,5 +7757,7 @@ a:hover {
     padding-top: 7.7rem; }
   .footer .mailing-list__callout {
     margin-top: -.3rem; } }
+
+
 
 /*# sourceMappingURL=sourcemaps/style.css.map */
