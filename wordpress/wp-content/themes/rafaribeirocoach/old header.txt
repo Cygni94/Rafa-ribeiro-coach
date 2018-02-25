@@ -1,0 +1,25 @@
+        <nav class="nav navbar navbar-dark navbar-expand-lg justify-content-between container" role="navigation">
+            <div class="nav__brand">
+                <a class="navbar-brand" href="index.html">
+                    <img class="nav__brand-logo" src="<?= $theme_folder; ?>/assets/img/brand/logo_menu.png" alt="">
+                </a>
+            </div>
+            <button class="navbar-toggler justify-content-end" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="nav__menu collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav">
+                    <li class="nav__item nav-item active">
+                        <a class="nav-link" href="<?= $theme_folder; ?>/papo-momento-da-virada">papo momento da virada</a>
+                        </a>
+                    </li>
+                    <li class="nav__item nav-item active">
+                    <a class="nav-link" href="<?= $theme_folder; ?>/treinamentos">treinamentos</a>
+                    </li>
+                    <li class="nav__item nav-item active">
+                        <a class="nav-link" href="#">contato</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>

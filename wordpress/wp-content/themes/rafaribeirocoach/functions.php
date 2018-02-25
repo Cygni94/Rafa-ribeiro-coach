@@ -6,6 +6,23 @@
 
 add_theme_support( 'post-thumbnails' );
 
+require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+
+register_nav_menus( array(
+    'primary' => __( 'Primary Menu', 'rafaribeirocoach' ),
+) );
+
+wp_nav_menu( array(
+    'theme_location'	=> 'primary',
+    'depth'				=> 1, // 1 = with dropdowns, 0 = no dropdowns.
+	'container'			=> 'div',
+	'container_class'	=> 'collapse navbar-collapse',
+	'container_id'		=> 'bs-example-navbar-collapse-1',
+	'menu_class'		=> 'navbar-nav mr-auto',
+    'fallback_cb'		=> 'WP_Bootstrap_Navwalker::fallback',
+    'walker'			=> new WP_Bootstrap_Navwalker()
+) );
+
 //add_action('init', 'avf_remove_media_element', 10);
 function avf_remove_media_element()
 {	

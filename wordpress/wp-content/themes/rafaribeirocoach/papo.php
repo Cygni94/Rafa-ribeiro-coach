@@ -1,12 +1,12 @@
 <?php /* Template Name: Papo Momento da Virada */ ?>
-<?php $theme_folder = get_template_directory_uri(); ?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<?php $theme_folder = get_template_directory_uri(); ?>
 
 	<link rel="icon" href="<?php bloginfo('template_url'); ?>/rafaribeiro.ico" />
 
@@ -22,7 +22,7 @@
 
 <body class="papo-page">
 	<header class="header">
-		<nav class="nav navbar navbar-dark navbar-expand-lg justify-content-between container">
+		<nav class="navbar navbar-dark navbar-expand-lg justify-content-between">
 			<div class="nav__brand">
 				<a class="navbar-brand" href="index.html">
 					<img class="nav__brand-logo" src="<?php bloginfo('template_url'); ?>/assets/img/brand/logo_menu.png" alt="">
@@ -32,25 +32,10 @@
 			    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			<div class="nav__menu collapse navbar-collapse" id="navbarTogglerDemo02">
-				<ul class="navbar-nav">
-					<li class="nav__item nav-item">
-						<a class="nav-link active" href="<?= $theme_folder; ?>/papo-momento-da-virada">papo momento da virada</a>
-						</a>
-					</li>
-					<li class="nav__item nav-item">
-						<a class="nav-link" href="<?= $theme_folder; ?>/treinamentos">treinamentos</a>
-					</li>
-					<li class="nav__item nav-item">
-						<a class="nav-link" href="#">contato</a>
-					</li>
-
-				</ul>
-			</div>
+			<?php wp_nav_menu( array( 'theme_location'=> 'primary', 'depth'=> 2, 'container'=> 'div', 'container_class'=> 'collapse navbar-collapse', 'container_id'=> 'bs-example-navbar-collapse-1', 'menu_class'=> 'nav navbar-nav', 'fallback_cb'=> 'WP_Bootstrap_Navwalker::fallback', 'walker'=> new WP_Bootstrap_Navwalker()));
+?>
 		</nav>
 	</header>
-
-
 
 	<main class="papo">
 		<div class="container">
