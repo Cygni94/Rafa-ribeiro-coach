@@ -1,42 +1,9 @@
 <?php /* Template Name: Papo Momento da Virada */ ?>
-<!DOCTYPE html>
-<html lang="pt-BR">
+<?php get_header(); ?>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<?php $theme_folder = get_template_directory_uri(); ?>
-
-	<link rel="icon" href="<?php bloginfo('template_url'); ?>/rafaribeiro.ico" />
-
-	<?php wp_head(); ?>
-
-	<title>Rafael Ribeiro Coaching - Desperte seu Herói</title>
-
-	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400,700" rel="stylesheet">
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/papo.css">
-
-</head>
-
-
-<body class="papo-page">
-	<header class="header">
-		<nav class="navbar navbar-dark navbar-expand-lg justify-content-between">
-			<div class="nav__brand">
-				<a class="navbar-brand" href="index.html">
-					<img class="nav__brand-logo" src="<?php bloginfo('template_url'); ?>/assets/img/brand/logo_menu.png" alt="">
-				</a>
-			</div>
-			<button class="navbar-toggler justify-content-end" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-			    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<?php wp_nav_menu( array( 'theme_location'=> 'primary', 'depth'=> 2, 'container'=> 'div', 'container_class'=> 'collapse navbar-collapse', 'container_id'=> 'bs-example-navbar-collapse-1', 'menu_class'=> 'nav navbar-nav', 'fallback_cb'=> 'WP_Bootstrap_Navwalker::fallback', 'walker'=> new WP_Bootstrap_Navwalker()));
-?>
-		</nav>
-	</header>
-
+<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/papo.css">
+<?php $theme_folder=get_template_directory_uri();?>
+<div class="papo-page">
 	<main class="papo">
 		<div class="container">
 			<div class="row">
@@ -156,5 +123,5 @@
 				<?php } ?>
 			</div>
 	</section>
-
+	</div>
 	<?php get_footer(); ?>
