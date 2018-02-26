@@ -9670,6 +9670,7 @@ a:hover {
 
 .nav {
   height: 4.5rem;
+  align-items: center;
 }
 
 .nav__brand {
@@ -9695,15 +9696,24 @@ a:hover {
   font-size: 1rem;
 }
 
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
 .navbar-dark .navbar-nav .nav-link,
 .menu,
 .menu-item a {
+  text-align: right;
   color: white;
 }
 
 .navbar-dark .navbar-nav .nav-link.active {
   color: #ffc107;
   font-weight: 500;
+}
+
+.active>.nav-link {
+  color: #ffc107 !important;
 }
 
 #menu-header-menu {
@@ -10306,5 +10316,3 @@ a:hover {
     margin-top: -.3rem;
   }
 }
-
-/*# sourceMappingURL=sourcemaps/style.css.map */
