@@ -1,7 +1,7 @@
-<?php /* Template Name: Papo Momento da Virada */ ?>
-<?php get_header(); ?>
+<?php /* Template Name: Papo Momento da Virada */?>
+<?php get_header();?>
 
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/papo.css">
+<link rel="stylesheet" href="<?php bloginfo('template_url');?>/assets/css/papo.css">
 <?php $theme_folder=get_template_directory_uri();?>
 <div class="papo-page">
 	<main class="papo">
@@ -12,7 +12,7 @@
 						<br>Assista o vídeo para saber sobre o</h1>
 				</div>
 				<div class="offset-md-4 col-md-4 col-12">
-					<img class="papo__img" src="<?php bloginfo('template_url'); ?>/assets/img/brand/logo_papo_momento_da_virada.png" alt="Papo Momento da Virada">
+					<img class="papo__img" src="<?php bloginfo('template_url');?>/assets/img/brand/logo_papo_momento_da_virada.png" alt="Papo Momento da Virada">
 				</div>
 			</div>
 			<div class="row">
@@ -47,15 +47,15 @@
 			<?php 
 			$args = array( 'post_type' => 'video' );
 			$loop = new WP_Query( $args );
-			if( $loop->have_posts() ) { ?>
+			if( $loop->have_posts() ) {?>
 				<div class="videos__list row">
 					<?php while( $loop->have_posts() ) {
-					$loop->the_post(); ?>
+					$loop->the_post();?>
 					<div class="videos__item col-md col-12">
 						<div class="videos__item--title">
-							<a href="<?= the_permalink(); ?>">
+							<a href="<?= the_permalink();?>">
 								<h4>
-									<?php the_title(); ?>
+									<?php the_title();?>
 								</h4>
 							</a>
 							<div class="videos__item--frame">
@@ -68,9 +68,9 @@
 							</div>
 						</div>
 					</div>
-				<?php } ?>
+				<?php }?>
 				</div>
-			<?php } ?>
+			<?php }?>
 		</div>
 	</section>
 
@@ -91,7 +91,7 @@
 			<?php 
 		$args = array( 'post_type' => 'audio' );
 		$loop = new WP_Query( $args );
-		if( $loop->have_posts() ) { ?>
+		if( $loop->have_posts() ) {?>
 			<div class="audios__list row">
 				<div class=" offset-md-2 col-md-8 offset-0 col">
 					<div class="audios__list--header">
@@ -108,20 +108,20 @@
 								<span class="audios__item--title">papo momento da virada </span>
 								<span class="separator">- </span>
 								<span class="audios__item--guest">
-									<?php the_title(); ?>
+									<?php the_title();?>
 								</span>
 							</div>
 							<div class="audios__item--player">
 								<span class="play-btn">
-									<?php the_content(); ?>
+									<?php the_content();?>
 								</span>
 							</div>
 						</div>
 					</div>
-					<?php } ?>
+					<?php }?>
 				</div>
-				<?php } ?>
+				<?php }?>
 			</div>
 	</section>
 	</div>
-	<?php get_footer(); ?>
+	<?php get_footer();?>

@@ -1,27 +1,25 @@
 <?php
+require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+
+register_nav_menus( array(
+    'primary' => __( 'Primary Menu', 'rafaribeirocoach' ),
+) );
+
+function special_nav_class ($classes, $item) {
+    if (in_array('current-menu-item', $classes) ){
+        $classes[] = 'active ';
+    }
+    return $classes;
+}
+
 //aumentar o limite de upload de cada arquivo:
 @ini_set( 'upload_max_size' , '64M' );
 @ini_set( 'post_max_size', '64M');
 @ini_set( 'max_execution_time', '300' );
 
 add_theme_support( 'post-thumbnails' );
-
-require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
-
-register_nav_menus( array(
-    'primary' => __( 'Primary Menu', 'rafaribeirocoach' ),
-) );
-
-wp_nav_menu( array(
-    'theme_location'	=> 'primary',
-    'depth'				=> 1, // 1 = with dropdowns, 0 = no dropdowns.
-	'container'			=> 'div',
-	'container_class'	=> 'collapse navbar-collapse',
-	'container_id'		=> 'bs-example-navbar-collapse-1',
-	'menu_class'		=> 'navbar-nav mr-auto',
-    'fallback_cb'		=> 'WP_Bootstrap_Navwalker::fallback',
-    'walker'			=> new WP_Bootstrap_Navwalker()
-) );
 
 //add_action('init', 'avf_remove_media_element', 10);
 function avf_remove_media_element()
@@ -170,12 +168,3 @@ function theme_js() {
 }
 
 add_action( 'wp_enqueue_scripts', 'theme_js');
-
-add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
-
-function special_nav_class ($classes, $item) {
-    if (in_array('current-menu-item', $classes) ){
-        $classes[] = 'active ';
-    }
-    return $classes;
-}

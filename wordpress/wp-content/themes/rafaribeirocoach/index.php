@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header();?>
 <?php $theme_folder=get_template_directory_uri();?>
 
 <main class="main container-fluid">
@@ -58,19 +58,19 @@
 				<span class="assista__callout-main">assista gratuitamente o
 					<br>papo momento da virada</span>
 				<div class="assista__callout-img-sm col-10">
-					<img class="img-fluid" src="<?= $theme_folder; ?>/assets/img/brand/logo_papo_momento_da_virada.png" alt="Papo Momento da Virada">
+					<img class="img-fluid" src="<?= $theme_folder;?>/assets/img/brand/logo_papo_momento_da_virada.png" alt="Papo Momento da Virada">
 				</div>
 				<span class="assista__callout-description">uma série de entrevistas com
 					<br>empreendedores super inspiradores</span>
 				<br>
-				<a href="<?= $theme_folder; ?>/papo-momento-da-virada">
+				<a href="<?= $theme_folder;?>/papo-momento-da-virada">
 					<button class="assista__callout-button">
 						quero participar agora
 					</button>
 				</a>
 			</div>
 			<div class="assista__callout-img-md col-6">
-				<img class="assista-img" src="<?= $theme_folder; ?>/assets/img/brand/logo_papo_momento_da_virada.png" alt="Papo Momento da Virada">
+				<img class="assista-img" src="<?= $theme_folder;?>/assets/img/brand/logo_papo_momento_da_virada.png" alt="Papo Momento da Virada">
 			</div>
 		</div>
 	</div>
@@ -105,7 +105,7 @@
 <?php 
 			$args = array( 'post_type' => 'depoimento' );
 			$loop = new WP_Query( $args );
-			if( $loop->have_posts() ) { ?>
+			if( $loop->have_posts() ) {?>
 <section class="depoimentos" id="depoimentos">
 	<div class="container">
 		<div class="row">
@@ -117,30 +117,30 @@
 		<div class="depoimentos__list row">
 
 			<?php while( $loop->have_posts() ) {
-			$loop->the_post(); ?>
+			$loop->the_post();?>
 			<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
 			<div class="depoimentos__wrapper offset-md-0 col-md-3 offset-1 col-10">
 				<div class="depoimentos__item" style="background-image: url('<?php echo $thumb['0'];?>')">
 					<div class="depoimentos__item-header">
 						<h3>
-							<?php the_title(); ?>
+							<?php the_title();?>
 						</h3>
 					</div>
 					<div class="depoimentos__item-body">
 						<p>
-							<?php the_content(); ?>
+							<?php the_content();?>
 						</p>
 					</div>
 					<div class="depoimentos__item-footer">
-						<img src="<?= $theme_folder; ?>/assets/img/icon/aspas_depoimento.png" alt="aspas">
+						<img src="<?= $theme_folder;?>/assets/img/icon/aspas_depoimento.png" alt="aspas">
 					</div>
 				</div>
 			</div>
-			<?php } ?>
+			<?php }?>
 		</div>
 	</div>
 </section>
-<?php	} ?>
+<?php	}?>
 
 
 	<section class="about" id="sobre">
@@ -174,4 +174,4 @@
 		</div>
 	</section>
 
-	<?php get_footer(); ?>
+	<?php get_footer();?>

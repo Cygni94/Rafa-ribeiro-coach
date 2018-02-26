@@ -1,5 +1,5 @@
-<?php /* Template Name: Evento */ ?>
-<?php $theme_folder = get_template_directory_uri(); ?>
+<?php /* Template Name: Evento */?>
+<?php $theme_folder = get_template_directory_uri();?>
 
 
 <!DOCTYPE html>
@@ -14,7 +14,7 @@
     <title>Rafael Ribeiro Coaching - Desperte seu Herói</title>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/calltoaction.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_url');?>/assets/css/calltoaction.css">
 </head>
 
 <body class="calltoaction">
@@ -44,9 +44,9 @@
                         <span class="calltoaction__headline">
                         <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 the_content();
-endwhile; else: ?>
+endwhile; else:?>
 <p>Defina a data e a hora do seu evento</p>
-<?php endif; ?>
+<?php endif;?>
                         </span>
                     </div>
                 </div>

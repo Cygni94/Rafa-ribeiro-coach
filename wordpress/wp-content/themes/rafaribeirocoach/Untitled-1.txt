@@ -5,8 +5,8 @@
 	'post_parent' => $post->ID,
 	'exclude'     => 'image'
 	));
-	if ( $attachments ) { ?> $attachments[post_type]
-<?php } ?>
+	if ( $attachments ) {?>$attachments[post_type]
+<?php }?>
 
 
 
@@ -25,8 +25,8 @@ get_attached_media( 'audio', get_the_ID() )
 									$attachment_id = the_ID(); // ID of attachment
 									$attachment_page = get_attachment_link( $attachment_id ); 
 									?>
-									<a href="<?php echo $attachment_page; ?>" download>
-									<?php echo get_the_title( $attachment_id ); ?></a>
+									<a href="<?php echo $attachment_page;?>" download>
+									<?php echo get_the_title( $attachment_id );?></a>
 
 
 
@@ -41,4 +41,4 @@ $attr = array(
 
 
 
-                <?php $media = get_attached_media( 'audio' ); ?>
+                <?php $media = get_attached_media( 'audio' );?>

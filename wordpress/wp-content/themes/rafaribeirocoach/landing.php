@@ -1,5 +1,5 @@
-<?php /* Template Name: Treinamentos */ ?>
-<?php $theme_folder = get_template_directory_uri(); ?>
+<?php /* Template Name: Treinamentos */?>
+<?php $theme_folder = get_template_directory_uri();?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -13,7 +13,7 @@
     <title>Rafael Ribeiro Coaching - Desperte seu Herói</title>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="<?= $theme_folder; ?>/assets/css/landing.css" type="text/css" />
+    <link rel="stylesheet" href="<?= $theme_folder;?>/assets/css/landing.css" type="text/css" />
 
 </head>
 
@@ -39,7 +39,7 @@
             <div class="landing-callout__list row">
                 <div class="offset-md-1 col-md-5 col-sm-12">
                     <div class="landing-callout__list--icon">
-                        <img src="<?= $theme_folder; ?>/assets/img/icon/like.png" alt="">
+                        <img src="<?= $theme_folder;?>/assets/img/icon/like.png" alt="">
                     </div>
                     <div class="landing-callout__list--description">
                         <p>para quem:
@@ -53,14 +53,14 @@
                 </div>
                 <div class="col-md-4 col-sm-12">
                     <div class="landing-callout__list--icon">
-                        <img src="<?= $theme_folder; ?>/assets/img/icon/relogio.png" alt="">
+                        <img src="<?= $theme_folder;?>/assets/img/icon/relogio.png" alt="">
                     </div>
                     <div class="landing-callout__list--date">
                         <p>08 de janeiro de 2018
                             <br>segunda-feira às 20:00</p>
                     </div>
                     <div class="landing-callout__list--icon">
-                        <img src="<?= $theme_folder; ?>/assets/img/icon/camera.png" alt="">
+                        <img src="<?= $theme_folder;?>/assets/img/icon/camera.png" alt="">
                     </div>
                     <div class="landing-callout__list--live">
                         <p>transmissão Ao Vivo e Online</p>
@@ -123,7 +123,7 @@
             <div class="landing-description__list row">
                 <div class="list__item--1 col-md-5 offset-sm-1 col-sm-10">
                     <div class="list__item--img">
-                        <img src="<?= $theme_folder; ?>/assets/img/icon/coracao.png" alt="">
+                        <img src="<?= $theme_folder;?>/assets/img/icon/coracao.png" alt="">
                     </div>
                     <div class="list__item--text">
                         <p class="list__item--title">IDENTIFICAR PROFUNDAMENTE COMO ESTÁ E COMO DESEJA A SUA VIDA PROFISSIONAL</p>
@@ -138,12 +138,12 @@
                             conquista de seus objetivos. </p>
                     </div>
                     <div class="list__item--img">
-                        <img src="<?= $theme_folder; ?>/assets/img/icon/caderno.png" alt="">
+                        <img src="<?= $theme_folder;?>/assets/img/icon/caderno.png" alt="">
                     </div>
                 </div>
                 <div class="list__item--3 col-md-5 offset-sm-1 col-sm-10">
                     <div class="list__item--img">
-                        <img src="<?= $theme_folder; ?>/assets/img/icon/estrela.png" alt="">
+                        <img src="<?= $theme_folder;?>/assets/img/icon/estrela.png" alt="">
                     </div>
                     <div class="list__item--text">
                         <p class="list__item--title">BÔNUS GRATUITO
@@ -158,7 +158,7 @@
                             na mão!</p>
                     </div>
                     <div class="list__item--img">
-                        <img src="<?= $theme_folder; ?>/assets/img/icon/conversa.png" alt="">
+                        <img src="<?= $theme_folder;?>/assets/img/icon/conversa.png" alt="">
                     </div>
                 </div>
             </div>

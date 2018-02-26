@@ -1,5 +1,5 @@
-<?php wp_footer(); ?>    
-<?php $theme_folder = get_template_directory_uri(); ?>
+<?php wp_footer();?>
+<?php $theme_folder = get_template_directory_uri();?>
 
 <footer class="footer container">
         <div class="row">
@@ -51,17 +51,17 @@
                 <div class="social-icons">
                     <span>
                         <a href="https://www.facebook.com/rafaribeirocoach/">
-                            <img class="social-icon" src="<?= $theme_folder; ?>/assets/img/icon/facebook.png" alt="Facebook">
+                            <img class="social-icon" src="<?= $theme_folder;?>/assets/img/icon/facebook.png" alt="Facebook">
                         </a>
                     </span>
                     <span>
                         <a href="https://www.instagram.com/rafaribeiro.coach/">
-                            <img class="social-icon" src="<?= $theme_folder; ?>/assets/img/icon/instagram.png" alt="Instagram">
+                            <img class="social-icon" src="<?= $theme_folder;?>/assets/img/icon/instagram.png" alt="Instagram">
                         </a>
                     </span>
                     <span>
                         <a href="https://www.youtube.com/channel/UCyEyl4K-FM1zY_mRaOv5Ylg">
-                            <img class="social-icon" src="<?= $theme_folder; ?>/assets/img/icon/youtube.png" alt="Youtube">
+                            <img class="social-icon" src="<?= $theme_folder;?>/assets/img/icon/youtube.png" alt="Youtube">
                         </a>
                     </span>
                 </div>
@@ -69,7 +69,7 @@
         </div>
         <div class="footer__bottom row">
             <div class="footer__logo col-12">
-                <img src="<?= $theme_folder; ?>/assets/img/brand/logo_rodape.png" alt="">
+                <img src="<?= $theme_folder;?>/assets/img/brand/logo_rodape.png" alt="">
             </div>
             <br>
             <div class="footer__copyright col-12">
