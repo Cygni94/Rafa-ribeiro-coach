@@ -9649,7 +9649,8 @@ body {
 
 a,
 a:hover {
-    color: #4d4d4d
+    color: #4d4d4d;
+    text-decoration: none;
 }
 
 .hr {
@@ -9735,7 +9736,7 @@ a:hover {
 
 .papo__img {
     padding: 2.5rem 0rem;
-    width: 306px
+    width: 250px
 }
 
 .papo__video {
@@ -9937,57 +9938,6 @@ a:hover {
     width: 30%
 }
 
-.footer {
-    height: 80%;
-    padding-top: 5rem;
-    font-family: Roboto;
-    font-weight: 700;
-    font-size: 1rem
-}
-
-.footer__mailing-list {
-    margin-bottom: 4rem
-}
-
-.footer .mailing-list__input-email {
-    width: 70%
-}
-
-.footer .mailing-list__callout {
-    text-align: center;
-    margin-bottom: 1rem
-}
-
-.footer__menu {
-    font-family: Roboto;
-    font-weight: 700;
-    font-size: 1.1rem
-}
-
-.footer__menu span {
-    display: block;
-    margin-bottom: .5rem
-}
-
-.footer__bottom {
-    margin-top: 6rem;
-    margin-bottom: 1rem
-}
-
-.footer__social {
-    font-size: 1.2rem;
-    text-align: right
-}
-
-.footer__social .social-icon {
-    background-color: #4d4d4d
-}
-
-.footer__copyright,
-.footer__logo {
-    text-align: center
-}
-
 @media (min-width:768px) {
     .about-sm {
         display: none
@@ -10028,12 +9978,6 @@ a:hover {
     .about {
         padding-top: 7.7rem;
         padding-bottom: 7.7rem
-    }
-    .footer {
-        padding-top: 7.7rem
-    }
-    .footer .mailing-list__callout {
-        margin-top: -.3rem
     }
 }
 
@@ -10126,9 +10070,6 @@ a:hover {
     }
     .about__text p br {
         content: ' '
-    }
-    .footer__social {
-        text-align: right
     }
     p {
         line-height: 1.5

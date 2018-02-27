@@ -9630,6 +9630,7 @@ body {
 a,
 a:hover {
   color: #4D4D4D;
+  text-decoration: none;
 }
 
 .hr {
@@ -10092,6 +10093,19 @@ a:hover {
   margin-bottom: .5rem;
 }
 
+.footer-nav {
+  list-style: none;
+}
+
+.footer-nav, .footer-nav a, .footer-nav a:hover, .footer-nav>.active>.nav-link {
+  color: #4D4D4D !important;
+}
+
+.footer-nav .nav-link, .footer-nav .menu-item, .footer-nav {
+  text-align: left;
+  padding-left: 0;
+}
+
 .footer__bottom {
   margin-top: 6rem;
   margin-bottom: 1rem;
@@ -10104,6 +10118,10 @@ a:hover {
 
 .footer__social .social-icon {
   background-color: #4D4D4D;
+}
+
+.social-icon a:hover {
+text-decoration: none;
 }
 
 .footer__logo,

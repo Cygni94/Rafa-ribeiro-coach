@@ -48,28 +48,28 @@
 			$args = array( 'post_type' => 'video' );
 			$loop = new WP_Query( $args );
 			if( $loop->have_posts() ) {?>
-				<div class="videos__list row">
-					<?php while( $loop->have_posts() ) {
+			<div class="videos__list row">
+				<?php while( $loop->have_posts() ) {
 					$loop->the_post();?>
-					<div class="videos__item col-md col-12">
-						<div class="videos__item--title">
-							<a href="<?= the_permalink();?>">
-								<h4>
-									<?php the_title();?>
-								</h4>
-							</a>
-							<div class="videos__item--frame">
-								<?php 
+				<div class="videos__item col-md col-12">
+					<div class="videos__item--title">
+						<a href="<?= the_permalink();?>">
+							<h4>
+								<?php the_title();?>
+							</h4>
+						</a>
+						<div class="videos__item--frame">
+							<?php 
 									if ( has_post_thumbnail() ) {
 									the_post_thumbnail();
 									} 
 									the_content();
 									?>
-							</div>
 						</div>
 					</div>
-				<?php }?>
 				</div>
+				<?php }?>
+			</div>
 			<?php }?>
 		</div>
 	</section>
@@ -124,4 +124,16 @@
 			</div>
 	</section>
 	</div>
+
+	<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+	<script type="text/javascript">
+		require(["mojo/signup-forms/Loader"], function (L) {
+			L.start({
+				"baseUrl": "mc.us17.list-manage.com",
+				"uuid": "df9ab4b863ab4a55fa168caf6",
+				"lid": "f0b21dcfa4"
+			})
+		})
+	</script>
+
 	<?php get_footer();?>

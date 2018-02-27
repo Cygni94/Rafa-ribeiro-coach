@@ -106,10 +106,10 @@
 			$args = array( 'post_type' => 'depoimento' );
 			$loop = new WP_Query( $args );
 			if( $loop->have_posts() ) {?>
-<section class="depoimentos" id="depoimentos">
+<section class="depoimentos">
 	<div class="container">
 		<div class="row">
-			<div class="depoimentos__section-header col-12">
+			<div class="depoimentos__section-header col-12" id="depoimentos">
 				<div class="hr"></div>
 				<span class="depoimentos__section-title">depoimentos</span>
 			</div>

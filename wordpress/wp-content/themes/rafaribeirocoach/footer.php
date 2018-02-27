@@ -34,33 +34,35 @@
             </div>
         </div>
         <div class="row">
-            <div class="footer__menu offset-md-2 col-md-5 col-6">
-                <span>
-                    <a href="index.html#sobre">sobre</a>
-                </span>
-                <span>
-                    <a href="index.html#papo-momento-da-virada">papo momento da virada</a>
-                </span>
-                <span>
-                    <a href="index.html#depoimentos">depoimentos</a>
-                </span>
-                <span>contato</span>
+            <div class="offset-md-2 col-md-5 col-6">
+            <?php
+wp_nav_menu( array(
+    'theme_location'	=> 'secondary',
+    'depth'				=> 0, // 1 = with dropdowns, 0 = no dropdowns.
+	'container'			=> 'div',
+	'container_class'	=> 'footer__menu',
+	'container_id'		=> 'bs-example-navbar-collapse-2',
+	'menu_class'		=> 'footer-nav',
+    'fallback_cb'		=> 'WP_Bootstrap_Navwalker::fallback',
+    'walker'			=> new WP_Bootstrap_Navwalker()
+) );
+?>
             </div>
             <div class="footer__social col-md-3 col-6">
                 <span>conecte-se comigo</span>
                 <div class="social-icons">
                     <span>
-                        <a href="https://www.facebook.com/rafaribeirocoach/">
+                        <a href="https://www.facebook.com/rafaribeirocoach/" target="_blank">
                             <img class="social-icon" src="<?= $theme_folder;?>/assets/img/icon/facebook.png" alt="Facebook">
                         </a>
                     </span>
                     <span>
-                        <a href="https://www.instagram.com/rafaribeiro.coach/">
+                        <a href="https://www.instagram.com/rafaribeiro.coach/" target="_blank">
                             <img class="social-icon" src="<?= $theme_folder;?>/assets/img/icon/instagram.png" alt="Instagram">
                         </a>
                     </span>
                     <span>
-                        <a href="https://www.youtube.com/channel/UCyEyl4K-FM1zY_mRaOv5Ylg">
+                        <a href="https://www.youtube.com/channel/UCyEyl4K-FM1zY_mRaOv5Ylg" target="_blank">
                             <img class="social-icon" src="<?= $theme_folder;?>/assets/img/icon/youtube.png" alt="Youtube">
                         </a>
                     </span>

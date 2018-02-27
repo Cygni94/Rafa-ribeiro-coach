@@ -4,7 +4,8 @@ require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
 
 register_nav_menus( array(
-    'primary' => __( 'Primary Menu', 'rafaribeirocoach' ),
+    'primary' => __( 'Primary Menu', 'rafaribeirocoach'     ),
+    'secondary' => __('Footer Menu', 'rafaribeirocoach'),
 ) );
 
 function special_nav_class ($classes, $item) {
