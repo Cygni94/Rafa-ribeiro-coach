@@ -164,7 +164,6 @@ function theme_js() {
 	global $wp_scripts;
 
 	wp_enqueue_script( 'bootstrap_js', get_template_directory_uri() . '/assets/js/bootstrap.min.js' );
-	wp_enqueue_script( 'my_custom_js', get_template_directory_uri() . '/assets/js/video.js');
 
 }
 

@@ -15,7 +15,7 @@
     <header class="header">
         <nav class="navbar navbar-expand-md navbar-dark justify-content-between" role="navigation">
             <div class="container">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>">
                     <img class="nav__brand-logo" src="<?= $theme_folder;?>/assets/img/brand/logo_menu.png" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1"

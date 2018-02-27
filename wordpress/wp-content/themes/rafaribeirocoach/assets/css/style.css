@@ -4454,7 +4454,7 @@ tbody.collapse.show {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 0.5rem 1rem;
+  padding: 0rem 1rem;
 }
 
 .navbar>.container,
@@ -9720,7 +9720,7 @@ a:hover {
 #menu-header-menu {
   list-style-type: none;
   display: inline-flex;
-  margin: 1rem;
+  margin: 0rem 1rem;
 }
 
 .menu-item {
@@ -10099,6 +10099,10 @@ a:hover {
 
 .footer-nav, .footer-nav a, .footer-nav a:hover, .footer-nav>.active>.nav-link {
   color: #4D4D4D !important;
+}
+
+.inactive>.nav-link {
+  color: white !important;
 }
 
 .footer-nav .nav-link, .footer-nav .menu-item, .footer-nav {
