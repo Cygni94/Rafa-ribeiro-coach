@@ -45,7 +45,7 @@
 	<section class="videos">
 		<div class="container">
 			<?php 
-			$args = array( 'post_type' => 'video' );
+			$args = array( 'post_type' => 'video', 'posts_per_page' => -1 );
 			$loop = new WP_Query( $args );
 			if( $loop->have_posts() ) {?>
 			<div class="videos__list row">
@@ -89,7 +89,7 @@
 	<section class="audios">
 		<div class="container">
 			<?php 
-		$args = array( 'post_type' => 'audio' );
+		$args = array( 'post_type' => 'audio', 'posts_per_page' => -1 );	
 		$loop = new WP_Query( $args );
 		if( $loop->have_posts() ) {?>
 			<div class="audios__list row">
