@@ -9706,7 +9706,6 @@ a:hover {
         width: auto;
         height: auto;
     }
-    
 }
 
 .callout {
@@ -9755,7 +9754,8 @@ a:hover {
     .videos__item--frame,
     .videos__item--title {
         padding: 0rem 0rem;
-        width: auto
+        width: auto;
+        height: auto;
     }
 }
 
