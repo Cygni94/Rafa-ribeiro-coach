@@ -1,0 +1,27 @@
+input {
+    border: none;
+}
+
+.contact-form {
+    text-align: center;
+}
+
+.contact-form h1 {
+    font-size: 24px;
+    font-family: Roboto;
+    font-weight: 300;
+    padding: 1rem;
+}
+
+@media (min-width: 768px) {
+    .wpcf7-form {
+        margin: auto;
+    }
+    .wpcf7-form p>.label-your-name, .wpcf7-form p>.label-your-email {
+        display: inline-flex;
+    }
+
+    .your-subject {
+        display: block;
+    }
+}
