@@ -1,11 +1,3 @@
-/*!
- * Bootstrap Reboot v4.0.0-beta.3 (https://getbootstrap.com)
- * Copyright 2011-2017 The Bootstrap Authors
- * Copyright 2011-2017 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
- */
-
 *,
 *::before,
 *::after {
@@ -9670,8 +9662,7 @@ a:hover {
 }
 
 .nav {
-  height: 4.5rem;
-  align-items: center;
+  padding: 1rem;
 }
 
 .nav__brand {
@@ -10138,6 +10129,9 @@ text-decoration: none;
   span br {
     content: ' ';
   }
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
   .navbar-nav {
     background-color: #01CAFF;
   }
@@ -10204,9 +10198,8 @@ text-decoration: none;
   .depoimentos__section-header {
     padding-left: 1rem;
   }
-  .depoimentos__item-1,
-  .depoimentos__item-2 {
-    margin-bottom: 1rem;
+  .depoimentos__item {
+    margin-bottom: 2rem;
   }
   .about {
     height: auto;

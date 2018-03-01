@@ -9683,52 +9683,6 @@ a:hover {
     color: #ffc107
 }
 
-.header {
-    background-color: #01caff;
-    width: 100%;
-    z-index: 1
-}
-
-.nav {
-    height: 4.5rem
-}
-
-.nav__brand {
-    -ms-flex-item-align: center;
-    align-self: center;
-    text-align: center
-}
-
-.nav__menu {
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-    padding-left: 2.75rem;
-    background-color: #01caff
-}
-
-.nav__item {
-    -ms-flex-item-align: center;
-    align-self: center;
-    text-align: center;
-    margin-left: 4.5rem;
-    color: #fff;
-    font-size: 1rem
-}
-
-.navbar-dark .navbar-nav .nav-link {
-    color: #fff
-}
-
-.navbar-dark .navbar-nav .nav-link.active {
-    color: #ffc107;
-    font-weight: 500
-}
-
-.header {
-    position: relative
-}
-
 .papo {
     padding: 3rem 0rem;
     text-align: center
@@ -9748,6 +9702,11 @@ a:hover {
     .papo__img {
         width: 100%
     }
+    .papo__video {
+        width: auto;
+        height: auto;
+    }
+    
 }
 
 .callout {
@@ -9985,18 +9944,6 @@ a:hover {
     br,
     span br {
         content: ' '
-    }
-    .nav__menu {
-        position: absolute;
-        top: 4rem;
-        right: 0;
-        padding-right: 1rem;
-    }
-    .nav__item {
-        -ms-flex-item-align: inherit;
-        align-self: inherit;
-        text-align: right;
-        margin-left: 0
     }
     .main__callout .main__lead {
         font-size: 1.3rem
