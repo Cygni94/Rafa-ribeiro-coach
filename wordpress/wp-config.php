@@ -62,6 +62,8 @@ define( 'NONCE_SALT',       'coloque a sua frase única aqui' );
 
 /**#@-*/
 
+define('WPCF7_AUTOP', false );
+
 /**
  * Prefixo da tabela do banco de dados do WordPress.
  *
