@@ -9943,13 +9943,14 @@ a:hover {
   font-size: 2rem;
 }
 
-.cursos__item-1,
-.cursos__item-2,
-.cursos__item-3 {
+.cursos__container row {
+
+}
+
+.cursos__item {
   font-family: 'Roboto';
   font-weight: 700;
   height: 20rem;
-  margin-right: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9957,25 +9958,11 @@ a:hover {
   align-content: center;
 }
 
-.cursos__item-1 span,
-.cursos__item-2 span,
-.cursos__item-3 span {
+.cursos__item span {
   -ms-flex-item-align: center;
   align-self: center;
   color: white;
   font-size: 2rem;
-}
-
-.cursos__item-1 {
-  background-color: #EF4136;
-}
-
-.cursos__item-2 {
-  background-color: #FFD200;
-}
-
-.cursos__item-3 {
-  background-color: #01CAFF;
 }
 
 .depoimentos {

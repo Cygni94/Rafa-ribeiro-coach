@@ -157,6 +157,38 @@ function post_type_eventos() {
     register_post_type( 'evento', $args);    
 }
 
+function post_type_treinamentos() {
+
+    $nomeSingular = 'Treinamento';
+    $nomePlural = 'Treinamentos';
+    $description = 'Treinamentos';
+
+    $labels = array(
+        'name' => $nomePlural,
+        'name_singular' => $nomeSingular,
+        'add_new_item' => 'Adicionar novo ' . $nomeSingular,
+        'edit_item' => 'Editar ' . $nomeSingular
+    );
+
+    $supports = array(
+        'title',
+        'editor',
+        'thumbnail'
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'description' => $description,
+        'public' => true,
+        'menu_icon' => 'dashicons-welcome-learn-more',
+        'supports' => $supports
+    );
+    
+    register_post_type( 'treinamento', $args);    
+}
+
+add_action('init', 'post_type_treinamentos');
+
 add_action('init', 'post_type_eventos');
 
 function theme_js() {

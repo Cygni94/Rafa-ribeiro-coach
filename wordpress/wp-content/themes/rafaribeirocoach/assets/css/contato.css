@@ -1,26 +1,67 @@
 input {
+    line-height: 2rem;
+}
+
+input,
+textarea {
     border: none;
+    border: 1px solid #a8a8a8;
+    border-radius: 5px;
+    background-color: #f1f2f4;
+    padding-left: .5rem;
+}
+
+input:focus,
+textarea:focus {
+    background-color: white;
 }
 
 .contact-form {
     text-align: center;
+    padding: 1rem;
 }
 
 .contact-form h1 {
     font-size: 24px;
     font-family: Roboto;
     font-weight: 300;
-    padding: 1rem;
+    padding: 1.5rem;
+}
+
+.wpcf7-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.wpcf7-email,
+.wpcf7-text {
+    width: 30rem;
+}
+
+.wpcf7-textarea {
+    width: 30rem;
+    height: 10rem;
+}
+
+.wpcf7-submit {
+    margin: auto;
+    background-color: #00cd68;
+    color: white;
+    font-weight: 700;
+    width: 30rem;
 }
 
 @media (min-width: 768px) {
+    .footer {
+        padding-top: 3rem !important;
+    }
     .wpcf7-form {
         margin: auto;
     }
-    .wpcf7-form p>.label-your-name, .wpcf7-form p>.label-your-email {
+    .wpcf7-form p>.label-your-name,
+    .wpcf7-form p>.label-your-email {
         display: inline-flex;
     }
-
     .your-subject {
         display: block;
     }
