@@ -38,7 +38,7 @@
                             </div>
                         </div>
                         <div class="modal-body">
-                            <?php echo do_shortcode( '[contact-form-7 id="99" title="momento da virada"]' ); ?>
+                        <?php echo do_shortcode( '[contact-form-7 id="50" title="momento da virada" mc4wp_checkbox]' ); ?>
                         </div>
                     </div>
                 </div>
@@ -56,7 +56,11 @@
                             </button>
                         </div>
                         <div class="modal-body">
-
+                            <p>asdfsadfdfas</p>
+                            <p>asdfsadfdfas</p>
+                            <p>asdfsadfdfas</p>
+                            <p>asdfsadfdfas</p>
+                            <p>asdfsadfdfas</p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn" data-toggle="modal" data-target="#treinamento-success-modal" data-dismiss="modal">
