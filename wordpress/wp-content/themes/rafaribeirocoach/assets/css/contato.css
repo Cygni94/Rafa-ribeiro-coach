@@ -16,6 +16,10 @@ textarea:focus {
     background-color: white;
 }
 
+.wpcf7-submit:focus {
+    background-color: palegreen;
+}
+
 .contact-form {
     text-align: center;
     padding: 1rem;

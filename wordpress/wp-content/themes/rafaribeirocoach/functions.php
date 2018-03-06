@@ -157,6 +157,8 @@ function post_type_eventos() {
     register_post_type( 'evento', $args);    
 }
 
+add_action('init', 'post_type_eventos');
+
 function post_type_treinamentos() {
 
     $nomeSingular = 'Treinamento';
@@ -188,8 +190,6 @@ function post_type_treinamentos() {
 }
 
 add_action('init', 'post_type_treinamentos');
-
-add_action('init', 'post_type_eventos');
 
 function theme_js() {
 
