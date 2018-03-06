@@ -1,0 +1,25 @@
+Plugin Mailchimp for WP:
+    API KEY dd9a0e7d80fa0150b037cca21aa089e2-us17
+
+Form code
+    <input type="email" name="EMAIL" placeholder="Qual seu e-mail?" required />
+
+    <input type="text" name="FNAME" placeholder="Qual seu nome?" />
+
+    <input type="submit" value="Sign up" />
+
+
+Plugin Contact Form 7:
+Apagar todas as mensagens de erro;
+Form 
+    <label class="label-your-name"> [text* your-name placeholder "Nome"] </label>
+
+    <label class="label-your-email"> [email* your-email placeholder "E-mail"] </label>
+
+    <label> [submit "Enviar"] </label>
+
+Messages
+    (apagar todas)
+
+Aditional Setting: 
+    skip_mail: on
