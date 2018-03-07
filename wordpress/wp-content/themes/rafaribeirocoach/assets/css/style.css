@@ -9945,6 +9945,9 @@ a:hover {
 
 .curso-link {
   color: white;
+  padding: 8rem 0rem;
+  height: 100%;
+  width: 100%;
 }
 
 .curso-link:hover {
@@ -9963,16 +9966,10 @@ a:hover {
   align-content: center;
 }
 
-.cursos__item span {
-  -ms-flex-item-align: center;
-  align-self: center;
-  color: white;
-  font-size: 2rem;
-}
-
 .cursos__item-1,
 .cursos__item-2,
 .cursos__item-3 {
+  padding: 0rem;
   font-family: 'Roboto';
   font-weight: 700;
   height: 20rem;
@@ -9983,9 +9980,10 @@ a:hover {
   -ms-flex-line-pack: center;
       align-content: center; }
 
-.cursos__item-1 span,
-.cursos__item-2 span,
-.cursos__item-3 span {
+.cursos__item-1 a,
+.cursos__item-2 a,
+.cursos__item-3 a {
+  padding-left: .4rem;
   -ms-flex-item-align: center;
       align-self: center;
   color: white;

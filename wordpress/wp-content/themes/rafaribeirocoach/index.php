@@ -88,27 +88,21 @@
 	<div class="cursos__container container">
 		<div class="row">
 			<div class="cursos__item-1 col-md-3 offset-1 offset-md-0 col-10">
-				<span>
-					<a class="curso-link" href="www.rafaribeiro.com.br/momento-da-virada">
-						momento da virada
-					</a>
-				</span>
+				<a class="curso-link" href="www.rafaribeiro.com.br/momento-da-virada">
+					momento da virada
+				</a>
 			</div>
 			<div class="col-md"></div>
 			<div class="cursos__item-2 col-md-3 offset-1 offset-md-0 col-10">
-				<span>
-					<a class="curso-link" href="www.rafaribeiro.com.br/aperte-o-play">
-						aperte o play
-					</a>
-				</span>
+				<a class="curso-link" href="www.rafaribeiro.com.br/aperte-o-play">
+					aperte o play
+				</a>
 			</div>
 			<div class="col-md"></div>
 			<div class="cursos__item-3 col-md-3 offset-1 offset-md-0 col-10">
-				<span>
-					<a class="curso-link" href="www.rafaribeiro.com.br/mentoria">
-						mentoria
-					</a>
-				</span>
+				<a class="curso-link" href="www.rafaribeiro.com.br/mentoria">
+					mentoria
+				</a>
 			</div>
 		</div>
 	</div>
