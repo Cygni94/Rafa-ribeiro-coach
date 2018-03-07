@@ -9947,6 +9947,11 @@ a:hover {
   color: white;
 }
 
+.curso-link:hover {
+  color: white;
+  filter: opacity(80%);
+}
+
 .cursos__item {
   font-family: 'Roboto';
   font-weight: 700;
