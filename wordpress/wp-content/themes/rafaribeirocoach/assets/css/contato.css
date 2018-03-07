@@ -17,7 +17,7 @@ textarea:focus {
 }
 
 .wpcf7-submit:focus {
-    background-color: palegreen;
+    background-color: #00cd68;
 }
 
 .contact-form {

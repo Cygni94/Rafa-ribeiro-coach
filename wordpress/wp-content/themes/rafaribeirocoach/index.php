@@ -76,35 +76,6 @@
 	</div>
 </section>
 
-<?php 
-			$args = array( 'post_type' => 'treinamento' );
-			$loop = new WP_Query( $args );
-			if( $loop->have_posts() ) {?>
-<section class="cursos" id="cursos">
-	<div class="container">
-		<div class="row">
-			<div class="cursos__section-header col-12">
-				<div class="hr"></div>
-				<span class="cursos__section-title">conheça nossos treinamentos</span>
-			</div>
-		</div>
-	</div>
-	<div class="cursos__container container">
-		<div class="row">
-			<?php while( $loop->have_posts() ) {
-			$loop->the_post();?>
-			<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
-			<div class="cursos__item col-md-3 offset-1 offset-md-0 col-10" style="background-image: url('<?php echo $thumb['0'];?>')">
-				<span>
-					<?php the_title();?>
-				</span>
-			</div>
-			<?php }?>
-		</div>
-	</div>
-</section>
-<?php	}?>
-
 <section class="cursos" id="cursos">
 	<div class="container">
 		<div class="row">
@@ -117,15 +88,27 @@
 	<div class="cursos__container container">
 		<div class="row">
 			<div class="cursos__item-1 col-md-3 offset-1 offset-md-0 col-10">
-				<span>momento da virada</span>
+				<span>
+					<a class="curso-link" href="www.rafaribeiro.com.br/momento-da-virada">
+						momento da virada
+					</a>
+				</span>
 			</div>
 			<div class="col-md"></div>
 			<div class="cursos__item-2 col-md-3 offset-1 offset-md-0 col-10">
-				<span>aperte o play</span>
+				<span>
+					<a class="curso-link" href="www.rafaribeiro.com.br/aperte-o-play">
+						aperte o play
+					</a>
+				</span>
 			</div>
 			<div class="col-md"></div>
 			<div class="cursos__item-3 col-md-3 offset-1 offset-md-0 col-10">
-				<span>mentoria</span>
+				<span>
+					<a class="curso-link" href="www.rafaribeiro.com.br/mentoria">
+						mentoria
+					</a>
+				</span>
 			</div>
 		</div>
 	</div>
