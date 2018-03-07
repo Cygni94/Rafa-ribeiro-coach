@@ -19,6 +19,17 @@
     font-weight: 500;
 }
 
+.success-btn__wrapper {
+    text-align: center;
+    margin: 2rem;
+}
+
+.success-btn {
+    background-color: #01CAFF;
+    font-weight: 700;
+    width: 3rem;
+}
+
 body {
     position: absolute;
     height: 100%;
@@ -32,7 +43,11 @@ h1 {
     color: white;
     font-size: 24px;
     font-family: Roboto;
-    font-weight: 700;
+    font-weight: 300;
+}
+
+h6 {
+    font-weight: 300;
 }
 
 p {
@@ -60,13 +75,54 @@ p {
     font-weight: 100;
 }
 
-.modal-header {
+.treinamento-modal__header {
     background-color: #EF4136;
     color: white;
+}
+
+.success-modal__header {
+    background-color: white;
 }
 
 .modal-body {
 text-align: center;
 }
 
+.success-modal__img {
+    height: 7rem;
+    margin: 1rem auto;
+}
+
 input, button, submit { border:none; } 
+
+input {
+    line-height: 2rem;
+}
+
+input,
+textarea {
+    margin: .5rem;
+    width: 95%;
+    border: none;
+    border: 1px solid #a8a8a8;
+    border-radius: 5px;
+    background-color: #f1f2f4;
+    padding-left: .5rem;
+}
+
+input:focus,
+textarea:focus {
+    background-color: white;
+}
+
+.button {
+    margin: 1rem auto;
+    background-color: #00cd68;
+    color: white;
+    font-weight: 300;
+    width: 50%;
+}
+
+.button:focus {
+    background-color: #00cd68;
+}

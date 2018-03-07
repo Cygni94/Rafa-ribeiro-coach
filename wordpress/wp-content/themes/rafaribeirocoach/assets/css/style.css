@@ -9943,8 +9943,13 @@ a:hover {
   font-size: 2rem;
 }
 
-.cursos__container row {
+.curso-link {
+  color: white;
+}
 
+.curso-link:hover {
+  color: white;
+  filter: opacity(80%);
 }
 
 .cursos__item {
