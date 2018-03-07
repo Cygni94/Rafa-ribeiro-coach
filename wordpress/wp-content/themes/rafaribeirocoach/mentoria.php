@@ -13,59 +13,88 @@
     <link rel="stylesheet" href="<?php bloginfo('template_url');?>/assets/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="<?php bloginfo('template_url');?>/assets/css/treinamentos.css">
+
+    <?php wp_head();?>
 </head>
 
 <body class="container mentoria__page">
     <main class="row">
         <div class="treinamento__wrapper col-md-4 offset-md-1">
             <div class="treinamento__logo">
-                <img src="<?php bloginfo('template_url');?>/assets/img/brand/aperte-o-play.png" alt="momento da virada">
+                <img src="<?php bloginfo('template_url');?>/assets/img/brand/mentoria.png" alt="momento da virada">
             </div>
             <h1>Este curso não está disponível no momento :/</h1>
             <p>Deixe seu e-mail abaixo e seja avisado quando uma nova turma estiver aberta.</p>
             <button type="button" class="btn" data-toggle="modal" data-target="#treinamento-modal">
                 Me avise quando estiver disponível!
             </button>
-
             <!-- Modal -->
             <div class="modal fade" id="treinamento-modal" tabindex="-1" role="dialog" aria-labelledby="treinamento-modalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
-                        <div class="modal-header">
+                        <div class="modal-header treinamento-modal__header">
                             <div class="modal-title-wrapper">
                                 <h5 class="modal-title" id="treinamento-modalLabel">Maravilha!</h5>
                                 <h6 class="modal-subtitle">Falta pouco para ser avisado sobre a próxima turma!</h6>
                             </div>
                         </div>
                         <div class="modal-body">
-                        <?php echo do_shortcode( '[contact-form-7 id="50" title="momento da virada" mc4wp_checkbox]' ); ?>
+
+                            <!-- Begin MailChimp Signup Form -->
+                            <div id="mc_embed_signup">
+                                <form action="https://rafaribeiro.us17.list-manage.com/subscribe/post?u=df9ab4b863ab4a55fa168caf6&amp;id=f0b21dcfa4" method="post"
+                                    id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+                                    novalidate>
+                                    <div id="mc_embed_signup_scroll">
+
+                                        <div class="mc-field-group">
+                                            <!--	<label for="mce-FNAME">Nome </label> -->
+                                            <input type="text" value="" placeholder="Qual seu nome?" name="FNAME" class="" id="mce-FNAME">
+                                        </div>
+                                        <div class="mc-field-group">
+                                            <!--	<label for="mce-EMAIL">Email </label> -->
+                                            <input type="email" value="" placeholder="Qual seu email?" name="EMAIL" class="required email" id="mce-EMAIL">
+                                        </div>
+                                        <div id="mce-responses" class="clear">
+                                            <div class="response" id="mce-error-response" style="display:none"></div>
+                                            <div class="response" id="mce-success-response" style="display:none"></div>
+                                        </div>
+                                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                            <input type="text" name="b_df9ab4b863ab4a55fa168caf6_f0b21dcfa4" tabindex="-1" value="">
+                                        </div>
+                                        <div class="clear" data-toggle="modal" data-target="#treinamento-success-modal">
+                                            <input type="submit" value="Quero ser avisado!" name="subscribe" id="mc-embedded-subscribe" class="button">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!--End mc_embed_signup-->
+
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Modal 2 -->
-            <div class="modal fade" id="treinamento-success-modal" tabindex="-1" role="dialog" aria-labelledby="treinamento-modalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="treinamento-modalLabel">Maravilha!</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <p>asdfsadfdfas</p>
-                            <p>asdfsadfdfas</p>
-                            <p>asdfsadfdfas</p>
-                            <p>asdfsadfdfas</p>
-                            <p>asdfsadfdfas</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn" data-toggle="modal" data-target="#treinamento-success-modal" data-dismiss="modal">
-                                Ok!
-                            </button>
+                <!-- Modal 2 -->
+                <div class="modal fade" id="treinamento-success-modal" tabindex="-1" role="dialog" aria-labelledby="treinamento-modalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div>
+                                    <img class="success-modal__img" src="<?= $theme_folder;?>/assets/img/brand/ok.png" alt="Ok!">
+                                </div>
+                                <div>
+                                    <h3>Parabéns!</h3>
+                                    <br>
+                                    <h6>Você será avisado quando uma nova turma for aberta.</h6>
+                                </div>
+                            </div>
+                            <div class="success-btn__wrapper">
+                                <button type="button" class="btn success-btn" data-toggle="modal" data-target="#treinamento-success-modal" data-dismiss="modal">
+                                    OK
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
