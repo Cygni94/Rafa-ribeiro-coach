@@ -64,6 +64,10 @@ p {
     padding-bottom: 4rem;
 }
 
+.treinamento__logo {
+    margin: 1rem 0rem;
+}
+
 .modal-title-wrapper {
     width: 100%;
     text-align: center;
@@ -85,7 +89,7 @@ p {
 }
 
 .modal-body {
-text-align: center;
+    text-align: center;
 }
 
 .success-modal__img {
@@ -93,7 +97,11 @@ text-align: center;
     margin: 1rem auto;
 }
 
-input, button, submit { border:none; } 
+input,
+button,
+submit {
+    border: none;
+}
 
 input {
     line-height: 2rem;
@@ -115,14 +123,24 @@ textarea:focus {
     background-color: white;
 }
 
+.clear {
+    text-align: center;
+}
+
 .button {
     margin: 1rem auto;
-    background-color: #00cd68;
+    background-color: #00cd68 !important;
     color: white;
-    font-weight: 300;
-    width: 50%;
+    font-weight: 300 !important;
+    width: 50% !important;
 }
 
 .button:focus {
     background-color: #00cd68;
+}
+
+@media (max-width: 767px) {
+    #mc_embed_signup .button {
+        padding: 0px !important;
+    }
 }

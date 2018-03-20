@@ -63,7 +63,7 @@
 				<span class="assista__callout-description">uma série de entrevistas com
 					<br>empreendedores super inspiradores</span>
 				<br>
-				<a href="<?= $theme_folder;?>/papo-momento-da-virada">
+				<a href="http://www.rafaribeiro.com.br/papo-momento-da-virada">
 					<button class="assista__callout-button">
 						quero participar agora
 					</button>
@@ -76,7 +76,7 @@
 	</div>
 </section>
 
-<section class="cursos" id="cursos">
+<section class="cursos" id="treinamentos">
 	<div class="container">
 		<div class="row">
 			<div class="cursos__section-header col-12">
@@ -88,19 +88,19 @@
 	<div class="cursos__container container">
 		<div class="row">
 			<div class="cursos__item-1 col-md-3 offset-1 offset-md-0 col-10">
-				<a class="curso-link" href="www.rafaribeiro.com.br/momento-da-virada">
+				<a class="curso-link" href="/treinamentos/momento-da-virada">
 					momento da virada
 				</a>
 			</div>
 			<div class="col-md"></div>
 			<div class="cursos__item-2 col-md-3 offset-1 offset-md-0 col-10">
-				<a class="curso-link" href="www.rafaribeiro.com.br/aperte-o-play">
+				<a class="curso-link" href="/treinamentos/aperte-o-play">
 					aperte o play
 				</a>
 			</div>
 			<div class="col-md"></div>
 			<div class="cursos__item-3 col-md-3 offset-1 offset-md-0 col-10">
-				<a class="curso-link" href="www.rafaribeiro.com.br/mentoria">
+				<a class="curso-link" href="/treinamentos/mentoria">
 					mentoria
 				</a>
 			</div>

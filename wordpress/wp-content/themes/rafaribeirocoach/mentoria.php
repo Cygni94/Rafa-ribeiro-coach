@@ -1,114 +1,134 @@
 <?php /* Template Name: Mentoria */?>
-<?php $theme_folder = get_template_directory_uri();?>
+<?php get_header();?>
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>mentoria - Rafa Ribeiro Coach</title>
-
-    <link rel="stylesheet" href="<?php bloginfo('template_url');?>/assets/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="<?php bloginfo('template_url');?>/assets/css/treinamentos.css">
-
-    <?php wp_head();?>
-</head>
-
-<body class="container mentoria__page">
-    <main class="row">
-        <div class="treinamento__wrapper col-md-4 offset-md-1">
-            <div class="treinamento__logo">
-                <img src="<?php bloginfo('template_url');?>/assets/img/brand/mentoria.png" alt="momento da virada">
-            </div>
-            <h1>Este curso não está disponível no momento :/</h1>
-            <p>Deixe seu e-mail abaixo e seja avisado quando uma nova turma estiver aberta.</p>
-            <button type="button" class="btn" data-toggle="modal" data-target="#treinamento-modal">
-                Me avise quando estiver disponível!
-            </button>
-            <!-- Modal -->
-            <div class="modal fade" id="treinamento-modal" tabindex="-1" role="dialog" aria-labelledby="treinamento-modalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header treinamento-modal__header">
-                            <div class="modal-title-wrapper">
-                                <h5 class="modal-title" id="treinamento-modalLabel">Maravilha!</h5>
-                                <h6 class="modal-subtitle">Falta pouco para ser avisado sobre a próxima turma!</h6>
-                            </div>
-                        </div>
-                        <div class="modal-body">
-
-                            <!-- Begin MailChimp Signup Form -->
-                            <div id="mc_embed_signup">
-                                <form action="https://rafaribeiro.us17.list-manage.com/subscribe/post?u=df9ab4b863ab4a55fa168caf6&amp;id=f0b21dcfa4" method="post"
-                                    id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
-                                    novalidate>
-                                    <div id="mc_embed_signup_scroll">
-
-                                        <div class="mc-field-group">
-                                            <!--	<label for="mce-FNAME">Nome </label> -->
-                                            <input type="text" value="" placeholder="Qual seu nome?" name="FNAME" class="" id="mce-FNAME">
-                                        </div>
-                                        <div class="mc-field-group">
-                                            <!--	<label for="mce-EMAIL">Email </label> -->
-                                            <input type="email" value="" placeholder="Qual seu email?" name="EMAIL" class="required email" id="mce-EMAIL">
-                                        </div>
-                                        <div id="mce-responses" class="clear">
-                                            <div class="response" id="mce-error-response" style="display:none"></div>
-                                            <div class="response" id="mce-success-response" style="display:none"></div>
-                                        </div>
-                                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                                            <input type="text" name="b_df9ab4b863ab4a55fa168caf6_f0b21dcfa4" tabindex="-1" value="">
-                                        </div>
-                                        <div class="clear" data-toggle="modal" data-target="#treinamento-success-modal">
-                                            <input type="submit" value="Quero ser avisado!" name="subscribe" id="mc-embedded-subscribe" class="button">
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-
-                            <!--End mc_embed_signup-->
-
-                        </div>
-                    </div>
+<link rel="stylesheet" href="<?php bloginfo('template_url');?>/assets/css/papo.css">
+<?php $theme_folder=get_template_directory_uri();?>
+<div class="papo-page">
+    <main class="papo">
+        <div class="container">
+            <div class="row">
+                <div class="papo__callout offset-md-2 col-md-8 col-12">
+                    <h1>Você sonha em empreender suas idéias, seus sonhos e talentos?
+                        <br>Assista o vídeo para saber sobre o</h1>
                 </div>
-                <!-- Modal 2 -->
-                <div class="modal fade" id="treinamento-success-modal" tabindex="-1" role="dialog" aria-labelledby="treinamento-modalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <div>
-                                    <img class="success-modal__img" src="<?= $theme_folder;?>/assets/img/brand/ok.png" alt="Ok!">
-                                </div>
-                                <div>
-                                    <h3>Parabéns!</h3>
-                                    <br>
-                                    <h6>Você será avisado quando uma nova turma for aberta.</h6>
-                                </div>
-                            </div>
-                            <div class="success-btn__wrapper">
-                                <button type="button" class="btn success-btn" data-toggle="modal" data-target="#treinamento-success-modal" data-dismiss="modal">
-                                    OK
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="offset-md-4 col-md-4 col-12">
+                    <img class="papo__img" src="<?php bloginfo('template_url');?>/assets/img/brand/logo-mentoria.png" alt="Mentoria">
                 </div>
             </div>
-
+            <div class="row">
+                <div class="papo__video offset-md-2 col-md-8 col-12">
+                    <?php 
+			if ( has_post_thumbnail() ) {
+				the_post_thumbnail();
+			} 
+			the_content();
+			?>
+                </div>
+            </div>
         </div>
     </main>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-</body>
+    <section class="callout mentoria">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Conheça a trajetória empreendedora de
+                        <span class="highlight">PESSOAS INCRÍVEIS</span>
+                        <br>e como realizaram seus
+                        <span class="highlight">MOMENTOS DE VIRADA.</span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</html>
+    <section class="videos">
+        <div class="container">
+            <?php
+                $args = array( 'category_name' => 'mentoria', 'post_type' => 'video', 'posts_per_page' => -1 );
+                $catquery = new WP_Query( $args );
+                if( $catquery->have_posts() ) {?>
+                <div class="videos__list row">
+                    <?php while($catquery->have_posts()) : $catquery->the_post(); ?>
+                    <div class="videos__item col-md col-12">
+                        <div class="videos__item--title">
+                            <a href="<?= the_permalink();?>">
+                                <h4>
+                                    <?php the_title();?>
+                                </h4>
+                            </a>
+                            <div class="videos__item--frame">
+                                <?php 
+									if ( has_post_thumbnail() ) {
+									the_post_thumbnail();
+									} 
+									the_content();
+									?>
+                            </div>
+                        </div>
+                    </div>
+                    <?php endwhile;
+                wp_reset_postdata();
+            } ?>
+    </section>
+
+    <section class="callout mentoria">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <h2>Faça o DOWNLOAD e escute as nossas
+                        <span class="highlight">ENTREVISTAS</span> em qualquer lugar.
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <section class="audios">
+            <div class="container">
+                <?php
+                    $args = array( 'category_name' => 'mentoria', 'post_type' => 'audio', 'posts_per_page' => -1 );
+                    $catquery = new WP_Query( $args );
+                    if( $catquery->have_posts() ) {?>
+                    <div class="audios__list row">
+                        <div class=" offset-md-2 col-md-8 offset-0 col">
+                            <div class="audios__list--header">
+                                <h2>mentoria</h2>
+                                <h5>Rafa Ribeiro</h5>
+                            </div>
+                            <?php while($catquery->have_posts()) : $catquery->the_post(); ?>
+                            <hr>
+                            <div class="audios__item">
+                                <div class="audios__item--wrapper">
+                                    <div class="audios__item--header">
+                                        <span class="audios__item--title">mentoria </span>
+                                        <span class="separator">- </span>
+                                        <span class="audios__item--guest">
+                                            <?php the_title();?>
+                                        </span>
+                                    </div>
+                                    <div class="audios__item--player">
+                                        <span class="play-btn">
+                                            <?php the_content();?>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php endwhile;
+                    wp_reset_postdata();
+                } ?>
+        </section>
+    </div>
+
+    <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+    <script type="text/javascript">
+        require(["mojo/signup-forms/Loader"], function (L) {
+            L.start({
+                "baseUrl": "mc.us17.list-manage.com",
+                "uuid": "df9ab4b863ab4a55fa168caf6",
+                "lid": "f0b21dcfa4"
+            })
+        })
+    </script>
+
+    <?php get_footer();?>

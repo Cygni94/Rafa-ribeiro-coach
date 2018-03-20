@@ -42,37 +42,35 @@
 		</div>
 	</section>
 
-	<section class="videos">
-		<div class="container">
-			<?php 
-			$args = array( 'post_type' => 'video', 'posts_per_page' => -1 );
-			$loop = new WP_Query( $args );
-			if( $loop->have_posts() ) {?>
-			<div class="videos__list row">
-				<?php while( $loop->have_posts() ) {
-					$loop->the_post();?>
-				<div class="videos__item col-md col-12">
-					<div class="videos__item--title">
-						<a href="<?= the_permalink();?>">
-							<h4>
-								<?php the_title();?>
-							</h4>
-						</a>
-						<div class="videos__item--frame">
-							<?php 
+    <section class="videos">
+        <div class="container">
+            <?php
+                $args = array( 'category_name' => 'papo-momento-da-virada', 'post_type' => 'video', 'posts_per_page' => -1 );
+                $catquery = new WP_Query( $args );
+                if( $catquery->have_posts() ) {?>
+                <div class="videos__list row">
+                    <?php while($catquery->have_posts()) : $catquery->the_post(); ?>
+                    <div class="videos__item col-md col-12">
+                        <div class="videos__item--title">
+                            <a href="<?= the_permalink();?>">
+                                <h4>
+                                    <?php the_title();?>
+                                </h4>
+                            </a>
+                            <div class="videos__item--frame">
+                                <?php 
 									if ( has_post_thumbnail() ) {
 									the_post_thumbnail();
 									} 
 									the_content();
 									?>
-						</div>
-					</div>
-				</div>
-				<?php }?>
-			</div>
-			<?php }?>
-		</div>
-	</section>
+                            </div>
+                        </div>
+                    </div>
+                    <?php endwhile;
+                wp_reset_postdata();
+            } ?>
+    </section>
 
 	<section class="callout">
 		<div class="container-fluid">
@@ -123,6 +121,7 @@
 				<?php }?>
 			</div>
 	</section>
+
 	</div>
 
 	<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>

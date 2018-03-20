@@ -1,5 +1,4 @@
-<?php /* Template Name: Momento da virada */?>
-
+<?php /* Template Name: Aperte o play [INDISPONIVEL] */?>
 <?php $theme_folder = get_template_directory_uri();?>
 
 <!DOCTYPE html>
@@ -9,25 +8,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>momento da virada - Rafa Ribeiro Coach</title>
+    <title>aperte o play - Rafa Ribeiro Coach</title>
 
     <link rel="stylesheet" href="<?php bloginfo('template_url');?>/assets/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="<?php bloginfo('template_url');?>/assets/css/treinamentos.css">
 </head>
 
-<body class="container momento-da-virada__page">
+<body class="container aperte-o-play__page">
     <main class="row">
         <div class="treinamento__wrapper col-md-4 offset-md-1">
             <div class="treinamento__logo">
-                <img src="<?php bloginfo('template_url');?>/assets/img/brand/momento-da-virada.png" alt="momento da virada">
+                <img src="<?php bloginfo('template_url');?>/assets/img/brand/aperte-o-play.png" alt="momento da virada">
             </div>
             <h1>Este curso não está disponível no momento :/</h1>
             <p>Deixe seu e-mail abaixo e seja avisado quando uma nova turma estiver aberta.</p>
             <button type="button" class="btn" data-toggle="modal" data-target="#treinamento-modal">
                 Me avise quando estiver disponível!
             </button>
-
             <!-- Modal -->
             <div class="modal fade" id="treinamento-modal" tabindex="-1" role="dialog" aria-labelledby="treinamento-modalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -99,8 +97,6 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
     </main>
 
