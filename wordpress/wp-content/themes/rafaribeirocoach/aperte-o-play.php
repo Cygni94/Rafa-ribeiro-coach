@@ -290,9 +290,10 @@
 
     <section class="investimento container-fluid">
         <div class="row">
-            <div class="investimento__datas">
+            <div class="investimento__datas col">
                 <div class="investimento__datas--icon"></div>
-                <ul>DATAS DOS<br>TREINAMENTOS:</ul>
+                <ul>DATAS DOS
+                    <br>TREINAMENTOS:</ul>
                 <li>23/08/2018</li>
                 <li>23/08/2018</li>
                 <li>23/08/2018</li>
@@ -301,112 +302,45 @@
                 <ul>HORÁRIO:</ul>
                 <li>19:00 ÀS 22:00</li>
             </div>
-            <div class="investimento__valor"></div>
-            <div class="investimento__items"></div>
-        </div>
-    </section>
-
-    <section class="callout momento-da-virada">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <h2>Conheça a trajetória empreendedora de
-                        <span class="highlight">PESSOAS INCRÍVEIS</span>
-                        <br>e como realizaram seus
-                        <span class="highlight">MOMENTOS DE VIRADA.</span>
-                    </h2>
+            <div class="investimento__valor col-3">
+                <div class="investimento__valor--header">INVESTIMENTO</div>
+                <div class="investimento__valor--desconto">R$ 1.300,00</div>
+                <div class="investimento__valor--prazo">
+                    <h3>VALOR PARA INSCRIÇÃO
+                        <BR>ATÉ DIA 25/07/2017</h3>
                 </div>
+                <div class="investimento__valor--preco">
+                    <strong>
+                        <h4>02X</h4>
+                        <h1>200,00</h1>
+                    </strong>
+                </div>
+                <div class="investimento__valor--subscribe">
+                    <button type="button" class="btn btn-subscribe">
+                        quero me inscrever
+                    </button>
+                </div>
+            </div>
+            <div class="investimento__items col">
+                <ul>
+                    <li>Treinamento Completo
+                        <br>Aperte o Play</li>
+                    <li>Consultoria Individual</li>
+                    <li>Mini curso - Tarefas em Dia</li>
+                    <li>Mini curso - Vídeo Profissional</li>
+                    <li>Mini Curso - Identidade Visual</li>
+                    <li>Vídeo Desmistificando a Contabilidade</li>
+                    <li>Mini Curso - Vídeos de Qualidade</li>
+                    <li>Desafios Individuais</li>
+                    <li>Acesso a Comunidade Vip
+                        <br>exclusiva para alunos</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <section class="videos">
-        <div class="container">
-            <?php
-                $args = array( 'category_name' => 'aperte-o-play', 'post_type' => 'video', 'posts_per_page' => -1 );
-                $catquery = new WP_Query( $args );
-                if( $catquery->have_posts() ) {?>
-                <div class="videos__list row">
-                    <?php while($catquery->have_posts()) : $catquery->the_post(); ?>
-                    <div class="videos__item col-md col-12">
-                        <div class="videos__item--title">
-                            <a href="<?= the_permalink();?>">
-                                <h4>
-                                    <?php the_title();?>
-                                </h4>
-                            </a>
-                            <div class="videos__item--frame">
-                                <?php 
-									if ( has_post_thumbnail() ) {
-									the_post_thumbnail();
-									} 
-									the_content();
-									?>
-                            </div>
-                        </div>
-                    </div>
-                    <?php endwhile;
-                wp_reset_postdata();
-            } ?>
-    </section>
+<section class="garantia"></section>
 
-    <section class="callout momento-da-virada">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col">
-                    <h2>Faça o DOWNLOAD e escute as nossas
-                        <span class="highlight">ENTREVISTAS</span> em qualquer lugar.
-                    </h2>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="audios">
-        <div class="container">
-            <?php
-                    $args = array( 'category_name' => 'aperte-o-play', 'post_type' => 'audio', 'posts_per_page' => -1 );
-                    $catquery = new WP_Query( $args );
-                    if( $catquery->have_posts() ) {?>
-                <div class="audios__list row">
-                    <div class=" offset-md-2 col-md-8 offset-0 col">
-                        <div class="audios__list--header">
-                            <h2>aperte o play</h2>
-                            <h5>Rafa Ribeiro</h5>
-                        </div>
-                        <?php while($catquery->have_posts()) : $catquery->the_post(); ?>
-                        <hr>
-                        <div class="audios__item">
-                            <div class="audios__item--wrapper">
-                                <div class="audios__item--header">
-                                    <span class="audios__item--title">aperte o play </span>
-                                    <span class="separator">- </span>
-                                    <span class="audios__item--guest">
-                                        <?php the_title();?>
-                                    </span>
-                                </div>
-                                <div class="audios__item--player">
-                                    <span class="play-btn">
-                                        <?php the_content();?>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <?php endwhile;
-                    wp_reset_postdata();
-                } ?>
-    </section>
-    </div>
-
-    <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
-    <script type="text/javascript">
-        require(["mojo/signup-forms/Loader"], function (L) {
-            L.start({
-                "baseUrl": "mc.us17.list-manage.com",
-                "uuid": "df9ab4b863ab4a55fa168caf6",
-                "lid": "f0b21dcfa4"
-            })
-        })
-    </script>
+<section class="metodologia"></section>
 
     <?php get_footer();?>

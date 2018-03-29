@@ -687,3 +687,24 @@ textarea:focus {
     background-color: #ECECEC;
     min-height: 100%;
 }
+
+.investimento__datas {
+    background-color: #01CAFF;
+}
+
+.investimento__valor {
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+    background-color: lightgrey;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.investimento__valor--header {
+    background-color: black;
+    color: white;
+}
+
+.investimento__items {
+    background-color: #01CAFF;
+}
