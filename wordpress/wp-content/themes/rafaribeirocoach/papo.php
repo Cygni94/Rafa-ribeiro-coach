@@ -1,7 +1,7 @@
 <?php /* Template Name: Papo Momento da Virada */?>
 <?php get_header();?>
 
-<link rel="stylesheet" href="<?php bloginfo('template_url');?>/assets/css/papo.css">
+<link rel="stylesheet" href="<?php bloginfo('template_url');?>/assets/css/treinamentos.css">
 <?php $theme_folder=get_template_directory_uri();?>
 <div class="papo-page">
 	<main class="papo">

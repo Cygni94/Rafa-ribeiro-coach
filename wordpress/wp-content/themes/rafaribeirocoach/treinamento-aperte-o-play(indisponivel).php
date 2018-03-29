@@ -1,4 +1,7 @@
-<?php /* Template Name: Aperte o play [INDISPONIVEL] */?>
+<?php /* 
+       * Template Name: Treinamento Aperte o play (indisponivel)
+       * Template Post Type: post, page, treinamento
+       */?>
 <?php $theme_folder = get_template_directory_uri();?>
 
 <!DOCTYPE html>
@@ -13,6 +16,8 @@
     <link rel="stylesheet" href="<?php bloginfo('template_url');?>/assets/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="<?php bloginfo('template_url');?>/assets/css/treinamentos.css">
+
+    <?php wp_head();?>
 </head>
 
 <body class="container aperte-o-play__page">
@@ -21,11 +26,12 @@
             <div class="treinamento__logo">
                 <img src="<?php bloginfo('template_url');?>/assets/img/brand/aperte-o-play.png" alt="momento da virada">
             </div>
-            <h1>Este curso não está disponível no momento :/</h1>
+            <h1>Este treinamento não está disponível no momento :/</h1>
             <p>Deixe seu e-mail abaixo e seja avisado quando uma nova turma estiver aberta.</p>
             <button type="button" class="btn" data-toggle="modal" data-target="#treinamento-modal">
                 Me avise quando estiver disponível!
             </button>
+
             <!-- Modal -->
             <div class="modal fade" id="treinamento-modal" tabindex="-1" role="dialog" aria-labelledby="treinamento-modalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -37,8 +43,18 @@
                             </div>
                         </div>
                         <div class="modal-body">
-
                             <!-- Begin MailChimp Signup Form -->
+                            <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+                            <style type="text/css">
+                                #mc_embed_signup {
+                                    background: #fff;
+                                    clear: left;
+                                    font: 14px Helvetica, Arial, sans-serif;
+                                }
+
+                                /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+                            </style>
                             <div id="mc_embed_signup">
                                 <form action="https://rafaribeiro.us17.list-manage.com/subscribe/post?u=df9ab4b863ab4a55fa168caf6&amp;id=f0b21dcfa4" method="post"
                                     id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
@@ -46,11 +62,9 @@
                                     <div id="mc_embed_signup_scroll">
 
                                         <div class="mc-field-group">
-                                            <!--	<label for="mce-FNAME">Nome </label> -->
                                             <input type="text" value="" placeholder="Qual seu nome?" name="FNAME" class="" id="mce-FNAME">
                                         </div>
                                         <div class="mc-field-group">
-                                            <!--	<label for="mce-EMAIL">Email </label> -->
                                             <input type="email" value="" placeholder="Qual seu email?" name="EMAIL" class="required email" id="mce-EMAIL">
                                         </div>
                                         <div id="mce-responses" class="clear">
@@ -62,7 +76,8 @@
                                             <input type="text" name="b_df9ab4b863ab4a55fa168caf6_f0b21dcfa4" tabindex="-1" value="">
                                         </div>
                                         <div class="clear" data-toggle="modal" data-target="#treinamento-success-modal">
-                                            <input type="submit" value="Quero ser avisado!" name="subscribe" id="mc-embedded-subscribe" class="button">
+                                            <input type="submit" value="Quero ser avisado!
+                                            " name="subscribe" id="mc-embedded-subscribe" class="button">
                                         </div>
                                     </div>
                                 </form>

@@ -10,8 +10,7 @@ add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
 
 register_nav_menus( array(
 
-    'primary' => __( 'Primary Menu', 'rafaribeirocoach'     ),
-
+    'primary' => __( 'Primary Menu', 'rafaribeirocoach'),
     'secondary' => __('Footer Menu', 'rafaribeirocoach'),
 
 ) );
@@ -257,8 +256,6 @@ function post_type_audios() {
 
 
 add_action('init', 'post_type_audios');
-
-
 
 function theme_js() {
 

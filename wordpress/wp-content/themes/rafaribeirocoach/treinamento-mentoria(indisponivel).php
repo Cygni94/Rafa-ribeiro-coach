@@ -1,4 +1,8 @@
-<?php /* Template Name: Treinamento Mentoria */?>
+<?php /* 
+* Template Name: Treinamento Mentoria (indisponivel)
+* Template Post Type: post, page, treinamento
+*/?>
+
 <?php $theme_folder = get_template_directory_uri();?>
 
 <!DOCTYPE html>

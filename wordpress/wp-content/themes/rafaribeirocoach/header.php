@@ -54,5 +54,8 @@
             </div>
 
         </nav>
-
+		
+<!-- script do mailchimp -->
+		
+		<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/b7e6bd13bacd77e8c1b074a80/88a3ac4417ca7ddf494669ee6.js");</script>
     </header>
