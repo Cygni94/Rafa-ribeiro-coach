@@ -82,100 +82,37 @@ $appointment_options=theme_setup_data();
 $service_setting = wp_parse_args(  get_option( 'appointment_options', array() ), $appointment_options );
 if($service_setting['service_section_enabled'] == 0 ) { ?>
 <section class="Service-section cursos" id="treinamentos">
-	<div class="container">
-		<div class="row">
+    <div class="container">
+        <div class="row">
             <div class="cursos__section-header col-12">
                 <div class="hr"></div>
-				<div class="section-heading-title">
-                    <span class="cursos__section-title"><?php echo $service_setting['service_title']; ?></span>
+                <div class="section-heading-title">
+                    <span class="cursos__section-title">
+                        <?php echo $service_setting['service_title']; ?>
+                    </span>
                 </div>
             </div>
         </div>
-
-		
-		<div class="row">
-			<div class="col-md-4">
-				<div class="service-area">
-					<div class="media">
-						<div class="service-icon">
-							<i class="fa <?php echo $service_setting['service_one_icon']; ?>"></i>
-						</div>
-						<div class="media-body">
-							<h3><?php echo $service_setting['service_one_title']; ?></h3>
-							<p><?php echo $service_setting['service_one_description']; ?></p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="service-area">
-					<div class="media">
-						<div class="service-icon">
-							<i class="fa <?php echo $service_setting['service_two_icon']; ?>"></i>
-						</div>
-						<div class="media-body">
-							<h3><?php echo $service_setting['service_two_title']; ?></h3>
-							<p><?php echo $service_setting['service_two_description']; ?></p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="service-area">
-					<div class="media">
-						<div class="service-icon">
-							<i class="fa <?php echo $service_setting['service_three_icon']; ?>"></i>
-						</div>
-						<div class="media-body">
-							<h3><?php echo $service_setting['service_three_title']; ?></h3>
-							<p><?php echo $service_setting['service_three_description']; ?></p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="clearfix"></div>
-			<div class="col-md-4">
-				<div class="service-area">
-					<div class="media">
-						<div class="service-icon">
-							<i class="fa <?php echo $service_setting['service_four_icon']; ?>"></i>
-						</div>
-						<div class="media-body">
-							<h3><?php echo $service_setting['service_four_title']; ?></h3>
-							<p><?php echo $service_setting['service_four_description']; ?></p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="service-area">
-					<div class="media">
-						<div class="service-icon">
-							<i class="fa <?php echo $service_setting['service_five_icon']; ?>"></i>
-						</div>
-						<div class="media-body">
-							<h3><?php echo $service_setting['service_five_title']; ?></h3>
-							<p><?php echo $service_setting['service_five_description']; ?></p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="service-area">
-					<div class="media">
-						<div class="service-icon">
-							<i class="fa <?php echo $service_setting['service_six_icon']; ?>"></i>
-						</div>
-						<div class="media-body">
-							<h3><?php echo $service_setting['service_six_title']; ?></h3>
-							<p><?php echo $service_setting['service_six_description']; ?></p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	</div>
+    </div>
+    <div class="cursos__container container">
+        <div class="row" style="justify-content: space-between">
+            <div class="cursos__item col-md-3 offset-1 offset-md-0 col-10 treinamento-1" style="background-color: <?php echo $service_setting['header_textcolor']; ?>">
+                <a class="curso-link">
+                    <?php echo $service_setting['service_one_title']; ?>
+                </a>
+            </div>
+            <div class="cursos__item col-md-3 offset-1 offset-md-0 col-10">
+                <a class="curso-link">
+                    <?php echo $service_setting['service_two_title']; ?>
+                </a>
+            </div>
+            <div class="cursos__item col-md-3 offset-1 offset-md-0 col-10">
+                <a class="curso-link">
+                    <?php echo $service_setting['service_three_title']; ?>
+                </a>
+            </div>
+        </div>
+    </div>
 </section>
 <!-- /HomePage Service Section -->
 <?php } ?>
@@ -208,77 +145,77 @@ if($service_setting['service_section_enabled'] == 0 ) { ?>
             </div>
         </div>
     </section>
-        <?php } ?>
+    <?php } ?>
 
-                <?php 
+    <?php 
 			$args = array( 'post_type' => 'depoimento' );
 			$loop = new WP_Query( $args );
 			if( $loop->have_posts() ) {?>
-                <section class="depoimentos">
-                    <div class="container">
-                        <div class="row">
-                            <div class="depoimentos__section-header col-12" id="depoimentos">
-                                <div class="hr"></div>
-                                <span class="depoimentos__section-title">depoimentos</span>
-                            </div>
-                        </div>
-                        <div class="depoimentos__list row">
+    <section class="depoimentos">
+        <div class="container">
+            <div class="row">
+                <div class="depoimentos__section-header col-12" id="depoimentos">
+                    <div class="hr"></div>
+                    <span class="depoimentos__section-title">depoimentos</span>
+                </div>
+            </div>
+            <div class="depoimentos__list row">
 
-                            <?php while( $loop->have_posts() ) {
+                <?php while( $loop->have_posts() ) {
 			$loop->the_post();?>
-                            <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
-                            <div class="depoimentos__wrapper offset-md-0 col-md-3 offset-1 col-10">
-                                <div class="depoimentos__item" style="background-image: url('<?php echo $thumb['0'];?>')">
-                                    <div class="depoimentos__item-header">
-                                        <h3>
-                                            <?php the_title();?>
-                                        </h3>
-                                    </div>
-                                    <div class="depoimentos__item-body">
-                                        <p>
-                                            <?php the_content();?>
-                                        </p>
-                                    </div>
-                                    <div class="depoimentos__item-footer">
-                                        <img src="<?= $theme_folder;?>/assets/img/icon/aspas_depoimento.png" alt="aspas">
-                                    </div>
-                                </div>
-                            </div>
-                            <?php }?>
+                <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
+                <div class="depoimentos__wrapper offset-md-0 col-md-3 offset-1 col-10">
+                    <div class="depoimentos__item" style="background-image: url('<?php echo $thumb['0'];?>')">
+                        <div class="depoimentos__item-header">
+                            <h3>
+                                <?php the_title();?>
+                            </h3>
+                        </div>
+                        <div class="depoimentos__item-body">
+                            <p>
+                                <?php the_content();?>
+                            </p>
+                        </div>
+                        <div class="depoimentos__item-footer">
+                            <img src="<?= $theme_folder;?>/assets/img/icon/aspas_depoimento.png" alt="aspas">
                         </div>
                     </div>
-                </section>
-                <?php	}?>
+                </div>
+                <?php }?>
+            </div>
+        </div>
+    </section>
+    <?php	}?>
 
-                    <section class="about" id="sobre">
-                        <div class="container">
-                            <div class="row">
-                                <div class="about__container col-md-6 col-12">
-                                    <div class="about-sm"></div>
-                                    <div class="about__title">
-                                        <span class="about__title-blue">
-                                            <span class="about__title-black">conheça o </span>
-                                            rafa</span>
-                                        </span>
-                                    </div>
-                                    <br>
-                                    <div class="about__text">
-                                        <p>Um apaixonado por esportes e empreendedorismo, formado em
-                                            <br> Coaching e Liderança pela Organização Internacional Cóndor
-                                            <br> Blanco.</p>
-                                        <p>Pai do Matheus, que sonha em ser jogador de futebol.</p>
-                                        <p>Co-criador da Revoada, rede de facilitadores que potencializa o
-                                            <br> desenvolvimento pessoal e de grupos através de cursos,
-                                            <br> workshop e vivências.</p>
-                                        <p>Membro da equipe de Coachs da empresa Desperte-se. Mentor
-                                            <br> de jovens Empreendedores no Programa Iniciativa Jovem.</p>
-                                        <p>Formado em sustentabilidade pelo Gaia Education e facilitador de
-                                            <br> projetos colaborativos - Dragon Dreaming.</p>
-                                        <p class="last-p">Turismólogo e Sócio-fundador da Mini Aventuras.</p>
-                                    </div>
-                                </div>
-                            </div>
+        <section class="about" id="sobre">
+            <div class="container">
+                <div class="row">
+                    <div class="about__container col-md-6 col-12">
+                        <div class="about-sm"></div>
+                        <div class="about__title">
+                            <span class="about__title-blue">
+                                <span class="about__title-black">conheça o </span>
+                                rafa</span>
+                            </span>
                         </div>
-                    </section>
+                        <br>
+                        <div class="about__text">
+                            <p>Um apaixonado por esportes e empreendedorismo, formado em
+                                <br> Coaching e Liderança pela Organização Internacional Cóndor
+                                <br> Blanco.</p>
+                            <p>Pai do Matheus, que sonha em ser jogador de futebol.</p>
+                            <p>Co-criador da Revoada, rede de facilitadores que potencializa o
+                                <br> desenvolvimento pessoal e de grupos através de cursos,
+                                <br> workshop e vivências.</p>
+                            <p>Membro da equipe de Coachs da empresa Desperte-se. Mentor
+                                <br> de jovens Empreendedores no Programa Iniciativa Jovem.</p>
+                            <p>Formado em sustentabilidade pelo Gaia Education e facilitador de
+                                <br> projetos colaborativos - Dragon Dreaming.</p>
+                            <p class="last-p">Turismólogo e Sócio-fundador da Mini Aventuras.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                    <?php get_footer();?>
+        <?php get_footer();?>

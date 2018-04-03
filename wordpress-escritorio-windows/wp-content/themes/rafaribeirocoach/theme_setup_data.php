@@ -32,6 +32,7 @@ function theme_setup_data()
 	'service_section_enabled' => '',
 	'service_title' => __('Our services','appointment'),
 	//'service_description' => 'Duis aute irure dolor in reprehenderit in voluptate velit cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupid non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+	'curso_one_color'=>__('#000000','appointment'),
 	'service_one_icon' => 'fa-mobile',
 	'service_one_title'=>__('Easy to use','appointment'),
 	'service_one_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consec tetur adipisicing elit dignissim dapib tumst.',
