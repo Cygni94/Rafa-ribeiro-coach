@@ -289,7 +289,185 @@ function tags_support_query($wp_query) {
 add_action('init', 'tags_support_all');
 add_action('pre_get_posts', 'tags_support_query');
 
+//INICIO SEÇÃO TREINAMENTOS
+function rafaribeiro_treinamentos_customizer( $wp_customize ) {
+ 
+//treinamento section panel
+$wp_customize->add_panel( 'rafaribeiro_treinamento_options', array(
+		'priority'       => 500,
+		'capability'     => 'edit_theme_options',
+		'title'      => __('Seção Treinamentos', 'Rafa Ribeiro Coach'),
+	) );
+
+	
+	$wp_customize->add_section( 'treinamento_section_head' , array(
+		'title'      => __('Título da seção','Rafa Ribeiro Coach'),
+		'panel'  => 'rafaribeiro_treinamento_options',
+		'priority'   => 50,
+   	) );
+	
+	
+	//Hide Index treinamento Section
+	
+	$wp_customize->add_setting(
+    'treinamento_options[treinamento_section_enabled]',
+    array(
+        'default' => '',
+		'capability'     => 'edit_theme_options',
+		'sanitize_callback' => 'sanitize_text_field',
+		'type' => 'option'
+    )	
+	);
+	$wp_customize->add_control(
+    'treinamento_options[treinamento_section_enabled]',
+    array(
+        'label' => __('Ocultar esta seção','Rafa Ribeiro Coach'),
+        'section' => 'treinamento_section_head',
+        'type' => 'checkbox',
+    )
+	);
+	
+	$wp_customize->add_setting(
+    'treinamento_options[treinamento_title]',
+    array(
+        'default' => __('Conheça nossos treinamentos','Rafa Ribeiro Coach'),
+		'capability'     => 'edit_theme_options',
+		'sanitize_callback' => 'rafaribeiro_treinamentos_sanitize_html',
+		'type' => 'option'
+    )	
+	);
+	$wp_customize->add_control(
+    'treinamento_options[treinamento_title]',
+    array(
+        'label' => __('Title','Rafa Ribeiro Coach'),
+        'section' => 'treinamento_section_head',
+        'type' => 'text',
+    )
+	);
+	
+	//$wp_customize->add_setting(
+    //'treinamento_options[treinamento_description]',
+    //array(
+        //'default' => 'Duis aute irure dolor in reprehenderit in voluptate velit cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupid non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+		//'sanitize_callback' => 'rafaribeiro_treinamentos_sanitize_html',
+		//'type' => 'option'
+    //)	
+	//);
+	$wp_customize->add_control(
+    'treinamento_options[treinamento_description]',
+    array(
+        'label' => __('Description','Rafa Ribeiro Coach'),
+        'section' => 'treinamento_section_head',
+        'type' => 'text',
+		'sanitize_callback' => 'rafaribeiro_treinamentos_sanitize_html',
+    )
+	);	
+	
+//treinamento section one
+	$wp_customize->add_section( 'treinamento_section_one' , array(
+		'title'      => __('Treinamento 1', 'Rafa Ribeiro Coach'),
+		'panel'  => 'rafaribeiro_treinamento_options',
+		'priority'   => 100,
+		'sanitize_callback' => 'sanitize_text_field',
+       ) );
+
+
+       
+	$wp_customize->add_setting(
+    'treinamento_options[treinamento_one_title]',
+    array(
+        'default' => __('Momento da virada','Rafa Ribeiro Coach'),
+		'capability'     => 'edit_theme_options',
+		'sanitize_callback' => 'rafaribeiro_treinamentos_sanitize_html',
+		'type' => 'option'
+    )	
+	);
+	$wp_customize->add_control(
+    'treinamento_options[treinamento_one_title]',
+    array(
+        'label' => __('Nome do treinamento','Rafa Ribeiro Coach'),
+        'section' => 'treinamento_section_one',
+        'type' => 'text',
+    )
+	);
+
+//Second treinamento
+
+$wp_customize->add_section( 'treinamento_section_two' , array(
+		'title'      => __('Treinamento 2', 'Rafa Ribeiro Coach'),
+		'panel'  => 'rafaribeiro_treinamento_options',
+		'priority'   => 200,
+   	) );
+
+$wp_customize->add_setting(
+    'treinamento_options[treinamento_two_title]',
+    array(
+        'default' => __('Aperte o play','Rafa Ribeiro Coach'),
+		'capability'     => 'edit_theme_options',
+		'sanitize_callback' => 'rafaribeiro_treinamentos_sanitize_html',
+		'type' => 'option',
+    )	
+);
+$wp_customize->add_control(
+    'treinamento_options[treinamento_two_title]',
+    array(
+        'label' => __('Nome do treinamento' ,'Rafa Ribeiro Coach'),
+        'section' => 'treinamento_section_two',
+        'type' => 'text',
+    )
+);
+
+//Third treinamento section
+$wp_customize->add_section( 'treinamento_section_three' , array(
+		'title'      => __('Treinamento 3', 'Rafa Ribeiro Coach'),
+		'panel'  => 'rafaribeiro_treinamento_options',
+		'priority'   => 300,
+   	) );
+
+$wp_customize->add_setting(
+    'treinamento_options[treinamento_three_title]',
+    array(
+        'default' => __('Mentoria','Rafa Ribeiro Coach'),
+		'capability'     => 'edit_theme_options',
+		'sanitize_callback' => 'rafaribeiro_treinamentos_sanitize_html',
+		'type' =>'option',
+    )	
+);
+$wp_customize->add_control(
+    'treinamento_options[treinamento_three_title]',
+    array(
+        'label' => __('Nome do treinamento','Rafa Ribeiro Coach'),
+        'section' => 'treinamento_section_three',
+        'type' => 'text',
+    )
+);
+
+class WP_treinamento_Customize_Control extends WP_Customize_Control {
+    public $type = 'new_menu';
+    /**
+    * Render the control's content.
+    */
+    public function render_content() {
+    ?>
+      <div class="pro-box">
+		<a href="<?php echo 'http://webriti.com/appointment/';?>" target="_blank" class="button button-primary" id="review_pro"><?php _e('Add more treinamentos. Get Pro.','Rafa Ribeiro Coach' ); ?></a>
+	 
+	<div>
+    <?php
+    }
+}
+
+function rafaribeiro_treinamentos_sanitize_html( $input ) {
+    return force_balance_tags( $input );
+	}
+
+
+}
+add_action( 'customize_register', 'rafaribeiro_treinamentos_customizer' );
+
+
 //INICIO CUSTOMIZER
+
 /**
  * Contains methods for customizing the theme customization screen.
  * 
@@ -313,17 +491,18 @@ class MyTheme_Customize {
       //1. Define a new section (if desired) to the Theme Customizer
       $wp_customize->add_section( 'mytheme_options', 
          array(
-            'title'       => __( 'MyTheme Options', 'Rafa Ribeiro Coaching' ), //Visible title of section
+            'title'       => __( 'MyTheme Options', 'Rafa Ribeiro Coach' ), //Visible title of section
             'priority'    => 35, //Determines what order this appears in
             'capability'  => 'edit_theme_options', //Capability needed to tweak
-            'description' => __('Allows you to customize some example settings for MyTheme.', 'Rafa Ribeiro Coaching'), //Descriptive tooltip
+            'section'     => 'Treinamentos',
+            'description' => __('Allows you to customize some example settings for MyTheme.', 'Rafa Ribeiro Coach'), //Descriptive tooltip
          ) 
       );
       
       //2. Register new settings to the WP database...
       $wp_customize->add_setting( 'treinamento_backgroundcolor-1', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
          array(
-            'default'    => '#ffffff', //Default setting/value to save
+            'default'    => '#EF4136', //Default setting/value to save
             'type'       => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
             'capability' => 'edit_theme_options', //Optional. Special permissions for accessing this setting.
             'transport'  => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
@@ -333,9 +512,9 @@ class MyTheme_Customize {
       //3. Finally, we define the control itself (which links a setting to a section and renders the HTML controls)...
       $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
          $wp_customize, //Pass the $wp_customize object (required)
-         'mytheme_treinamento_backgroundcolor', //Set a unique ID for the control
+         'rafaribeirocoach_treinamento_backgroundcolor-1', //Set a unique ID for the control
          array(
-            'label'      => __( 'Cor do Treinamento 1', 'Rafa Ribeiro Coaching' ), //Admin-visible name of the control
+            'label'      => __( 'Cor do Treinamento 1', 'Rafa Ribeiro Coach' ), //Admin-visible name of the control
             'settings'   => 'treinamento_backgroundcolor-1', //Which setting to load and manipulate (serialized is okay)
             'priority'   => 10, //Determines the order this control appears in for the specified section
             'section'    => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
@@ -345,7 +524,7 @@ class MyTheme_Customize {
       //Treinamento 2
       $wp_customize->add_setting( 'treinamento_backgroundcolor-2', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
          array(
-            'default'    => '#ffffff', //Default setting/value to save
+            'default'    => '#FFD200', //Default setting/value to save
             'type'       => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
             'capability' => 'edit_theme_options', //Optional. Special permissions for accessing this setting.
             'transport'  => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
@@ -355,9 +534,9 @@ class MyTheme_Customize {
       //3. Finally, we define the control itself (which links a setting to a section and renders the HTML controls)...
       $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
          $wp_customize, //Pass the $wp_customize object (required)
-         'mytheme_treinamento-2_backgroundcolor', //Set a unique ID for the control
+         'rafaribeirocoach_treinamento_backgroundcolor-2', //Set a unique ID for the control
          array(
-            'label'      => __( 'Cor do Treinamento 2', 'Rafa Ribeiro Coaching' ), //Admin-visible name of the control
+            'label'      => __( 'Cor do Treinamento 2', 'Rafa Ribeiro Coach' ), //Admin-visible name of the control
             'settings'   => 'treinamento_backgroundcolor-2', //Which setting to load and manipulate (serialized is okay)
             'priority'   => 11, //Determines the order this control appears in for the specified section
             'section'    => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
@@ -367,7 +546,7 @@ class MyTheme_Customize {
       //Treinamento 3
       $wp_customize->add_setting( 'treinamento_backgroundcolor-3', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
          array(
-            'default'    => '#ffffff', //Default setting/value to save
+            'default'    => '#01CAFF', //Default setting/value to save
             'type'       => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
             'capability' => 'edit_theme_options', //Optional. Special permissions for accessing this setting.
             'transport'  => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
@@ -377,9 +556,9 @@ class MyTheme_Customize {
       //3. Finally, we define the control itself (which links a setting to a section and renders the HTML controls)...
       $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
          $wp_customize, //Pass the $wp_customize object (required)
-         'mytheme_treinamento-3_backgroundcolor', //Set a unique ID for the control
+         'rafaribeirocoach_treinamento_backgroundcolor-3', //Set a unique ID for the control
          array(
-            'label'      => __( 'Cor do Treinamento 3', 'Rafa Ribeiro Coaching' ), //Admin-visible name of the control
+            'label'      => __( 'Cor do Treinamento 3', 'Rafa Ribeiro Coach' ), //Admin-visible name of the control
             'settings'   => 'treinamento_backgroundcolor-3', //Which setting to load and manipulate (serialized is okay)
             'priority'   => 12, //Determines the order this control appears in for the specified section
             'section'    => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
@@ -473,5 +652,34 @@ add_action( 'wp_head' , array( 'MyTheme_Customize' , 'header_output' ) );
 
 // Enqueue live preview javascript in Theme Customizer admin screen
 add_action( 'customize_preview_init' , array( 'MyTheme_Customize' , 'live_preview' ) );
+
+function theme_setup_data()
+  	{
+	return $appointment_options=array(
+	//treinamento section settings
+	'treinamento_section_enabled' => '',
+	'treinamento_title' => __('Our treinamentos','appointment'),
+	//'treinamento_description' => 'Duis aute irure dolor in reprehenderit in voluptate velit cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupid non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+	'curso_one_color'=>__('#000000','appointment'),
+	'treinamento_one_icon' => 'fa-mobile',
+	'treinamento_one_title'=>__('Easy to use','appointment'),
+	'treinamento_one_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consec tetur adipisicing elit dignissim dapib tumst.',
+	'treinamento_two_icon' => 'fa-bell',
+	'treinamento_two_title'=>__('Easy to use','appointment'),
+	'treinamento_two_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consec tetur adipisicing elit dignissim dapib tumst.',
+	'treinamento_three_icon' => 'fa-laptop',
+	'treinamento_three_title'=>__('Easy to use','appointment'),
+	'treinamento_three_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consec tetur adipisicing elit dignissim dapib tumst.',
+	'treinamento_four_icon' => 'fa-support',
+	'treinamento_four_title'=>__('Easy to use','appointment'),
+	'treinamento_four_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consec tetur adipisicing elit dignissim dapib tumst.',
+	'treinamento_five_icon' => 'fa-code',
+	'treinamento_five_title'=>__('Easy to use','appointment'),
+	'treinamento_five_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consec tetur adipisicing elit dignissim dapib tumst.',
+	'treinamento_six_icon' => 'fa-cog',
+	'treinamento_six_title'=>__('Easy to use','appointment'),
+	'treinamento_six_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consec tetur adipisicing elit dignissim dapib tumst.',
+    );
+}
 
 ?>

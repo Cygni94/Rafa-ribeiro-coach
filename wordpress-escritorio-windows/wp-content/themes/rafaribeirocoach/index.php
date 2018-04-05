@@ -77,6 +77,46 @@
     </div>
 </section>
 
+<?php 
+$appointment_options=theme_setup_data(); 
+$treinamento_setting = wp_parse_args(  get_option( 'treinamento_options', array() ), $treinamento_options );
+if($treinamento_setting['treinamento_section_enabled'] == 0 ) { ?>
+<section class="treinamento-section cursos" id="treinamentos">
+    <div class="container">
+        <div class="row">
+            <div class="cursos__section-header col-12">
+                <div class="hr"></div>
+                <div class="section-heading-title">
+                    <span class="cursos__section-title" style="color: <?php echo get_theme_mod('header_color', '#000000'); ?>;">
+                        <?php echo $treinamento_setting['treinamento_title']; ?>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cursos__container container">
+        <div class="row" style="justify-content: space-between">
+            <div class="cursos__item col-md-3 offset-1 offset-md-0 col-10 treinamento-1" style="background-color: <?php echo $treinamento_setting['header_textcolor']; ?>">
+                <a class="curso-link">
+                    <?php echo $treinamento_setting['treinamento_one_title']; ?>
+                </a>
+            </div>
+            <div class="cursos__item col-md-3 offset-1 offset-md-0 col-10">
+                <a class="curso-link">
+                    <?php echo $treinamento_setting['treinamento_two_title']; ?>
+                </a>
+            </div>
+            <div class="cursos__item col-md-3 offset-1 offset-md-0 col-10">
+                <a class="curso-link">
+                    <?php echo $treinamento_setting['treinamento_three_title']; ?>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /HomePage treinamento Section -->
+<?php } ?>
+
 <section class="cursos" id="treinamentos">
     <div class="container">
         <div class="row">
@@ -84,7 +124,7 @@
                 <div class="hr"></div>
                 <div class="section-heading-title">
                     <span class="cursos__section-title">
-                        <?php echo $service_setting['service_title']; ?>
+                        <?php echo $treinamento_setting['treinamento_title']; ?>
                     </span>
                 </div>
             </div>
@@ -94,17 +134,17 @@
         <div class="row" style="justify-content: space-between">
             <div class="cursos__item-1 col-md-3 offset-1 offset-md-0 col-10 treinamento-1">
                 <a class="curso-link">
-                    <?php echo $service_setting['service_one_title']; ?>
+                    <?php echo $treinamento_setting['treinamento_one_title']; ?>
                 </a>
             </div>
             <div class="cursos__item-2 col-md-3 offset-1 offset-md-0 col-10">
                 <a class="curso-link">
-                    <?php echo $service_setting['service_two_title']; ?>
+                    <?php echo $treinamento_setting['treinamento_two_title']; ?>
                 </a>
             </div>
             <div class="cursos__item-3 col-md-3 offset-1 offset-md-0 col-10">
                 <a class="curso-link">
-                    <?php echo $service_setting['service_three_title']; ?>
+                    <?php echo $treinamento_setting['treinamento_three_title']; ?>
                 </a>
             </div>
         </div>
