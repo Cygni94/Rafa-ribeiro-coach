@@ -36,10 +36,22 @@
 	} );
 	
 	//Update site link color in real time...
-	wp.customize( 'link_textcolor', function( value ) {
+	wp.customize( 'treinamento_backgroundcolor-1', function( value ) {
 		value.bind( function( newval ) {
-			$('a').css('color', newval );
+			$('.cursos__item-1').css('background-color', newval );
+		} );
+	} );
+
+	wp.customize( 'treinamento_backgroundcolor-2', function( value ) {
+		value.bind( function( newval ) {
+			$('.cursos__item-2').css('background-color', newval );
 		} );
 	} );
 	
+	wp.customize( 'treinamento_backgroundcolor-3', function( value ) {
+		value.bind( function( newval ) {
+			$('.cursos__item-3').css('background-color', newval );
+		} );
+	} );
+
 } )( jQuery );

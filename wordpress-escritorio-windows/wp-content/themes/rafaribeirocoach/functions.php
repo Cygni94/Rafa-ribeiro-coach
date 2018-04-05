@@ -321,7 +321,7 @@ class MyTheme_Customize {
       );
       
       //2. Register new settings to the WP database...
-      $wp_customize->add_setting( 'treinamento_backgroundcolor', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
+      $wp_customize->add_setting( 'treinamento_backgroundcolor-1', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
          array(
             'default'    => '#ffffff', //Default setting/value to save
             'type'       => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
@@ -335,9 +335,53 @@ class MyTheme_Customize {
          $wp_customize, //Pass the $wp_customize object (required)
          'mytheme_treinamento_backgroundcolor', //Set a unique ID for the control
          array(
-            'label'      => __( 'Cor do Treinamento', 'Rafa Ribeiro Coaching' ), //Admin-visible name of the control
-            'settings'   => 'treinamento_backgroundcolor', //Which setting to load and manipulate (serialized is okay)
+            'label'      => __( 'Cor do Treinamento 1', 'Rafa Ribeiro Coaching' ), //Admin-visible name of the control
+            'settings'   => 'treinamento_backgroundcolor-1', //Which setting to load and manipulate (serialized is okay)
             'priority'   => 10, //Determines the order this control appears in for the specified section
+            'section'    => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
+         ) 
+      ) );
+            
+      //Treinamento 2
+      $wp_customize->add_setting( 'treinamento_backgroundcolor-2', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
+         array(
+            'default'    => '#ffffff', //Default setting/value to save
+            'type'       => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
+            'capability' => 'edit_theme_options', //Optional. Special permissions for accessing this setting.
+            'transport'  => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
+         ) 
+      );      
+            
+      //3. Finally, we define the control itself (which links a setting to a section and renders the HTML controls)...
+      $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
+         $wp_customize, //Pass the $wp_customize object (required)
+         'mytheme_treinamento-2_backgroundcolor', //Set a unique ID for the control
+         array(
+            'label'      => __( 'Cor do Treinamento 2', 'Rafa Ribeiro Coaching' ), //Admin-visible name of the control
+            'settings'   => 'treinamento_backgroundcolor-2', //Which setting to load and manipulate (serialized is okay)
+            'priority'   => 11, //Determines the order this control appears in for the specified section
+            'section'    => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
+         ) 
+      ) );
+            
+      //Treinamento 3
+      $wp_customize->add_setting( 'treinamento_backgroundcolor-3', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
+         array(
+            'default'    => '#ffffff', //Default setting/value to save
+            'type'       => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
+            'capability' => 'edit_theme_options', //Optional. Special permissions for accessing this setting.
+            'transport'  => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
+         ) 
+      );      
+            
+      //3. Finally, we define the control itself (which links a setting to a section and renders the HTML controls)...
+      $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
+         $wp_customize, //Pass the $wp_customize object (required)
+         'mytheme_treinamento-3_backgroundcolor', //Set a unique ID for the control
+         array(
+            'label'      => __( 'Cor do Treinamento 3', 'Rafa Ribeiro Coaching' ), //Admin-visible name of the control
+            'settings'   => 'treinamento_backgroundcolor-3', //Which setting to load and manipulate (serialized is okay)
+            'priority'   => 12, //Determines the order this control appears in for the specified section
             'section'    => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
          ) 
       ) );
@@ -361,9 +405,9 @@ class MyTheme_Customize {
       ?>
       <!--Customizer CSS--> 
       <style type="text/css">
-           <?php self::generate_css('#site-title a', 'color', 'header_textcolor', '#'); ?> 
-           <?php self::generate_css('body', 'background-color', 'background_color', '#'); ?> 
-           <?php self::generate_css('a', 'color', 'treinamento_backgroundcolor'); ?>
+           <?php self::generate_css('.cursos__item-1', 'background-color', 'treinamento_backgroundcolor-1'); ?>
+           <?php self::generate_css('.cursos__item-2', 'background-color', 'treinamento_backgroundcolor-2'); ?>
+           <?php self::generate_css('.cursos__item-3', 'background-color', 'treinamento_backgroundcolor-3'); ?>
       </style> 
       <!--/Customizer CSS-->
       <?php
