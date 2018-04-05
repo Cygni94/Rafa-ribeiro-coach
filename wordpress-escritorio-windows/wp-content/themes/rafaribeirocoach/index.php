@@ -77,17 +77,13 @@
     </div>
 </section>
 
-<?php 
-$appointment_options=theme_setup_data(); 
-$service_setting = wp_parse_args(  get_option( 'appointment_options', array() ), $appointment_options );
-if($service_setting['service_section_enabled'] == 0 ) { ?>
-<section class="Service-section cursos" id="treinamentos">
+<section class="cursos" id="treinamentos">
     <div class="container">
         <div class="row">
             <div class="cursos__section-header col-12">
                 <div class="hr"></div>
                 <div class="section-heading-title">
-                    <span class="cursos__section-title">
+                    <span class="cursos__section-title" style="color: <?php echo get_theme_mod('header_color', '#000000'); ?>;">
                         <?php echo $service_setting['service_title']; ?>
                     </span>
                 </div>
@@ -96,7 +92,7 @@ if($service_setting['service_section_enabled'] == 0 ) { ?>
     </div>
     <div class="cursos__container container">
         <div class="row" style="justify-content: space-between">
-            <div class="cursos__item col-md-3 offset-1 offset-md-0 col-10 treinamento-1" style="background-color: <?php echo $service_setting['header_textcolor']; ?>">
+            <div class="cursos__item-1 col-md-3 offset-1 offset-md-0 col-10 treinamento-1" style="background-color: <?php echo $service_setting['header_textcolor']; ?>">
                 <a class="curso-link">
                     <?php echo $service_setting['service_one_title']; ?>
                 </a>
@@ -114,38 +110,6 @@ if($service_setting['service_section_enabled'] == 0 ) { ?>
         </div>
     </div>
 </section>
-<!-- /HomePage Service Section -->
-<?php } ?>
-
-<?php
-                $args = array( 'category_name' => 'treinamento', 'post_type' => 'page', 'posts_per_page' => 3 );
-                $catquery = new WP_Query( $args );
-                if( $catquery->have_posts() ) {?>
-    <section class="cursos" id="treinamentos">
-        <div class="container">
-            <div class="row">
-                <div class="cursos__section-header col-12">
-                    <div class="hr"></div>
-                    <span class="cursos__section-title">conheça nossos treinamentos</span>
-                </div>
-            </div>
-        </div>
-        <div class="cursos__container container">
-            <div class="row" style="justify-content: space-between">
-                <?php while($catquery->have_posts()) : $catquery->the_post(); ?>
-                <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
-                <div class="cursos__item col-md-3 offset-1 offset-md-0 col-10" style="background-image: url('<?php echo $thumb['0'];?>')">
-                    <a class="curso-link" href="<?php the_permalink(); ?>">
-                        <?php the_title();?>
-                    </a>
-                </div>
-                <?php endwhile;
-                wp_reset_postdata();
-                ?>
-            </div>
-        </div>
-    </section>
-    <?php } ?>
 
     <?php 
 			$args = array( 'post_type' => 'depoimento' );

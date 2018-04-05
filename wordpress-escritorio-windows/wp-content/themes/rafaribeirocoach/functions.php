@@ -289,181 +289,145 @@ function tags_support_query($wp_query) {
 add_action('init', 'tags_support_all');
 add_action('pre_get_posts', 'tags_support_query');
 
+//INICIO CUSTOMIZER
+/**
+ * Contains methods for customizing the theme customization screen.
+ * 
+ * @link http://codex.wordpress.org/Theme_Customization_API
+ * @since MyTheme 1.0
+ */
+class MyTheme_Customize {
+   /**
+    * This hooks into 'customize_register' (available as of WP 3.4) and allows
+    * you to add new sections and controls to the Theme Customize screen.
+    * 
+    * Note: To enable instant preview, we have to actually write a bit of custom
+    * javascript. See live_preview() for more.
+    *  
+    * @see add_action('customize_register',$func)
+    * @param \WP_Customize_Manager $wp_customize
+    * @link http://ottopress.com/2012/how-to-leverage-the-theme-customizer-in-your-own-themes/
+    * @since MyTheme 1.0
+    */
+   public static function register ( $wp_customize ) {
+      //1. Define a new section (if desired) to the Theme Customizer
+      $wp_customize->add_section( 'mytheme_options', 
+         array(
+            'title'       => __( 'MyTheme Options', 'Rafa Ribeiro Coaching' ), //Visible title of section
+            'priority'    => 35, //Determines what order this appears in
+            'capability'  => 'edit_theme_options', //Capability needed to tweak
+            'description' => __('Allows you to customize some example settings for MyTheme.', 'Rafa Ribeiro Coaching'), //Descriptive tooltip
+         ) 
+      );
+      
+      //2. Register new settings to the WP database...
+      $wp_customize->add_setting( 'treinamento_backgroundcolor', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
+         array(
+            'default'    => '#ffffff', //Default setting/value to save
+            'type'       => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
+            'capability' => 'edit_theme_options', //Optional. Special permissions for accessing this setting.
+            'transport'  => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
+         ) 
+      );      
+            
+      //3. Finally, we define the control itself (which links a setting to a section and renders the HTML controls)...
+      $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
+         $wp_customize, //Pass the $wp_customize object (required)
+         'mytheme_treinamento_backgroundcolor', //Set a unique ID for the control
+         array(
+            'label'      => __( 'Cor do Treinamento', 'Rafa Ribeiro Coaching' ), //Admin-visible name of the control
+            'settings'   => 'treinamento_backgroundcolor', //Which setting to load and manipulate (serialized is okay)
+            'priority'   => 10, //Determines the order this control appears in for the specified section
+            'section'    => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
+         ) 
+      ) );
+      
+      //4. We can also change built-in settings by modifying properties. For instance, let's make some stuff use live preview JS...
+      $wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
+      $wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
+      $wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+      $wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
+   }
 
-//INÍCIO APPOINTMENT
-/**Theme Name	: Appointment
- * Theme Core Functions and Codes
-*/
-	/**Includes reqired resources here**/
-	define('WEBRITI_TEMPLATE_DIR_URI', get_template_directory_uri());
-    define('WEBRITI_TEMPLATE_DIR' , get_template_directory());
-    define('WEBRITI_THEME_FUNCTIONS_PATH' , WEBRITI_TEMPLATE_DIR.'/functions');
-	require( WEBRITI_THEME_FUNCTIONS_PATH .'/scripts/script.php');
-    require( WEBRITI_THEME_FUNCTIONS_PATH .'/menu/default_menu_walker.php');
-    require( WEBRITI_THEME_FUNCTIONS_PATH .'/menu/appoinment_nav_walker.php');
-    require( WEBRITI_THEME_FUNCTIONS_PATH .'/widgets/sidebars.php');
-	require( WEBRITI_THEME_FUNCTIONS_PATH .'/widgets/appointment_info_widget.php');
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/template-tag.php');
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/breadcrumbs/breadcrumbs.php');
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/font/font.php');
-	//Customizer
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/customizer/customizer_theme_style.php');
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/customizer/customizer-callout.php');
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/customizer/customizer-slider.php');
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/customizer/customizer-copyright.php');
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/customizer/customizer-header.php');
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/customizer/customizer-news.php');
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/customizer/customizer-service.php');
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/customizer/customizer-pro.php');
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/customizer/customizer-project.php');
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/customizer/customizer-testimonial.php');
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/customizer/customizer-client.php');
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/customizer/customizer-footer-callout.php');
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/customizer/customizer-template.php');
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/customizer/customizer-emailcourse.php');
-	
-	// Appointment Info Page
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/appointment-info/welcome-screen.php');
-	
-	// Custom Category control 
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/custom-controls/select/category-dropdown-custom-control.php');
-	/* Theme Setup Function */
-	add_action( 'after_setup_theme', 'appointment_setup' );
-	
-	function appointment_setup()
-	{	
-	// Load text domain for translation-ready
-    load_theme_textdomain( 'appointment', WEBRITI_THEME_FUNCTIONS_PATH . '/lang' );
+   /**
+    * This will output the custom WordPress settings to the live theme's WP head.
+    * 
+    * Used by hook: 'wp_head'
+    * 
+    * @see add_action('wp_head',$func)
+    * @since MyTheme 1.0
+    */
+   public static function header_output() {
+      ?>
+      <!--Customizer CSS--> 
+      <style type="text/css">
+           <?php self::generate_css('#site-title a', 'color', 'header_textcolor', '#'); ?> 
+           <?php self::generate_css('body', 'background-color', 'background_color', '#'); ?> 
+           <?php self::generate_css('a', 'color', 'treinamento_backgroundcolor'); ?>
+      </style> 
+      <!--/Customizer CSS-->
+      <?php
+   }
+   
+   /**
+    * This outputs the javascript needed to automate the live settings preview.
+    * Also keep in mind that this function isn't necessary unless your settings 
+    * are using 'transport'=>'postMessage' instead of the default 'transport'
+    * => 'refresh'
+    * 
+    * Used by hook: 'customize_preview_init'
+    * 
+    * @see add_action('customize_preview_init',$func)
+    * @since MyTheme 1.0
+    */
+   public static function live_preview() {
+      wp_enqueue_script( 
+           'mytheme-themecustomizer', // Give the script a unique ID
+           get_template_directory_uri() . '/js/theme-customizer.js', // Define the path to the JS file
+           array(  'jquery', 'customize-preview' ), // Define dependencies
+           '', // Define a version (optional) 
+           true // Specify whether to put in footer (leave this true)
+      );
+   }
 
-	$header_args = array(
-				 'flex-height' => true,
-				 'height' => 200,
-				 'flex-width' => true,
-				 'width' => 1600,
-				 'admin-head-callback' => 'mytheme_admin_header_style',
-				 );
-				 
-				 add_theme_support( 'custom-header', $header_args );
-    add_theme_support( 'post-thumbnails' ); //supports featured image
-	// Register primary menu 
-    register_nav_menu( 'primary', __('Primary Menu', 'appointment' ) );
-	
-	//Add Theme Support Title Tag
-	add_theme_support( "title-tag" );
-	
-	// Add default posts and comments RSS feed links to head.
-    add_theme_support( 'automatic-feed-links' );
-	// Set the content_width with 900
-    if ( ! isset( $content_width ) ) $content_width = 900;
-	require_once('theme_setup_data.php');
-	}
-// set appointment page title       
-function appointment_title( $title, $sep )
-{	
-    global $paged, $page;
-		
-	if ( is_feed() )
-        return $title;
-		// Add the site name.
-		$title .= get_bloginfo( 'name' );
-		// Add the site description for the home/front page.
-		$site_description = get_bloginfo( 'description' );
-		if ( $site_description && ( is_home() || is_front_page() ) )
-			$title = "$title $sep $site_description";
-		// Add a page number if necessary.
-		if ( $paged >= 2 || $page >= 2 )
-			$title = "$title $sep " . sprintf( __( 'Page', 'appointment' ), max( $paged, $page ) );
-		return $title;
-}	
-add_filter( 'wp_title', 'appointment_title', 10,2 );
-
-add_filter('get_avatar','appointment_add_gravatar_class');
-
-function appointment_add_gravatar_class($class) {
-    $class = str_replace("class='avatar", "class='img-responsive img-circle", $class);
-    return $class;
+    /**
+     * This will generate a line of CSS for use in header output. If the setting
+     * ($mod_name) has no defined value, the CSS will not be output.
+     * 
+     * @uses get_theme_mod()
+     * @param string $selector CSS selector
+     * @param string $style The name of the CSS *property* to modify
+     * @param string $mod_name The name of the 'theme_mod' option to fetch
+     * @param string $prefix Optional. Anything that needs to be output before the CSS property
+     * @param string $postfix Optional. Anything that needs to be output after the CSS property
+     * @param bool $echo Optional. Whether to print directly to the page (default: true).
+     * @return string Returns a single line of CSS with selectors and a property.
+     * @since MyTheme 1.0
+     */
+    public static function generate_css( $selector, $style, $mod_name, $prefix='', $postfix='', $echo=true ) {
+      $return = '';
+      $mod = get_theme_mod($mod_name);
+      if ( ! empty( $mod ) ) {
+         $return = sprintf('%s { %s:%s; }',
+            $selector,
+            $style,
+            $prefix.$mod.$postfix
+         );
+         if ( $echo ) {
+            echo $return;
+         }
+      }
+      return $return;
+    }
 }
-function appointment_add_to_author_profile( $contactmethods ) {
-		$contactmethods['facebook_profile'] = __('Facebook URL','appointment');
-		$contactmethods['twitter_profile'] = __('Twitter URL','appointment');
-		$contactmethods['linkedin_profile'] = __('LinkedIn URL','appointment');
-		$contactmethods['google_profile'] = __('GooglePlus URL','appointment');
-		return $contactmethods;
-		}
-		add_filter( 'user_contactmethods', 'appointment_add_to_author_profile', 10, 1);
-	
-	
-	    add_filter('get_the_excerpt','appointment_post_slider_excerpt');
-	    function appointment_post_slider_excerpt($output){
-		$output = strip_tags(preg_replace(" (\[.*?\])",'',$output));
-		$output = strip_shortcodes($output);		
-		$original_len = strlen($output);
-		$output = substr($output, 0, 155);		
-		$len=strlen($output);	 
-		if($original_len>155) {
-		$output = $output;
-		return  '<div class="slide-text-bg2">' .'<span>'.$output.'</span>'.'</div>'.
-	                       '<div class="slide-btn-area-sm"><a href="' . get_permalink() . '" class="slide-btn-sm">'
-						   .__("Read More","appointment").'</a></div>';
-		}
-		else
-		{ return '<div class="slide-text-bg2">' .'<span>'.$output.'</span>'.'</div>'; }   
-        }
-						
-	function get_home_blog_excerpt()
-	{
-		global $post;
-		$excerpt = get_the_content();
-		$excerpt = strip_tags(preg_replace(" (\[.*?\])",'',$excerpt));
-		$excerpt = strip_shortcodes($excerpt);		
-		$original_len = strlen($excerpt);
-		$excerpt = substr($excerpt, 0, 145);		
-		$len=strlen($excerpt);	 
-		if($original_len>275) {
-		$excerpt = $excerpt;
-		return $excerpt . '<div class="blog-btn-area-sm"><a href="' . get_permalink() . '" class="blog-btn-sm">'.__("Read More","appointment").'</a></div>';
-		}
-		else
-		{ return $excerpt; }
-	}
-	
-	function appointment_import_files() {
-  return array(
-    array(
-      'import_file_name'           => 'Demo Import 1',
-      'categories'                 => array( 'Category 1', 'Category 2' ),
-      'import_file_url'            => 'https://webriti.com/themes/dummydata/appointment/lite/appointment-content.xml',
-      'import_widget_file_url'     => 'https://webriti.com/themes/dummydata/appointment/lite/appointment-widget.json',
-      'import_customizer_file_url' => 'https://webriti.com/themes/dummydata/appointment/lite/appointment-customize.dat',
-      'import_notice'              => sprintf(__( 'Click the large blue button to start the dummy data import process.</br></br>Please be patient while WordPress imports all the content.</br></br>
-			<h3>Recommended Plugins</h3> Appointment theme supports the following plugins:</br> </br><li> <a href="https://wordpress.org/plugins/contact-form-7/"> Contact form 7</a> </l1> </br></br> <li> <a href="https://wordpress.org/plugins/bootstrap-3-shortcodes/"> Bootstrap Shortcodes</a> </l1>','appointment' )),
-			),
-    	
-    	
-    	
-	);
-}
-add_filter( 'pt-ocdi/import_files', 'appointment_import_files' );
 
+// Setup the Theme Customizer settings and controls...
+add_action( 'customize_register' , array( 'MyTheme_Customize' , 'register' ) );
 
-function appointment_after_import_setup() {
+// Output custom CSS to live site
+add_action( 'wp_head' , array( 'MyTheme_Customize' , 'header_output' ) );
 
-	// Menus to assign after import.
-	$main_menu   = get_term_by( 'name', 'Menu 1', 'nav_menu' );
+// Enqueue live preview javascript in Theme Customizer admin screen
+add_action( 'customize_preview_init' , array( 'MyTheme_Customize' , 'live_preview' ) );
 
-	set_theme_mod( 'nav_menu_locations', array(
-		'primary'   => $main_menu->term_id,
-	));
-	
-	// Assign front page and posts page (blog page).
-    $front_page_id = get_page_by_title( 'Home' );
-    $blog_page_id  = get_page_by_title( 'Blog' );
-
-    update_option( 'show_on_front', 'page' );
-    update_option( 'page_on_front', $front_page_id->ID );
-    update_option( 'page_for_posts', $blog_page_id->ID );	
-	
-	
-}
-add_action( 'pt-ocdi/after_import', 'appointment_after_import_setup' );
 ?>
