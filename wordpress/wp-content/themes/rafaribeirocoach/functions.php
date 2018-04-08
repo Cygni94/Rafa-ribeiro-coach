@@ -298,7 +298,6 @@ $wp_customize->add_panel( 'rafaribeiro_treinamento_options', array(
 		'capability'     => 'edit_theme_options',
 		'title'      => __('Seção Treinamentos', 'Rafa Ribeiro Coach'),
 	) );
-
 	
 	$wp_customize->add_section( 'treinamento_section_head' , array(
 		'title'      => __('Título da seção','Rafa Ribeiro Coach'),
@@ -306,9 +305,7 @@ $wp_customize->add_panel( 'rafaribeiro_treinamento_options', array(
 		'priority'   => 50,
    	) );
 	
-	
-	//Hide Index treinamento Section
-	
+	//Hide Index treinamento Section	
 	$wp_customize->add_setting(
     'treinamento_options[treinamento_section_enabled]',
     array(
@@ -345,14 +342,6 @@ $wp_customize->add_panel( 'rafaribeiro_treinamento_options', array(
     )
 	);
 	
-	//$wp_customize->add_setting(
-    //'treinamento_options[treinamento_description]',
-    //array(
-        //'default' => 'Duis aute irure dolor in reprehenderit in voluptate velit cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupid non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-		//'sanitize_callback' => 'rafaribeiro_treinamentos_sanitize_html',
-		//'type' => 'option'
-    //)	
-	//);
 	$wp_customize->add_control(
     'treinamento_options[treinamento_description]',
     array(
@@ -460,33 +449,11 @@ class WP_treinamento_Customize_Control extends WP_Customize_Control {
 function rafaribeiro_treinamentos_sanitize_html( $input ) {
     return force_balance_tags( $input );
 	}
-
-
 }
 add_action( 'customize_register', 'rafaribeiro_treinamentos_customizer' );
 
-
 //INICIO CUSTOMIZER
-
-/**
- * Contains methods for customizing the theme customization screen.
- * 
- * @link http://codex.wordpress.org/Theme_Customization_API
- * @since MyTheme 1.0
- */
 class MyTheme_Customize {
-   /**
-    * This hooks into 'customize_register' (available as of WP 3.4) and allows
-    * you to add new sections and controls to the Theme Customize screen.
-    * 
-    * Note: To enable instant preview, we have to actually write a bit of custom
-    * javascript. See live_preview() for more.
-    *  
-    * @see add_action('customize_register',$func)
-    * @param \WP_Customize_Manager $wp_customize
-    * @link http://ottopress.com/2012/how-to-leverage-the-theme-customizer-in-your-own-themes/
-    * @since MyTheme 1.0
-    */
    public static function register ( $wp_customize ) {
       //1. Define a new section (if desired) to the Theme Customizer
       $wp_customize->add_section( 'mytheme_options', 
@@ -572,14 +539,6 @@ class MyTheme_Customize {
       $wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
    }
 
-   /**
-    * This will output the custom WordPress settings to the live theme's WP head.
-    * 
-    * Used by hook: 'wp_head'
-    * 
-    * @see add_action('wp_head',$func)
-    * @since MyTheme 1.0
-    */
    public static function header_output() {
       ?>
       <!--Customizer CSS--> 
@@ -592,17 +551,6 @@ class MyTheme_Customize {
       <?php
    }
    
-   /**
-    * This outputs the javascript needed to automate the live settings preview.
-    * Also keep in mind that this function isn't necessary unless your settings 
-    * are using 'transport'=>'postMessage' instead of the default 'transport'
-    * => 'refresh'
-    * 
-    * Used by hook: 'customize_preview_init'
-    * 
-    * @see add_action('customize_preview_init',$func)
-    * @since MyTheme 1.0
-    */
    public static function live_preview() {
       wp_enqueue_script( 
            'mytheme-themecustomizer', // Give the script a unique ID
@@ -613,20 +561,6 @@ class MyTheme_Customize {
       );
    }
 
-    /**
-     * This will generate a line of CSS for use in header output. If the setting
-     * ($mod_name) has no defined value, the CSS will not be output.
-     * 
-     * @uses get_theme_mod()
-     * @param string $selector CSS selector
-     * @param string $style The name of the CSS *property* to modify
-     * @param string $mod_name The name of the 'theme_mod' option to fetch
-     * @param string $prefix Optional. Anything that needs to be output before the CSS property
-     * @param string $postfix Optional. Anything that needs to be output after the CSS property
-     * @param bool $echo Optional. Whether to print directly to the page (default: true).
-     * @return string Returns a single line of CSS with selectors and a property.
-     * @since MyTheme 1.0
-     */
     public static function generate_css( $selector, $style, $mod_name, $prefix='', $postfix='', $echo=true ) {
       $return = '';
       $mod = get_theme_mod($mod_name);
@@ -658,28 +592,10 @@ function theme_setup_data()
 	return $appointment_options=array(
 	//treinamento section settings
 	'treinamento_section_enabled' => '',
-	'treinamento_title' => __('Our treinamentos','appointment'),
-	//'treinamento_description' => 'Duis aute irure dolor in reprehenderit in voluptate velit cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupid non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-	'curso_one_color'=>__('#000000','appointment'),
-	'treinamento_one_icon' => 'fa-mobile',
-	'treinamento_one_title'=>__('Easy to use','appointment'),
-	'treinamento_one_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consec tetur adipisicing elit dignissim dapib tumst.',
-	'treinamento_two_icon' => 'fa-bell',
-	'treinamento_two_title'=>__('Easy to use','appointment'),
-	'treinamento_two_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consec tetur adipisicing elit dignissim dapib tumst.',
-	'treinamento_three_icon' => 'fa-laptop',
-	'treinamento_three_title'=>__('Easy to use','appointment'),
-	'treinamento_three_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consec tetur adipisicing elit dignissim dapib tumst.',
-	'treinamento_four_icon' => 'fa-support',
-	'treinamento_four_title'=>__('Easy to use','appointment'),
-	'treinamento_four_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consec tetur adipisicing elit dignissim dapib tumst.',
-	'treinamento_five_icon' => 'fa-code',
-	'treinamento_five_title'=>__('Easy to use','appointment'),
-	'treinamento_five_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consec tetur adipisicing elit dignissim dapib tumst.',
-	'treinamento_six_icon' => 'fa-cog',
-	'treinamento_six_title'=>__('Easy to use','appointment'),
-	'treinamento_six_description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consec tetur adipisicing elit dignissim dapib tumst.',
-    );
+	'treinamento_title' => __('Conheça nossos treinamentos','Rafa Ribeiro Coach'),
+	'treinamento_one_title'=>__('Momento da Virada','Rafa Ribeiro Coach'),
+	'treinamento_two_title'=>__('Aperte o Play','Rafa Ribeiro Coach'),
+	'treinamento_three_title'=>__('Mentoria','Rafa Ribeiro Coach'),
+	);
 }
-
 ?>

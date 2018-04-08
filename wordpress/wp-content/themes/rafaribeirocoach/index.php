@@ -87,7 +87,7 @@ if ($treinamento_setting['treinamento_section_enabled'] == 0) {?>
             <div class="cursos__section-header col-12">
                 <div class="hr"></div>
                 <div class="section-heading-title">
-                    <span class="cursos__section-title" style="color: <?php echo get_theme_mod('header_color', '#000000'); ?>;">
+                    <span class="cursos__section-title">
                         <?php echo $treinamento_setting['treinamento_title']; ?>
                     </span>
                 </div>
