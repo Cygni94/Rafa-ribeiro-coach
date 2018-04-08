@@ -517,7 +517,7 @@ class MyTheme_Customize {
             'label'      => __( 'Cor do Treinamento 1', 'Rafa Ribeiro Coach' ), //Admin-visible name of the control
             'settings'   => 'treinamento_backgroundcolor-1', //Which setting to load and manipulate (serialized is okay)
             'priority'   => 10, //Determines the order this control appears in for the specified section
-            'section'    => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
+            'section'    => 'treinamento_section_one', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
          ) 
       ) );
             
@@ -539,7 +539,7 @@ class MyTheme_Customize {
             'label'      => __( 'Cor do Treinamento 2', 'Rafa Ribeiro Coach' ), //Admin-visible name of the control
             'settings'   => 'treinamento_backgroundcolor-2', //Which setting to load and manipulate (serialized is okay)
             'priority'   => 11, //Determines the order this control appears in for the specified section
-            'section'    => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
+            'section'    => 'treinamento_section_two', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
          ) 
       ) );
             
@@ -561,7 +561,7 @@ class MyTheme_Customize {
             'label'      => __( 'Cor do Treinamento 3', 'Rafa Ribeiro Coach' ), //Admin-visible name of the control
             'settings'   => 'treinamento_backgroundcolor-3', //Which setting to load and manipulate (serialized is okay)
             'priority'   => 12, //Determines the order this control appears in for the specified section
-            'section'    => 'colors', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
+            'section'    => 'treinamento_section_three', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
          ) 
       ) );
       
