@@ -289,181 +289,659 @@ function tags_support_query($wp_query) {
 add_action('init', 'tags_support_all');
 add_action('pre_get_posts', 'tags_support_query');
 
-
-//INÍCIO APPOINTMENT
-/**Theme Name	: Appointment
- * Theme Core Functions and Codes
-*/
-	/**Includes reqired resources here**/
-	define('WEBRITI_TEMPLATE_DIR_URI', get_template_directory_uri());
-    define('WEBRITI_TEMPLATE_DIR' , get_template_directory());
-    define('WEBRITI_THEME_FUNCTIONS_PATH' , WEBRITI_TEMPLATE_DIR.'/functions');
-	require( WEBRITI_THEME_FUNCTIONS_PATH .'/scripts/script.php');
-    require( WEBRITI_THEME_FUNCTIONS_PATH .'/menu/default_menu_walker.php');
-    require( WEBRITI_THEME_FUNCTIONS_PATH .'/menu/appoinment_nav_walker.php');
-    require( WEBRITI_THEME_FUNCTIONS_PATH .'/widgets/sidebars.php');
-	require( WEBRITI_THEME_FUNCTIONS_PATH .'/widgets/appointment_info_widget.php');
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/template-tag.php');
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/breadcrumbs/breadcrumbs.php');
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/font/font.php');
-	//Customizer
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/customizer/customizer_theme_style.php');
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/customizer/customizer-callout.php');
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/customizer/customizer-slider.php');
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/customizer/customizer-copyright.php');
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/customizer/customizer-header.php');
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/customizer/customizer-news.php');
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/customizer/customizer-service.php');
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/customizer/customizer-pro.php');
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/customizer/customizer-project.php');
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/customizer/customizer-testimonial.php');
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/customizer/customizer-client.php');
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/customizer/customizer-footer-callout.php');
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/customizer/customizer-template.php');
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/customizer/customizer-emailcourse.php');
+//INICIO SEÇÃO TREINAMENTOS
+function rafaribeiro_treinamentos_customizer( $wp_customize ) {
+ 
+//treinamento section panel
+$wp_customize->add_panel( 'rafaribeiro_treinamento_options', array(
+		'priority'       => 500,
+		'capability'     => 'edit_theme_options',
+		'title'      => __('Seção Treinamentos', 'Rafa Ribeiro Coach'),
+	) );
 	
-	// Appointment Info Page
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/appointment-info/welcome-screen.php');
+	$wp_customize->add_section( 'treinamento_section_head' , array(
+		'title'      => __('Título da seção','Rafa Ribeiro Coach'),
+		'panel'  => 'rafaribeiro_treinamento_options',
+		'priority'   => 50,
+   	) );
 	
-	// Custom Category control 
-	require( WEBRITI_THEME_FUNCTIONS_PATH . '/custom-controls/select/category-dropdown-custom-control.php');
-	/* Theme Setup Function */
-	add_action( 'after_setup_theme', 'appointment_setup' );
-	
-	function appointment_setup()
-	{	
-	// Load text domain for translation-ready
-    load_theme_textdomain( 'appointment', WEBRITI_THEME_FUNCTIONS_PATH . '/lang' );
-
-	$header_args = array(
-				 'flex-height' => true,
-				 'height' => 200,
-				 'flex-width' => true,
-				 'width' => 1600,
-				 'admin-head-callback' => 'mytheme_admin_header_style',
-				 );
-				 
-				 add_theme_support( 'custom-header', $header_args );
-    add_theme_support( 'post-thumbnails' ); //supports featured image
-	// Register primary menu 
-    register_nav_menu( 'primary', __('Primary Menu', 'appointment' ) );
-	
-	//Add Theme Support Title Tag
-	add_theme_support( "title-tag" );
-	
-	// Add default posts and comments RSS feed links to head.
-    add_theme_support( 'automatic-feed-links' );
-	// Set the content_width with 900
-    if ( ! isset( $content_width ) ) $content_width = 900;
-	require_once('theme_setup_data.php');
-	}
-// set appointment page title       
-function appointment_title( $title, $sep )
-{	
-    global $paged, $page;
-		
-	if ( is_feed() )
-        return $title;
-		// Add the site name.
-		$title .= get_bloginfo( 'name' );
-		// Add the site description for the home/front page.
-		$site_description = get_bloginfo( 'description' );
-		if ( $site_description && ( is_home() || is_front_page() ) )
-			$title = "$title $sep $site_description";
-		// Add a page number if necessary.
-		if ( $paged >= 2 || $page >= 2 )
-			$title = "$title $sep " . sprintf( __( 'Page', 'appointment' ), max( $paged, $page ) );
-		return $title;
-}	
-add_filter( 'wp_title', 'appointment_title', 10,2 );
-
-add_filter('get_avatar','appointment_add_gravatar_class');
-
-function appointment_add_gravatar_class($class) {
-    $class = str_replace("class='avatar", "class='img-responsive img-circle", $class);
-    return $class;
-}
-function appointment_add_to_author_profile( $contactmethods ) {
-		$contactmethods['facebook_profile'] = __('Facebook URL','appointment');
-		$contactmethods['twitter_profile'] = __('Twitter URL','appointment');
-		$contactmethods['linkedin_profile'] = __('LinkedIn URL','appointment');
-		$contactmethods['google_profile'] = __('GooglePlus URL','appointment');
-		return $contactmethods;
-		}
-		add_filter( 'user_contactmethods', 'appointment_add_to_author_profile', 10, 1);
-	
-	
-	    add_filter('get_the_excerpt','appointment_post_slider_excerpt');
-	    function appointment_post_slider_excerpt($output){
-		$output = strip_tags(preg_replace(" (\[.*?\])",'',$output));
-		$output = strip_shortcodes($output);		
-		$original_len = strlen($output);
-		$output = substr($output, 0, 155);		
-		$len=strlen($output);	 
-		if($original_len>155) {
-		$output = $output;
-		return  '<div class="slide-text-bg2">' .'<span>'.$output.'</span>'.'</div>'.
-	                       '<div class="slide-btn-area-sm"><a href="' . get_permalink() . '" class="slide-btn-sm">'
-						   .__("Read More","appointment").'</a></div>';
-		}
-		else
-		{ return '<div class="slide-text-bg2">' .'<span>'.$output.'</span>'.'</div>'; }   
-        }
-						
-	function get_home_blog_excerpt()
-	{
-		global $post;
-		$excerpt = get_the_content();
-		$excerpt = strip_tags(preg_replace(" (\[.*?\])",'',$excerpt));
-		$excerpt = strip_shortcodes($excerpt);		
-		$original_len = strlen($excerpt);
-		$excerpt = substr($excerpt, 0, 145);		
-		$len=strlen($excerpt);	 
-		if($original_len>275) {
-		$excerpt = $excerpt;
-		return $excerpt . '<div class="blog-btn-area-sm"><a href="' . get_permalink() . '" class="blog-btn-sm">'.__("Read More","appointment").'</a></div>';
-		}
-		else
-		{ return $excerpt; }
-	}
-	
-	function appointment_import_files() {
-  return array(
+	//Hide Index treinamento Section	
+	$wp_customize->add_setting(
+    'treinamento_options[treinamento_section_enabled]',
     array(
-      'import_file_name'           => 'Demo Import 1',
-      'categories'                 => array( 'Category 1', 'Category 2' ),
-      'import_file_url'            => 'https://webriti.com/themes/dummydata/appointment/lite/appointment-content.xml',
-      'import_widget_file_url'     => 'https://webriti.com/themes/dummydata/appointment/lite/appointment-widget.json',
-      'import_customizer_file_url' => 'https://webriti.com/themes/dummydata/appointment/lite/appointment-customize.dat',
-      'import_notice'              => sprintf(__( 'Click the large blue button to start the dummy data import process.</br></br>Please be patient while WordPress imports all the content.</br></br>
-			<h3>Recommended Plugins</h3> Appointment theme supports the following plugins:</br> </br><li> <a href="https://wordpress.org/plugins/contact-form-7/"> Contact form 7</a> </l1> </br></br> <li> <a href="https://wordpress.org/plugins/bootstrap-3-shortcodes/"> Bootstrap Shortcodes</a> </l1>','appointment' )),
-			),
-    	
-    	
-    	
+        'default' => '',
+		'capability'     => 'edit_theme_options',
+		'sanitize_callback' => 'sanitize_text_field',
+		'type' => 'option'
+    )	
 	);
+	$wp_customize->add_control(
+    'treinamento_options[treinamento_section_enabled]',
+    array(
+        'label' => __('Ocultar esta seção','Rafa Ribeiro Coach'),
+        'section' => 'treinamento_section_head',
+        'type' => 'checkbox',
+    )
+	);
+	
+	$wp_customize->add_setting(
+    'treinamento_options[treinamento_title]',
+    array(
+        'default' => __('Conheça nossos treinamentos','Rafa Ribeiro Coach'),
+		'capability'     => 'edit_theme_options',
+		'sanitize_callback' => 'rafaribeiro_treinamentos_sanitize_html',
+		'type' => 'option'
+    )	
+	);
+	$wp_customize->add_control(
+    'treinamento_options[treinamento_title]',
+    array(
+        'label' => __('Title','Rafa Ribeiro Coach'),
+        'section' => 'treinamento_section_head',
+        'type' => 'text',
+    )
+	);
+	
+	$wp_customize->add_control(
+    'treinamento_options[treinamento_description]',
+    array(
+        'label' => __('Description','Rafa Ribeiro Coach'),
+        'section' => 'treinamento_section_head',
+        'type' => 'text',
+		'sanitize_callback' => 'rafaribeiro_treinamentos_sanitize_html',
+    )
+	);	
+	
+//treinamento section one
+	$wp_customize->add_section( 'treinamento_section_one' , array(
+		'title'      => __('Treinamento 1', 'Rafa Ribeiro Coach'),
+		'panel'  => 'rafaribeiro_treinamento_options',
+		'priority'   => 100,
+		'sanitize_callback' => 'sanitize_text_field',
+       ) );
+
+
+       
+	$wp_customize->add_setting(
+    'treinamento_options[treinamento_one_title]',
+    array(
+        'default' => __('Momento da virada','Rafa Ribeiro Coach'),
+		'capability'     => 'edit_theme_options',
+		'sanitize_callback' => 'rafaribeiro_treinamentos_sanitize_html',
+		'type' => 'option'
+    )	
+	);
+	$wp_customize->add_control(
+    'treinamento_options[treinamento_one_title]',
+    array(
+        'label' => __('Nome do treinamento','Rafa Ribeiro Coach'),
+        'section' => 'treinamento_section_one',
+        'type' => 'text',
+    )
+	);
+
+//Second treinamento
+
+$wp_customize->add_section( 'treinamento_section_two' , array(
+		'title'      => __('Treinamento 2', 'Rafa Ribeiro Coach'),
+		'panel'  => 'rafaribeiro_treinamento_options',
+		'priority'   => 200,
+   	) );
+
+$wp_customize->add_setting(
+    'treinamento_options[treinamento_two_title]',
+    array(
+        'default' => __('Aperte o play','Rafa Ribeiro Coach'),
+		'capability'     => 'edit_theme_options',
+		'sanitize_callback' => 'rafaribeiro_treinamentos_sanitize_html',
+		'type' => 'option',
+    )	
+);
+$wp_customize->add_control(
+    'treinamento_options[treinamento_two_title]',
+    array(
+        'label' => __('Nome do treinamento' ,'Rafa Ribeiro Coach'),
+        'section' => 'treinamento_section_two',
+        'type' => 'text',
+    )
+);
+
+//Third treinamento section
+$wp_customize->add_section( 'treinamento_section_three' , array(
+		'title'      => __('Treinamento 3', 'Rafa Ribeiro Coach'),
+		'panel'  => 'rafaribeiro_treinamento_options',
+		'priority'   => 300,
+   	) );
+
+$wp_customize->add_setting(
+    'treinamento_options[treinamento_three_title]',
+    array(
+        'default' => __('Mentoria','Rafa Ribeiro Coach'),
+		'capability'     => 'edit_theme_options',
+		'sanitize_callback' => 'rafaribeiro_treinamentos_sanitize_html',
+		'type' =>'option',
+    )	
+);
+$wp_customize->add_control(
+    'treinamento_options[treinamento_three_title]',
+    array(
+        'label' => __('Nome do treinamento','Rafa Ribeiro Coach'),
+        'section' => 'treinamento_section_three',
+        'type' => 'text',
+    )
+);
+
+function rafaribeiro_treinamentos_sanitize_html( $input ) {
+    return force_balance_tags( $input );
+	}
 }
-add_filter( 'pt-ocdi/import_files', 'appointment_import_files' );
+add_action( 'customize_register', 'rafaribeiro_treinamentos_customizer' );
 
+//INICIO CUSTOMIZER
+class Treinamento_Customize {
+   public static function register ( $wp_customize ) {
+      //1. Define a new section (if desired) to the Theme Customizer
+      $wp_customize->add_section( 'mytheme_options', 
+         array(
+            'title'       => __( 'MyTheme Options', 'Rafa Ribeiro Coach' ), //Visible title of section
+            'priority'    => 35, //Determines what order this appears in
+            'capability'  => 'edit_theme_options', //Capability needed to tweak
+            'section'     => 'Treinamentos',
+            'description' => __('Allows you to customize some example settings for MyTheme.', 'Rafa Ribeiro Coach'), //Descriptive tooltip
+         ) 
+      );
+      
+      //2. Register new settings to the WP database...
+      $wp_customize->add_setting( 'treinamento_backgroundcolor-1', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
+         array(
+            'default'    => '#EF4136', //Default setting/value to save
+            'type'       => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
+            'capability' => 'edit_theme_options', //Optional. Special permissions for accessing this setting.
+            'transport'  => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
+         ) 
+      );      
+            
+      //3. Finally, we define the control itself (which links a setting to a section and renders the HTML controls)...
+      $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
+         $wp_customize, //Pass the $wp_customize object (required)
+         'rafaribeirocoach_treinamento_backgroundcolor-1', //Set a unique ID for the control
+         array(
+            'label'      => __( 'Cor do Treinamento 1', 'Rafa Ribeiro Coach' ), //Admin-visible name of the control
+            'settings'   => 'treinamento_backgroundcolor-1', //Which setting to load and manipulate (serialized is okay)
+            'priority'   => 10, //Determines the order this control appears in for the specified section
+            'section'    => 'treinamento_section_one', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
+         ) 
+      ) );
+            
+      //Treinamento 2
+      $wp_customize->add_setting( 'treinamento_backgroundcolor-2', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
+         array(
+            'default'    => '#FFD200', //Default setting/value to save
+            'type'       => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
+            'capability' => 'edit_theme_options', //Optional. Special permissions for accessing this setting.
+            'transport'  => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
+         ) 
+      );      
+            
+      //3. Finally, we define the control itself (which links a setting to a section and renders the HTML controls)...
+      $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
+         $wp_customize, //Pass the $wp_customize object (required)
+         'rafaribeirocoach_treinamento_backgroundcolor-2', //Set a unique ID for the control
+         array(
+            'label'      => __( 'Cor do Treinamento 2', 'Rafa Ribeiro Coach' ), //Admin-visible name of the control
+            'settings'   => 'treinamento_backgroundcolor-2', //Which setting to load and manipulate (serialized is okay)
+            'priority'   => 11, //Determines the order this control appears in for the specified section
+            'section'    => 'treinamento_section_two', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
+         ) 
+      ) );
+            
+      //Treinamento 3
+      $wp_customize->add_setting( 'treinamento_backgroundcolor-3', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
+         array(
+            'default'    => '#01CAFF', //Default setting/value to save
+            'type'       => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
+            'capability' => 'edit_theme_options', //Optional. Special permissions for accessing this setting.
+            'transport'  => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
+         ) 
+      );      
+            
+      //3. Finally, we define the control itself (which links a setting to a section and renders the HTML controls)...
+      $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
+         $wp_customize, //Pass the $wp_customize object (required)
+         'rafaribeirocoach_treinamento_backgroundcolor-3', //Set a unique ID for the control
+         array(
+            'label'      => __( 'Cor do Treinamento 3', 'Rafa Ribeiro Coach' ), //Admin-visible name of the control
+            'settings'   => 'treinamento_backgroundcolor-3', //Which setting to load and manipulate (serialized is okay)
+            'priority'   => 12, //Determines the order this control appears in for the specified section
+            'section'    => 'treinamento_section_three', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
+         ) 
+      ) );
+      
+      //4. We can also change built-in settings by modifying properties. For instance, let's make some stuff use live preview JS...
+      $wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
+      $wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
+      $wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+      $wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
+   }
 
-function appointment_after_import_setup() {
+   public static function header_output() {
+      ?>
+      <!--Customizer CSS--> 
+      <style type="text/css">
+           <?php self::generate_css('.cursos__item-1', 'background-color', 'treinamento_backgroundcolor-1'); ?>
+           <?php self::generate_css('.cursos__item-2', 'background-color', 'treinamento_backgroundcolor-2'); ?>
+           <?php self::generate_css('.cursos__item-3', 'background-color', 'treinamento_backgroundcolor-3'); ?>
+      </style> 
+      <!--/Customizer CSS-->
+      <?php
+   }
+   
+   public static function live_preview() {
+      wp_enqueue_script( 
+           'mytheme-themecustomizer', // Give the script a unique ID
+           get_template_directory_uri() . '/js/theme-customizer.js', // Define the path to the JS file
+           array(  'jquery', 'customize-preview' ), // Define dependencies
+           '', // Define a version (optional) 
+           true // Specify whether to put in footer (leave this true)
+      );
+   }
 
-	// Menus to assign after import.
-	$main_menu   = get_term_by( 'name', 'Menu 1', 'nav_menu' );
-
-	set_theme_mod( 'nav_menu_locations', array(
-		'primary'   => $main_menu->term_id,
-	));
-	
-	// Assign front page and posts page (blog page).
-    $front_page_id = get_page_by_title( 'Home' );
-    $blog_page_id  = get_page_by_title( 'Blog' );
-
-    update_option( 'show_on_front', 'page' );
-    update_option( 'page_on_front', $front_page_id->ID );
-    update_option( 'page_for_posts', $blog_page_id->ID );	
-	
-	
+    public static function generate_css( $selector, $style, $mod_name, $prefix='', $postfix='', $echo=true ) {
+      $return = '';
+      $mod = get_theme_mod($mod_name);
+      if ( ! empty( $mod ) ) {
+         $return = sprintf('%s { %s:%s; }',
+            $selector,
+            $style,
+            $prefix.$mod.$postfix
+         );
+         if ( $echo ) {
+            echo $return;
+         }
+      }
+      return $return;
+    }
 }
-add_action( 'pt-ocdi/after_import', 'appointment_after_import_setup' );
-?>
+
+// Setup the Theme Customizer settings and controls...
+add_action( 'customize_register' , array( 'Treinamento_Customize' , 'register' ) );
+
+// Output custom CSS to live site
+add_action( 'wp_head' , array( 'Treinamento_Customize' , 'header_output' ) );
+
+// Enqueue live preview javascript in Theme Customizer admin screen
+add_action( 'customize_preview_init' , array( 'Treinamento_Customize' , 'live_preview' ) );
+
+function treinamentos_setup_data()
+{
+return $treinamentos_options=array(
+//treinamento section settings
+'treinamento_section_enabled' => '',
+'treinamento_title' => __('Conheça nossos treinamentos','Rafa Ribeiro Coach'),
+'treinamento_one_title'=>__('Momento da Virada','Rafa Ribeiro Coach'),
+'treinamento_two_title'=>__('Aperte o Play','Rafa Ribeiro Coach'),
+'treinamento_three_title'=>__('Mentoria','Rafa Ribeiro Coach'),
+);
+}
+
+//INICIO SEÇÃO DEPOIMENTOS
+function rafaribeiro_depoimentos_customizer( $wp_customize ) {
+ 
+    //depoimento section panel
+    $wp_customize->add_panel( 'rafaribeiro_depoimento_options', array(
+            'priority'       => 500,
+            'capability'     => 'edit_theme_options',
+            'title'      => __('Seção Depoimentos', 'Rafa Ribeiro Coach'),
+        ) );
+        
+        $wp_customize->add_section( 'depoimento_section_head' , array(
+            'title'      => __('Título da seção','Rafa Ribeiro Coach'),
+            'panel'  => 'rafaribeiro_depoimento_options',
+            'priority'   => 50,
+           ) );
+        
+        //Hide Index depoimento Section	
+        $wp_customize->add_setting(
+        'depoimento_options[depoimento_section_enabled]',
+        array(
+            'default' => '',
+            'capability'     => 'edit_theme_options',
+            'sanitize_callback' => 'sanitize_text_field',
+            'type' => 'option'
+        )	
+        );
+        $wp_customize->add_control(
+        'depoimento_options[depoimento_section_enabled]',
+        array(
+            'label' => __('Ocultar esta seção','Rafa Ribeiro Coach'),
+            'section' => 'depoimento_section_head',
+            'type' => 'checkbox',
+        )
+        );
+
+        $wp_customize->add_setting(
+        'depoimento_options[depoimento_title]',
+        array(
+            'default' => __('depoimentos','Rafa Ribeiro Coach'),
+            'capability'     => 'edit_theme_options',
+            'sanitize_callback' => 'rafaribeiro_depoimentos_sanitize_html',
+            'type' => 'option'
+        )	
+        );
+        $wp_customize->add_control(
+        'depoimento_options[depoimento_title]',
+        array(
+            'label' => __('Title','Rafa Ribeiro Coach'),
+            'section' => 'depoimento_section_head',
+            'type' => 'text',
+        )
+        );
+
+    //depoimento section one
+        $wp_customize->add_section( 'depoimento_section_one' , array(
+            'title'      => __('Depoimento 1', 'Rafa Ribeiro Coach'),
+            'panel'  => 'rafaribeiro_depoimento_options',
+            'priority'   => 100,
+            'sanitize_callback' => 'sanitize_text_field',
+           ) );
+
+        $wp_customize->add_setting(
+        'depoimento_options[depoimento_one_title]',
+        array(
+            'default' => __('XANDE BASTOS','Rafa Ribeiro Coach'),
+            'capability'     => 'edit_theme_options',
+            'sanitize_callback' => 'rafaribeiro_depoimentos_sanitize_html',
+            'type' => 'option'
+        )	
+        );
+        $wp_customize->add_control(
+        'depoimento_options[depoimento_one_title]',
+        array(
+            'label' => __('Nome do depoimento','Rafa Ribeiro Coach'),
+            'section' => 'depoimento_section_one',
+            'type' => 'text',
+        )
+        );
+        $wp_customize->add_setting(
+            'depoimento_options[depoimento_one_text]',
+            array(
+                'default' => __('O resultado foi incrível, pois consegui entender as minhas maiores dificuldades e potencializar as minhas qualidades. Hoje sou uma pessoa melhor e com foco na solução.','Rafa Ribeiro Coach'),
+                'capability'     => 'edit_theme_options',
+                'sanitize_callback' => 'rafaribeiro_depoimentos_sanitize_html',
+                'type' =>'option',
+            )	
+        );
+        $wp_customize->add_control(
+            'depoimento_options[depoimento_one_text]',
+            array(
+                'label' => __('Texto do depoimento','Rafa Ribeiro Coach'),
+                'section' => 'depoimento_section_one',
+                'type' => 'textarea',
+            )
+        );
+        $wp_customize->add_setting(
+            'depoimento_options[depoimento_one_background]', array(
+                'default'        => '',
+                'capability'     => 'edit_theme_options',
+                'sanitize_callback' => 'sanitize_text_field',
+                'type' => 'option',
+            ));
+            $wp_customize->add_control('depoimento_options[depoimento_one_background]', array(
+                'label'   => __('Imagem do depoimento', 'Rafa Ribeiro Coach'),
+                'section' => 'depoimento_section_one',
+                'type'    => 'text',
+                'priority'   => 140,
+            ));
+
+	$wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,
+            'depoimento_options[upload_image_logo]',
+            array(
+                'label'          => __( 'Upload a 150x150 Logo Image', 'Rafa Ribeiro Coach' ),
+                'section'        => 'depoimento_section_one',
+                'priority'   => 50,
+            )
+        )
+ );
+        
+    //Second depoimento
+    
+    $wp_customize->add_section( 'depoimento_section_two' , array(
+            'title'      => __('Depoimento 2', 'Rafa Ribeiro Coach'),
+            'panel'  => 'rafaribeiro_depoimento_options',
+            'priority'   => 200,
+           ) );
+
+    $wp_customize->add_setting(
+        'depoimento_options[depoimento_two_title]',
+        array(
+            'default' => __('ÁGATHA TOMMASI','Rafa Ribeiro Coach'),
+            'capability'     => 'edit_theme_options',
+            'sanitize_callback' => 'rafaribeiro_depoimentos_sanitize_html',
+            'type' => 'option',
+        )	
+    );
+    $wp_customize->add_control(
+        'depoimento_options[depoimento_two_title]',
+        array(
+            'label' => __('Nome do depoimento' ,'Rafa Ribeiro Coach'),
+            'section' => 'depoimento_section_two',
+            'type' => 'text',
+        )
+    );
+    $wp_customize->add_setting(
+        'depoimento_options[depoimento_two_text]',
+        array(
+            'default' => __('Foi um processo de autodescoberta. Aprendi quais eram os meus limites e a julgar se devia respeitá-los ou ultrapassá-los. Aprendi a equilibrar minha energia e hierarquizar minhas prioridades.'),
+            'capability'     => 'edit_theme_options',
+            'sanitize_callback' => 'rafaribeiro_depoimentos_sanitize_html',
+            'type' =>'option',
+        )	
+    );
+    $wp_customize->add_control(
+        'depoimento_options[depoimento_two_text]',
+        array(
+            'label' => __('Texto do depoimento','Rafa Ribeiro Coach'),
+            'section' => 'depoimento_section_two',
+            'type' => 'textarea',
+        )
+    );
+
+    //Third depoimento section
+    $wp_customize->add_section( 'depoimento_section_three' , array(
+            'title'      => __('Depoimento 3', 'Rafa Ribeiro Coach'),
+            'panel'  => 'rafaribeiro_depoimento_options',
+            'priority'   => 300,
+           ) );
+
+    $wp_customize->add_setting(
+        'depoimento_options[depoimento_three_title]',
+        array(
+            'default' => __('XANDE BASTOS','Rafa Ribeiro Coach'),
+            'capability'     => 'edit_theme_options',
+            'sanitize_callback' => 'rafaribeiro_depoimentos_sanitize_html',
+            'type' =>'option',
+        )	
+    );
+    $wp_customize->add_control(
+        'depoimento_options[depoimento_three_title]',
+        array(
+            'label' => __('Autor do depoimento','Rafa Ribeiro Coach'),
+            'section' => 'depoimento_section_three',
+            'type' => 'text',
+        )
+    );
+    $wp_customize->add_setting(
+        'depoimento_options[depoimento_three_text]',
+        array(
+            'default' => __('Vou levar para a vida inteira o que aprendi com o coaching. Se eu pudesse teria esse acompanhamento a vida toda!!!','Rafa Ribeiro Coach'),
+            'capability'     => 'edit_theme_options',
+            'sanitize_callback' => 'rafaribeiro_depoimentos_sanitize_html',
+            'type' =>'option',
+        )	
+    );
+    $wp_customize->add_control(
+        'depoimento_options[depoimento_three_text]',
+        array(
+            'label' => __('Texto do depoimento','Rafa Ribeiro Coach'),
+            'section' => 'depoimento_section_three',
+            'type' => 'textarea',
+        )
+    );
+
+    function rafaribeiro_depoimentos_sanitize_html( $input ) {
+        return force_balance_tags( $input );
+        }
+    }
+    add_action( 'customize_register', 'rafaribeiro_depoimentos_customizer' );
+
+    //INICIO CUSTOMIZER
+    class Depoimento_Customize {
+       public static function register ( $wp_customize ) {
+          //1. Define a new section (if desired) to the Theme Customizer
+          $wp_customize->add_section( 'mytheme_options', 
+             array(
+                'title'       => __( 'MyTheme Options', 'Rafa Ribeiro Coach' ), //Visible title of section
+                'priority'    => 35, //Determines what order this appears in
+                'capability'  => 'edit_theme_options', //Capability needed to tweak
+                'section'     => 'depoimentos',
+                'description' => __('Allows you to customize some example settings for MyTheme.', 'Rafa Ribeiro Coach'), //Descriptive tooltip
+             ) 
+          );
+
+          //2. Register new settings to the WP database...
+          $wp_customize->add_setting( 'depoimento_background-1', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
+             array(
+                'default'    => '#EF4136', //Default setting/value to save
+                'type'       => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
+                'capability' => 'edit_theme_options', //Optional. Special permissions for accessing this setting.
+                'transport'  => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
+             ) 
+          );      
+
+          //3. Finally, we define the control itself (which links a setting to a section and renders the HTML controls)...
+          $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
+             $wp_customize, //Pass the $wp_customize object (required)
+             'rafaribeirocoach_depoimento_background-1', //Set a unique ID for the control
+             array(
+                'label'      => __( 'Imagem do depoimento 1', 'Rafa Ribeiro Coach' ), //Admin-visible name of the control
+                'settings'   => 'depoimento_background-1', //Which setting to load and manipulate (serialized is okay)
+                'priority'   => 10, //Determines the order this control appears in for the specified section
+                'section'    => 'depoimento_section_one', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
+             ) 
+          ) );
+
+          //depoimento 2
+          $wp_customize->add_setting( 'depoimento_background-2', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
+             array(
+                'default'    => '#FFD200', //Default setting/value to save
+                'type'       => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
+                'capability' => 'edit_theme_options', //Optional. Special permissions for accessing this setting.
+                'transport'  => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
+             ) 
+          );      
+
+          $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
+             $wp_customize, //Pass the $wp_customize object (required)
+             'rafaribeirocoach_depoimento_background-2', //Set a unique ID for the control
+             array(
+                'label'      => __( 'Imagem do depoimento 2', 'Rafa Ribeiro Coach' ), //Admin-visible name of the control
+                'settings'   => 'depoimento_background-2', //Which setting to load and manipulate (serialized is okay)
+                'priority'   => 11, //Determines the order this control appears in for the specified section
+                'section'    => 'depoimento_section_two', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
+             ) 
+          ) );
+
+          //depoimento 3
+          $wp_customize->add_setting( 'depoimento_background-3', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
+             array(
+                'default'    => '#01CAFF', //Default setting/value to save
+                'type'       => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
+                'capability' => 'edit_theme_options', //Optional. Special permissions for accessing this setting.
+                'transport'  => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
+             ) 
+          );      
+          $wp_customize->add_control( new WP_Customize_Color_Control( //Instantiate the color control class
+             $wp_customize, //Pass the $wp_customize object (required)
+             'rafaribeirocoach_depoimento_background-3', //Set a unique ID for the control
+             array(
+                'label'      => __( 'Imagem do depoimento 3', 'Rafa Ribeiro Coach' ), //Admin-visible name of the control
+                'settings'   => 'depoimento_background-3', //Which setting to load and manipulate (serialized is okay)
+                'priority'   => 12, //Determines the order this control appears in for the specified section
+                'section'    => 'depoimento_section_three', //ID of the section this control should render in (can be one of yours, or a WordPress default section)
+             ) 
+          ) );
+          
+          //4. We can also change built-in settings by modifying properties. For instance, let's make some stuff use live preview JS...
+          $wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
+          $wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
+          $wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+          $wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
+       }
+
+       public static function header_output() {
+          ?>
+          <!--Customizer CSS--> 
+          <style type="text/css">
+               <?php self::generate_css('.depoimentos__item-1', 'background-image', 'depoimento_background-1'); ?>
+               <?php self::generate_css('.depoimentos__item-2', 'background-image', 'depoimento_background-2'); ?>
+               <?php self::generate_css('.depoimentos__item-3', 'background-image', 'depoimento_background-3'); ?>
+          </style> 
+          <!--/Customizer CSS-->
+          <?php
+       }
+
+       public static function live_preview() {
+          wp_enqueue_script( 
+               'mytheme-themecustomizer', // Give the script a unique ID
+               get_template_directory_uri() . '/js/theme-customizer.js', // Define the path to the JS file
+               array(  'jquery', 'customize-preview' ), // Define dependencies
+               '', // Define a version (optional) 
+               true // Specify whether to put in footer (leave this true)
+          );
+       }
+
+        public static function generate_css( $selector, $style, $mod_name, $prefix='', $postfix='', $echo=true ) {
+          $return = '';
+          $mod = get_theme_mod($mod_name);
+          if ( ! empty( $mod ) ) {
+             $return = sprintf('%s { %s:%s; }',
+                $selector,
+                $style,
+                $prefix.$mod.$postfix
+             );
+             if ( $echo ) {
+                echo $return;
+             }
+          }
+          return $return;
+        }
+    }
+
+    // Setup the Theme Customizer settings and controls...
+    add_action( 'customize_register' , array( 'Depoimento_Customize' , 'register' ) );
+
+    // Output custom CSS to live site
+    add_action( 'wp_head' , array( 'Depoimento_Customize' , 'header_output' ) );
+
+    // Enqueue live preview javascript in Theme Customizer admin screen
+    add_action( 'customize_preview_init' , array( 'Depoimento_Customize' , 'live_preview' ) );
+
+    function depoimentos_setup_data()
+          {
+        return $depoimentos_options=array(
+        //depoimento section settings
+        'depoimento_section_enabled' => '',
+        'depoimento_title' => __('depoimentos','Rafa Ribeiro Coach'),
+        'depoimento_one_title'=>__('XANDE BASTOS','Rafa Ribeiro Coach'),
+        'depoimento_one_text'=>__('O resultado foi incrível, pois consegui entender as minhas maiores dificuldades e potencializar as minhas qualidades. Hoje sou uma pessoa melhor e com foco na solução.','Rafa Ribeiro Coach'),
+        'depoimento_one_background'=>__('','Rafa Ribeiro Coach'),
+        'depoimento_two_title'=>__('AGATHA TOMMASI','Rafa Ribeiro Coach'),
+        'depoimento_two_text'=>__('Foi um processo de autodescoberta. Aprendi quais eram os meus limites e a julgar se devia respeitá-los ou ultrapassá-los. Aprendi a equilibrar minha energia e hierarquizar minhas prioridades.','Rafa Ribeiro Coach'),
+        'depoimento_two_background'=>__('','Rafa Ribeiro Coach'),
+        'depoimento_three_title'=>__('RAFAEL, DABÁ','Rafa Ribeiro Coach'),
+        'depoimento_three_text'=>__('Vou levar para a vida inteira o que aprendi com o coaching. Se eu pudesse teria esse acompanhamento a vida toda!!!','Rafa Ribeiro Coach'),
+        'depoimento_three_background'=>__('','Rafa Ribeiro Coach'),
+    );
+    }
