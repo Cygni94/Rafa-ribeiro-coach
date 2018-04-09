@@ -46,15 +46,21 @@
         </div>
         <div class="row">
             <div class="beneficios__item col-md-3">
-                <div class="beneficios__item--icon"></div>
+                <div class="beneficios__item--icon">
+                <img src="<?php bloginfo('template_url');?>/assets/img/icon/aperte-o-play/01---icone-coracao.png" alt="">
+                </div>
                 <div class="beneficios__item--label">você ame e acredite.</div>
             </div>
             <div class="beneficios__item col-md-3">
-                <div class="beneficios__item--icon"></div>
+                <div class="beneficios__item--icon">
+                <img src="<?php bloginfo('template_url');?>/assets/img/icon/aperte-o-play/02---icone-estrela.png" alt="">
+                </div>
                 <div class="beneficios__item--label">você utilize seus talentos.</div>
             </div>
             <div class="beneficios__item col-md-3">
-                <div class="beneficios__item--icon"></div>
+                <div class="beneficios__item--icon">
+                <img src="<?php bloginfo('template_url');?>/assets/img/icon/aperte-o-play/03---icone-familia.png" alt="">
+                </div>
                 <div class="beneficios__item--label">traga mais tempo para
                     <br>você e sua família.</div>
             </div>
