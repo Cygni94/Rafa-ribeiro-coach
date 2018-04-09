@@ -1,6 +1,6 @@
 <?php /* Template Name: Index */?>
 <?php get_header();?>
-<?php $theme_folder=get_template_directory_uri();?>
+<?php $theme_folder = get_template_directory_uri();?>
 
 <main class="main container-fluid">
     <div class="main__callout">
@@ -59,7 +59,7 @@
                 <span class="assista__callout-main">assista gratuitamente o
                     <br>papo momento da virada</span>
                 <div class="assista__callout-img-sm col-10">
-                    <img class="img-fluid" src="<?= $theme_folder;?>/assets/img/brand/logo_papo_momento_da_virada.png" alt="Papo Momento da Virada">
+                    <img class="img-fluid" src="<?=$theme_folder;?>/assets/img/brand/logo_papo_momento_da_virada.png" alt="Papo Momento da Virada">
                 </div>
                 <span class="assista__callout-description">uma série de entrevistas com
                     <br>empreendedores super inspiradores</span>
@@ -71,53 +71,17 @@
                 </a>
             </div>
             <div class="assista__callout-img-md col-6">
-                <img class="assista-img" src="<?= $theme_folder;?>/assets/img/brand/logo_papo_momento_da_virada.png" alt="Papo Momento da Virada">
+                <img class="assista-img" src="<?=$theme_folder;?>/assets/img/brand/logo_papo_momento_da_virada.png" alt="Papo Momento da Virada">
             </div>
         </div>
     </div>
 </section>
 
-<?php 
-$appointment_options=theme_setup_data(); 
-$treinamento_setting = wp_parse_args(  get_option( 'treinamento_options', array() ), $treinamento_options );
-if($treinamento_setting['treinamento_section_enabled'] == 0 ) { ?>
+<?php
+$treinamento_options = treinamentos_setup_data();
+$treinamento_setting = wp_parse_args(get_option('treinamento_options', array()), $treinamento_options);
+if ($treinamento_setting['treinamento_section_enabled'] == 0) {?>
 <section class="treinamento-section cursos" id="treinamentos">
-    <div class="container">
-        <div class="row">
-            <div class="cursos__section-header col-12">
-                <div class="hr"></div>
-                <div class="section-heading-title">
-                    <span class="cursos__section-title" style="color: <?php echo get_theme_mod('header_color', '#000000'); ?>;">
-                        <?php echo $treinamento_setting['treinamento_title']; ?>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="cursos__container container">
-        <div class="row" style="justify-content: space-between">
-            <div class="cursos__item col-md-3 offset-1 offset-md-0 col-10 treinamento-1" style="background-color: <?php echo $treinamento_setting['header_textcolor']; ?>">
-                <a class="curso-link">
-                    <?php echo $treinamento_setting['treinamento_one_title']; ?>
-                </a>
-            </div>
-            <div class="cursos__item col-md-3 offset-1 offset-md-0 col-10">
-                <a class="curso-link">
-                    <?php echo $treinamento_setting['treinamento_two_title']; ?>
-                </a>
-            </div>
-            <div class="cursos__item col-md-3 offset-1 offset-md-0 col-10">
-                <a class="curso-link">
-                    <?php echo $treinamento_setting['treinamento_three_title']; ?>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- /HomePage treinamento Section -->
-<?php } ?>
-
-<section class="cursos" id="treinamentos">
     <div class="container">
         <div class="row">
             <div class="cursos__section-header col-12">
@@ -132,7 +96,7 @@ if($treinamento_setting['treinamento_section_enabled'] == 0 ) { ?>
     </div>
     <div class="cursos__container container">
         <div class="row" style="justify-content: space-between">
-            <div class="cursos__item-1 col-md-3 offset-1 offset-md-0 col-10 treinamento-1">
+            <div class="cursos__item-1 col-md-3 offset-1 offset-md-0 col-10">
                 <a class="curso-link">
                     <?php echo $treinamento_setting['treinamento_one_title']; ?>
                 </a>
@@ -150,11 +114,52 @@ if($treinamento_setting['treinamento_section_enabled'] == 0 ) { ?>
         </div>
     </div>
 </section>
+<!-- /HomePage treinamento Section -->
+<?php }?>
+<?php
+$depoimento_options = depoimentos_setup_data();
+$depoimento_setting = wp_parse_args(get_option('depoimento_options', array()), $depoimento_options);
+if ($depoimento_setting['depoimento_section_enabled'] == 0) {?>
+<section class="depoimento-section cursos" id="depoimentos">
+    <div class="container">
+        <div class="row">
+            <div class="cursos__section-header col-12">
+                <div class="hr"></div>
+                <div class="section-heading-title">
+                    <span class="cursos__section-title">
+                        <?php echo $depoimento_setting['depoimento_title']; ?>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cursos__container container">
+        <div class="row" style="justify-content: space-between">
+            <div class="cursos__item-1 col-md-3 offset-1 offset-md-0 col-10">
+                <a class="curso-link">
+                    <?php echo $depoimento_setting['depoimento_one_title']; ?>
+                </a>
+            </div>
+            <div class="cursos__item-2 col-md-3 offset-1 offset-md-0 col-10">
+                <a class="curso-link">
+                    <?php echo $depoimento_setting['depoimento_two_title']; ?>
+                </a>
+            </div>
+            <div class="cursos__item-3 col-md-3 offset-1 offset-md-0 col-10">
+                <a class="curso-link">
+                    <?php echo $depoimento_setting['depoimento_three_title']; ?>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /HomePage depoimento Section -->
+<?php }?>
 
-    <?php 
-			$args = array( 'post_type' => 'depoimento' );
-			$loop = new WP_Query( $args );
-			if( $loop->have_posts() ) {?>
+<?php
+$args = array('post_type' => 'depoimento');
+$loop = new WP_Query($args);
+if ($loop->have_posts()) {?>
     <section class="depoimentos">
         <div class="container">
             <div class="row">
@@ -165,11 +170,11 @@ if($treinamento_setting['treinamento_section_enabled'] == 0 ) { ?>
             </div>
             <div class="depoimentos__list row">
 
-                <?php while( $loop->have_posts() ) {
-			$loop->the_post();?>
-                <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
+                <?php while ($loop->have_posts()) {
+    $loop->the_post();?>
+                <?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');?>
                 <div class="depoimentos__wrapper offset-md-0 col-md-3 offset-1 col-10">
-                    <div class="depoimentos__item" style="background-image: url('<?php echo $thumb['0'];?>')">
+                    <div class="depoimentos__item" style="background-image: url('<?php echo $thumb['0']; ?>')">
                         <div class="depoimentos__item-header">
                             <h3>
                                 <?php the_title();?>
@@ -181,7 +186,7 @@ if($treinamento_setting['treinamento_section_enabled'] == 0 ) { ?>
                             </p>
                         </div>
                         <div class="depoimentos__item-footer">
-                            <img src="<?= $theme_folder;?>/assets/img/icon/aspas_depoimento.png" alt="aspas">
+                            <img src="<?=$theme_folder;?>/assets/img/icon/aspas_depoimento.png" alt="aspas">
                         </div>
                     </div>
                 </div>
