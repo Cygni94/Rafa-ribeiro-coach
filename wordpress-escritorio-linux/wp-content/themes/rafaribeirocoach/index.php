@@ -132,7 +132,7 @@ if ($depoimento_setting['depoimento_section_enabled'] == 0) {?>
                 </div>
                 <div class="depoimentos__list row">
 
-                    <div class="depoimentos__item-1 offset-md-0 col-md-3 offset-1 col-10">
+                    <div class="depoimentos__item-1 offset-md-0 col-md-3 offset-1 col-10" style="background-image:url('<?php echo $depoimento_setting['depoimento_one_image']; ?>')">
                         <div class="depoimentos__item-header">
                             <h3 class="depoimento_one_title">
                                 <?php echo $depoimento_setting['depoimento_one_title']; ?>
