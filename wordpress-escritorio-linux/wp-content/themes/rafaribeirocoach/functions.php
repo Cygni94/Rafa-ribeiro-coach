@@ -681,9 +681,9 @@ function rafaribeiro_depoimentos_customizer( $wp_customize ) {
         );
         $wp_customize->add_setting(
             'depoimento_options[depoimento_one_background]', array(
-                'default'        => '',
+                'default'        => get_stylesheet_directory_uri() . '/assets/img/drawing.svg',
                 'capability'     => 'edit_theme_options',
-                'sanitize_callback' => 'sanitize_text_field',
+                'sanitize_callback'	=> 'esc_url_raw',
                 'type' => 'option',
             ));
             $wp_customize->add_control('depoimento_options[depoimento_one_background]', array(
