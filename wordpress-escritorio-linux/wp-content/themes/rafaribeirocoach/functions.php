@@ -792,42 +792,6 @@ function rafaribeiro_depoimentos_customizer( $wp_customize ) {
     }
     add_action( 'customize_register', 'rafaribeiro_depoimentos_customizer' );
 
-       public static function live_preview() {
-          wp_enqueue_script( 
-               'mytheme-themecustomizer', // Give the script a unique ID
-               get_template_directory_uri() . '/js/theme-customizer.js', // Define the path to the JS file
-               array(  'jquery', 'customize-preview' ), // Define dependencies
-               '', // Define a version (optional) 
-               true // Specify whether to put in footer (leave this true)
-          );
-       }
-
-        public static function generate_css( $selector, $style, $mod_name, $prefix='', $postfix='', $echo=true ) {
-          $return = '';
-          $mod = get_theme_mod($mod_name);
-          if ( ! empty( $mod ) ) {
-             $return = sprintf('%s { %s:%s; }',
-                $selector,
-                $style,
-                $prefix.$mod.$postfix
-             );
-             if ( $echo ) {
-                echo $return;
-             }
-          }
-          return $return;
-        }
-    }
-
-    // Setup the Theme Customizer settings and controls...
-    add_action( 'customize_register' , array( 'Depoimento_Customize' , 'register' ) );
-
-    // Output custom CSS to live site
-    add_action( 'wp_head' , array( 'Depoimento_Customize' , 'header_output' ) );
-
-    // Enqueue live preview javascript in Theme Customizer admin screen
-    add_action( 'customize_preview_init' , array( 'Depoimento_Customize' , 'live_preview' ) );
-
     function depoimentos_setup_data()
           {
         return $depoimentos_options=array(
