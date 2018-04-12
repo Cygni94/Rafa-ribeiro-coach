@@ -294,7 +294,7 @@ function rafaribeiro_treinamentos_customizer( $wp_customize ) {
  
 //treinamento section panel
 $wp_customize->add_panel( 'rafaribeiro_treinamento_options', array(
-		'priority'       => 500,
+		'priority'       => 200,
 		'capability'     => 'edit_theme_options',
 		'title'      => __('Seção Treinamentos', 'Rafa Ribeiro Coach'),
 	) );
@@ -589,7 +589,7 @@ function rafaribeiro_depoimentos_customizer( $wp_customize ) {
  
     //depoimento section panel
     $wp_customize->add_panel( 'rafaribeiro_depoimento_options', array(
-            'priority'       => 500,
+            'priority'       => 200,
             'capability'     => 'edit_theme_options',
             'title'      => __('Seção Depoimentos', 'Rafa Ribeiro Coach'),
         ) );
@@ -744,6 +744,26 @@ function rafaribeiro_depoimentos_customizer( $wp_customize ) {
         )
     );
 
+    $wp_customize->add_setting( 'depoimento_options[depoimento_two_image]',
+    array(
+        'default' => get_template_directory_uri().'/assets/img/depoimentos/depoimento_agatha.png',
+        'type' => 'option','sanitize_callback' => 'esc_url_raw',
+    )
+);
+
+$wp_customize->add_control(
+new WP_Customize_Image_Control(
+    $wp_customize,
+    'depoimento_options[depoimento_two_image]',
+    array(
+        'type'        => 'upload',
+        'label' => __('Imagem do depoimento 2','Rafa Ribeiro Coach'),
+        'section' => 'depoimento_section_two',
+        'settings' =>'depoimento_options[depoimento_two_image]',
+    )
+)
+);
+
     //Third depoimento section
     $wp_customize->add_section( 'depoimento_section_three' , array(
             'title'      => __('Depoimento 3', 'Rafa Ribeiro Coach'),
@@ -754,7 +774,7 @@ function rafaribeiro_depoimentos_customizer( $wp_customize ) {
     $wp_customize->add_setting(
         'depoimento_options[depoimento_three_title]',
         array(
-            'default' => __('XANDE BASTOS','Rafa Ribeiro Coach'),
+            'default' => __('RAFAEL, DABÁ','Rafa Ribeiro Coach'),
             'capability'     => 'edit_theme_options',
             'sanitize_callback' => 'rafaribeiro_depoimentos_sanitize_html',
             'type' =>'option',
@@ -786,6 +806,27 @@ function rafaribeiro_depoimentos_customizer( $wp_customize ) {
         )
     );
 
+    $wp_customize->add_setting( 'depoimento_options[depoimento_three_image]',
+    array(
+        'default' => get_template_directory_uri().'/assets/img/depoimentos/depoimento_rafael.png',
+        'type' => 'option','sanitize_callback' => 'esc_url_raw',
+    )
+);
+
+$wp_customize->add_control(
+new WP_Customize_Image_Control(
+    $wp_customize,
+    'depoimento_options[depoimento_three_image]',
+    array(
+        'type'        => 'upload',
+        'label' => __('Imagem do depoimento 3','Rafa Ribeiro Coach'),
+        'section' => 'depoimento_section_three',
+        'settings' =>'depoimento_options[depoimento_three_image]',
+    )
+)
+);
+
+
     function rafaribeiro_depoimentos_sanitize_html( $input ) {
         return force_balance_tags( $input );
         }
@@ -803,9 +844,219 @@ function rafaribeiro_depoimentos_customizer( $wp_customize ) {
         'depoimento_one_image'=>__('','Rafa Ribeiro Coach'),
         'depoimento_two_title'=>__('AGATHA TOMMASI','Rafa Ribeiro Coach'),
         'depoimento_two_text'=>__('Foi um processo de autodescoberta. Aprendi quais eram os meus limites e a julgar se devia respeitá-los ou ultrapassá-los. Aprendi a equilibrar minha energia e hierarquizar minhas prioridades.','Rafa Ribeiro Coach'),
-        'depoimento_two_background'=>__('','Rafa Ribeiro Coach'),
+        'depoimento_two_image'=>__('','Rafa Ribeiro Coach'),
         'depoimento_three_title'=>__('RAFAEL, DABÁ','Rafa Ribeiro Coach'),
         'depoimento_three_text'=>__('Vou levar para a vida inteira o que aprendi com o coaching. Se eu pudesse teria esse acompanhamento a vida toda!!!','Rafa Ribeiro Coach'),
-        'depoimento_three_background'=>__('','Rafa Ribeiro Coach'),
+        'depoimento_three_image'=>__('','Rafa Ribeiro Coach'),
+    );
+    }
+
+//INICIO SEÇÃO BENEFICIOS
+//INICIO Aperte o play - Benefícios
+function rafaribeiro_beneficios_customizer( $wp_customize ) {
+ 
+    //beneficio section panel
+    $wp_customize->add_panel( 'rafaribeiro_beneficio_options', array(
+            'priority'       => 200,
+            'capability'     => 'edit_theme_options',
+            'title'      => __('Seção beneficios', 'Rafa Ribeiro Coach'),
+        ) );
+        
+        $wp_customize->add_section( 'beneficio_section_head' , array(
+            'title'      => __('Título da seção','Rafa Ribeiro Coach'),
+            'panel'  => 'rafaribeiro_beneficio_options',
+            'priority'   => 50,
+           ) );
+        
+        //Hide Index beneficio Section	
+        $wp_customize->add_setting(
+        'beneficio_options[beneficio_section_enabled]',
+        array(
+            'default' => '',
+            'capability'     => 'edit_theme_options',
+            'sanitize_callback' => 'sanitize_text_field',
+            'type' => 'option'
+        )	
+        );
+        $wp_customize->add_control(
+        'beneficio_options[beneficio_section_enabled]',
+        array(
+            'label' => __('Ocultar esta seção','Rafa Ribeiro Coach'),
+            'section' => 'beneficio_section_head',
+            'type' => 'checkbox',
+        )
+        );
+
+        $wp_customize->add_setting(
+        'beneficio_options[beneficio_label]',
+        array(
+            'default' => __('beneficios','Rafa Ribeiro Coach'),
+            'capability'     => 'edit_theme_options',
+            'sanitize_callback' => 'rafaribeiro_beneficios_sanitize_html',
+            'type' => 'option'
+        )	
+        );
+        $wp_customize->add_control(
+        'beneficio_options[beneficio_label]',
+        array(
+            'label' => __('Title','Rafa Ribeiro Coach'),
+            'section' => 'beneficio_section_head',
+            'type' => 'text',
+        )
+        );
+
+    //beneficio section one
+        $wp_customize->add_section( 'beneficio_item_one' , array(
+            'title'      => __('beneficio 1', 'Rafa Ribeiro Coach'),
+            'panel'  => 'rafaribeiro_beneficio_options',
+            'priority'   => 100,
+            'sanitize_callback' => 'sanitize_text_field',
+           ) );
+           $wp_customize->add_setting( 'beneficio_options[beneficio_one_image]',
+           array(
+               'default' => get_template_directory_uri().'/assets/img/beneficios/beneficio_xande_bastos.png',
+               'type' => 'option','sanitize_callback' => 'esc_url_raw',
+           )
+       );
+
+       $wp_customize->add_control(
+       new WP_Customize_Image_Control(
+           $wp_customize,
+           'beneficio_options[beneficio_one_image]',
+           array(
+               'type'        => 'upload',
+               'label' => __('Imagem do beneficio 1','Rafa Ribeiro Coach'),
+               'section' => 'beneficio_item_one',
+               'settings' =>'beneficio_options[beneficio_one_image]',
+           )
+       )
+   );
+        $wp_customize->add_setting(
+        'beneficio_options[beneficio_one_label]',
+        array(
+            'default' => __('você ame e acredite.','Rafa Ribeiro Coach'),
+            'capability'     => 'edit_theme_options',
+            'sanitize_callback' => 'rafaribeiro_beneficios_sanitize_html',
+            'type' => 'option'
+        )	
+        );
+        $wp_customize->add_control(
+        'beneficio_options[beneficio_one_label]',
+        array(
+            'label' => __('Legenda','Rafa Ribeiro Coach'),
+            'section' => 'beneficio_item_one',
+            'type' => 'text',
+        )
+        );
+        
+    //Second beneficio
+    
+    $wp_customize->add_section( 'beneficio_item_two' , array(
+            'title'      => __('beneficio 2', 'Rafa Ribeiro Coach'),
+            'panel'  => 'rafaribeiro_beneficio_options',
+            'priority'   => 200,
+           ) );
+
+           $wp_customize->add_setting( 'beneficio_options[beneficio_two_image]',
+           array(
+               'default' => get_template_directory_uri().'/assets/img/beneficios/beneficio_agatha.png',
+               'type' => 'option','sanitize_callback' => 'esc_url_raw',
+           )
+       );
+       
+       $wp_customize->add_control(
+       new WP_Customize_Image_Control(
+           $wp_customize,
+           'beneficio_options[beneficio_two_image]',
+           array(
+               'type'        => 'upload',
+               'label' => __('Imagem do beneficio 2','Rafa Ribeiro Coach'),
+               'section' => 'beneficio_item_two',
+               'settings' =>'beneficio_options[beneficio_two_image]',
+           )
+       )
+       );
+
+    $wp_customize->add_setting(
+        'beneficio_options[beneficio_two_label]',
+        array(
+            'default' => __('você utilize seus talentos.','Rafa Ribeiro Coach'),
+            'capability'     => 'edit_theme_options',
+            'sanitize_callback' => 'rafaribeiro_beneficios_sanitize_html',
+            'type' => 'option',
+        )	
+    );
+    $wp_customize->add_control(
+        'beneficio_options[beneficio_two_label]',
+        array(
+            'label' => __('Legenda' ,'Rafa Ribeiro Coach'),
+            'section' => 'beneficio_item_two',
+            'type' => 'text',
+        )
+    );
+
+    //Third beneficio section
+    $wp_customize->add_section( 'beneficio_item_three' , array(
+            'title'      => __('beneficio 3', 'Rafa Ribeiro Coach'),
+            'panel'  => 'rafaribeiro_beneficio_options',
+            'priority'   => 300,
+           ) );
+
+           $wp_customize->add_setting( 'beneficio_options[beneficio_three_image]',
+           array(
+               'default' => get_template_directory_uri().'/assets/img/beneficios/beneficio_rafael.png',
+               'type' => 'option','sanitize_callback' => 'esc_url_raw',
+           )
+       );
+       
+       $wp_customize->add_control(
+       new WP_Customize_Image_Control(
+           $wp_customize,
+           'beneficio_options[beneficio_three_image]',
+           array(
+               'type'        => 'upload',
+               'label' => __('Imagem do beneficio 3','Rafa Ribeiro Coach'),
+               'section' => 'beneficio_item_three',
+               'settings' =>'beneficio_options[beneficio_three_image]',
+           )
+       )
+       );
+
+           $wp_customize->add_setting(
+        'beneficio_options[beneficio_three_label]',
+        array(
+            'default' => __('traga mais tempo para você e sua família','Rafa Ribeiro Coach'),
+            'capability'     => 'edit_theme_options',
+            'sanitize_callback' => 'rafaribeiro_beneficios_sanitize_html',
+            'type' =>'option',
+        )	
+    );
+    $wp_customize->add_control(
+        'beneficio_options[beneficio_three_label]',
+        array(
+            'label' => __('Legenda','Rafa Ribeiro Coach'),
+            'section' => 'beneficio_item_three',
+            'type' => 'text',
+        )
+    );
+
+    function rafaribeiro_beneficios_sanitize_html( $input ) {
+        return force_balance_tags( $input );
+        }
+    }
+    add_action( 'customize_register', 'rafaribeiro_beneficios_customizer' );
+
+    function beneficios_setup_data()
+          {
+        return $beneficios_options=array(
+        //beneficio section settings
+        'beneficio_section_enabled' => '',
+        'beneficio_label' => __('beneficios','Rafa Ribeiro Coach'),
+        'beneficio_one_label'=>__('','Rafa Ribeiro Coach'),
+        'beneficio_one_image'=>__('','Rafa Ribeiro Coach'),
+        'beneficio_two_label'=>__('','Rafa Ribeiro Coach'),
+        'beneficio_two_image'=>__('','Rafa Ribeiro Coach'),
+        'beneficio_three_label'=>__('','Rafa Ribeiro Coach'),
+        'beneficio_three_image'=>__('','Rafa Ribeiro Coach'),
     );
     }

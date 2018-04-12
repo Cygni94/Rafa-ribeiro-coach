@@ -148,7 +148,7 @@ if ($depoimento_setting['depoimento_section_enabled'] == 0) {?>
                         </div>
                     </div>
 
-                    <div class="depoimentos__item-2 col-md-3 offset-1 col-10">
+                    <div class="depoimentos__item-2 col-md-3 offset-1 col-10" style="background-image:url('<?php echo $depoimento_setting['depoimento_two_image']; ?>')">
                         <div class="depoimentos__item-header">
                             <h3>
                                 <?php echo $depoimento_setting['depoimento_two_title']; ?>
@@ -164,7 +164,7 @@ if ($depoimento_setting['depoimento_section_enabled'] == 0) {?>
                         </div>
                     </div>
 
-                    <div class="depoimentos__item-3 col-md-3 offset-1 col-10">
+                    <div class="depoimentos__item-3 col-md-3 offset-1 col-10" style="background-image:url('<?php echo $depoimento_setting['depoimento_three_image']; ?>')">
                         <div class="depoimentos__item-header">
                             <h3>
                                 <?php echo $depoimento_setting['depoimento_three_title']; ?>

@@ -471,7 +471,7 @@ a:hover {
   justify-content: space-between;
 }
 
-.depoimentos__item {
+.depoimentos__item-1, .depoimentos__item-2, .depoimentos__item-3 {
   height: 28rem;
   width: 19rem;
   display: -webkit-box;
