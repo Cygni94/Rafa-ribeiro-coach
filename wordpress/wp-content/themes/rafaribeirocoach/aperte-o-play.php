@@ -35,53 +35,54 @@
         </div>
     </main>
 
-    <section class="beneficios container-fluid">
-        <div>
-            <h1>
-                <strong>A sensação de plenitude através
-                    <br>do seu trabalho.</strong>
-            </h1>
-            <br>
-            <h2>Imagine por um momento criar um negócio que:</h2>
-        </div>
-        <div class="row">
-            <div class="beneficios__item col-md-3">
-                <div class="beneficios__item--icon">
-                <img src="<?php bloginfo('template_url');?>/assets/img/icon/aperte-o-play/01---icone-coracao.png" alt="">
+    <section class="beneficios">
+        <div class="container">
+            <div>
+                <h1>
+                    <strong>A sensação de plenitude através
+                        <br>do seu trabalho.</strong>
+                </h1>
+                <br>
+                <h2>Imagine por um momento criar um negócio que:</h2>
+            </div>
+            <div class="row">
+                <div class="beneficios__item col-md-3">
+                    <div class="beneficios__item--icon">
+                        <img src="<?php bloginfo('template_url');?>/assets/img/icon/aperte-o-play/01---icone-coracao.png" alt="">
+                    </div>
+                    <div class="beneficios__item--label">você ame e acredite.</div>
                 </div>
-                <div class="beneficios__item--label">você ame e acredite.</div>
-            </div>
-            <div class="beneficios__item col-md-3">
-                <div class="beneficios__item--icon">
-                <img src="<?php bloginfo('template_url');?>/assets/img/icon/aperte-o-play/02---icone-estrela.png" alt="">
+                <div class="beneficios__item col-md-3">
+                    <div class="beneficios__item--icon">
+                        <img src="<?php bloginfo('template_url');?>/assets/img/icon/aperte-o-play/02---icone-estrela.png" alt="">
+                    </div>
+                    <div class="beneficios__item--label">você utilize seus talentos.</div>
                 </div>
-                <div class="beneficios__item--label">você utilize seus talentos.</div>
-            </div>
-            <div class="beneficios__item col-md-3">
-                <div class="beneficios__item--icon">
-                <img src="<?php bloginfo('template_url');?>/assets/img/icon/aperte-o-play/03---icone-familia.png" alt="">
+                <div class="beneficios__item col-md-3">
+                    <div class="beneficios__item--icon">
+                        <img src="<?php bloginfo('template_url');?>/assets/img/icon/aperte-o-play/03---icone-familia.png" alt="">
+                    </div>
+                    <div class="beneficios__item--label">traga mais tempo para
+                        <br>você e sua família.</div>
                 </div>
-                <div class="beneficios__item--label">traga mais tempo para
-                    <br>você e sua família.</div>
             </div>
-        </div>
-        <div class="row">
-            <div class="beneficios__item col-md-3">
-                <div class="beneficios__item--icon"></div>
-                <div class="beneficios__item--label">traga o retorno
-                    <br>financeiro merecido.</div>
+            <div class="row">
+                <div class="beneficios__item col-md-3">
+                    <div class="beneficios__item--icon"></div>
+                    <div class="beneficios__item--label">traga o retorno
+                        <br>financeiro merecido.</div>
+                </div>
+                <div class="beneficios__item col-md-3">
+                    <div class="beneficios__item--icon"></div>
+                    <div class="beneficios__item--label">transforme a vida de
+                        <br>milhares de pessoas.</div>
+                </div>
+                <div class="beneficios__item col-md-3">
+                    <div class="beneficios__item--icon"></div>
+                    <div class="beneficios__item--label">traga liberdade
+                        <br>e autonomia.</div>
+                </div>
             </div>
-            <div class="beneficios__item col-md-3">
-                <div class="beneficios__item--icon"></div>
-                <div class="beneficios__item--label">transforme a vida de
-                    <br>milhares de pessoas.</div>
-            </div>
-            <div class="beneficios__item col-md-3">
-                <div class="beneficios__item--icon"></div>
-                <div class="beneficios__item--label">traga liberdade
-                    <br>e autonomia.</div>
-            </div>
-        </div>
     </section>
 
     <section class="etapas container-fluid">
@@ -345,8 +346,8 @@
         </div>
     </section>
 
-<section class="garantia"></section>
+    <section class="garantia"></section>
 
-<section class="metodologia"></section>
+    <section class="metodologia"></section>
 
     <?php get_footer();?>
