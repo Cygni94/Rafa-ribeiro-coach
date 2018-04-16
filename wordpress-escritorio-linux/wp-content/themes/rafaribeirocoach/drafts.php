@@ -1,24 +1,23 @@
-
-//INICIO Aperte o play - Horarios
-function rafaribeiro_horariosAperteOPlay_customizer($wp_customize)
+//INICIO Aperte o play - Itens do treinamento
+function rafaribeiro_itensAperteOPlay_customizer($wp_customize)
 {
 
-    //horarios section panel
-    $wp_customize->add_panel('rafaribeiro_horariosAperteOPlay_options', array(
+    //itens section panel
+    $wp_customize->add_panel('rafaribeiro_itensAperteOPlay_options', array(
         'priority' => 300,
         'capability' => 'edit_theme_options',
-        'title' => __('Seção Horarios', 'Rafa Ribeiro Coach'),
+        'title' => __('Seção Itens do Aperte o Play', 'Rafa Ribeiro Coach'),
     ));
 
-    $wp_customize->add_section('horarios_dos_treinamentos_aperteOPlay', array(
-        'title' => __('Horarios dos treinamentos', 'Rafa Ribeiro Coach'),
-        'panel' => 'rafaribeiro_horariosAperteOPlay_options',
+    $wp_customize->add_section('itens_dos_treinamentos_aperteOPlay', array(
+        'title' => __('Itens do treinamento', 'Rafa Ribeiro Coach'),
+        'panel' => 'rafaribeiro_itensAperteOPlay_options',
         'priority' => 50,
     ));
 
-    //Hide Index horarios Section
+    //Hide Index itens Section
     $wp_customize->add_setting(
-        'horarios_options[horarios_section_enabled]',
+        'itens_options[itens_section_enabled]',
         array(
             'default' => '',
             'capability' => 'edit_theme_options',
@@ -27,110 +26,71 @@ function rafaribeiro_horariosAperteOPlay_customizer($wp_customize)
         )
     );
     $wp_customize->add_control(
-        'horarios_options[horarios_section_enabled]',
+        'itens_options[itens_section_enabled]',
         array(
             'label' => __('Ocultar esta seção', 'Rafa Ribeiro Coach'),
-            'section' => 'horarios_dos_treinamentos_aperteOPlay',
+            'section' => 'itens_dos_treinamentos_aperteOPlay',
             'type' => 'checkbox',
         )
     );
-
     $wp_customize->add_setting(
-        'horarios_options[horarios_label]',
+        'itens_options[itens_one_label]',
         array(
-            'default' => __('Horarios dos treinamentos', 'Rafa Ribeiro Coach'),
+            'default' => __('Treinamento Completo Aperte o Play', 'Rafa Ribeiro Coach'),
             'capability' => 'edit_theme_options',
-            'sanitize_callback' => 'rafaribeiro_horariosAperteOPlay_sanitize_html',
+            'sanitize_callback' => 'rafaribeiro_itensAperteOPlay_sanitize_html',
             'type' => 'option',
         )
     );
     $wp_customize->add_control(
-        'horarios_options[horarios_label]',
+        'itens_options[itens_one_label]',
         array(
-            'label' => __('Cabeçalho', 'Rafa Ribeiro Coach'),
-            'section' => 'horarios_dos_treinamentos_aperteOPlay',
-            'type' => 'text',
-        )
-    );
-    $wp_customize->add_setting('horarios_options[horarios_one_image]',
-        array(
-            'default' => get_template_directory_uri() . '/assets/img/icon/aperte-o-play/25---icone-calendario.png',
-            'type' => 'option', 'sanitize_callback' => 'esc_url_raw',
-        )
-    );
-
-    $wp_customize->add_control(
-        new WP_Customize_Image_Control(
-            $wp_customize,
-            'horarios_options[horarios_one_image]',
-            array(
-                'type' => 'upload',
-                'label' => __('Ícone das horarios', 'Rafa Ribeiro Coach'),
-                'section' => 'horarios_dos_treinamentos_aperteOPlay',
-                'settings' => 'horarios_options[horarios_one_image]',
-            )
-        )
-    );
-    $wp_customize->add_setting(
-        'horarios_options[horarios_dos_treinamentos_aperteOPlay_one]',
-        array(
-            'default' => __('', 'Rafa Ribeiro Coach'),
-            'capability' => 'edit_theme_options',
-            'sanitize_callback' => 'rafaribeiro_horariosAperteOPlay_sanitize_html',
-            'type' => 'option',
-        )
-    );
-    $wp_customize->add_control(
-        'horarios_options[horarios_dos_treinamentos_aperteOPlay_one]',
-        array(
-            'label' => __('Horarios', 'Rafa Ribeiro Coach'),
-            'section' => 'horarios_dos_treinamentos_aperteOPlay',
+            'label' => __('Item', 'Rafa Ribeiro Coach'),
+            'section' => 'itens_dos_treinamentos_aperteOPlay',
             'type' => 'text',
         )
     );
     $wp_customize->add_setting(
-        'horarios_options[horarios_dos_treinamentos_aperteOPlay_two]',
+        'itens_options[itens_dos_treinamentos_aperteOPlay]',
         array(
-            'default' => __('', 'Rafa Ribeiro Coach'),
+            'default' => __('Consultoria Individual', 'Rafa Ribeiro Coach'),
             'capability' => 'edit_theme_options',
-            'sanitize_callback' => 'rafaribeiro_horariosAperteOPlay_sanitize_html',
+            'sanitize_callback' => 'rafaribeiro_itensAperteOPlay_sanitize_html',
             'type' => 'option',
         )
     );
     $wp_customize->add_control(
-        'horarios_options[horarios_dos_treinamentos_aperteOPlay_two]',
+        'itens_options[itens_two_label]',
         array(
-            'label' => __('', 'Rafa Ribeiro Coach'),
-            'section' => 'horarios_dos_treinamentos_aperteOPlay',
+            'label' => __('Item', 'Rafa Ribeiro Coach'),
+            'section' => 'itens_dos_treinamentos_aperteOPlay',
             'type' => 'text',
+        )
+    );
+    $wp_customize->add_setting(
+        'itens_options[itens_dos_treinamentos_aperteOPlay]',
+        array(
+            'default' => __('Mini curso  - Tarefas em Dia', 'Rafa Ribeiro Coach'),
+            'capability' => 'edit_theme_options',
+            'sanitize_callback' => 'rafaribeiro_itensAperteOPlay_sanitize_html',
+            'type' => 'option',
         )
     );
     
-
-    function rafaribeiro_horariosAperteOPlay_sanitize_html($input)
+    function rafaribeiro_itensAperteOPlay_sanitize_html($input)
     {
         return force_balance_tags($input);
     }
-}
-add_action('customize_register', 'rafaribeiro_horariosAperteOPlay_customizer');
+    }
+    add_action('customize_register', 'rafaribeiro_itensAperteOPlay_customizer');
 
-function horariosAperteOPlay_setup_horario()
-{
-    return $horariosAperteOPlay_options = array(
-        //horarios section settings
-        'horarios_section_enabled' => '',
-        'horarios_label' => __('', 'Rafa Ribeiro Coach'),
-        'horarios_dos_treinamentos_aperteOPlay_one' => __('', 'Rafa Ribeiro Coach'),
-        'horarios_dos_treinamentos_aperteOPlay_two' => __('', 'Rafa Ribeiro Coach'),      
-        'horarios_one_image' => __('', 'Rafa Ribeiro Coach'),
+    function itensAperteOPlay_setup_data()
+    {
+    return $itensAperteOPlay_options = array(
+        //itens section settings
+        'itens_section_enabled' => '',
+        'itens_label' => __('', 'Rafa Ribeiro Coach'),
+        'itens_dos_treinamentos_aperteOPlay_one' => __('', 'Rafa Ribeiro Coach'),
+        'itens_dos_treinamentos_aperteOPlay_two' => __('', 'Rafa Ribeiro Coach'),            
     );
 }
-
-$wp_customize->add_control(
-        'horarios_options[horarios_dos_treinamentos_aperteOPlay_two]',
-        array(
-            'label' => __('', 'Rafa Ribeiro Coach'),
-            'section' => 'horarios_dos_treinamentos_aperteOPlay',
-            'type' => 'text',
-        )
-    );
