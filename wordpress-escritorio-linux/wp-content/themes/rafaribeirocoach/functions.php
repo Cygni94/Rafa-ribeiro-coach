@@ -1048,4 +1048,3 @@ function rafaribeiro_datasAperteOPlay_customizer($wp_customize)
         return $datasAperteOPlay_options = array(
         );
     }
-
