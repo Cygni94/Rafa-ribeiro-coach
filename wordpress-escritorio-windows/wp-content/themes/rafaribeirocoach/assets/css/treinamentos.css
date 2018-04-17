@@ -688,6 +688,59 @@ textarea:focus {
     min-height: 100%;
 }
 
+.beneficios__item--label {
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 1.25rem;
+    margin: .5rem 0rem 0rem 0rem;
+}
+
+.etapas h1 {
+    font-family: 'Roboto';
+    font-size: 1.875rem;
+}
+
+.etapas h2 {
+    font-family: 'Roboto';
+    font-size: 1.5625rem;
+}
+
+.etapas__item {
+    background-color: #fff;
+    display: inherit;
+    height: auto;
+    margin: 2rem 1.2rem;
+    line-height: 1;
+    padding-left: 0;
+    padding-right: 0
+}
+
+.etapas__item .left {
+    text-align: left;
+    justify-content: flex-start
+}
+
+.etapas__item .right {
+    text-align: right;
+    justify-content: flex-end
+}
+
+.etapas__item--label {
+    margin: 1rem;
+}
+
+.etapas__item .label__count {
+    font-size: 0.75rem;
+}
+
+.etapas__item .label__title {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 1.2;
+    height: 3rem
+}
+
 .investimento__datas {
     background-color: #01CAFF;
 }

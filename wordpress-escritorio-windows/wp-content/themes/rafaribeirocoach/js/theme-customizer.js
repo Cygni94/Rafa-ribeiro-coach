@@ -35,7 +35,7 @@
 		} );
 	} );
 	
-	//Update site link color in real time...
+	//treinamentos
 	wp.customize( 'treinamento_backgroundcolor-1', function( value ) {
 		value.bind( function( newval ) {
 			$('.cursos__item-1').css('background-color', newval );
@@ -53,5 +53,9 @@
 			$('.cursos__item-3').css('background-color', newval );
 		} );
 	} );
+
+
+	//depoimentos
+
 
 } )( jQuery );

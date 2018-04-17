@@ -2,6 +2,7 @@
 <?php get_header();?>
 
 <link rel="stylesheet" href="<?php bloginfo('template_url');?>/assets/css/treinamentos.css">
+<link rel="stylesheet" href="<?php bloginfo('template_url');?>/assets/css/aperte-o-play.css">
 <?php $theme_folder=get_template_directory_uri();?>
 <div class="papo-page">
     <main class="papo">
@@ -68,25 +69,31 @@
             </div>
             <div class="row">
                 <div class="beneficios__item col-md-3">
-                    <div class="beneficios__item--icon"></div>
+                    <div class="beneficios__item--icon">
+                        <img src="<?php bloginfo('template_url');?>/assets/img/icon/aperte-o-play/04---icone-dinheiro.png" alt="">
+                    </div>
                     <div class="beneficios__item--label">traga o retorno
                         <br>financeiro merecido.</div>
                 </div>
                 <div class="beneficios__item col-md-3">
-                    <div class="beneficios__item--icon"></div>
+                    <div class="beneficios__item--icon">
+                        <img src="<?php bloginfo('template_url');?>/assets/img/icon/aperte-o-play/05---icone-personas.png" alt="">
+                    </div>
                     <div class="beneficios__item--label">transforme a vida de
                         <br>milhares de pessoas.</div>
                 </div>
                 <div class="beneficios__item col-md-3">
-                    <div class="beneficios__item--icon"></div>
+                    <div class="beneficios__item--icon">
+                        <img src="<?php bloginfo('template_url');?>/assets/img/icon/aperte-o-play/06---icone-borboleta.png" alt="">
+                    </div>
                     <div class="beneficios__item--label">traga liberdade
                         <br>e autonomia.</div>
                 </div>
             </div>
     </section>
 
-    <section class="etapas container-fluid">
-        <div>
+    <section class="etapas">
+        <div class="container">
             <h1>
                 <strong>O Treinamento perfeito para colocar
                     <br>suas ideias empreendedoreas em ação</strong>
@@ -96,8 +103,11 @@
         </div>
         <div class="etapas__list">
             <div class="row">
-                <div class="etapas__item left col-md-5">
-                    <div class="etapas__item--icon"></div>
+                <div class="col"></div>
+                <div class="etapas__item left col-md-4">
+                    <div class="etapas__item--icon">
+                        <img src="<?php bloginfo('template_url');?>/assets/img/icon/aperte-o-play/07---icone-play.png" alt="">
+                    </div>
                     <div class="etapas__item--label">
                         <div class="label__count">FASE 01</div>
                         <div class="label__title">START - ONDE ESTOU?</div>
@@ -106,8 +116,11 @@
                             <br>seu momento atual</div>
                     </div>
                 </div>
-                <div class="etapas__item right col-md-5">
-                    <div class="etapas__item--icon"></div>
+                <div class="col"></div>
+                <div class="etapas__item right col-md-4">
+                    <div class="etapas__item--icon">
+                        <img src="<?php bloginfo('template_url');?>/assets/img/icon/aperte-o-play/08---icone-coracao.png" alt="">
+                    </div>
                     <div class="etapas__item--label">
                         <div class="label__count">FASE 02</div>
                         <div class="label__title">DESCOBRINDO
@@ -117,10 +130,14 @@
                             <br>da empresa</div>
                     </div>
                 </div>
+                <div class="col"></div>
             </div>
             <div class="row">
-                <div class="etapas__item left col-md-5">
-                    <div class="etapas__item--icon"></div>
+                <div class="col"></div>
+                <div class="etapas__item left col-md-4">
+                    <div class="etapas__item--icon">
+                        <img src="<?php bloginfo('template_url');?>/assets/img/icon/aperte-o-play/09---icone-visao.png" alt="">
+                    </div>
                     <div class="etapas__item--label">
                         <div class="label__count">FASE 03</div>
                         <div class="label__title">VISÃO ALÉM DO ALCANCE</div>
@@ -133,8 +150,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="etapas__item right col-md-5">
-                    <div class="etapas__item--icon"></div>
+                <div class="col"></div>
+                <div class="etapas__item right col-md-4">
+                    <div class="etapas__item--icon">
+                        <img src="<?php bloginfo('template_url');?>/assets/img/icon/aperte-o-play/10---icone-maos.png" alt="">
+                    </div>
                     <div class="etapas__item--label">
                         <div class="label__count">FASE 04</div>
                         <div class="label__title">VALORES VALIOSOS</div>
@@ -144,10 +164,14 @@
                             <br>não somos nada.</div>
                     </div>
                 </div>
+                <div class="col"></div>
             </div>
             <div class="row">
-                <div class="etapas__item left col-md-5">
-                    <div class="etapas__item--icon"></div>
+                <div class="col"></div>
+                <div class="etapas__item left col-md-4">
+                    <div class="etapas__item--icon">
+                        <img src="<?php bloginfo('template_url');?>/assets/img/icon/aperte-o-play/11---icone-aquarela.png" alt="">
+                    </div>
                     <div class="etapas__item--label">
                         <div class="label__count">FASE 05</div>
                         <div class="label__title">RECONECTANDO COM
@@ -159,8 +183,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="etapas__item right col-md-5">
-                    <div class="etapas__item--icon"></div>
+                <div class="col"></div>
+                <div class="etapas__item right col-md-4">
+                    <div class="etapas__item--icon">
+                        <img src="<?php bloginfo('template_url');?>/assets/img/icon/aperte-o-play/12---icone-anotacao.png" alt="">
+                    </div>
                     <div class="etapas__item--label">
                         <div class="label__count">FASE 06</div>
                         <div class="label__title">A PONTE</div>
@@ -171,8 +198,11 @@
                 </div>
             </div>
             <div class="row">
-                <div class="etapas__item left col-md-5">
-                    <div class="etapas__item--icon"></div>
+                <div class="col"></div>
+                <div class="etapas__item left col-md-4">
+                    <div class="etapas__item--icon">
+                        <img src="<?php bloginfo('template_url');?>/assets/img/icon/aperte-o-play/13---icone-retorno.png" alt="">
+                    </div>
                     <div class="etapas__item--label">
                         <div class="label__count">FASE 07</div>
                         <div class="label__title">AJUSTANDO AS VELAS</div>
@@ -183,8 +213,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="etapas__item right col-md-5">
-                    <div class="etapas__item--icon"></div>
+                <div class="col"></div>
+                <div class="etapas__item right col-md-4">
+                    <div class="etapas__item--icon">
+                        <img src="<?php bloginfo('template_url');?>/assets/img/icon/aperte-o-play/14---icone-celebracao.png" alt="">
+                    </div>
                     <div class="etapas__item--label">
                         <div class="label__count">FASE FINAL</div>
                         <div class="label__title">CELEBRAÇÃO</div>
@@ -195,6 +228,7 @@
                             <br>que merece.</div>
                     </div>
                 </div>
+                <div class="col"></div>
             </div>
         </div>
     </section>
