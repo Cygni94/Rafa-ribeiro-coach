@@ -22,28 +22,28 @@ a:hover {
     margin: 0;
     height: 1px;
     background: #717171;
-    border-bottom: 2px solid #4d4d4d
+    border-bottom: 2px solid #4d4d4d;
 }
 
 .blank {
-    color: transparent
+    color: transparent;
 }
 
 .blank-space {
     width: 7.9rem;
-    display: inline-block
+    display: inline-block;
 }
 
 .last-p {
-    margin-bottom: -9px
+    margin-bottom: -9px;
 }
 
 .gray {
-    color: #a8a8a8
+    color: #a8a8a8;
 }
 
 .yellow {
-    color: #ffc107
+    color: #ffc107;
 }
 
 .papo {
@@ -663,7 +663,7 @@ textarea:focus {
     }
 }
 
-.beneficios,
+.beneficios, 
 .etapas, .bonus {
     text-align: center;
     padding: 73px 0px;
@@ -686,6 +686,89 @@ textarea:focus {
 .etapas {
     background-color: #ECECEC;
     min-height: 100%;
+}
+
+.beneficios__item--label {
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 1.25rem;
+    margin: .5rem 0rem 0rem 0rem;
+}
+
+.etapas h1 {
+    font-family: 'Roboto';
+    font-size: 1.875rem;
+}
+
+.etapas h2 {
+    font-family: 'Roboto';
+    font-size: 1.5625rem;
+}
+
+.etapas__item {
+    background-color: #fff;
+    display: inherit;
+    height: auto;
+    margin: 2rem 1.2rem;
+    line-height: 1;
+    padding-left: 0;
+    padding-right: 0
+}
+
+.etapas__item.left {
+    text-align: left;
+    justify-content: flex-start
+}
+
+.etapas__item.right {
+    text-align: right;
+    justify-content: flex-end
+}
+
+.etapas__item--label {
+    margin: 1rem;
+    width: 100%;
+}
+
+.etapas__item .label__count {
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin: 1rem 0rem;
+}
+
+.etapas__item .label__title {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 1.1875rem;
+    line-height: 1.2;
+    height: 3rem
+}
+
+.etapas__item .label__subtitle {
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 1.125rem;
+    line-height: 1.2;
+}
+
+.bonus__item {
+    background-color: #ffc107;
+    margin-top: 4rem;
+    padding: 1.5rem;
+}
+
+.bonus__item--title {
+    font-weight: 500;
+    font-size: 1.125rem;
+}
+
+.bonus__item--subtitle {
+    font-weight: 300;
+    font-size: 1.125rem;
+}
+
+.investimento {
+    margin-top: 89px;
 }
 
 .investimento__datas {

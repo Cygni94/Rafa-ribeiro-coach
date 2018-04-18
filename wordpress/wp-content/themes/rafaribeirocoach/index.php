@@ -217,3 +217,4 @@ if ($depoimento_setting['depoimento_section_enabled'] == 0) {?>
         </section>
 
         <?php get_footer();?>
+        
