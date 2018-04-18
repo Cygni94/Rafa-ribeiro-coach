@@ -22,28 +22,28 @@ a:hover {
     margin: 0;
     height: 1px;
     background: #717171;
-    border-bottom: 2px solid #4d4d4d
+    border-bottom: 2px solid #4d4d4d;
 }
 
 .blank {
-    color: transparent
+    color: transparent;
 }
 
 .blank-space {
     width: 7.9rem;
-    display: inline-block
+    display: inline-block;
 }
 
 .last-p {
-    margin-bottom: -9px
+    margin-bottom: -9px;
 }
 
 .gray {
-    color: #a8a8a8
+    color: #a8a8a8;
 }
 
 .yellow {
-    color: #ffc107
+    color: #ffc107;
 }
 
 .papo {
@@ -664,13 +664,15 @@ textarea:focus {
 }
 
 .beneficios,
-.etapas, .bonus {
+.etapas,
+.bonus {
     text-align: center;
     padding: 73px 0px;
 }
 
 .beneficios .row,
-.etapas .row, .bonus .row {
+.etapas .row,
+.bonus .row {
     justify-content: space-around;
 }
 
@@ -679,7 +681,8 @@ textarea:focus {
     min-height: 100%;
 }
 
-.beneficios__item, .etapas__item {
+.beneficios__item,
+.etapas__item {
     margin-top: 73px;
 }
 
@@ -715,49 +718,162 @@ textarea:focus {
     padding-right: 0
 }
 
-.etapas__item .left {
+.etapas__item.left {
     text-align: left;
     justify-content: flex-start
 }
 
-.etapas__item .right {
+.etapas__item.right {
     text-align: right;
     justify-content: flex-end
 }
 
 .etapas__item--label {
     margin: 1rem;
+    width: 100%;
 }
 
 .etapas__item .label__count {
     font-size: 0.75rem;
+    font-weight: 500;
+    margin: 1rem 0rem;
 }
 
 .etapas__item .label__title {
     font-family: Roboto;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1.1875rem;
     line-height: 1.2;
     height: 3rem
 }
 
-.investimento__datas {
+.etapas__item .label__subtitle {
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 1.125rem;
+    line-height: 1.2;
+}
+
+.bonus__item {
+    background-color: #ffc107;
+    margin-top: 4rem;
+    padding: 1.5rem;
+}
+
+.bonus__item--title {
+    font-weight: 500;
+    font-size: 1.125rem;
+}
+
+.bonus__item--subtitle {
+    font-weight: 300;
+    font-size: 1.125rem;
+}
+
+.investimento {
+    margin-top: 89px;
     background-color: #01CAFF;
 }
 
-.investimento__valor {
-    margin-top: -1rem;
-    margin-bottom: -1rem;
-    background-color: lightgrey;
-    padding-left: 0px;
-    padding-right: 0px;
-}
+    .investimento__datas {
+        margin: 3rem 0rem;
+        text-align: center;
+        
+    }
 
-.investimento__valor--header {
-    background-color: black;
-    color: white;
-}
+        .investimento__datas--icon {
+            margin: 1rem;
+        }
 
-.investimento__items {
-    background-color: #01CAFF;
-}
+        .investimento__datas ul {
+            padding: 0px;
+            margin-bottom: 0rem;
+            color: black;
+            font-family: 'Roboto';
+            font-size: 1.0625rem;
+            font-weight: 700;
+        }
+
+        .investimento__datas ul li {
+            list-style: none;
+            color: white;
+            font-family: 'Roboto';
+            font-size: 1.0625rem;
+            font-weight: 700;
+        }
+
+    .investimento__valor {
+        margin-top: -1rem;
+        margin-bottom: -1rem;
+        background-color: #f2f2f2;
+        padding-left: 0px;
+        padding-right: 0px;
+        text-align: center;
+        }
+
+        .investimento__valor--header {
+            background-color: #544741;
+            color: white;
+            padding: .5rem;
+            font-size: 1.35rem;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        .arrow-down {
+            margin: auto;
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 25px solid #544741;
+        }
+
+        .investimento__valor--desconto {
+            margin: 1rem 0rem;
+            font-size: 1.5rem;
+        }
+
+        .linha-desconto {
+            margin: auto;
+            width: 50%;
+            background: linear-gradient(to top left, #f2f2f2 calc(50% - 1.5px), red, #f2f2f2 calc(50% + 1.5px));
+        }
+
+        .investimento__valor--prazo {
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 1.3;
+            margin: 1rem;
+        }
+
+        .investimento__valor--preco .preco__vezes {
+            font-weight: 500;
+        }
+
+        .investimento__valor--preco .preco__parc {
+            font-size: 3.5rem;
+            font-weight: 600;
+        }
+
+    .investimento__items {
+        background-color: #01CAFF;
+        height: 100%;
+        align-self: center;
+        }
+
+        .investimento__items ul {
+        list-style: square outside url('../img/tick.png');
+        }
+
+        .investimento__items ul li {
+            margin-bottom: 1rem;
+            color: white;
+            font-family: 'Roboto';
+            font-size: 1.0625rem;
+            font-weight: 700;
+        }
+        
+        .investimento__items ul li.first {
+            color: black;
+        }
