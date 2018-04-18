@@ -381,6 +381,7 @@
             </div>
             <div class="investimento__valor col-3">
                 <div class="investimento__valor--header">INVESTIMENTO</div>
+                <div class="arrow-down"></div>
                 <div class="investimento__valor--desconto">R$ 1.300,00</div>
                 <div class="investimento__valor--prazo">
                     <h3>VALOR PARA INSCRIÇÃO

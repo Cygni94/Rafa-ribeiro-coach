@@ -784,9 +784,19 @@ textarea:focus {
 }
 
 .investimento__valor--header {
-    background-color: black;
+    background-color: #544741;
     color: white;
 }
+
+.arrow-down {
+margin: auto;
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    
+    border-top: 25px solid #544741;
+  }
 
 .investimento__items {
     background-color: #01CAFF;
