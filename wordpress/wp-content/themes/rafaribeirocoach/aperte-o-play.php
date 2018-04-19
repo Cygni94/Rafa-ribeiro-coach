@@ -365,60 +365,152 @@
         </div>
     </section>
 
-    <section class="investimento container-fluid">
-        <div class="row">
-            <div class="investimento__datas col">
-                <div class="investimento__datas--icon"></div>
-                <ul>DATAS DOS
-                    <br>TREINAMENTOS:</ul>
-                <li>23/08/2018</li>
-                <li>23/08/2018</li>
-                <li>23/08/2018</li>
-                <li>23/08/2018</li>
-                <br>
-                <ul>HORÁRIO:</ul>
-                <li>19:00 ÀS 22:00</li>
-            </div>
-            <div class="investimento__valor col-3">
-                <div class="investimento__valor--header">INVESTIMENTO</div>
-                <div class="arrow-down"></div>
-                <div class="investimento__valor--desconto">R$ 1.300,00</div>
-                <div class="investimento__valor--prazo">
-                    <h3>VALOR PARA INSCRIÇÃO
-                        <BR>ATÉ DIA 25/07/2017</h3>
+    <section class="investimento">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="investimento__datas col">
+                    <div class="investimento__datas--wrapper">
+                        <div class="investimento__datas--icon">
+                            <img src="<?php bloginfo('template_url');?>/assets/img/icon/aperte-o-play/25---icone-calendario.png" alt="">
+                        </div>
+                        <ul>DATAS DOS
+                            <br>TREINAMENTOS:
+                            <li>23/08/2018</li>
+                            <li>23/08/2018</li>
+                            <li>23/08/2018</li>
+                            <li>23/08/2018</li>
+                            <li>23/08/2018</li>
+                            <li>23/08/2018</li>
+                            <li>23/08/2018</li>
+                            <li>23/08/2018</li>
+                        </ul>
+                        <br>
+                        <ul>HORÁRIO:
+                            <li>19:00 ÀS 22:00</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="investimento__valor--preco">
-                    <strong>
-                        <h4>02X</h4>
-                        <h1>200,00</h1>
-                    </strong>
+                <div class="investimento__valor col-3">
+                    <div class="investimento__valor--header">INVESTIMENTO</div>
+                    <div class="arrow-down"></div>
+                    <div class="investimento__valor--desconto">
+                        <div class="linha-desconto">
+                            R$ 1.300,00
+                        </div>
+                    </div>
+                    <div class="investimento__valor--prazo">
+                        VALOR PARA INSCRIÇÃO
+                        <BR>ATÉ DIA 25/07/2017
+                    </div>
+                    <div class="investimento__valor--preco">
+                        <strong>
+                            <span class="preco__vezes">02 X </span>
+                            <span class="preco__parc">200,00</span>
+                        </strong>
+                    </div>
+                    <div class="investimento__valor--subscribe">
+                        <button type="button" class="btn btn-subscribe">
+                            quero me inscrever
+                        </button>
+                    </div>
                 </div>
-                <div class="investimento__valor--subscribe">
-                    <button type="button" class="btn btn-subscribe">
-                        quero me inscrever
-                    </button>
+                <div class="investimento__items col">
+                    <ul>
+                        <li class="first">Treinamento Completo
+                            <br>Aperte o Play</li>
+                        <li>Consultoria Individual</li>
+                        <li>Mini curso - Tarefas em Dia</li>
+                        <li>Mini curso - Vídeo Profissional</li>
+                        <li>Mini Curso - Identidade Visual</li>
+                        <li>Vídeo Desmistificando a Contabilidade</li>
+                        <li>Mini Curso - Vídeos de Qualidade</li>
+                        <li>Desafios Individuais</li>
+                        <li>Acesso a Comunidade Vip
+                            <br>exclusiva para alunos</li>
+                    </ul>
                 </div>
-            </div>
-            <div class="investimento__items col">
-                <ul>
-                    <li>Treinamento Completo
-                        <br>Aperte o Play</li>
-                    <li>Consultoria Individual</li>
-                    <li>Mini curso - Tarefas em Dia</li>
-                    <li>Mini curso - Vídeo Profissional</li>
-                    <li>Mini Curso - Identidade Visual</li>
-                    <li>Vídeo Desmistificando a Contabilidade</li>
-                    <li>Mini Curso - Vídeos de Qualidade</li>
-                    <li>Desafios Individuais</li>
-                    <li>Acesso a Comunidade Vip
-                        <br>exclusiva para alunos</li>
-                </ul>
             </div>
         </div>
     </section>
 
-    <section class="garantia"></section>
+    <section class="garantia">
+        <div class="container">
+            <div class="row">
+                <div class="garantia__icon col-3">
+                    <img src="<?php bloginfo('template_url');?>/assets/img/icon/aperte-o-play/26---selo-garantia.png" alt="">
+                </div>
+                <div class="garantia__text col-7">
+                    <div class="garantia__text--title">RISCO ZERO</div>
+                    <div class="garantia__text--text">
+                        Tenho tanta certeza que você vai amar os resultados que terá com o treinamento que vou te dar uma garantia incondicional.
+                        <br>Se após o nosso primeiro encontro você não gostar do treinamento e queira mudar de ideia por qualquer
+                        motivo, eu te devolverei 100% do valor investido, sem burocracia.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <section class="metodologia"></section>
+    <section class="metodologia">
+        <div class="container">
+            <div>
+                <h1>
+                    <strong>Como será entregue o Treinamento Aperte o Play</strong>
+                </h1>
+            </div>
+            <div class="row">
+                <div class="metodologia__item col-md-3">
+                    <div class="metodologia__item--icon">
+                        <img src="<?php bloginfo('template_url');?>/assets/img/icon/aperte-o-play/27---icone-personas.png" alt="">
+                    </div>
+                    <div class="metodologia__item--label">08 encontros Ao Vivo
+                        <br>Online com 03 horas
+                        <br>de duração</div>
+                </div>
+                <div class="metodologia__item col-md-3">
+                    <div class="metodologia__item--icon">
+                        <img src="<?php bloginfo('template_url');?>/assets/img/icon/aperte-o-play/28---icone-videos.png" alt="">
+                    </div>
+                    <div class="metodologia__item--label">os encontros serão
+                        <br>gravados para
+                        <br>você revisar</div>
+                </div>
+                <div class="metodologia__item col-md-3">
+                    <div class="metodologia__item--icon">
+                        <img src="<?php bloginfo('template_url');?>/assets/img/icon/aperte-o-play/29---icone-conversa.png" alt="">
+                    </div>
+                    <div class="metodologia__item--label">03 consultorias
+                        <br>individuais (online)
+                        <br>comigo</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="metodologia__item col-md-3">
+                    <div class="metodologia__item--icon">
+                        <img src="<?php bloginfo('template_url');?>/assets/img/icon/aperte-o-play/30---icone-livro.png" alt="">
+                    </div>
+                    <div class="metodologia__item--label">material de apoio</div>
+                </div>
+                <div class="metodologia__item col-md-3">
+                    <div class="metodologia__item--icon">
+                        <img src="<?php bloginfo('template_url');?>/assets/img/icon/aperte-o-play/31---icone-anotacao.png" alt="">
+                    </div>
+                    <div class="metodologia__item--label">exercícios práticos</div>
+                </div>
+                <div class="metodologia__item col-md-3">
+                    <div class="metodologia__item--icon">
+                        <img src="<?php bloginfo('template_url');?>/assets/img/icon/aperte-o-play/32---icone-medalha.png" alt="">
+                    </div>
+                    <div class="metodologia__item--label">desafios individuais<br>(gamificação)</div>
+                </div>
+            </div>
+            <div class="row callout__button">
+                <button type="button" class="btn btn-subscribe">
+                    quero me inscrever
+                </button>
+            </div>
+
+        </div>
+    </section>
 
     <?php get_footer();?>
