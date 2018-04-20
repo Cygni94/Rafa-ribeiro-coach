@@ -262,6 +262,23 @@ function rafaribeiro_treinamentos_customizer($wp_customize)
             'type' => 'text',
         )
     );
+    $wp_customize->add_setting(
+        'treinamento_options[treinamento_one_link]',
+        array(
+            'default' => __('https://www.rafaribeiro.com.br/', 'Rafa Ribeiro Coach'),
+            'capability' => 'edit_theme_options',
+            'sanitize_callback' => 'rafaribeiro_treinamentos_sanitize_html',
+            'type' => 'option',
+        )
+    );
+    $wp_customize->add_control(
+        'treinamento_options[treinamento_one_link]',
+        array(
+            'label' => __('Link do treinamento', 'Rafa Ribeiro Coach'),
+            'section' => 'treinamento_section_one',
+            'type' => 'text',
+        )
+    );
 
     //Second treinamento
 
@@ -288,6 +305,23 @@ function rafaribeiro_treinamentos_customizer($wp_customize)
             'type' => 'text',
         )
     );
+    $wp_customize->add_setting(
+        'treinamento_options[treinamento_two_link]',
+        array(
+            'default' => __('https://www.rafaribeiro.com.br/', 'Rafa Ribeiro Coach'),
+            'capability' => 'edit_theme_options',
+            'sanitize_callback' => 'rafaribeiro_treinamentos_sanitize_html',
+            'type' => 'option',
+        )
+    );
+    $wp_customize->add_control(
+        'treinamento_options[treinamento_two_link]',
+        array(
+            'label' => __('Link do treinamento', 'Rafa Ribeiro Coach'),
+            'section' => 'treinamento_section_one',
+            'type' => 'text',
+        )
+    );
 
     //Third treinamento section
     $wp_customize->add_section('treinamento_section_three', array(
@@ -310,6 +344,23 @@ function rafaribeiro_treinamentos_customizer($wp_customize)
         array(
             'label' => __('Nome do treinamento', 'Rafa Ribeiro Coach'),
             'section' => 'treinamento_section_three',
+            'type' => 'text',
+        )
+    );
+    $wp_customize->add_setting(
+        'treinamento_options[treinamento_three_link]',
+        array(
+            'default' => __('https://www.rafaribeiro.com.br/', 'Rafa Ribeiro Coach'),
+            'capability' => 'edit_theme_options',
+            'sanitize_callback' => 'rafaribeiro_treinamentos_sanitize_html',
+            'type' => 'option',
+        )
+    );
+    $wp_customize->add_control(
+        'treinamento_options[treinamento_three_link]',
+        array(
+            'label' => __('Link do treinamento', 'Rafa Ribeiro Coach'),
+            'section' => 'treinamento_section_one',
             'type' => 'text',
         )
     );

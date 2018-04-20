@@ -874,6 +874,8 @@
 
             <div class="row">
 
+            <div class="col-md-1"></div>
+
                 <div class="garantia__icon col-md-3">
 
                     <img src="<?php bloginfo('template_url');?>/assets/img/icon/aperte-o-play/26---selo-garantia.png" alt="">
