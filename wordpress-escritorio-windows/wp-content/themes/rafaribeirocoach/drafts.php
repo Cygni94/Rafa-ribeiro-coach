@@ -3,55 +3,34 @@ function rafaribeiro_treinamentos_customizer($wp_customize)
 {
 
     //treinamento section panel
-    $wp_customize->add_panel('rafaribeiro_treinamento_options', array(
+    $wp_customize->add_panel('pagina_treinamentos', array(
         'priority' => 113,
         'capability' => 'edit_theme_options',
         'title' => __('Página Treinamentos', 'Rafa Ribeiro Coach'),
     ));
 
     $wp_customize->add_section('data_do_treinamento', array(
-        'title' => __('Datas dos treinamentos', 'Rafa Ribeiro Coach'),
-        'panel' => 'rafaribeiro_infoAperteoPlay_options',
+        'title' => __('Horário do treinamento', 'Rafa Ribeiro Coach'),
+        'panel' => 'pagina_treinamentos',
         'priority' => 50,
     ));
     $wp_customize->add_setting(
-            'datas_options[data_treinamento]',
+            'datas_options[hora_treinamento]',
             array(
                 'default' => __('', 'Rafa Ribeiro Coach'),
                 'capability' => 'edit_theme_options',
-                'sanitize_callback' => 'rafaribeiro_datasAperteOPlay_sanitize_html',
+                'sanitize_callback' => 'pagina_treinamentos_sanitize_html',
                 'type' => 'option',
             )
         );
         $wp_customize->add_control(
             'datas_options[data_treinamento]',
             array(
-                'label' => __('Datas', 'Rafa Ribeiro Coach'),
-                'section' => 'data_do_treinamento',
-                'type' => 'date',
+                'label' => __('Horário', 'Rafa Ribeiro Coach'),
+                'section' => 'hora_do_treinamento',
+                'type' => 'time',
             )
         );
-
-
-    //Hide Index treinamento Section
-    $wp_customize->add_setting(
-        'treinamento_options[treinamento_section_enabled]',
-        array(
-            'default' => '',
-            'capability' => 'edit_theme_options',
-            'sanitize_callback' => 'sanitize_text_field',
-            'type' => 'option',
-        )
-    );
-    $wp_customize->add_control(
-        'treinamento_options[treinamento_section_enabled]',
-        array(
-            'label' => __('Ocultar esta seção', 'Rafa Ribeiro Coach'),
-            'section' => 'treinamento_section_head',
-            'type' => 'checkbox',
-        )
-    );
-
     $wp_customize->add_setting(
         'treinamento_options[treinamento_title]',
         array(
