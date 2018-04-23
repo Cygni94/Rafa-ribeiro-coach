@@ -663,16 +663,21 @@ textarea:focus {
     }
 }
 
+.callout__button {
+    justify-content: center;
+}
+
 .beneficios,
 .etapas,
-.bonus {
+.bonus, .metodologia {
     text-align: center;
     padding: 73px 0px;
 }
 
 .beneficios .row,
 .etapas .row,
-.bonus .row {
+.bonus .row,
+.metodologia .row {
     justify-content: space-around;
 }
 
@@ -682,7 +687,8 @@ textarea:focus {
 }
 
 .beneficios__item,
-.etapas__item {
+.etapas__item,
+.metodologia__item {
     margin-top: 73px;
 }
 
@@ -772,66 +778,186 @@ textarea:focus {
 
 .investimento {
     margin-top: 89px;
-}
-
-.investimento__datas {
     background-color: #01CAFF;
 }
 
-.investimento__valor {
-    margin-top: -1rem;
-    margin-bottom: -1rem;
-    background-color: #f2f2f2;
-    padding-left: 0px;
-    padding-right: 0px;
-    text-align: center;
-}
+    .investimento__datas--wrapper {
+        padding-left: 6rem;
+    }
 
-.investimento__valor--header {
-    background-color: #544741;
-    color: white;
-    padding: .5rem;
-    font-size: 1.35rem;
-    font-weight: 300;
-    text-align: center;
-}
+    .investimento__datas {
+        margin: 3rem 0rem;
+        text-align: center;
+        
+    }
 
-.arrow-down {
-    margin: auto;
-    width: 0;
-    height: 0;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-top: 25px solid #544741;
-}
+        .investimento__datas--icon {
+            margin: 1rem;
+        }
 
-.investimento__valor--desconto {
-    margin: 1rem 0rem;
-    font-size: 1.5rem;
-}
+        .investimento__datas ul {
+            padding: 0px;
+            margin-bottom: 0rem;
+            color: black;
+            font-family: 'Roboto';
+            font-size: 1.0625rem;
+            font-weight: 700;
+        }
 
-.linha-desconto {
-    margin: auto;
-    width: 50%;
-    background: linear-gradient(to top left, #f2f2f2 calc(50% - 1.5px), red, #f2f2f2 calc(50% + 1.5px));
-}
+        .investimento__datas ul li {
+            list-style: none;
+            color: white;
+            font-family: 'Roboto';
+            font-size: 1.0625rem;
+            font-weight: 700;
+        }
 
-.investimento__valor--prazo {
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 1.3;
-    margin: 1rem;
-}
+    .investimento__valor {
+        margin-top: -1rem;
+        margin-bottom: -1rem;
+        background-color: #f2f2f2;
+        padding-left: 0px;
+        padding-right: 0px;
+        text-align: center;
+        align-self: stretch;
+        }
 
-.investimento__valor--preco .preco__vezes {
-    font-weight: 500;
-}
+        .investimento__valor--header {
+            background-color: #544741;
+            color: white;
+            padding: .5rem;
+            font-size: 1.35rem;
+            font-weight: 300;
+            text-align: center;
+        }
 
-.investimento__valor--preco .preco__parc {
-    font-size: 3.5rem;
-    font-weight: 600;
-}
+        .arrow-down {
+            margin: auto;
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 25px solid #544741;
+        }
 
-.investimento__items {
-    background-color: #01CAFF;
+        .investimento__valor--desconto {
+            margin: 2rem 0rem;
+            font-size: 1.5rem;
+        }
+
+        .linha-desconto {
+            margin: auto;
+            width: 50%;
+            background: linear-gradient(to top left, #f2f2f2 calc(50% - 1.5px), red, #f2f2f2 calc(50% + 1.5px));
+        }
+
+        .investimento__valor--prazo {
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 1.3;
+            margin: 2rem;
+        }
+
+        .investimento__valor--preco {
+            margin: 3rem 0rem;
+        }
+
+        .investimento__valor--preco .preco__vezes {
+            font-weight: 500;
+        }
+
+        .investimento__valor--preco .preco__parc {
+            font-size: 3.5rem;
+            font-weight: 600;
+        }
+
+    .investimento__items {
+        background-color: #01CAFF;
+        height: 100%;
+        align-self: center;
+        }
+
+        .investimento__items ul {
+        list-style: square outside url('../img/tick.png');
+        padding-left: 8rem;
+        }
+
+        .investimento__items ul li {
+            margin-bottom: 1rem;
+            color: white;
+            font-family: 'Roboto';
+            font-size: 1.0625rem;
+            font-weight: 700;
+            text-align: left;
+        }
+        
+        .investimento__items ul li.first {
+            color: black;
+        }
+
+.garantia {
+    background-color: #A8A8A8;
+    padding-top: 146px;
+    padding-bottom: 146px; 
 }
+    .garantia__icon {
+        text-align: right;
+        padding-right: 3rem;
+    }
+
+    .garantia__text {
+        color: white;
+    }
+
+    .garantia__text--title {
+        font-family: 'Roboto';
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .garantia__text--text {
+        font-family: 'Roboto';
+        font-size: 1.4375rem;
+        font-weight: 400;
+    }
+
+    .metodologia {
+        background-color: #F2F2F2;
+        min-height: 100%;
+    }
+
+    .metodologia h1 {
+        font-size: 1.9375rem;
+    }
+    
+    .metodologia__item--label {
+        font-family: 'Roboto';
+        font-weight: 300;
+        font-size: 1.25rem;
+        margin: .5rem 0rem 0rem 0rem;
+    }
+    
+    @media (max-width:767px) {
+        .investimento__datas--wrapper {
+            padding-left: 0rem;
+        }
+
+        .investimento__valor {
+            margin-top: 0rem;
+            margin-bottom: 0rem;
+        }
+
+        .investimento__items ul {
+            padding: 2rem 0rem 0.5rem 3rem;
+        }
+
+        .garantia {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+
+        .garantia__icon {
+            text-align: center;
+            padding-right: initial;
+        }
+    }

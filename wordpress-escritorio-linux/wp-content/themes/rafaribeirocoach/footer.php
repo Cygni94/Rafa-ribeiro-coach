@@ -1,6 +1,6 @@
 <?php wp_footer();?>
 <?php $theme_folder = get_template_directory_uri();?>
-
+<link rel="stylesheet" href="<?php bloginfo('template_url');?>/assets/css/style.css">
 <footer class="footer container">
         <div class="row">
             <div class="mailing-list__callout offset-md-3 col-md-6 col-sm-12">
