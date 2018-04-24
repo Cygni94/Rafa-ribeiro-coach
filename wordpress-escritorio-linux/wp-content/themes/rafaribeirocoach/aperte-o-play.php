@@ -730,8 +730,10 @@
 
     </section>
 
-
-
+<?php
+$investimento_options = datasAperteOPlay_setup_data();
+$investimento_setting = wp_parse_args(get_option('datas_options', array()), $investimento_options);
+{ ?>
     <section class="investimento">
 
         <div class="container-fluid">
@@ -744,7 +746,7 @@
 
                         <div class="investimento__datas--icon">
 
-                            <img src="<?php bloginfo('template_url');?>/assets/img/icon/aperte-o-play/25---icone-calendario.png" alt="">
+                            <img src="<?php echo $depoimento_setting['icone_datas_aperteOPlay']; ?>" alt="">
 
                         </div>
 
@@ -752,7 +754,7 @@
 
                             <br>TREINAMENTOS:
 
-                            <li>23/08/2018</li>
+                            <li><?php echo $depoimento_setting['datas_dos_treinamentos_aperteOPlay_one']; ?></li>
 
                             <li>23/08/2018</li>
 
@@ -781,7 +783,7 @@
                     </div>
 
                 </div>
-
+<?php } ?>
                 <div class="investimento__valor col-md-3">
 
                     <div class="investimento__valor--header">INVESTIMENTO</div>

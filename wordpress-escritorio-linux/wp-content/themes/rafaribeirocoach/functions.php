@@ -875,6 +875,109 @@ function rafaribeiro_datasAperteOPlay_customizer($wp_customize)
                     'type' => 'date',
                 )
             );
+
+            $wp_customize->add_setting(
+                'datas_options[datas_dos_treinamentos_aperteOPlay_three]',
+                array(
+                    'default' => __('', 'Rafa Ribeiro Coach'),
+                    'capability' => 'edit_theme_options',
+                    'sanitize_callback' => 'rafaribeiro_datasAperteOPlay_sanitize_html',
+                    'type' => 'option',
+                )
+            );
+            $wp_customize->add_control(
+                'datas_options[datas_dos_treinamentos_aperteOPlay_three]',
+                array(
+                    'label' => __('', 'Rafa Ribeiro Coach'),
+                    'section' => 'datas_dos_treinamentos_aperteOPlay',
+                    'type' => 'date',
+                )
+            );
+            $wp_customize->add_setting(
+                'datas_options[datas_dos_treinamentos_aperteOPlay_four]',
+                array(
+                    'default' => __('', 'Rafa Ribeiro Coach'),
+                    'capability' => 'edit_theme_options',
+                    'sanitize_callback' => 'rafaribeiro_datasAperteOPlay_sanitize_html',
+                    'type' => 'option',
+                )
+            );
+            $wp_customize->add_control(
+                'datas_options[datas_dos_treinamentos_aperteOPlay_four]',
+                array(
+                    'label' => __('', 'Rafa Ribeiro Coach'),
+                    'section' => 'datas_dos_treinamentos_aperteOPlay',
+                    'type' => 'date',
+                )
+            );
+            $wp_customize->add_setting(
+                'datas_options[datas_dos_treinamentos_aperteOPlay_five]',
+                array(
+                    'default' => __('', 'Rafa Ribeiro Coach'),
+                    'capability' => 'edit_theme_options',
+                    'sanitize_callback' => 'rafaribeiro_datasAperteOPlay_sanitize_html',
+                    'type' => 'option',
+                )
+            );
+            $wp_customize->add_control(
+                'datas_options[datas_dos_treinamentos_aperteOPlay_five]',
+                array(
+                    'label' => __('', 'Rafa Ribeiro Coach'),
+                    'section' => 'datas_dos_treinamentos_aperteOPlay',
+                    'type' => 'date',
+                )
+            );
+            $wp_customize->add_setting(
+                'datas_options[datas_dos_treinamentos_aperteOPlay_six]',
+                array(
+                    'default' => __('', 'Rafa Ribeiro Coach'),
+                    'capability' => 'edit_theme_options',
+                    'sanitize_callback' => 'rafaribeiro_datasAperteOPlay_sanitize_html',
+                    'type' => 'option',
+                )
+            );
+            $wp_customize->add_control(
+                'datas_options[datas_dos_treinamentos_aperteOPlay_six]',
+                array(
+                    'label' => __('', 'Rafa Ribeiro Coach'),
+                    'section' => 'datas_dos_treinamentos_aperteOPlay',
+                    'type' => 'date',
+                )
+            );
+            $wp_customize->add_setting(
+                'datas_options[datas_dos_treinamentos_aperteOPlay_seven]',
+                array(
+                    'default' => __('', 'Rafa Ribeiro Coach'),
+                    'capability' => 'edit_theme_options',
+                    'sanitize_callback' => 'rafaribeiro_datasAperteOPlay_sanitize_html',
+                    'type' => 'option',
+                )
+            );
+            $wp_customize->add_control(
+                'datas_options[datas_dos_treinamentos_aperteOPlay_seven]',
+                array(
+                    'label' => __('', 'Rafa Ribeiro Coach'),
+                    'section' => 'datas_dos_treinamentos_aperteOPlay',
+                    'type' => 'date',
+                )
+            );
+            $wp_customize->add_setting(
+                'datas_options[datas_dos_treinamentos_aperteOPlay_eight]',
+                array(
+                    'default' => __('', 'Rafa Ribeiro Coach'),
+                    'capability' => 'edit_theme_options',
+                    'sanitize_callback' => 'rafaribeiro_datasAperteOPlay_sanitize_html',
+                    'type' => 'option',
+                )
+            );
+            $wp_customize->add_control(
+                'datas_options[datas_dos_treinamentos_aperteOPlay_eight]',
+                array(
+                    'label' => __('', 'Rafa Ribeiro Coach'),
+                    'section' => 'datas_dos_treinamentos_aperteOPlay',
+                    'type' => 'date',
+                )
+            );
             $wp_customize->add_setting(
                 'horarios_options[horarios_label]',
                 array(
@@ -927,98 +1030,98 @@ function rafaribeiro_datasAperteOPlay_customizer($wp_customize)
                 )
             );
     //valor section panel
-    $wp_customize->add_section('valor_dos_treinamentos_aperteOPlay', array(
-        'title' => __('Valor dos treinamentos', 'Rafa Ribeiro Coach'),
-        'panel' => 'rafaribeiro_infoAperteoPlay_options',
-        'priority' => 55,
-    ));
-    $wp_customize->add_setting(
-        'valor_options[valor_label]',
-        array(
-            'default' => __('R$ 1.300,00', 'Rafa Ribeiro Coach'),
-            'capability' => 'edit_theme_options',
-            'sanitize_callback' => 'rafaribeiro_valorAperteOPlay_sanitize_html',
-            'type' => 'option',
-        )
-    );
-    $wp_customize->add_control(
-        'valor_options[valor_label]',
-        array(
-            'label' => __('Valor do treinamento', 'Rafa Ribeiro Coach'),
-            'section' => 'valor_dos_treinamentos_aperteOPlay',
-            'type' => 'text',
-        )
-    );
-    $wp_customize->add_setting(
-        'valor_options[prazo_label]',
-        array(
-            'default' => __('25/07/2017', 'Rafa Ribeiro Coach'),
-            'capability' => 'edit_theme_options',
-            'sanitize_callback' => 'rafaribeiro_valorAperteOPlay_sanitize_html',
-            'type' => 'option',
-        )
-    );
-    $wp_customize->add_control(
-        'valor_options[prazo_label]',
-        array(
-            'label' => __('Prazo para inscrição', 'Rafa Ribeiro Coach'),
-            'section' => 'valor_dos_treinamentos_aperteOPlay',
-            'type' => 'date',
-        )
-    );
-    $wp_customize->add_setting(
-        'valor_options[numParc_label]',
-        array(
-            'default' => __('02', 'Rafa Ribeiro Coach'),
-            'capability' => 'edit_theme_options',
-            'sanitize_callback' => 'rafaribeiro_valorAperteOPlay_sanitize_html',
-            'type' => 'option',
-        )
-    );
-    $wp_customize->add_control(
-        'valor_options[numParc_label]',
-        array(
-            'label' => __('Número de parcelas', 'Rafa Ribeiro Coach'),
-            'section' => 'valor_dos_treinamentos_aperteOPlay',
-            'type' => 'text',
-        )
-    );
-    $wp_customize->add_setting(
-        'valor_options[valParc_label]',
-        array(
-            'default' => __('200,00', 'Rafa Ribeiro Coach'),
-            'capability' => 'edit_theme_options',
-            'sanitize_callback' => 'rafaribeiro_valorAperteOPlay_sanitize_html',
-            'type' => 'option',
-        )
-    );
-    $wp_customize->add_control(
-        'valor_options[valParc_label]',
-        array(
-            'label' => __('Valor das parcelas', 'Rafa Ribeiro Coach'),
-            'section' => 'valor_dos_treinamentos_aperteOPlay',
-            'type' => 'text',
-        )
-    );
-    $wp_customize->add_setting(
-        'valor_options[linkPagto_label]',
-        array(
-            'default' => __('', 'Rafa Ribeiro Coach'),
-            'capability' => 'edit_theme_options',
-            'sanitize_callback' => 'rafaribeiro_valorAperteOPlay_sanitize_html',
-            'type' => 'option',
-        )
-    );
-    $wp_customize->add_control(
-        'valor_options[linkPagto_label]',
-        array(
-            'label' => __('Link para pagamento', 'Rafa Ribeiro Coach'),
-            'section' => 'valor_dos_treinamentos_aperteOPlay',
-            'type' => 'text',
-        )
-    );
+        $wp_customize->add_section('valor_dos_treinamentos_aperteOPlay', array(
+            'title' => __('Valor dos treinamentos', 'Rafa Ribeiro Coach'),
+            'panel' => 'rafaribeiro_infoAperteoPlay_options',
+            'priority' => 55,
+        ));
+        $wp_customize->add_setting(
+            'valor_options[valor_label]',
+            array(
+                'default' => __('R$ 1.300,00', 'Rafa Ribeiro Coach'),
+                'capability' => 'edit_theme_options',
+                'sanitize_callback' => 'rafaribeiro_valorAperteOPlay_sanitize_html',
+                'type' => 'option',
+            )
+        );
+        $wp_customize->add_control(
+            'valor_options[valor_label]',
+            array(
+                'label' => __('Valor do treinamento', 'Rafa Ribeiro Coach'),
+                'section' => 'valor_dos_treinamentos_aperteOPlay',
+                'type' => 'text',
+            )
+        );
+        $wp_customize->add_setting(
+            'valor_options[prazo_label]',
+            array(
+                'default' => __('25/07/2017', 'Rafa Ribeiro Coach'),
+                'capability' => 'edit_theme_options',
+                'sanitize_callback' => 'rafaribeiro_valorAperteOPlay_sanitize_html',
+                'type' => 'option',
+            )
+        );
+        $wp_customize->add_control(
+            'valor_options[prazo_label]',
+            array(
+                'label' => __('Prazo para inscrição', 'Rafa Ribeiro Coach'),
+                'section' => 'valor_dos_treinamentos_aperteOPlay',
+                'type' => 'date',
+            )
+        );
+        $wp_customize->add_setting(
+            'valor_options[numParc_label]',
+            array(
+                'default' => __('02', 'Rafa Ribeiro Coach'),
+                'capability' => 'edit_theme_options',
+                'sanitize_callback' => 'rafaribeiro_valorAperteOPlay_sanitize_html',
+                'type' => 'option',
+            )
+        );
+        $wp_customize->add_control(
+            'valor_options[numParc_label]',
+            array(
+                'label' => __('Número de parcelas', 'Rafa Ribeiro Coach'),
+                'section' => 'valor_dos_treinamentos_aperteOPlay',
+                'type' => 'text',
+            )
+        );
+        $wp_customize->add_setting(
+            'valor_options[valParc_label]',
+            array(
+                'default' => __('200,00', 'Rafa Ribeiro Coach'),
+                'capability' => 'edit_theme_options',
+                'sanitize_callback' => 'rafaribeiro_valorAperteOPlay_sanitize_html',
+                'type' => 'option',
+            )
+        );
+        $wp_customize->add_control(
+            'valor_options[valParc_label]',
+            array(
+                'label' => __('Valor das parcelas', 'Rafa Ribeiro Coach'),
+                'section' => 'valor_dos_treinamentos_aperteOPlay',
+                'type' => 'text',
+            )
+        );
+        $wp_customize->add_setting(
+            'valor_options[linkPagto_label]',
+            array(
+                'default' => __('', 'Rafa Ribeiro Coach'),
+                'capability' => 'edit_theme_options',
+                'sanitize_callback' => 'rafaribeiro_valorAperteOPlay_sanitize_html',
+                'type' => 'option',
+            )
+        );
+        $wp_customize->add_control(
+            'valor_options[linkPagto_label]',
+            array(
+                'label' => __('Link para pagamento', 'Rafa Ribeiro Coach'),
+                'section' => 'valor_dos_treinamentos_aperteOPlay',
+                'type' => 'text',
+            )
+        );
 
-//Itens do treinamento
+    //Itens do treinamento
         $wp_customize->add_section('itens_dos_treinamentos_aperteOPlay', array(
             'title' => __('Itens do treinamento', 'Rafa Ribeiro Coach'),
             'panel' => 'rafaribeiro_infoAperteoPlay_options',
@@ -1189,6 +1292,33 @@ function rafaribeiro_datasAperteOPlay_customizer($wp_customize)
     function datasAperteOPlay_setup_data()
     {
     return $datasAperteOPlay_options = array(
+        'icone_datas_aperteOPlay' => __(get_template_directory_uri() . '/assets/img/icon/aperte-o-play/25---icone-calendario.png', 'Rafa Ribeiro Coach'),
+        'datas_label' => __('Datas dos treinamentos', 'Rafa Ribeiro Coach'),
+        'datas_dos_treinamentos_aperteOPlay_one' => __('', 'Rafa Ribeiro Coach'),
+        'datas_dos_treinamentos_aperteOPlay_two' => __('', 'Rafa Ribeiro Coach'),
+        'datas_dos_treinamentos_aperteOPlay_three' => __('', 'Rafa Ribeiro Coach'),
+        'datas_dos_treinamentos_aperteOPlay_four' => __('', 'Rafa Ribeiro Coach'),
+        'datas_dos_treinamentos_aperteOPlay_five' => __('', 'Rafa Ribeiro Coach'),
+        'datas_dos_treinamentos_aperteOPlay_six' => __('', 'Rafa Ribeiro Coach'),
+        'datas_dos_treinamentos_aperteOPlay_seven' => __('', 'Rafa Ribeiro Coach'),
+        'datas_dos_treinamentos_aperteOPlay_eight' => __('', 'Rafa Ribeiro Coach'),
+        'horarios_label' => __('Horário:', 'Rafa Ribeiro Coach'),
+        'horarios_dos_treinamentos_aperteOPlay_one' => __('', 'Rafa Ribeiro Coach'),
+        'horarios_dos_treinamentos_aperteOPlay_two' => __('', 'Rafa Ribeiro Coach'),
+        'valor_label' => __('R$ 1.300,00', 'Rafa Ribeiro Coach'),
+        'prazo_label' => __('', 'Rafa Ribeiro Coach'),
+        'numParc_label' => __('02', 'Rafa Ribeiro Coach'),
+        'valParc_label' => __('200,00', 'Rafa Ribeiro Coach'),
+        'linkPagto_label' => __('', 'Rafa Ribeiro Coach'),
+        'itens_one_label' => __('Treinamento Completo Aperte o Play', 'Rafa Ribeiro Coach'),
+        'itens_two_label' => __('Consultoria Individual', 'Rafa Ribeiro Coach'),
+        'itens_three_label' => __('Mini curso  - Tarefas em Dia', 'Rafa Ribeiro Coach'),
+        'itens_four_label' => __('Mini Curso - Vídeo Profissional', 'Rafa Ribeiro Coach'),
+        'itens_five_label' => __('Mini curso  - Identidade Visual', 'Rafa Ribeiro Coach'),
+        'itens_six_label' => __('Vídeo Desmistificando a Contabilidade', 'Rafa Ribeiro Coach'),
+        'itens_seven_label' => __('Mini curso  - Vídeos de qualidade', 'Rafa Ribeiro Coach'),
+        'itens_eight_label' => __('Desafios Individuais', 'Rafa Ribeiro Coach'),
+        'itens_nine_label' => __('Acesso a Comunidade Vip exclusiva para alunos', 'Rafa Ribeiro Coach'),
     );
     }
 
