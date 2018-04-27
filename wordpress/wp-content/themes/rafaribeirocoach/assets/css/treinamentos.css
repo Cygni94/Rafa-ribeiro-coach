@@ -663,6 +663,10 @@ textarea:focus {
     }
 }
 
+.callout__button {
+    justify-content: center;
+}
+
 .beneficios,
 .etapas,
 .bonus, .metodologia {
@@ -791,7 +795,7 @@ textarea:focus {
             margin: 1rem;
         }
 
-        .investimento__datas ul {
+        .investimento__datas ul, #datas_label, #horarios_label {
             padding: 0px;
             margin-bottom: 0rem;
             color: black;
@@ -933,3 +937,27 @@ textarea:focus {
         margin: .5rem 0rem 0rem 0rem;
     }
     
+    @media (max-width:767px) {
+        .investimento__datas--wrapper {
+            padding-left: 0rem;
+        }
+
+        .investimento__valor {
+            margin-top: 0rem;
+            margin-bottom: 0rem;
+        }
+
+        .investimento__items ul {
+            padding: 2rem 0rem 0.5rem 3rem;
+        }
+
+        .garantia {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+
+        .garantia__icon {
+            text-align: center;
+            padding-right: initial;
+        }
+    }

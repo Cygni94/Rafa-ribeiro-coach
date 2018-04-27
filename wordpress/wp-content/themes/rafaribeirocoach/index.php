@@ -97,17 +97,17 @@ if ($treinamento_setting['treinamento_section_enabled'] == 0) {?>
         <div class="cursos__container container">
             <div class="row" style="justify-content: space-between">
                 <div class="cursos__item-1 col-md-3 offset-1 offset-md-0 col-10">
-                    <a class="curso-link">
+                    <a class="curso-link" href="<?php echo $treinamento_setting['treinamento_one_link']; ?>">
                         <?php echo $treinamento_setting['treinamento_one_title']; ?>
                     </a>
                 </div>
                 <div class="cursos__item-2 col-md-3 offset-1 offset-md-0 col-10">
-                    <a class="curso-link">
+                <a class="curso-link" href="<?php echo $treinamento_setting['treinamento_two_link']; ?>">
                         <?php echo $treinamento_setting['treinamento_two_title']; ?>
                     </a>
                 </div>
                 <div class="cursos__item-3 col-md-3 offset-1 offset-md-0 col-10">
-                    <a class="curso-link">
+                <a class="curso-link" href="<?php echo $treinamento_setting['treinamento_three_link']; ?>">
                         <?php echo $treinamento_setting['treinamento_three_title']; ?>
                     </a>
                 </div>
