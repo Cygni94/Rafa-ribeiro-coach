@@ -795,7 +795,7 @@ textarea:focus {
             margin: 1rem;
         }
 
-        .investimento__datas ul {
+        .investimento__datas ul, #datas_label, #horarios_label {
             padding: 0px;
             margin-bottom: 0rem;
             color: black;
