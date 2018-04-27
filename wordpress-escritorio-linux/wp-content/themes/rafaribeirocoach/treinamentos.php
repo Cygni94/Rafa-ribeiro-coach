@@ -16,7 +16,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
+    <?php wp_head();?>
 
     <link rel="icon" href="rafaribeiro.ico" />
 
@@ -113,16 +113,13 @@
                     </div>
 
                     <div class="landing-callout__list--date">
-
-                        <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-
-the_content();
-
-endwhile; else:?>
-
-                        <p>Defina a data e a hora do seu evento</p>
-
-                        <?php endif;?>
+                        <?php
+                        $evento_options = evento_setup_data();
+                        $evento_setting = wp_parse_args(get_option('evento_options', array()), $evento_options);
+                        { ?>
+                            <p><?php echo $evento_setting['data_evento']; ?></p>
+                            <p><?php echo $evento_setting['hora_evento']; ?></p>
+                        <?php } ?>
                     </div>
 
                     <div class="landing-callout__list--icon">
@@ -408,7 +405,7 @@ endwhile; else:?>
     </section>
 
 
-
+    <?php wp_footer();?>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
 

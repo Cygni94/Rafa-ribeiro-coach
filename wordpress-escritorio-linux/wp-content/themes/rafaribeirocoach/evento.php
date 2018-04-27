@@ -43,11 +43,14 @@
                     <br>
                     <div>
                         <span class="calltoaction__headline">
-                        <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-the_content();
-endwhile; else:?>
-<p>Defina a data e a hora do seu evento</p>
-<?php endif;?>
+
+<?php
+$evento_options = evento_setup_data();
+$evento_setting = wp_parse_args(get_option('evento_options', array()), $evento_options);
+{ ?>
+                    <p><?php echo $evento_setting['data_evento']; ?></p>
+                    <p><?php echo $evento_setting['hora_evento']; ?></p>
+            <?php } ?>
                         </span>
                     </div>
                 </div>

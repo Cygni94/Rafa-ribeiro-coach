@@ -1367,3 +1367,68 @@ function pagina_treinamentos_customizer($wp_customize)
         return $pagina_treinamentos = array(
         );
     }
+
+
+//INICIO Treinamento Hotsite
+function rafaribeiro_evento_customizer($wp_customize)
+{
+    $wp_customize->add_panel('rafaribeiro_evento_options', array(
+        'priority' => 115,
+        'capability' => 'edit_theme_options',
+        'title' => __('Hotsite Treinamento', 'Rafa Ribeiro Coach'),
+    ));
+   
+    //data e hora section
+        $wp_customize->add_section('data_hora_hotsite', array(
+            'title' => __('Data e Hora do Treinamento', 'Rafa Ribeiro Coach'),
+            'panel' => 'rafaribeiro_evento_options',
+            'priority' => 55,
+        ));
+        $wp_customize->add_setting(
+            'evento_options[data_evento]',
+            array(
+                'default' => __('20/03/2018', 'Rafa Ribeiro Coach'),
+                'capability' => 'edit_theme_options',
+                'sanitize_callback' => 'rafaribeiro_evento_sanitize_html',
+                'type' => 'option',
+            )
+        );
+        $wp_customize->add_control(
+            'evento_options[data_evento]',
+            array(
+                'label' => __('Data', 'Rafa Ribeiro Coach'),
+                'section' => 'data_hora_hotsite',
+                'type' => 'text',
+            )
+        );
+        $wp_customize->add_setting(
+            'evento_options[hora_evento]',
+            array(
+                'default' => __('às 20:00', 'Rafa Ribeiro Coach'),
+                'capability' => 'edit_theme_options',
+                'sanitize_callback' => 'rafaribeiro_evento_sanitize_html',
+                'type' => 'option',
+            )
+        );
+        $wp_customize->add_control(
+            'evento_options[hora_evento]',
+            array(
+                'label' => __('Hora', 'Rafa Ribeiro Coach'),
+                'section' => 'data_hora_hotsite',
+                'type' => 'text',
+            )
+        );
+        function rafaribeiro_evento_sanitize_html($input)
+    {
+        return force_balance_tags($input);
+    }
+    }
+    add_action('customize_register', 'rafaribeiro_evento_customizer');
+
+    function evento_setup_data()
+    {
+    return $rafaribeiro_evento_options = array(
+        'data_evento' => __('20/03/2018', 'Rafa Ribeiro Coach'),
+        'hora_evento' => __('às 20:00', 'Rafa Ribeiro Coach'),
+    );
+    }
