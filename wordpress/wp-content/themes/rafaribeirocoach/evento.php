@@ -15,6 +15,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="<?php bloginfo('template_url');?>/assets/css/calltoaction.css">
+    <?php wp_head();?>
 </head>
 
 <body class="calltoaction">
@@ -42,17 +43,20 @@
                     <br>
                     <div>
                         <span class="calltoaction__headline">
-                        <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-the_content();
-endwhile; else:?>
-<p>Defina a data e a hora do seu evento</p>
-<?php endif;?>
+
+<?php
+$evento_options = evento_setup_data();
+$evento_setting = wp_parse_args(get_option('evento_options', array()), $evento_options);
+{ ?>
+                    <p><?php echo $evento_setting['data_evento']; ?></p>
+                    <p><?php echo $evento_setting['hora_evento']; ?></p>
+            <?php } ?>
                         </span>
                     </div>
                 </div>
             </div>
 
-
+            <?php wp_footer();?>
             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
                 crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"

@@ -553,7 +553,7 @@ body {
     height: 100%;
 }
 
-.row {
+.main-row {
     height: 100%;
 }
 
@@ -625,7 +625,7 @@ input {
     line-height: 2rem;
 }
 
-input,
+.input,
 textarea {
     margin: .5rem;
     width: 95%;
@@ -645,7 +645,7 @@ textarea:focus {
     text-align: center;
 }
 
-.button {
+.button-ind {
     margin: 1rem auto;
     background-color: #00cd68 !important;
     color: white;

@@ -22,7 +22,7 @@
 </head>
 
 <body class="container mentoria__page">
-    <main class="row">
+<main class="row main-row">
         <div class="treinamento__wrapper col-md-4 offset-md-1">
             <div class="treinamento__logo">
                 <img src="<?php bloginfo('template_url');?>/assets/img/brand/mentoria.png" alt="momento da virada">
@@ -63,10 +63,10 @@
                                     <div id="mc_embed_signup_scroll">
 
                                         <div class="mc-field-group">
-                                            <input type="text" value="" placeholder="Qual seu nome?" name="FNAME" class="" id="mce-FNAME">
+                                            <input type="text" value="" placeholder="Qual seu nome?" name="FNAME" class="input" id="mce-FNAME">
                                         </div>
                                         <div class="mc-field-group">
-                                            <input type="email" value="" placeholder="Qual seu email?" name="EMAIL" class="required email" id="mce-EMAIL">
+                                            <input type="email" value="" placeholder="Qual seu email?" name="EMAIL" class="required email input" id="mce-EMAIL">
                                         </div>
                                         <div id="mce-responses" class="clear">
                                             <div class="response" id="mce-error-response" style="display:none"></div>
@@ -74,11 +74,11 @@
                                         </div>
                                         <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                                         <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                                            <input type="text" name="b_df9ab4b863ab4a55fa168caf6_f0b21dcfa4" tabindex="-1" value="">
+                                            <input type="text" name="b_df9ab4b863ab4a55fa168caf6_f0b21dcfa4" tabindex="-1" value="" class="input">
                                         </div>
                                         <div class="clear" data-toggle="modal" data-target="#treinamento-success-modal">
                                             <input type="submit" value="Quero ser avisado!
-                                            " name="subscribe" id="mc-embedded-subscribe" class="button">
+                                            " name="subscribe" id="mc-embedded-subscribe" class="button button-ind input">
                                         </div>
                                     </div>
                                 </form>
