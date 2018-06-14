@@ -1098,7 +1098,7 @@ function rafaribeiro_datasAperteOPlay_customizer($wp_customize)
         $wp_customize->add_control(
             'datas_options[linkPagto_label]',
             array(
-                'label' => __('Link para pagamento', 'Rafa Ribeiro Coach'),
+                'label' => __('Link para pagamento (utilizar "http(s)://"', 'Rafa Ribeiro Coach'),
                 'section' => 'valor_dos_treinamentos_aperteOPlay',
                 'type' => 'text',
             )
